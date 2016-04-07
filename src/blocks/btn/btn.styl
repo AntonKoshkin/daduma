@@ -1,0 +1,26 @@
+.btn
+	@extend $btn-reset
+	
+	border 1px solid gray-light
+	border-radius 3px
+	position relative
+	
+	outline none
+	font-family yefimov
+	
+	&:before
+		@extend $pseudo-left
+		
+		left 9px
+	
+	@media (min-width tablet)
+		
+		padding 10px 15px 10px 40px
+
+		&:before
+			left 10px
+
+		&__text
+			@extend $very-small-text
+			
+			vertical-align middle

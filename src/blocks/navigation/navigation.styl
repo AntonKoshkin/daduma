@@ -1,0 +1,119 @@
+.navigation
+	position fixed
+	top 78px
+	left 0
+	width 100%
+	height calc(100% - 78px)
+	display none
+	background-color rgba(#0, .7)
+	overflow auto
+
+	&__bg
+		position absolute
+		width 100%
+		height 100%
+		top 0
+		left 0
+	
+	&--open
+		display block
+	
+	&__list
+		width 236px
+		position absolute
+		top 0
+		left 0
+	
+	&__list
+	&__sublist
+		list-style-type none
+		
+	&__item:not(:first-child) &__link
+		margin-bottom 1px
+	
+	&__link
+	&__sublink
+		display block
+		text-transform uppercase
+		
+	&__link
+		@extend $reg-text, $text
+		
+		color white
+		background-color blue
+		padding 16px 18px
+
+	&__sublink
+		@extend $small-text
+		
+		color gray
+		padding 17.5px 17px 17.5px 40px
+		margin-bottom 1px
+		background-color white
+	
+	@media (min-width tablet)
+		display flex
+		position static
+		width auto
+		height auto
+		background white
+		overflow visible
+		
+		justify-content center
+	
+		flex-grow 1
+		
+		&__bg
+			display none
+		
+		&__list
+			position static
+			width auto
+		
+		&__item
+			display inline-block
+			position relative
+			padding 0 15px
+			
+			&:not(:last-child)
+				margin-right 15px
+			
+			&--openable
+				&:after
+					@extend $pseudo-right
+					triangle down 3px 2px black
+
+		&__link
+			@extend $very-small-text
+			
+			padding 15px 0
+			text-transform none
+			color black
+			background none
+			position relative
+			
+			&:before
+				@extend $pseudo-bottom-fullwidth
+				
+				height 1px
+				background-color gray-light
+				bottom 10px
+		
+		&__subnav
+			position absolute
+			top calc(100% + 16px)
+			left 15px
+			padding 5px 0
+			display none
+			background-color white
+			min-width 100px
+			
+			&--open
+				display block
+		
+		&__sublink
+			@extend $very-small-text
+			
+			font-weight light
+			padding 5px
+			text-transform none

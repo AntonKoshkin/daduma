@@ -1,0 +1,127 @@
+.act
+	padding 82px 0 20px
+	
+	&__wrapper
+		@extend $row
+		
+		padding 0 10px
+	
+	&__face
+		@extend $col-3
+	
+	&__desc
+		@extend $col-12
+	
+	&__face
+	&__param
+	&__download
+		display none
+	
+	&__title
+		@extend $col-12, $title-h2
+		
+		color blue
+	
+	&__date
+		@extend $col-12
+	
+	&__date-time
+		@extend $very-small-text
+		
+		font-weight light
+		color gray-suka-ebaniy-designer
+		margin-bottom 10px
+		
+		&--fat
+			color black
+	
+	@media (min-width tablet)
+		padding-top 30px
+		padding-bottom 50px
+		
+		&__face
+		&__param
+		&__download
+			display block
+
+		&__face
+			mq-col(3)
+		
+		&__img
+			width 100%
+			max-height 100%
+			margin-bottom 10px
+		
+		&__desc
+			@extend $row
+			
+			mq-col(9)
+		
+		&__title
+			mq-col(9)
+		
+		&__description
+			@extend $col-12
+
+			margin-bottom 20px
+		
+		&__date
+			mq-col(3)
+		
+		&__date-time
+			text-align right
+		
+		&__params
+			@extend $row
+
+		&__param
+			margin-bottom 15px
+			
+			&:nth-child(2n+1)
+				@extend $col-3
+				
+				padding-right 20px
+			
+			&:nth-child(2n)
+				@extend $col-9
+		
+		&__download
+			@extend $col-12
+		
+		&__link
+			@extend $small-text
+			
+			color blue
+			font-weight semibold
+			margin-right 12px
+			margin-left 31px
+			position relative
+			
+			&:after
+				@extend $pseudo-bottom-fullwidth
+				
+				height 1px
+				background-color blue
+				bottom -4px
+			
+			&:before
+				@extend $pseudo-left
+				
+				left -31px
+			
+			&--pdf
+				&:before
+					bicon(fileFormat.pdf, 24)
+			
+			&--doc
+				&:before
+					bicon(fileFormat.doc, 24)
+			
+			&--docx
+				&:before
+					bicon(fileFormat.docx, 24)
+		
+		&__download-statistic
+			@extend $small-text
+			
+			color gray-suka-ebaniy-designer

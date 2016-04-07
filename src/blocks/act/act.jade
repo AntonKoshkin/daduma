@@ -1,0 +1,38 @@
+mixin actParam(title, text)
+	.act__param
+		+sTitle(title)
+		+mText(text)
+
+mixin actFace
+	.act__face
+		img.act__img(
+			src='http://placehold.it/300x200'
+			alt='Исображение документа')
+		if block
+			block
+
+mixin actDesc(title)
+	.act__desc
+		h2.act__title!=title
+		.act__date
+			p.act__date-time
+				| Опубликован: 
+				span.act__date-time--fat 18.03.2016
+		if block
+			block
+
+		.act__download
+			// классы значков форматов:
+			// pdf - act__link--pdf
+			// doc - act__link--doc
+			// docx - act__link--docx
+			a.act__link.act__link--docx(
+				href='#'
+				download) Скачать полный текст закона
+			span.act__download-statistic (скачали 18 953 раз)
+
+mixin act
+	.act
+		.act__wrapper
+			if block
+				block

@@ -1,0 +1,24 @@
+size(size)
+	width size
+	height size
+
+bgi(url)
+	@extend $bgi
+	background-image url
+
+btn-hover(color)
+	colLight = lightness(color)
+	colMinus = colLight - 5%
+	
+	&:hover
+		background-color color
+		border-color color
+		color white
+	
+	&:active
+		background-color lightness(color, colMinus)
+		border-color lightness(color, colMinus)
+
+for num in (1..100)
+	.percent--{num}
+		width (num)%

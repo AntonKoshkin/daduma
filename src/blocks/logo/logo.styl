@@ -1,0 +1,23 @@
+.logo
+	&__img
+		width 55px
+		height 45px
+	
+	&__text
+		display none
+	
+	@media (min-width tablet)
+		order -1
+		display flex
+		align-items center
+		
+		&__img
+			margin-right 12px
+		
+		&__text
+			@extend $logo-text
+			
+			display inline-block
+			color gray
+			padding 10px
+			border-left 1px solid gray-light

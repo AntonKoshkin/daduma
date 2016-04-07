@@ -1,0 +1,24 @@
+$pseudo
+	content ''
+	position absolute
+
+$pseudo-right
+	@extend $pseudo
+	
+	top 50%
+	right 0
+	transform translateY(-50%)
+
+$pseudo-left
+	@extend $pseudo
+	
+	top 50%
+	left 0
+	transform translateY(-50%)
+
+$pseudo-bottom-fullwidth
+	@extend $pseudo
+	
+	bottom 0
+	left 0
+	width 100%

@@ -1,0 +1,8 @@
+mixin rating(value)
+	.rating
+		.rating__visual
+			// модификаторы рейтинга
+			// percent--{рейтинг от 0 до 100}
+			.rating__stars(
+				class='percent--'+value)
+		span.rating__number!=value/10

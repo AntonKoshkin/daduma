@@ -1,0 +1,20 @@
+html
+	font-size fz
+	font-family exo
+	font-weight normal
+	min-width mobile-width
+
+body
+	background-color gray-body
+	
+	@media (min-width tablet)
+		background-position center
+		background-image url(../img/bg.jpg)
+
+.page
+	&__content
+		margin-top 78px
+	
+	@media (min-width tablet)
+		&__content
+			margin-top 0

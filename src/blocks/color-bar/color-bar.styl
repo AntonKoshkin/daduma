@@ -1,0 +1,57 @@
+.color-bar
+	height 18px
+	position relative
+	overflow hidden
+	margin-bottom 200px
+	margin-bottom 17px
+	
+	&__strips
+		@extend $row, $justify-between
+		flex-wrap nowrap
+		top 0
+		left 0
+		width calc(100% + 7px)
+		transform skewX(-20deg)
+		position absolute
+		height 100%		
+		transform-origin left top
+	
+	&__green
+		background-color green
+	
+	&__gray
+		background-color gray-light
+		flex-grow 1
+
+	&__red
+		background-color pink
+	
+	&__strip-bar
+		position absolute
+		width 100%
+		left 0
+		top 0
+		height 100%
+		background linear-gradient(to right,
+								rgba(#0, .07) 0%,
+								rgba(#0, .07) 33%,
+								rgba(#a, 0) 33%,
+								rgba(#a, 0) 100%)
+		background-size 30px 18px
+		background-repeat repeat-x
+	
+	&__numbers
+		@extend $row, $justify-between, $vertical-align-middle
+		
+		position relative
+		height 100%
+	
+	&__number
+		@extend $very-small-text
+		
+		font-family yefimov
+		text-align center
+		color white
+	
+	@media (min-width tablet)
+		margin-bottom 37px

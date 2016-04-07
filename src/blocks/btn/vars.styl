@@ -1,0 +1,92 @@
+.btn--person
+	font-family exo
+	padding 21px 20px 21px 27px
+	
+	&:after
+		@extend $pseudo-right
+		triangle down 3px 2px black
+		
+		right 7px
+	
+	&:before
+		bicon(person.blue, 16)
+		
+	.btn
+		&__text
+			display none	
+		
+	@media (min-width tablet)
+		btn-hover blue
+		
+		padding 11px 20px 11px 27px
+		
+		&:hover:before
+			bicon(person.white)
+		
+		&:after
+			display none
+		
+		.btn
+			&__text
+				display inline
+
+.btn
+	&--thumb-up
+	&--neutral
+	&--thumb-down
+		border-width 2px
+		width 100%
+		text-align left
+		padding 13px 20px
+		margin-bottom 8px
+		padding-left 49px
+	
+	@media (min-width 620px)
+		&--thumb-up
+		&--neutral
+		&--thumb-down
+			width auto
+			margin-bottom 11px
+		
+		&--thumb-up
+			btn-hover green
+			
+			&:hover
+				&:before
+					bicon(thumb.up.white)
+					
+		&--neutral
+			btn-hover gray-light
+			
+			padding-left 20px
+		
+		&--thumb-down
+			btn-hover pink
+			
+			order 1
+			
+			&:hover
+				&:before
+					bicon(thumb.down.white)
+
+.btn--thumb-up
+.btn--thumb-down
+	&:before
+		left 12px
+
+.btn--thumb-up
+	border-color green
+	color green
+	
+	&:before
+		bicon(thumb.up.green, 22)
+
+.btn--thumb-down
+	border-color pink
+	color pink
+	
+	&:before
+		bicon(thumb.down.pink, 22)
+
+.btn--neutral
+	color gray-light

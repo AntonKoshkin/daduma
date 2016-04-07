@@ -1,0 +1,14 @@
+mixin promoItem(icon, title, text)
+	.promo__perk
+		.promo__perk-content
+			+svg(icon)(class='promo__img')
+			h3.promo__perk-title!=title
+			p.promo__text!=text
+
+mixin promo
+	section.promo
+		.promo__wrapper
+			//- h1.promo__title Официальный сайт для&nbsp;размещения информации о&nbsp;подготовке федеральными органами исполнительной власти проектов нормативных правовых&nbsp;актов
+			.promo__perks
+				if block
+					block

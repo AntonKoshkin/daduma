@@ -1,0 +1,60 @@
+$font-reset
+	font-size 0
+	line-height 0
+
+$reg-text
+	font-weight regular
+
+$text
+	font-size 1rem
+	line-height 1.3em
+
+$small-text
+	font-size .875rem
+	line-height 1.3em
+
+$very-small-text
+	font-size .8125rem
+	line-height 1.3em
+
+$logo-text
+	@extend $very-small-text
+	
+	font-family yefimov
+	font-weight light
+
+// titles
+$title
+	line-height 1.3em
+	font-family yefimov
+
+$title-h1
+	@extend $title
+	
+	font-size 1.0625rem
+	margin-bottom 32px
+	
+	@media (min-width tablet)
+		font-size 1.1875rem
+
+$title-h2
+	@extend $title
+	
+	font-size 1.0625rem
+	line-height 1.3
+	font-weight regular
+	margin-bottom 10px
+	
+$title-h3
+	@extend $title
+	
+	font-size 1.0625rem
+	margin-bottom 8px
+
+$title-h4
+	@extend $title
+	
+	font-size .875rem
+	line-height 1.3
+	font-weight semibold
+	font-family exo
