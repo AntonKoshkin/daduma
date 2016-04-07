@@ -1,0 +1,25 @@
+mixin abAct
+	.about-act
+		.about-act__wrapper
+			if block
+				block
+
+mixin abActTab(title, id)
+	.about-act__tab(data-tab!=id)
+		span.about-act__tab-title!=title
+
+mixin abActCont(id, title)
+	.about-act__content(data-content!=id)
+		h4.about-act__cont-title!=title
+		.about-act__cont-content
+			if block
+				block
+
+mixin abActLeg(title, color)
+	span.about-act__legend(
+		class='about-act__legend--'+color)!=title
+
+mixin abActPie(desc)
+	.about-act__pie
+		.about-act__diagram
+		p.about-act__d-desc!=desc

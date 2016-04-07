@@ -1,0 +1,88 @@
+.about-act
+	&__wrapper
+		@extend $row
+		
+		padding 0 10px
+		margin-bottom 300px
+	
+	&__tabs
+		display none
+	
+	&__contents
+		flex-grow 1
+		text-align center
+	
+	&__content
+		border-radius 3px
+		overflow hidden
+		margin-bottom 2px
+		border 1px solid gray-lighter
+	
+	&__cont-title
+		@extend $small-text
+		
+		background-color gray-lighter
+		text-transform uppercase
+		padding 16px 0
+		cursor pointer
+	
+	&__cont-content
+		background-color white
+	
+	&__pies
+		padding 10px
+		padding-bottom 0
+	
+	&__pie
+		margin-bottom 20px
+	
+	&__diagram
+		size 135px
+		
+		background-color green
+		border-radius 50%
+		margin 0 auto 10px
+	
+	&__d-desc
+		@extend $very-small-text
+	
+	&__legends
+		padding 10px
+		padding-top 0
+	
+	&__legend
+		@extend $small-text
+		
+		padding-left 55px
+		position relative
+		width 100%
+		display inline-block
+		text-align left
+		
+		&:before
+			@extend $pseudo-left
+			
+			width 30px
+			height 3px
+		
+		&--green
+			&:before
+				background-color green
+		
+		&--red
+			&:before
+				background-color pink
+		
+		&--gray
+			&:before
+				background-color gray-lighter
+		
+		&--blue
+			&:before
+				background-color blue
+	
+	@media (min-width tablet)
+		padding 0 20px
+		
+		&__cont-title
+			display none
