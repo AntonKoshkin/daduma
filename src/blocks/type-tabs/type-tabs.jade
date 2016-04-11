@@ -1,0 +1,12 @@
+mixin tTab(title, isActive)
+	if isActive === true
+		.type-tabs__tab.type-tabs__tab--active
+			h5.type-tabs__title!=title
+	else
+		.type-tabs__tab
+			h5.type-tabs__title!=title
+
+mixin tTabs
+	.type-tabs
+		if block
+			block

@@ -1,21 +1,18 @@
 mixin cBar(foor, neutral, against)
-	//- -var neutralLength = neutral 
 	.color-bar
 		.color-bar__strips
-			// красной и зеленой полоскам задаются модификаторы ширин, серая меняется сама
-			// модификаторы для зеленой полосы (за)
-			// percent--{1-100}
+			// красной и зеленой полоскам задается ширина, серая меняется сама
+			// зеленая полоса (за)
 			.color-bar__green(
-				class='percent--'+foor)
+				style='width:'+foor+'%')
 			.color-bar__gray
-			// модификаторы для красной полосы (против)
-			// percent--{1-100}
+			// красная полоса (против)
 			.color-bar__red(
-				class='percent--'+against)
+				style='width:'+against+'%')
 			.color-bar__strip-bar
 		.color-bar__numbers
 			.color-bar__number.color-bar__number--for(
-				class='percent--'+foor)=foor
+				style='width:'+foor+'%')=foor
 			.color-bar__number.color-bar__number--neutral=neutral
 			.color-bar__number.color-bar__number--against(
-				class='percent--'+against)=against
+				style='width:'+against+'%')=against

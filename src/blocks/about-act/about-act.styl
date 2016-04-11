@@ -1,8 +1,7 @@
 .about-act
 	&__wrapper
-		@extend $row
+		@extend $pad-row
 		
-		padding 0 10px
 		margin-bottom 300px
 	
 	&__tabs
@@ -25,30 +24,18 @@
 		text-transform uppercase
 		padding 16px 0
 		cursor pointer
+		font-weight medium
+		text-align left
+		
+		&--btn
+			display block
 	
 	&__cont-content
 		background-color white
+		height 0
 	
-	&__pies
+	&__inner
 		padding 10px
-		padding-bottom 0
-	
-	&__pie
-		margin-bottom 20px
-	
-	&__diagram
-		size 135px
-		
-		background-color green
-		border-radius 50%
-		margin 0 auto 10px
-	
-	&__d-desc
-		@extend $very-small-text
-	
-	&__legends
-		padding 10px
-		padding-top 0
 	
 	&__legend
 		@extend $small-text
@@ -82,7 +69,9 @@
 				background-color blue
 	
 	@media (min-width tablet)
-		padding 0 20px
+		&__content
+			&--btn
+				display none
 		
 		&__cont-title
 			display none

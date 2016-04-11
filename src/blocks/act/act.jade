@@ -17,7 +17,8 @@ mixin actDesc(title)
 		.act__date
 			p.act__date-time
 				| Опубликован: 
-				span.act__date-time--fat 18.03.2016
+				time.act__date-time--fat(
+					datetime='2016-03-18') 18.03.2016
 		if block
 			block
 

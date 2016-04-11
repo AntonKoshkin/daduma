@@ -47,22 +47,55 @@ block content
 
 	+abAct
 		.about-act__tabs
-			+abActTab('Результаты голосований в гос. думе', 'gdRes')
-			+abActTab('Статистика по закону', 'stats')
-			+abActTab('Хронология закона', 'chrono')
+			+abActTab('Результаты голосований в гос. думе')
+			+abActTab('Статистика по закону')
+			+abActTab('Хронология закона')
 			+abActTab('Обсудить закон')
 		.about-act__contents
-			+abActCont('gdRes', 'Результаты голосований в гос. думе')
-				.about-act__pies
-					+abActPie('Фракция Всероссийской политичекой партии &#8220;Единая&nbsp;Россия&#8221;')
-					+abActPie('Фракция политичеекой партии &#8220;КПРФ&#8221;')
-					+abActPie('Фракция политической партии &#8220;Справедливая&nbsp;Россия&#8221;')
-					+abActPie('Фракция политической партии  &#8220;ЛДПР&#8221;')
-					+abActPie('Общая статистика по всем партиям')
+			+abActCont('Результаты голосований в гос. думе')
+				.about-act__diagram-pack
+					.about-act__diagrams
+						+diagram('main', 'pie-deputy', 'Фракция Всероссийской политичекой партии &#8220;Единая&nbsp;Россия&#8221;')(class='diagram--show')
+						+diagram('main', 'pie-deputy', 'Фракция политичеекой партии &#8220;КПРФ&#8221;')(class='diagram--show')
+						+diagram('main', 'pie-deputy', 'Фракция политической партии &#8220;Справедливая&nbsp;Россия&#8221;')(class='diagram--show')
+						+diagram('main', 'pie-deputy', 'Фракция политической партии  &#8220;ЛДПР&#8221;')(class='diagram--show')
+						+diagram('main', 'pie-deputy', 'Общая статистика по всем партиям')(class='diagram--show')
 				.about-act__legends
 					+abActLeg('Проголосовали За', 'green')
 					+abActLeg('Проголосовали Против', 'red')
 					+abActLeg('Не голосовали', 'blue')
 					+abActLeg('Воздержались', 'gray')
-			+abActCont('stats', 'Статистика по закону')
-			+abActCont('chrono', 'Хронология закона')
+			+abActCont('Статистика по закону')
+				+tTabs
+					+tTab('Пол/возраст', true)
+					+tTab('Образование')
+					+tTab('Статус')
+					+tTab('География')
+					+tTab('Карьера')
+					+tTab('Религия')
+					+tTab('Политика')
+				.about-act__diagram-pack
+					.about-act__diagrams
+						+diagram('main', 'bars')(class='diagram--show')
+						+diagram('main', 'pie')
+						+diagram('main', 'pie')
+						+diagram('main', 'pie')
+						+diagram('main', 'pie')
+						+diagram('main', 'pie')
+						+diagram('main', 'pie')
+				.about-act__legends
+					+abActLeg('Проголосовали За', 'green')
+					+abActLeg('Проголосовали Против', 'red')
+					+abActLeg('Воздержались', 'gray')
+			+abActCont('Хронология закона')
+				+scrl
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
+			+abActCont('Обсудить закон', true)

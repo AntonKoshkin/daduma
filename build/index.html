@@ -5,7 +5,9 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-		<meta name="HandheldFriendly" content="true"/><!--[if lt IE 9]>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/><!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css"/>
@@ -89,16 +91,18 @@
 					<div class="act__face"><img src="http://placehold.it/300x200" alt="Исображение документа" class="act__img"/>
 						<div class="rating">
 							<div class="rating__visual">
-								<!-- модификаторы рейтинга-->
-								<!-- percent--{рейтинг от 0 до 100}-->
-								<div class="rating__stars percent--33"></div>
+								<!-- рейтинг есть ширина блока rating__stars-->
+								<!-- указывается ширина в процентах соответственно рейтинга-->
+								<div style="width:33%" class="rating__stars"></div>
 							</div><span class="rating__number">3.3</span>
 						</div>
 					</div>
 					<div class="act__desc">
 						<h2 class="act__title">Закон об антитеррористической деятельности РФ и противодействии коррупции на территории Руси матушки</h2>
 						<div class="act__date">
-							<p class="act__date-time">Опубликован: <span class="act__date-time--fat">18.03.2016</span></p>
+							<p class="act__date-time">Опубликован: 
+								<time datetime="2016-03-18" class="act__date-time--fat">18.03.2016</time>
+							</p>
 						</div>
 						<div class="act__description">
 							<p class="main-text act__text">Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий представляет собой интересный эксперимент проверки направлений прогрессивного развития.
@@ -163,20 +167,18 @@
 					<div class="voiting__bar">
 						<div class="color-bar">
 							<div class="color-bar__strips">
-								<!-- красной и зеленой полоскам задаются модификаторы ширин, серая меняется сама-->
-								<!-- модификаторы для зеленой полосы (за)-->
-								<!-- percent--{1-100}-->
-								<div class="color-bar__green percent--35"></div>
+								<!-- красной и зеленой полоскам задается ширина, серая меняется сама-->
+								<!-- зеленая полоса (за)-->
+								<div style="width:35%" class="color-bar__green"></div>
 								<div class="color-bar__gray"></div>
-								<!-- модификаторы для красной полосы (против)-->
-								<!-- percent--{1-100}-->
-								<div class="color-bar__red percent--55"></div>
+								<!-- красная полоса (против)-->
+								<div style="width:55%" class="color-bar__red"></div>
 								<div class="color-bar__strip-bar"></div>
 							</div>
 							<div class="color-bar__numbers">
-								<div class="color-bar__number color-bar__number--for percent--35">35</div>
+								<div style="width:35%" class="color-bar__number color-bar__number--for">35</div>
 								<div class="color-bar__number color-bar__number--neutral">10</div>
-								<div class="color-bar__number color-bar__number--against percent--55">55</div>
+								<div style="width:55%" class="color-bar__number color-bar__number--against">55</div>
 							</div>
 						</div>
 					</div>
@@ -228,51 +230,123 @@
 			<div class="about-act">
 				<div class="about-act__wrapper">
 					<div class="about-act__tabs">
-						<div data-tab="gdRes" class="about-act__tab"><span class="about-act__tab-title">Результаты голосований в гос. думе</span></div>
-						<div data-tab="stats" class="about-act__tab"><span class="about-act__tab-title">Статистика по закону</span></div>
-						<div data-tab="chrono" class="about-act__tab"><span class="about-act__tab-title">Хронология закона</span></div>
-						<div class="about-act__tab"><span class="about-act__tab-title">Обсудить закон</span></div>
+						<button type="button" class="about-act__tab">Результаты голосований в гос. думе</button>
+						<button type="button" class="about-act__tab">Статистика по закону</button>
+						<button type="button" class="about-act__tab">Хронология закона</button>
+						<button type="button" class="about-act__tab">Обсудить закон</button>
 					</div>
 					<div class="about-act__contents">
-						<div data-content="gdRes" class="about-act__content">
+						<div class="about-act__content">
 							<h4 class="about-act__cont-title">Результаты голосований в гос. думе</h4>
 							<div class="about-act__cont-content">
-								<div class="about-act__pies">
-									<div class="about-act__pie">
-										<div class="about-act__diagram"></div>
-										<p class="about-act__d-desc">Фракция Всероссийской политичекой партии &#8220;Единая&nbsp;Россия&#8221;</p>
+								<div class="about-act__inner">
+									<div class="about-act__diagram-pack">
+										<div class="about-act__diagrams">
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<p class="diagram__description">Фракция Всероссийской политичекой партии &#8220;Единая&nbsp;Россия&#8221;</p>
+											</div>
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<p class="diagram__description">Фракция политичеекой партии &#8220;КПРФ&#8221;</p>
+											</div>
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<p class="diagram__description">Фракция политической партии &#8220;Справедливая&nbsp;Россия&#8221;</p>
+											</div>
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<p class="diagram__description">Фракция политической партии  &#8220;ЛДПР&#8221;</p>
+											</div>
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<p class="diagram__description">Общая статистика по всем партиям</p>
+											</div>
+										</div>
 									</div>
-									<div class="about-act__pie">
-										<div class="about-act__diagram"></div>
-										<p class="about-act__d-desc">Фракция политичеекой партии &#8220;КПРФ&#8221;</p>
+									<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--blue">Не голосовали</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 									</div>
-									<div class="about-act__pie">
-										<div class="about-act__diagram"></div>
-										<p class="about-act__d-desc">Фракция политической партии &#8220;Справедливая&nbsp;Россия&#8221;</p>
-									</div>
-									<div class="about-act__pie">
-										<div class="about-act__diagram"></div>
-										<p class="about-act__d-desc">Фракция политической партии  &#8220;ЛДПР&#8221;</p>
-									</div>
-									<div class="about-act__pie">
-										<div class="about-act__diagram"></div>
-										<p class="about-act__d-desc">Общая статистика по всем партиям</p>
-									</div>
-								</div>
-								<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--blue">Не голосовали</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 								</div>
 							</div>
 						</div>
-						<div data-content="stats" class="about-act__content">
+						<div class="about-act__content">
 							<h4 class="about-act__cont-title">Статистика по закону</h4>
 							<div class="about-act__cont-content">
+								<div class="about-act__inner">
+									<div class="type-tabs">
+										<div class="type-tabs__tab type-tabs__tab--active">
+											<h5 class="type-tabs__title">Пол/возраст</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">Образование</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">Статус</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">География</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">Карьера</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">Религия</h5>
+										</div>
+										<div class="type-tabs__tab">
+											<h5 class="type-tabs__title">Политика</h5>
+										</div>
+									</div>
+									<div class="about-act__diagram-pack">
+										<div class="about-act__diagrams">
+											<div class="diagram diagram--show">
+												<div class="diagram__showing diagram__showing--bars"><img src="http://placehold.it/135" class="diagram__img diagram__img--bars"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+											<div class="diagram">
+												<div class="diagram__showing diagram__showing--pie"><img src="http://placehold.it/135" class="diagram__img diagram__img--pie"/></div>
+											</div>
+										</div>
+									</div>
+									<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div data-content="chrono" class="about-act__content">
+						<div class="about-act__content">
 							<h4 class="about-act__cont-title">Хронология закона</h4>
 							<div class="about-act__cont-content">
+								<div class="about-act__inner">
+									<div class="scrl-area">
+										<div class="scrl-area__canvas">
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.</p>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+						<div class="about-act__content about-act__content--btn"><a href="#" class="about-act__cont-title about-act__cont-title--btn">Обсудить закон</a></div>
 					</div>
 				</div>
 			</div>

@@ -2,15 +2,7 @@
 	padding 82px 0 20px
 	
 	&__wrapper
-		@extend $row
-		
-		padding 0 10px
-	
-	&__face
-		@extend $col-3
-	
-	&__desc
-		@extend $col-12
+		@extend $pad-row
 	
 	&__face
 	&__param
@@ -18,12 +10,9 @@
 		display none
 	
 	&__title
-		@extend $col-12, $title-h2
+		@extend $title-h2
 		
 		color blue
-	
-	&__date
-		@extend $col-12
 	
 	&__date-time
 		@extend $very-small-text
@@ -45,8 +34,9 @@
 			display block
 
 		&__face
-			mq-col(3)
-		
+			width 25%
+			padding-right 25px
+
 		&__img
 			width 100%
 			max-height 100%
@@ -55,18 +45,16 @@
 		&__desc
 			@extend $row
 			
-			mq-col(9)
+			width 75%
 		
 		&__title
-			mq-col(9)
+			width 75%
 		
 		&__description
-			@extend $col-12
-
 			margin-bottom 20px
 		
 		&__date
-			mq-col(3)
+			width 25%
 		
 		&__date-time
 			text-align right
@@ -78,15 +66,12 @@
 			margin-bottom 15px
 			
 			&:nth-child(2n+1)
-				@extend $col-3
+				width 25%
 				
 				padding-right 20px
 			
 			&:nth-child(2n)
-				@extend $col-9
-		
-		&__download
-			@extend $col-12
+				width 75%
 		
 		&__link
 			@extend $small-text

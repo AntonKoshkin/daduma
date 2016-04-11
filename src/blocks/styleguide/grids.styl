@@ -1,0 +1,27 @@
+smWidth	= 337px
+mdWidth	= 940px
+lgWidth	= 1200px
+
+$row
+	display flex
+	min-width 337px
+	margin 0 auto
+	width 100%
+	flex-wrap wrap
+
+$pad-row
+	@extend $row
+	
+	padding 0 10px
+	
+	@media (min-width mdWidth)
+		padding 0 20px
+
+$just-between
+	justify-content space-between
+
+$just-center
+	justify-content center
+
+$va-middle
+	align-items center

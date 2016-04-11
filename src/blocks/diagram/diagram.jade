@@ -1,0 +1,18 @@
+//- types:
+//- 	bars
+//- 	diagram
+//- 	diagram-deputy
+//- 	lines
+
+//- places:
+//- 	main - index.jade
+
+mixin diagram(place, type, descr)
+	.diagram(class=attributes.class)
+		.diagram__showing(
+			class='diagram__showing--'+type)
+			img.diagram__img(
+				class='diagram__img--'+type
+				src='http://placehold.it/135')
+		if descr
+			p.diagram__description!=descr

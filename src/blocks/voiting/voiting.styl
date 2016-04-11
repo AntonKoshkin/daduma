@@ -1,14 +1,12 @@
 .voiting
 	&__wrapper
-		@extend $row
-		
-		padding 0 10px
+		@extend $pad-row
 	
 	&__btns
-		@extend $col-12, $row, $justify-between
-	
+		@extend $row, $just-between
+
 	&__bar
-		@extend $col-12
+		width 100%
 
 	@media (min-width tablet)
 		&__wrapper

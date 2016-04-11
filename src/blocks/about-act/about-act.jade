@@ -4,22 +4,23 @@ mixin abAct
 			if block
 				block
 
-mixin abActTab(title, id)
-	.about-act__tab(data-tab!=id)
-		span.about-act__tab-title!=title
+mixin abActTab(title)
+	button.about-act__tab(
+		type='button')!=title
 
-mixin abActCont(id, title)
-	.about-act__content(data-content!=id)
-		h4.about-act__cont-title!=title
-		.about-act__cont-content
-			if block
-				block
+mixin abActCont(title, isBtn)
+	if isBtn === true
+		.about-act__content.about-act__content--btn
+			a.about-act__cont-title.about-act__cont-title--btn(
+				href='#')!=title
+	else
+		.about-act__content
+			h4.about-act__cont-title!=title
+			.about-act__cont-content
+				.about-act__inner
+					if block
+						block
 
 mixin abActLeg(title, color)
 	span.about-act__legend(
 		class='about-act__legend--'+color)!=title
-
-mixin abActPie(desc)
-	.about-act__pie
-		.about-act__diagram
-		p.about-act__d-desc!=desc

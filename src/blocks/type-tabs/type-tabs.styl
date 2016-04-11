@@ -1,0 +1,19 @@
+.type-tabs
+	margin-bottom 20px
+	
+	&__title
+		@extend $extra-small-text
+		
+		cursor pointer
+		text-transform uppercase
+		display inline-block
+		margin-bottom 5px
+		padding 5px 0
+		position relative
+	
+	&__tab--active &__title
+		&:before
+			@extend $pseudo-bottom-fullwidth
+			
+			height 1px
+			background-color blue
