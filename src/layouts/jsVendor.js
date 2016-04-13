@@ -1,4 +1,5 @@
-// ../../bower_components/jquery/dist/jquery.js
-// ../blocks/owl/owl.carousel.js
-//= ../../bower_components/slick-carousel/slick/slick.js
-// ../blocks/rating/rating.js
+// slider
+//= ../blocks/sliders/owl.carousel.js
+
+// headerscroll hiding plagin
+//= ../../bower_components/scroll-up-bar/dist/scroll-up-bar.js

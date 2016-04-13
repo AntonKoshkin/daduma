@@ -1,0 +1,58 @@
+.owl
+	&-nav
+		text-align center
+		
+	&-prev
+	&-next
+		@extend $btn-reset, $font-reset
+		size 30px
+		
+		background-color blue
+		position relative
+		cursor pointer
+		display inline-block
+		
+		&:before
+			@extend $pseudo-center
+	
+	&-prev
+		margin-right 3px
+		
+		&:before
+			triangle left 8px 5px white
+	
+	&-next
+		&:before
+			triangle right 8px 5px white
+	
+	&-dots
+		margin-top 20px
+		text-align center
+
+	&-dot
+		size 10px
+		
+		cursor pointer
+		border-radius 50%
+		background-color gray-light
+		display inline-block
+		
+		&:not(:last-child)
+			margin-right 10px
+
+		&.active
+			background-color pink
+
+	@media (min-width tablet)
+		&-nav
+			display inline-block
+			position absolute
+			right -20px
+			bottom -20px
+
+.usage
+	.owl
+		&-stage
+		&-item
+			display flex
+			align-items stretch

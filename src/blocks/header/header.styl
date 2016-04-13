@@ -1,18 +1,15 @@
 .header
 	padding 15px 0 18px
 	background-color white
-	position fixed
+	// position fixed
+	position absolute
 	top 0
 	left 0
 	width 100%
+	box-shadow 0 1px 10px black
 
 	&__wrapper
 		@extend $pad-row, $va-middle, $font-reset, $just-between
-		
-		// padding 0 10px
 	
 	@media (min-width tablet)
 		position relative
-		
-		// &__wrapper
-		// 	padding 0 20px

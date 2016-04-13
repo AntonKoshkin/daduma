@@ -1,0 +1,124 @@
+.sides
+	margin-bottom 30px
+	
+	&__wrapper
+		max-width 1200px
+		width 100%
+		margin auto
+		padding 0 10px
+	
+	&__titles
+	&__contents
+		@extend $row
+		
+		background-color white
+	
+	&__title
+		@extend $title-h1
+		
+		width 50%
+		background-color gray-lighter
+		text-align center
+		padding 14px
+		cursor pointer
+		
+		&--active
+			background-color white
+		
+		&--invise
+			display none
+		
+		&--green
+			color green
+		
+		&--red
+			color pink
+	
+	&__contents
+		padding 10px
+	
+	&__content
+		display none
+		text-align center
+		
+		&--show
+			display block
+	
+	&__text
+		text-align justify
+		margin-bottom 35px
+		
+		p
+			@extend $very-small-text
+			
+			margin-bottom 10px
+			color gray
+	
+	&__suggestion
+		@extend $btn-reset, $not-so-small-text
+		
+		text-transform uppercase
+		text-decoration underline
+		margin-bottom 20px
+		padding 5px
+		
+	&__content--green &__suggestion
+		color green
+	
+	&__content--red &__suggestion
+		color pink
+	
+	@media (min-width tablet)
+		&__wrapper
+			padding 0 20px
+			
+		&__title
+			cursor default
+			background-color #e
+			margin-bottom 0
+			
+			&--invise
+				display inline
+			
+			&:last-child
+				background-color gray-lighter
+		
+		&__contents
+			padding 20px 0
+			align-items stretch
+			border 1px solid gray-lighter
+			border-top none
+		
+		&__content
+			flex-basis 50%
+			display flex
+			flex-direction column
+			justify-content space-between
+			
+			&:first-child
+				border-right 1px solid gray-lighter
+		
+		&__text
+			padding 0 20px
+			
+			p
+				padding-left 40px
+				position relative
+				
+				&:before
+					@extend $pseudo-left-top
+					
+					left 5px
+
+		&__suggestion
+			margin-bottom 0
+		
+		&__content--red
+			p
+				&:before
+					bicon(ex, 16)
+		
+		&__content--green
+			p
+				&:before
+					bicon(galka, 16)

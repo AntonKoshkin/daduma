@@ -16,9 +16,28 @@ $pseudo-left
 	left 0
 	transform translateY(-50%)
 
+$pseudo-left-top
+	@extend $pseudo
+	
+	top 0
+	left 0
+
 $pseudo-bottom-fullwidth
 	@extend $pseudo
 	
 	bottom 0
 	left 0
 	width 100%
+
+$pseudo-bottom-left
+	@extend $pseudo
+	
+	bottom 0
+	left 0
+
+$pseudo-center
+	@extend $pseudo
+	
+	top 50%
+	left 50%
+	transform translate(-50%, -50%)

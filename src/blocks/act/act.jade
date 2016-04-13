@@ -1,3 +1,9 @@
+mixin act
+	section.act
+		.act__wrapper
+			if block
+				block
+
 mixin actParam(title, text)
 	.act__param
 		+sTitle(title)
@@ -6,7 +12,7 @@ mixin actParam(title, text)
 mixin actFace
 	.act__face
 		img.act__img(
-			src='http://placehold.it/300x200'
+			src='http://placekitten.com/300/200'
 			alt='Исображение документа')
 		if block
 			block
@@ -31,9 +37,3 @@ mixin actDesc(title)
 				href='#'
 				download) Скачать полный текст закона
 			span.act__download-statistic (скачали 18 953 раз)
-
-mixin act
-	.act
-		.act__wrapper
-			if block
-				block

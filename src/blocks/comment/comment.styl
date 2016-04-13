@@ -1,0 +1,47 @@
+.comment
+	position relative
+	padding-top 25px
+	padding-bottom 15px
+	border-bottom 1px solid gray-lighter
+	
+	&__face
+		size 50px
+		
+		float left
+		margin-right 10px
+		margin-bottom 5px
+		margin-top 4px
+		position relative
+	
+	&__name
+		@extend $small-text
+		
+		color blue
+		font-weight medium
+	
+	&__date
+		@extend $very-small-text
+		
+		color gray
+		display block
+	
+	&__text
+		@extend $very-small-text
+		
+		clear both
+		font-weight light
+	
+	&__like
+		@extend $very-small-text
+		
+		position absolute
+		left 60px
+		bottom 0
+		font-weight medium
+		cursor pointer
+		
+		&:before
+			@extend $pseudo-right
+			bicon(heart.empty, 12)
+			
+			right -20px

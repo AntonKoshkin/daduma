@@ -1,0 +1,30 @@
+mixin sides
+	section.sides
+		.sides__wrapper
+			.sides__titles
+				buttons.sides__title.sides__title--green.sides__title--active(
+					type='button')
+					| Плюсы
+					span.sides__title--invise  законопроекта
+				buttons.sides__title.sides__title--red(
+					type='button')
+					| Минусы
+					span.sides__title--invise  законопроекта
+			.sides__contents
+				if block
+					block
+
+mixin side(color)
+	.sides__content(
+		class=attributes.class
+		class='sides__content--'+color)
+			if block
+				block
+
+mixin sugg(side)
+	if side === 'green'
+		button.sides__suggestion(
+			type='button') Предложить плюс
+	if side === 'red'
+		button.sides__suggestion(
+			type='button') Предложить минус

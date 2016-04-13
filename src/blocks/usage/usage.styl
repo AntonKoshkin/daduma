@@ -1,0 +1,50 @@
+.usage
+	&__item
+		width 100%
+		padding 0 10px
+		display flex
+		align-items stretch
+
+	&__content
+		max-width 500px
+		border 1px solid gray-lighter
+		border-radius 3px
+		margin 0 auto
+	
+	&__face
+		@extend $font-reset
+		
+		max-height 135px
+		overflow hidden
+		text-align center
+		
+		&:before
+			content ''
+			width 0
+			height 100%
+			display inline-block
+			vertical-align middle
+		
+	&__img
+		width 100%
+		vertical-align middle
+	
+	&__desc
+		padding 10px
+	
+	&__name
+		@extend $small-text
+		
+		font-weight medium
+		margin-bottom 10px
+	
+	&__text
+		@extend $very-small-text
+		
+		color gray
+		text-align justify
+		margin-bottom 10px
+	
+	@media (min-width desktop)
+		&__item
+			padding 0 20px

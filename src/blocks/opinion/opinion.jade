@@ -1,0 +1,18 @@
+mixin opinion
+	.opinion
+		if block
+			block
+
+mixin opItem(img, text, name, link)
+	.opinion__item
+		.opinion__face
+			// изображения необходимо кропать под квадрат
+			img.opinion__img(
+				src=img
+				alt='Фото эксперта')
+		blockquote.opinion__bq
+			p.opinion__text!=text
+			cite.opinion__name
+				a(
+					href!=link
+					target='_blank')!=name

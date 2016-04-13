@@ -1,0 +1,24 @@
+.section
+	width 100%
+	max-width 1200px
+	margin 0 auto 30px
+	padding 0 10px
+	
+	&__wrapper
+		background-color white
+		padding 10px
+		position relative
+	
+	&__title
+		@extend $title-very-big
+		
+		font-weight regular
+		margin-bottom 20px
+		text-align center
+	
+	@media (min-width tablet)
+		margin-bottom 50px
+		padding 0 20px
+		
+		&__wrapper
+			border 1px solid gray-lighter

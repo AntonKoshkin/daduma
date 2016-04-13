@@ -1,12 +1,17 @@
 mixin abAct
-	.about-act
+	section.about-act
 		.about-act__wrapper
 			if block
 				block
 
-mixin abActTab(title)
-	button.about-act__tab(
-		type='button')!=title
+mixin abActTab(title, isBtn)
+	if isBtn === true
+		button.about-act__tab.about-act__tab--btn(
+			type='button')!=title
+	else
+		button.about-act__tab(
+			class=attributes.class
+			type='button')!=title
 
 mixin abActCont(title, isBtn)
 	if isBtn === true
@@ -14,7 +19,7 @@ mixin abActCont(title, isBtn)
 			a.about-act__cont-title.about-act__cont-title--btn(
 				href='#')!=title
 	else
-		.about-act__content
+		.about-act__content(class=attributes.class)
 			h4.about-act__cont-title!=title
 			.about-act__cont-content
 				.about-act__inner

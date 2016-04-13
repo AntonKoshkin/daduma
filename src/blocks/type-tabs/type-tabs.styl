@@ -17,3 +17,35 @@
 			
 			height 1px
 			background-color blue
+	
+	&__slice
+		display none
+	
+	@media (min-width tablet)
+		@extend $single-row, $just-left
+		tab-row()
+		
+		border-bottom 1px solid gray-lighter
+		position relative
+		
+		&__tab
+			flex-basis 1%
+			white-space nowrap
+			margin-right 45px
+		
+		&__title
+			margin-bottom 0
+			padding 15px 8px
+			
+			&:before
+				display none
+		
+		&__slice
+			display inline-block
+			height 1px
+			background-color blue
+			position absolute
+			bottom -1px
+			left 7px
+			width 74px
+			transition .3s

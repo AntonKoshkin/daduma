@@ -1,0 +1,58 @@
+.opinion
+	text-align center
+	
+	&__face
+		@extend $font-reset
+		size 100px
+		
+		overflow hidden
+		border-radius 50%
+		margin 0 auto 20px
+		
+		&:before
+			@extend $font-reset
+			
+			content ''
+			width 0
+			height 100%
+			display inline-block
+			vertical-align middle
+
+	&__img
+		width 100%
+		vertical-align middle
+	
+	&__face &__img
+		display inline-block
+	
+	&__bq
+		@extend $small-text
+		
+		margin-bottom 20px
+	
+	&__text
+		color gray
+		margin-bottom 20px
+		font-style italic
+		font-family yefimov
+	
+	&__name
+		font-style normal
+		font-weight medium
+
+	@media (min-width tablet)
+		&__item
+			display flex
+			flex-wrap nowrap
+		
+		&__face
+			margin 0 20px 0 10px
+			flex-shrink 0
+		
+		&__bq
+			flex-shrink 1
+			text-align left
+			padding-right 100px
+		
+		&__text
+			padding-top 10px

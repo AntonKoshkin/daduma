@@ -1,8 +1,8 @@
 .about-act
+	margin-bottom 30px
+	
 	&__wrapper
 		@extend $pad-row
-		
-		margin-bottom 300px
 	
 	&__tabs
 		display none
@@ -22,7 +22,7 @@
 		
 		background-color gray-lighter
 		text-transform uppercase
-		padding 16px 0
+		padding 16px 10px
 		cursor pointer
 		font-weight medium
 		text-align left
@@ -30,21 +30,41 @@
 		&--btn
 			display block
 	
+	&__type
+		@extend $row
+		
+		width 100%
+		display flex
+		padding 20px
+		
+		&:not(:first-child)
+			display none
+		
+		> .diagram
+			width 100%
+	
 	&__cont-content
 		background-color white
-		height 0
+		display none
 	
 	&__inner
 		padding 10px
+	
+	&__diagrams
+		@extend $row, $just-center
+		
+		> .diagram
+			flex-basis 100%
 	
 	&__legend
 		@extend $small-text
 		
 		padding-left 55px
 		position relative
-		width 100%
 		display inline-block
 		text-align left
+		margin-right 35px
+		min-width 175px
 		
 		&:before
 			@extend $pseudo-left
@@ -69,9 +89,75 @@
 				background-color blue
 	
 	@media (min-width tablet)
+		margin-bottom 50px
+	
+		&__tabs
+			@extend $row, $just-between, $single-row
+			
+			display flex
+			flex-basis 100%
+		
+		&__tab
+			@extend $btn-reset, $very-small-text
+			
+			text-align center
+			background-color gray-lighter
+			flex-basis 25%
+			// width 25%
+			padding 14.5px
+			outline none
+			white-space nowrap
+			
+			&:first-child
+				flex-shrink 0
+				flex-grow 1
+			
+			&:not(:last-child)
+				margin-right 3px
+				
+			&:not(:first-child)
+				flex-shrink 1
+			
+			&--active
+				background-color white
+		
+		&__contents
+			padding-top 35px
+			background-color white
+			flex-basis 100%
+			margin-bottom 0
+
 		&__content
-			&--btn
-				display none
+			border none
+			
+			&--show
+				display block
 		
 		&__cont-title
 			display none
+		
+		&__cont-content
+			height auto
+			display block
+		
+		&__inner
+			padding-left 20px
+			padding-right 20px
+		
+		&__type
+			@extend $just-center
+			// tab-row()
+		
+		&__type	
+		&__diagrams
+			> .diagram
+				flex-basis 25%
+		
+		&__legends
+			text-align left
+	
+	@media (min-width desktop)
+		&__type
+		&__diagrams
+			> .diagram
+				flex-basis 20%

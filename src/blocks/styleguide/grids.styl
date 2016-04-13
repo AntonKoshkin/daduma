@@ -2,12 +2,24 @@ smWidth	= 337px
 mdWidth	= 940px
 lgWidth	= 1200px
 
-$row
-	display flex
-	min-width 337px
-	margin 0 auto
+$wrapper
 	width 100%
+	max-width lgWidth
+	margin 0 auto
+
+$row
+	@extend $wrapper
+	
+	display flex
 	flex-wrap wrap
+
+tab-row()
+	@media (min-width tablet)
+		display flex
+		width 100%
+		max-width lgWidth
+		margin 0 auto
+		flex-wrap wrap
 
 $pad-row
 	@extend $row
@@ -17,11 +29,17 @@ $pad-row
 	@media (min-width mdWidth)
 		padding 0 20px
 
+$single-row
+	flex-wrap nowrap
+
 $just-between
 	justify-content space-between
 
 $just-center
 	justify-content center
+
+$just-left
+	justify-content flex-start
 
 $va-middle
 	align-items center

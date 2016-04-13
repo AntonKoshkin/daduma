@@ -1,0 +1,17 @@
+mixin usage
+	.usage
+		if block
+			block
+
+mixin usItem(link, img, title, text)
+	article.usage__item
+		a.usage__content(
+			href=link
+			target='_blank')
+			.usage__face
+				img.usage__img(
+					src=img
+					alt='')
+			.usage__desc
+				.usage__name!=title
+				.usage__text!=text

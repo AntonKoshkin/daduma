@@ -10,9 +10,23 @@ jQuery(document).ready(function($) {
 
 		$(this)
 			.closest('.about-act__content')
-			.find('.diagram')
-			.removeClass('diagram--show')
+			.find('.about-act__type')
 			.eq($(this).closest('.type-tabs__tab').index())
-			.addClass('diagram--show');
+			.css('display', 'flex')
+			.siblings()
+			.hide();
+
+		var
+			thisPosLeft	=	$(this)
+									.closest('.type-tabs__tab')
+									.position()
+									.left + 7,
+			thisWidth	=	$(this).width() + 1;
+
+		$('.type-tabs__slice')
+			.css({
+				left: thisPosLeft,
+				width: thisWidth
+			});
 	});
 });
