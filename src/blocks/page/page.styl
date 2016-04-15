@@ -18,7 +18,26 @@ body
 .page
 	&__content
 		margin-top 78px
+
+	&__comments
+		margin-bottom 30px
 	
+	&__numbers
+		text-align center
+	
+	&__diags
+		display none
+
 	@media (min-width tablet)
 		&__content
 			margin-top 0
+			
+		&__numbers
+			display flex
+			flex-wrap nowrap
+			justify-content space-around
+		
+		&__diags
+			display flex
+			flex-wrap nowrap
+			justify-content space-around

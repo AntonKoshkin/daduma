@@ -1,5 +1,5 @@
 // svg cashing
-//= ../blocks/template/svgCash.js
+// ../blocks/template/svgCash.js
 
 // header scroll hidding
 //= ../blocks/header/header.js

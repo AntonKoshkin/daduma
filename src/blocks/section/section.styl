@@ -4,10 +4,16 @@
 	margin 0 auto 30px
 	padding 0 10px
 	
+	&--fullwidth
+		max-width 100%
+		padding 0
+		background-color white
+		margin 0
+		
 	&__wrapper
 		background-color white
-		padding 10px
 		position relative
+		padding 10px
 	
 	&__title
 		@extend $title-very-big
@@ -16,9 +22,29 @@
 		margin-bottom 20px
 		text-align center
 	
+	&--fullwidth &__wrapper
+		max-width 1200px
+		width 100%
+		margin auto
+		border none
+		padding 50px 10px 60px
+	
+	&--fullwidth &__title
+		margin-bottom 50px
+	
 	@media (min-width tablet)
 		margin-bottom 50px
 		padding 0 20px
 		
+		&--fullwidth
+			margin-bottom 0
+		
 		&__wrapper
 			border 1px solid gray-lighter
+			padding 20px 30px
+			
+		&--small-pad &__wrapper
+			padding 20px 10px
+		
+		&--fullwidth &__wrapper
+			padding 50px 20px 60px

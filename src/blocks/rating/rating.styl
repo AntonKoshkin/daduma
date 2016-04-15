@@ -2,19 +2,20 @@
 	text-align center
 	
 	&__visual
-	&__stars
-		height 12px
-		background-position left center
-		background-repeat repeat-x
-	
-	&__visual
+		bicon(star.gray, 12)
+		
 		width 60px
 		display inline-block
-		bimg(star.gray)
 		margin-right 13px
 	
 	&__stars
-		bimg(star.yellow)
+		bicon(star.yellow, 12)
+	
+	&__visual
+	&__stars
+		height 12px
+		background-position 0 50%
+		background-repeat repeat-x
 	
 	&__number
 		@extend $small-text

@@ -1,3 +1,12 @@
+-var projectImg		= 'http://zak.k-dev.ru/img/logo.jpg'
+-var projectFavicon	= '/img/favicon.png'
+-var faviconSize		= 32
+-var themeColor		= '#4b5a6e'
+-var themeTitle		= 'Сайт в законе'
+-var themeName			= 'Сайт про законы'
+
+-var needHTML5shiv	= true
+
 meta(charset='UTF-8')
 
 //- for adaptive
@@ -12,18 +21,59 @@ meta(
 	content='true')
 meta(
 	property='og:image'
-	content='http://zak.k-dev.ru/img/logo.jpg')
+	content=projectImg)
 link(
 	rel='icon'
 	type='image/png'
-	sizes='32x32'
-	href='/img/favicon.png')
+	sizes=faviconSize+'x'+faviconSize
+	href=projectFavicon)
+
+//- CHROME, FF, OPERA
+meta(
+	name='theme-color'
+	content=themeColor)
+
+//- IE, EDGE
+meta(
+	name='application-name'
+	content=themeName)
+meta(
+	name='msapplication-tooltip'
+	content=themeTitle)
+meta(
+	name='msapplication-starturl'
+	content='./')
+meta(
+	name='msapplication-navbutton-color'
+	content=themeColor)
+
+//- SAFARI
+meta(
+	name='apple-mobile-web-app-capable'
+	content='yes')
+meta(
+	name='apple-mobile-web-app-status-bar-style'
+	content='black-translucent')
+meta(
+	name='format-detection'
+	content='telephone=no')
+
+//- YA BR
+//- meta(
+//- 	name='viewport'
+//- 	content='ya-title='+themeColor+',ya-dock=fade')
 
 //- html5shiv
-<!--[if lt IE 9]>
-script(
-	src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
-<![endif]-->
+if needHTML5shiv
+	<!--[if lt IE 9]>
+	script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+	<![endif]-->
+
+//- flexbox polifill
+script(src='js/flexbox-polifill.js')
+
+//- IE 10, 11 detecting
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
 
 //- fonts
 link(
@@ -36,7 +86,8 @@ link(
 	rel='stylesheet'
 	href='css/style.css')
 
-script(
+//- modernizr
+//- script(
 	src='js/modernizr.js'
 	async
 	defer)

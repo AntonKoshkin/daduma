@@ -1,7 +1,7 @@
 mixin promoItem(icon, title, text)
-	.promo__perk
+	.promo__perk(class='promo__perk--'+icon)
 		.promo__perk-content
-			+svg(icon)(class='promo__img')
+			//- +svg(icon)(class='promo__img')
 			h3.promo__perk-title!=title
 			p.promo__text!=text
 

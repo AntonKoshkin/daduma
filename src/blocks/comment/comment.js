@@ -4,19 +4,18 @@ jQuery(document).ready(function($) {
 		
 		var numOfLikes = $(this).text();
 		
-		if ($(this).hasClass('.comment__like--liked')) {
-			// var newNumOfLikes = (+numOfLikes - 1).toString();
-
+		if ($(this).hasClass('comment__like--liked')) {
+			numOfLikes--;
 			
 			$(this)
-				.removeClass('.comment__like--liked')
-				// .text(newNumOfLikes);
-				.text((numOfLikes--).toString());
+				.removeClass('comment__like--liked')
+				.text(numOfLikes.toString());
 		} else {
+			numOfLikes++;
+
 			$(this)
-				.text(numOfLikes++)
-				.addClass('.comment__like--liked')
-			console.log(numOfLikes);
+				.text(numOfLikes.toString())
+				.addClass('comment__like--liked');
 		}
 	});
 });

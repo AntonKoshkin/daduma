@@ -8,13 +8,23 @@ jQuery(document).ready(function($) {
 			.siblings()
 			.removeClass('type-tabs__tab--active');
 
-		$(this)
-			.closest('.about-act__content')
-			.find('.about-act__type')
-			.eq($(this).closest('.type-tabs__tab').index())
-			.css('display', 'flex')
-			.siblings()
-			.hide();
+		if ($('.ie10').length !== 0) {
+			$(this)
+				.closest('.about-act__content')
+				.find('.about-act__type')
+				.eq($(this).closest('.type-tabs__tab').index())
+				.show()
+				.siblings()
+				.hide();
+		} else {
+			$(this)
+				.closest('.about-act__content')
+				.find('.about-act__type')
+				.eq($(this).closest('.type-tabs__tab').index())
+				.css('display', 'flex')
+				.siblings()
+				.hide();
+		}
 
 		var
 			thisPosLeft	=	$(this)

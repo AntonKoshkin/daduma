@@ -1,7 +1,12 @@
 .logo
-	&__img
-		width 55px
-		height 45px
+	position relative
+	
+	&:before
+		@extend $pseudo
+		bicon(logo, 45)
+		
+		position static
+		display inline-block
 	
 	&__text
 		display none
@@ -11,7 +16,7 @@
 		display flex
 		align-items center
 		
-		&__img
+		&:before
 			margin-right 12px
 		
 		&__text

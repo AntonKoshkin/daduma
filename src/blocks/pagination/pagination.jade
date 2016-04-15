@@ -1,0 +1,8 @@
+mixin pag(page, pages)
+	.pagination
+		button.pagination__btn.pagination__btn--prev(type='button') Назад
+		p.pagination__page
+			| Страница
+			span.pagination__page--number=page
+			span.pagination__page--gray='из '+pages
+		button.pagination__btn.pagination__btn--next(type='button') Дальше

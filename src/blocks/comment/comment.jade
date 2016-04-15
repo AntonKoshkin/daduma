@@ -4,6 +4,7 @@ mixin comment(img, name, date, datetime, likes, text)
 			img.comment__img(
 				src!=img
 				alt='')
+			// если коммент лайкнут, то у него есть класс comment__like--liked
 			if attributes.liked
 				span.comment__like.comment__like--liked=likes
 			else

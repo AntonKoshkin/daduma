@@ -7,9 +7,10 @@
 	left 0
 	width 100%
 	box-shadow 0 1px 10px black
+	min-width 320px
 
 	&__wrapper
 		@extend $pad-row, $va-middle, $font-reset, $just-between
 	
 	@media (min-width tablet)
-		position relative
+		position static !important

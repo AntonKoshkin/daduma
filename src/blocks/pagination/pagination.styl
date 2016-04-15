@@ -1,0 +1,38 @@
+.pagination
+	display none
+	
+	@media (min-width desktop)
+		display flex
+		flex-wrap nowrap
+		width 365px
+		margin auto
+		background-color rgba(#f5, .5)
+		align-items center
+		justify-content space-between
+		margin-bottom 30px
+		
+		
+		&__btn
+			@extend $btn-reset, $mega-small-text
+			
+			font-weight regular
+			text-transform uppercase
+			padding 15px 20px
+		
+		&__page
+			@extend $very-small-text
+			
+			font-weight regular
+			
+			&--number
+				size 30px
+				
+				display inline-block
+				border 1px solid gray
+				background-color white
+				text-align center
+				line-height 29px
+				margin 10px
+		
+			&--gray
+				color gray

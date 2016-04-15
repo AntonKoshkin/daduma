@@ -7,20 +7,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<meta name="HandheldFriendly" content="true"/>
 		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
-		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/><!--[if lt IE 9]>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/>
+		<meta name="theme-color" content="#4b5a6e"/>
+		<meta name="application-name" content="Сайт про законы"/>
+		<meta name="msapplication-tooltip" content="Сайт в законе"/>
+		<meta name="msapplication-starturl" content="./"/>
+		<meta name="msapplication-navbutton-color" content="#4b5a6e"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="format-detection" content="telephone=no"/><!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
 		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css"/>
-		<script src="js/modernizr.js" async="async" defer="defer"></script>
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__wrapper">
 				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button>
 				<div class="logo">
-					<svg role="img" title="svg-logo" class="svg-logo logo__img">
-						<use xlink:href="img/svg-sprite.svg#svg-logo"></use>
-					</svg>
 					<p class="logo__text">Народная база законов</p>
 				</div>
 				<nav class="navigation">
@@ -47,38 +52,26 @@
 			<section class="promo">
 				<div class="promo__wrapper">
 					<div class="promo__perks">
-						<div class="promo__perk">
+						<div class="promo__perk promo__perk--toKnow">
 							<div class="promo__perk-content">
-								<svg role="img" title="svg-book" class="svg-book promo__img">
-									<use xlink:href="img/svg-sprite.svg#svg-book"></use>
-								</svg>
 								<h3 class="promo__perk-title">Узнать</h3>
 								<p class="promo__text">Узнать первыми о&nbsp;новых законопроектах и отношение населения к&nbsp;новым законопроектам</p>
 							</div>
 						</div>
-						<div class="promo__perk">
+						<div class="promo__perk promo__perk--toSay">
 							<div class="promo__perk-content">
-								<svg role="img" title="svg-interface" class="svg-interface promo__img">
-									<use xlink:href="img/svg-sprite.svg#svg-interface"></use>
-								</svg>
 								<h3 class="promo__perk-title">Высказать</h3>
 								<p class="promo__text">Высказать свое отношение к&nbsp;любому законопроекту</p>
 							</div>
 						</div>
-						<div class="promo__perk">
+						<div class="promo__perk promo__perk--toCompare">
 							<div class="promo__perk-content">
-								<svg role="img" title="svg-scale" class="svg-scale promo__img">
-									<use xlink:href="img/svg-sprite.svg#svg-scale"></use>
-								</svg>
 								<h3 class="promo__perk-title">Сравнить</h3>
 								<p class="promo__text">Сравнить свое отношение с&nbsp;отношением своей партии к&nbsp;любому законопроекту</p>
 							</div>
 						</div>
-						<div class="promo__perk">
+						<div class="promo__perk promo__perk--toChoose">
 							<div class="promo__perk-content">
-								<svg role="img" title="svg-security" class="svg-security promo__img">
-									<use xlink:href="img/svg-sprite.svg#svg-security"></use>
-								</svg>
 								<h3 class="promo__perk-title">Определиться</h3>
 								<p class="promo__text">Определиться с&nbsp;выбором партии и своими политическими взглядами</p>
 							</div>
@@ -426,7 +419,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="about-act__content about-act__content--btn"><a href="#" class="about-act__cont-title about-act__cont-title--btn">Обсудить закон</a></div>
+						<div class="about-act__content about-act__content--btn"><a href="#comments" class="about-act__cont-title about-act__cont-title--btn">Обсудить закон</a></div>
 					</div>
 				</div>
 			</section>
@@ -514,7 +507,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section section--small-pad">
 				<div class="section__wrapper">
 					<h2 class="section__title">Примеры применения закона и зарубежный опыт:</h2>
 					<div class="usage">
@@ -551,44 +544,113 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section id="comments" class="section">
 				<div class="section__wrapper">
 					<h2 class="section__title">Что Вы думаете по этому поводу?</h2>
-					<div class="comments">
+					<div class="page__comments">
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/><span class="comment__like comment__like--liked">15</span>
+							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like comment__like--liked">15</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<p draggable="true" class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/><span class="comment__like comment__like--liked">15</span>
+							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">235</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<p draggable="true" class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/><span class="comment__like comment__like--liked">15</span>
+							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">1</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<p draggable="true" class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/><span class="comment__like comment__like--liked">15</span>
+							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">79</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<p draggable="true" class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/><span class="comment__like comment__like--liked">15</span>
+							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">22</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<p draggable="true" class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+						</div>
+					</div>
+					<div class="pagination">
+						<button type="button" class="pagination__btn pagination__btn--prev">Назад</button>
+						<p class="pagination__page">Страница<span class="pagination__page--number">2</span><span class="pagination__page--gray">из 50</span></p>
+						<button type="button" class="pagination__btn pagination__btn--next">Дальше</button>
+					</div>
+					<form action="#" name="leaveComment" class="page__leave-comment">
+						<div class="textarea">
+							<textarea name="commentMessage" id="comment" placeholder="Оставить комментарий" required="" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit">
+							<input type="submit" value="Комментировать" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="section section--fullwidth">
+				<div class="section__wrapper">
+					<h2 class="section__title">Статистика нашего портала:</h2>
+					<div class="page__numbers">
+						<div class="number">
+							<p class="number__quantity">[<span class="number__quantity--sum">8354</span>]</p>
+							<p class="number__caption">Всего<br>пользователей</p>
+						</div>
+						<div class="number">
+							<p class="number__quantity">[<span class="number__quantity--sum">1264</span>]</p>
+							<p class="number__caption">Экспертов<br>зарегистрировано</p>
+						</div>
+						<div class="number">
+							<p class="number__quantity">[<span class="number__quantity--sum">813</span>]</p>
+							<p class="number__caption">Законов<br>опубликовано</p>
+						</div>
+					</div>
+					<div class="page__diags">
+						<div class="diagram diagram--stat">
+							<div class="diagram__showing diagram__showing--stat"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--stat"/>
+								<p class="diagram__description">Различных тематик</p>
+							</div>
+							<div class="diagram__legends">
+								<p class="diagram__legend diagram__legend--red">Первая тематика, <span class="diagram__legend--gray">185 законов</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">Вторая тематика, <span class="diagram__legend--gray">91 закон</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">Третья тематика, <span class="diagram__legend--gray">65 законов</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">Четвертая тематика, <span class="diagram__legend--gray">102 закона</span>
+								</p>
+							</div>
+						</div>
+						<div class="diagram diagram--stat">
+							<div class="diagram__showing diagram__showing--stat"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--stat"/>
+								<p class="diagram__description">Партий участвует в обсуждениях</p>
+							</div>
+							<div class="diagram__legends">
+								<p class="diagram__legend diagram__legend--red">Единая Россия, <span class="diagram__legend--gray">185 человек</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">КПРФ, <span class="diagram__legend--gray">91 человек</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">Справедливая Россия, <span class="diagram__legend--gray">65 человек</span>
+								</p>
+								<p class="diagram__legend diagram__legend--red">ЛДПР, <span class="diagram__legend--gray">102 человека</span>
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

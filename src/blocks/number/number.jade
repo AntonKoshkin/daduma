@@ -1,0 +1,7 @@
+mixin number(num, text)
+	.number
+		p.number__quantity
+			| [
+			span.number__quantity--sum=num
+			| ]
+		p.number__caption!=text

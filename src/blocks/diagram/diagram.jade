@@ -8,11 +8,30 @@
 //- 	main - index.jade
 
 mixin diagram(place, type, descr)
-	.diagram(class=attributes.class)
-		.diagram__showing(
-			class='diagram__showing--'+type)
-			img.diagram__img(
-				class='diagram__img--'+type
-				src='http://placekitten.com/135/135')
-		if descr
-			p.diagram__description!=descr
+	if type === 'stat'
+		.diagram(class=attributes.class)
+			.diagram__showing(
+				class='diagram__showing--'+type)
+				img.diagram__img(
+					class='diagram__img--'+type
+					src='http://placekitten.com/135/135')
+				if descr
+					p.diagram__description!=descr
+			.diagram__legends
+				if block
+					block
+	else
+		.diagram(class=attributes.class)
+			.diagram__showing(
+				class='diagram__showing--'+type)
+				img.diagram__img(
+					class='diagram__img--'+type
+					src='http://placekitten.com/135/135')
+			if descr
+				p.diagram__description!=descr
+
+mixin legItem(color, text, gray)
+	p.diagram__legend(class='diagram__legend--'+color)
+		!=text
+		| , 
+		span.diagram__legend--gray!=gray

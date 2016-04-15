@@ -1,0 +1,23 @@
+.textarea
+	@extend $font-reset
+	
+	margin-bottom 10px
+	
+	&__input
+		@extend $textarea-reset, $not-so-small-text
+		
+		resize none
+		border 1px solid gray-lighter
+		padding 10px
+		width auto
+		min-height 100px
+		width 100%
+		
+		+placeholder()
+			@extend $not-so-small-text
+			
+			color gray-lighter
+	
+	@media (min-width desktop)
+		&__input
+			min-height 66px

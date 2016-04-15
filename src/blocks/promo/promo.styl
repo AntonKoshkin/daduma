@@ -25,6 +25,27 @@
 	
 	&__perk
 		text-align center
+		padding-top 61px
+		
+		&:before
+			@extend $pseudo-top
+		
+		&--toKnow
+			&:before
+				bicon(promo.toKnow, 51)
+
+		&--toSay
+			&:before
+				bicon(promo.toSay, 51)
+
+		&--toCompare
+			&:before
+				bicon(promo.toCompare, 51)
+
+		&--toChoose
+			&:before
+				bicon(promo.toChoose, 51)
+
 	
 	&__perk-content
 		max-width 230px
