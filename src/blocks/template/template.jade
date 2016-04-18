@@ -1,6 +1,10 @@
 //- includes
 include svg-sprite
+
 include ../header/header
+include ../main/main
+include ../footer/footer
+
 include ../logo/logo
 include ../navigation/navigation
 include ../btn/btn
@@ -27,6 +31,7 @@ include ../textarea/textarea
 include ../btn-submit/btn-submit
 include ../pagination/pagination
 include ../number/number
+include ../social/social
 
 include ../klichko/klichko
 
@@ -40,12 +45,15 @@ html(lang="ru")
 	body
 		+header
 			+burger
-			+logo
+			+logo('header')
 			+navigation
 			+btn('Войти / Зарегистрироваться', 'person')
-		main.page__content
-			block content
-		footer.page__footer
+		block content
+		+footer
+			+logo('footer')
+			+social
+				+socItem('vk', 'Мы в VKontakte', 'http://vk.com/')
+				+socItem('fb', 'Мы в Facebook', 'http://facebook.com/')
 
 		if withKlichko === true
 			+klichko

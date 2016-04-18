@@ -1,5 +1,11 @@
-mixin btn(text, icon)
-	button.btn(
-		type='button'
-		class='btn--'+icon)
-		span.btn__text!=text
+mixin btn(text, icon, isLink)
+	if isLink === true
+		a.btn(
+			href=attributes.href
+			class='btn--'+icon)
+			span.btn__text!=text
+	else
+		button.btn(
+			type='button'
+			class='btn--'+icon)
+			span.btn__text!=text

@@ -14,7 +14,7 @@ module.exports = function() {
 				'jade',
 				'js',
 				'stylus',
-				'svgSprite'
+				// 'svgSprite'
 			],
 			cb
 		);

@@ -2,6 +2,12 @@ size(size)
 	width size
 	height size
 
+slow(prop)
+	if prop
+		transition prop .3s linear
+	else
+		transition .3s linear
+
 bgi(url)
 	@extend $bgi
 	background-image url

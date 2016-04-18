@@ -7,9 +7,25 @@
 		
 		position static
 		display inline-block
+		vertical-align middle
+	
+	&--footer
+		&:before
+			margin-right 12px
 	
 	&__text
+		@extend $logo-text
+		
+		display inline-block
+		color gray
+		border-left 1px solid gray-light
+		vertical-align middle
+	
+	&--header &__text
 		display none
+	
+	&--footer &__text
+		padding-left 10px
 	
 	@media (min-width tablet)
 		order -1
@@ -19,10 +35,6 @@
 		&:before
 			margin-right 12px
 		
-		&__text
-			@extend $logo-text
-			
+		&--header &__text
 			display inline-block
-			color gray
 			padding 10px
-			border-left 1px solid gray-light

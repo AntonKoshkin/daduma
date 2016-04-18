@@ -12,4 +12,12 @@ mixin comment(img, name, date, datetime, likes, text)
 		p.comment__name!=name
 		time.comment__date(
 			datetime!=datetime)=date
-		p.comment__text(draggable='true')!=text
+		.comment__letter
+			.comment__small-text
+				// текст комментария вставляется в 2 блока одинаковый
+				.comment__text-wrapper
+					p.comment__text!=text
+				button.comment__more(type='button') Развернуть комментарий
+			.comment__full-text
+				p.comment__text!=text
+				button.comment__more(type='button') Свернуть комментарий

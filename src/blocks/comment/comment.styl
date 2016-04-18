@@ -27,15 +27,38 @@
 	&__date
 		@extend $very-small-text
 		
-		color gray
+		color gray-light
 		display block
 	
+	&__letter
+		clear both
+
+	&__full-text
+		visibility hidden
+		position absolute
+	
+	&__letter--expand &__full-text
+		visibility visible
+		position static
+	
+	&__letter--expand &__small-text
+		visibility hidden
+		position absolute
+
 	&__text
 		@extend $very-small-text
 		
-		clear both
 		font-weight light
 	
+	&__more
+		@extend $btn-reset, $very-small-text
+		
+		text-decoration underline
+		font-weight medium
+	
+	&__small-text &__more
+		display none
+
 	&__like
 		@extend $very-small-text
 		
@@ -55,6 +78,31 @@
 			&:before
 				bicon(heart.full)
 	
+	@media (min-width tablet)
+		&__face
+			position static
+		
+		&__name
+		&__date
+			display inline-block
+		
+		&__name
+			margin-right 20px
+		
+		&__date
+			font-size .6875rem
+		
+		&__like
+			position absolute
+			right 20px
+			top 25px
+			bottom auto
+			left auto
+		
+		&__letter
+			clear none
+			padding-left 60px
+
 	@media (min-width desktop)
 		&:nth-child(n+4)
 			display block

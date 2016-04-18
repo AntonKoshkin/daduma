@@ -1,0 +1,26 @@
+.social
+	&__link
+		@extend $font-reset
+		slow(opacity)
+		
+		display inline-block
+		opacity .15
+		
+		&--vk
+			&:before
+				bicon(social.vk, 32)
+		
+		&--fb
+			&:before
+				bicon(social.fb, 32)
+		
+		&:not(:last-child)
+			margin-right 15px
+		
+		&:hover
+			opacity 1
+		
+		&:before
+			content ''
+			display inline-block
+			

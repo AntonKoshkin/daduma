@@ -19,9 +19,9 @@ module.exports = function() {
 		watch(config.pathTo.watch.js, function() {
 			gulp.start('js');
 		});
-		watch(config.pathTo.watch.svgSprite, function() {
-			gulp.start('svgSprite');
-		});
+		// watch(config.pathTo.watch.svgSprite, function() {
+		// 	gulp.start('svgSprite');
+		// });
 		watch(config.pathTo.watch.assets, function() {
 			gulp.start('assets');
 		});

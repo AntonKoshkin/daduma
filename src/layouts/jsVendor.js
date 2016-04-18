@@ -3,3 +3,6 @@
 
 // headerscroll hiding plagin
 //= ../../bower_components/scroll-up-bar/dist/scroll-up-bar.js
+
+// threedotter
+//= ../blocks/dotdotdot/dotdotdot.js

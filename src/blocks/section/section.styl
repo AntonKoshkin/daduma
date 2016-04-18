@@ -7,13 +7,35 @@
 	&--fullwidth
 		max-width 100%
 		padding 0
-		background-color white
 		margin 0
+	
+	&--stat
+		background-color white
+	
+	&--test
+		background-color blue
+		background-image url('../img/section__bg--test.jpg')
+		background-position 0% 50%
+		background-size cover
 		
 	&__wrapper
 		background-color white
 		position relative
 		padding 10px
+	
+	&--fullwidth &__wrapper
+		max-width 1200px
+		width 100%
+		margin auto
+		border none
+	
+	&--stat &__wrapper
+		padding 50px 10px 60px
+
+	&--test &__wrapper
+		background none
+		text-align center
+		padding 45px 10px 50px
 	
 	&__title
 		@extend $title-very-big
@@ -22,15 +44,16 @@
 		margin-bottom 20px
 		text-align center
 	
-	&--fullwidth &__wrapper
-		max-width 1200px
-		width 100%
-		margin auto
-		border none
-		padding 50px 10px 60px
-	
-	&--fullwidth &__title
+	&--stat &__title
 		margin-bottom 50px
+		
+	&--test &__title
+		color white
+		font-weight regular
+		margin-bottom 10px
+		
+		&:last-of-type
+			margin-bottom 30px
 	
 	@media (min-width tablet)
 		margin-bottom 50px
@@ -46,5 +69,12 @@
 		&--small-pad &__wrapper
 			padding 20px 10px
 		
-		&--fullwidth &__wrapper
-			padding 50px 20px 60px
+		&--stat &__wrapper
+			padding 50px 20px 40px
+		
+		&--test &__wrapper
+			padding 65px 10px 67px
+		
+		&--test &__title
+			&:last-of-type
+				margin-bottom 40px

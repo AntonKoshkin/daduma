@@ -1,0 +1,10 @@
+mixin social
+	.social
+		if block
+			block
+
+mixin socItem(clas, text, href)
+	a.social__link(
+		class='social__link--'+clas
+		target='_blank'
+		href=href)!=text

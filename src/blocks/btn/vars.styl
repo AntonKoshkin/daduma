@@ -90,3 +90,18 @@
 
 .btn--neutral
 	color gray-light
+
+.btn--test
+	padding 11px 39px 15px
+	border 3px solid pink
+	border-radius 0
+	
+	.btn
+		&__text
+			@extend $not-so-big-text
+			
+			font-family exo
+			color white
+	
+	@media (min-width tablet)
+		btn-hover pink
