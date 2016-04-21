@@ -1,6 +1,9 @@
 // svg cashing
 // ../blocks/template/svgCash.js
 
+// smooth scroll
+//= ../blocks/template/scroll.js
+
 // header scroll hidding
 //= ../blocks/header/header.js
 
@@ -24,3 +27,9 @@
 
 // liking
 //= ../blocks/comment/comment.js
+
+// rate
+//= ../blocks/rate/rate.js
+
+// modal
+//= ../blocks/modal/modal.js

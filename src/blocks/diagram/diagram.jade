@@ -14,19 +14,28 @@ mixin diagram(place, type, descr)
 				class='diagram__showing--'+type)
 				img.diagram__img(
 					class='diagram__img--'+type
-					src='http://placekitten.com/135/135')
+					src='img/diagram__pie.png')
 				if descr
 					p.diagram__description!=descr
 			.diagram__legends
 				if block
 					block
+	else if type === 'bars'
+		.diagram(class=attributes.class)
+			.diagram__showing(
+				class='diagram__showing--'+type)
+				img.diagram__img(
+					class='diagram__img--'+type
+					src='img/diagram__bars.png')
+			if descr
+				p.diagram__description!=descr
 	else
 		.diagram(class=attributes.class)
 			.diagram__showing(
 				class='diagram__showing--'+type)
 				img.diagram__img(
 					class='diagram__img--'+type
-					src='http://placekitten.com/135/135')
+					src='img/diagram__pie.png')
 			if descr
 				p.diagram__description!=descr
 

@@ -21,7 +21,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css"/>
 	</head>
-	<body>
+	<body class="page">
 		<header class="header">
 			<div class="header__wrapper">
 				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button>
@@ -221,8 +221,7 @@
 					<div class="about-act__tabs">
 						<button type="button" class="about-act__tab about-act__tab--active">Результаты голосований в гос. думе</button>
 						<button type="button" class="about-act__tab">Статистика по закону</button>
-						<button type="button" class="about-act__tab">Хронология закона</button>
-						<button type="button" class="about-act__tab about-act__tab--btn">Обсудить закон</button>
+						<button type="button" class="about-act__tab">Хронология закона</button><a href="#comments" class="about-act__tab about-act__tab--btn">Обсудить закон</a>
 					</div>
 					<div class="about-act__contents">
 						<div class="about-act__content">
@@ -232,23 +231,23 @@
 									<div class="about-act__diagram-pack">
 										<div class="about-act__diagrams">
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
 												<p class="diagram__description">Фракция Всероссийской политичекой партии &#8220;Единая&nbsp;Россия&#8221;</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
 												<p class="diagram__description">Фракция политичеекой партии &#8220;КПРФ&#8221;</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
 												<p class="diagram__description">Фракция политической партии &#8220;Справедливая&nbsp;Россия&#8221;</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
 												<p class="diagram__description">Фракция политической партии  &#8220;ЛДПР&#8221;</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
 												<p class="diagram__description">Общая статистика по всем партиям</p>
 											</div>
 										</div>
@@ -290,111 +289,142 @@
 										<div class="about-act__diagrams">
 											<div class="about-act__type about-act__type--show">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--bars"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--bars"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--bars"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--bars"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--bars"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--bars"/></div>
+													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
 												</div>
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
-											</div>
-											<div class="about-act__type">
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 												</div>
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-											</div>
-											<div class="about-act__type">
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 												</div>
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 												</div>
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+												</div>
+											</div>
+											<div class="about-act__type">
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+												</div>
+											</div>
+											<div class="about-act__type">
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 									</div>
 								</div>
 							</div>
@@ -512,31 +542,31 @@
 					<h2 class="section__title">Примеры применения закона и зарубежный опыт:</h2>
 					<div class="usage">
 						<article class="usage__item"><a href="#" target="_blank" class="usage__content">
-								<div class="usage__face"><img src="http://placekitten.com/315/130" alt="" class="usage__img"/></div>
+								<div class="usage__face"><img src="img/usage__1.jpg" alt="" class="usage__img"/></div>
 								<div class="usage__desc">
 									<div class="usage__name">Разнообразный и богатый опыт</div>
 									<div class="usage__text">Эксперимент проверки позиций, занимаемых участниками вотношении поставленных задач.</div>
 								</div></a></article>
 						<article class="usage__item"><a href="#" target="_blank" class="usage__content">
-								<div class="usage__face"><img src="http://placekitten.com/315/130" alt="" class="usage__img"/></div>
+								<div class="usage__face"><img src="img/usage__2.jpg" alt="" class="usage__img"/></div>
 								<div class="usage__desc">
 									<div class="usage__name">Структура организации</div>
 									<div class="usage__text">Представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</div>
 								</div></a></article>
 						<article class="usage__item"><a href="#" target="_blank" class="usage__content">
-								<div class="usage__face"><img src="http://placekitten.com/315/130" alt="" class="usage__img"/></div>
+								<div class="usage__face"><img src="img/usage__3.jpg" alt="" class="usage__img"/></div>
 								<div class="usage__desc">
 									<div class="usage__name">Разнообразный и богатый опыт сложившаяся структура организации</div>
 									<div class="usage__text">Равным образом постоянный количественный рост и сфера нашей активности.</div>
 								</div></a></article>
 						<article class="usage__item"><a href="#" target="_blank" class="usage__content">
-								<div class="usage__face"><img src="http://placekitten.com/315/130" alt="" class="usage__img"/></div>
+								<div class="usage__face"><img src="img/usage__1.jpg" alt="" class="usage__img"/></div>
 								<div class="usage__desc">
 									<div class="usage__name">Разнообразный и богатый опыт</div>
 									<div class="usage__text">Эксперимент проверки позиций, занимаемых участниками вотношении поставленных задач.</div>
 								</div></a></article>
 						<article class="usage__item"><a href="#" target="_blank" class="usage__content">
-								<div class="usage__face"><img src="http://placekitten.com/315/130" alt="" class="usage__img"/></div>
+								<div class="usage__face"><img src="img/usage__2.jpg" alt="" class="usage__img"/></div>
 								<div class="usage__desc">
 									<div class="usage__name">Структура организации</div>
 									<div class="usage__text">Представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.</div>
@@ -549,7 +579,7 @@
 					<h2 class="section__title">Что Вы думаете по этому поводу?</h2>
 					<div class="page__comments">
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like comment__like--liked">15</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
@@ -569,7 +599,7 @@
 							</div>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">235</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
@@ -589,7 +619,7 @@
 							</div>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">1</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
@@ -609,7 +639,7 @@
 							</div>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">79</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
@@ -629,7 +659,7 @@
 							</div>
 						</div>
 						<div class="comment">
-							<div class="comment__face"><img src="http://placekitten.com/50/50" alt="" class="comment__img"/>
+							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">22</span>
 							</div>
 							<p class="comment__name">TheDark KNIGHT</p>
@@ -683,7 +713,7 @@
 					</div>
 					<div class="page__diags">
 						<div class="diagram diagram--stat">
-							<div class="diagram__showing diagram__showing--stat"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--stat"/>
+							<div class="diagram__showing diagram__showing--stat"><img src="img/diagram__pie.png" class="diagram__img diagram__img--stat"/>
 								<p class="diagram__description">Различных тематик</p>
 							</div>
 							<div class="diagram__legends">
@@ -698,7 +728,7 @@
 							</div>
 						</div>
 						<div class="diagram diagram--stat">
-							<div class="diagram__showing diagram__showing--stat"><img src="http://placekitten.com/135/135" class="diagram__img diagram__img--stat"/>
+							<div class="diagram__showing diagram__showing--stat"><img src="img/diagram__pie.png" class="diagram__img diagram__img--stat"/>
 								<p class="diagram__description">Партий участвует в обсуждениях</p>
 							</div>
 							<div class="diagram__legends">
@@ -731,6 +761,81 @@
 				</div>
 			</div>
 		</footer>
+		<div class="page__modals">
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Спасибо, Ваш голос учтен!</p>
+					<div class="rate">
+						<div class="rate__content">
+							<p class="rate__title">Оцените закон:</p>
+							<div class="rate__stars">
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="5" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="4" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="3" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="2" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="1" class="rate__input"/>
+								</label>
+							</div>
+						</div>
+					</div>
+					<form action="#" name="userComment">
+						<p class="modal__text">Оставьте комментарий:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="suggestPlus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Предложить плюс:</p>
+					<form action="#" name="suggestPlus">
+						<p class="modal__text">Предложение своего плюса закона:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="actPlus" placeholder="Введите текст плюса" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Предложить плюс" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="suggestMinus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Предложить минус:</p>
+					<form action="#" name="suggestMinus">
+						<p class="modal__text">Предложение своего минуса закона:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="actMinus" placeholder="Введите текст минуса" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Предложить минус" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="klichko"><img src="img/klichko.png" alt="" class="klichko__img"/>
+			<p class="klichko__perl">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать.</p>
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 		<script src="js/main.js"></script>

@@ -6,8 +6,8 @@ mixin abAct
 
 mixin abActTab(title, isBtn)
 	if isBtn === true
-		button.about-act__tab.about-act__tab--btn(
-			type='button')!=title
+		a.about-act__tab.about-act__tab--btn(
+			href='#comments')!=title
 	else
 		button.about-act__tab(
 			class=attributes.class

@@ -3,6 +3,9 @@
 	
 	margin-bottom 10px
 	
+	&--modal
+		margin-bottom 15px
+	
 	&__input
 		@extend $textarea-reset, $not-so-small-text
 		
@@ -12,6 +15,9 @@
 		width auto
 		min-height 100px
 		width 100%
+	
+	&--modal &__input
+		min-height 140px
 		
 		+placeholder()
 			@extend $not-so-small-text
@@ -21,3 +27,6 @@
 	@media (min-width desktop)
 		&__input
 			min-height 66px
+
+		&--modal &__input
+			min-width 335px

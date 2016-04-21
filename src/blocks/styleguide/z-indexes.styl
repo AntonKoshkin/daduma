@@ -1,19 +1,40 @@
-.header
-	z-index 3
+for i in 0..30
+	$zi{i}
+		z-index i
 
-.navigation
-	z-index 2
+zi(index, classes...)
+	for item in classes
+		.{item}
+			@extend $zi{index}
 
-.color
-	&__numbers
-		z-index 1
+zi(5, modal)
+
+zi(4, klichko)
+
+zi(3, header)
+
+zi(2, navigation, color__green)
+
+zi(1, color__numbers, color__gray)
+
+zi(0, color__strips, color__red)
+
+// .header
+// 	z-index 3
+
+// .navigation
+// 	z-index 2
+
+// .color
+// 	&__numbers
+// 		z-index 1
 	
-	&__srtips
-		z-index 0
+// 	&__srtips
+// 		z-index 0
 	
-	&__red
-		z-index 0
-	&__gray
-		z-index 1
-	&__green
-		z-index 2
+// 	&__red
+// 		z-index 0
+// 	&__gray
+// 		z-index 1
+// 	&__green
+// 		z-index 2

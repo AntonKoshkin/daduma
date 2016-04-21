@@ -1,0 +1,17 @@
+mixin modal(title)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'modal--' + mod
+
+	.modal(
+		class=mods
+		id=attributes.id)
+		.modal__bg
+		.modal__content
+			button.modal__close(
+				type='button'
+				id='closeModal')
+			p.modal__title.modal__title!=title
+			if block
+				block

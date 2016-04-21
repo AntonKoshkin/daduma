@@ -1,5 +1,9 @@
 mixin textarea
-	.textarea
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'textarea--' + mod
+	.textarea(class=mods)
 		textarea.textarea__input(
 			name=attributes.name
 			id=attributes.id

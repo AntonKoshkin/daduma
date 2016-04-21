@@ -1,0 +1,38 @@
+.rate
+	text-align center
+	margin-bottom 30px
+	
+	&__content
+		display inline-block
+		
+	&__title
+		@extend $very-small-text
+		
+		margin-bottom 5px
+	
+	&__stars
+		@extend $font-reset
+		
+		direction rtl
+		cursor default
+		transform translateX(2px)
+	
+	&__stars:hover &__label
+		bicon(star.withPad.gray)
+	
+	&__label
+		bicon(star.withPad.gray, 20)
+		
+		display inline-block
+		position relative
+		cursor pointer
+	
+	&__stars &__label:hover
+	&__label--active
+	&__label:hover ~ &__label
+	&__label--active ~ &__label
+		bicon(star.withPad.yellow)
+
+	&__input
+		position absolute
+		clip rect(0, 0, 0, 0)

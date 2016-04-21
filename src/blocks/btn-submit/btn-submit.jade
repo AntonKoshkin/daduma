@@ -1,5 +1,10 @@
 mixin btn-submit(value)
-	.btn-submit
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'btn-submit--' + mod
+
+	.btn-submit(class=mods)
 		input.btn-submit__input(
 			type='submit'
 			value!=value)

@@ -32,6 +32,8 @@ include ../btn-submit/btn-submit
 include ../pagination/pagination
 include ../number/number
 include ../social/social
+include ../modal/modal
+include ../rate/rate
 
 include ../klichko/klichko
 
@@ -42,18 +44,54 @@ html(lang="ru")
 	head
 		block title
 		include head
-	body
+	body.page
 		+header
 			+burger
 			+logo('header')
 			+navigation
 			+btn('Войти / Зарегистрироваться', 'person')
+
 		block content
+
 		+footer
 			+logo('footer')
 			+social
 				+socItem('vk', 'Мы в VKontakte', 'http://vk.com/')
 				+socItem('fb', 'Мы в Facebook', 'http://facebook.com/')
+		
+		.page__modals
+			+modal('Спасибо, Ваш голос учтен!')(id='voteCounted')
+				+rate
+				form(
+					action='#'
+					name='userComment')
+					p.modal__text Оставьте комментарий:
+					+textarea(
+						name='comment'
+						placeholder='Введите текст комментария'
+						mods=['modal'])
+					+btn-submit('Оставить комментарий')(mods=['modal'])
+			+modal('Предложить плюс:')(id='suggestPlus')
+				form(
+					action='#'
+					name='suggestPlus')
+					p.modal__text Предложение своего плюса закона:
+					+textarea(
+						name='actPlus'
+						placeholder='Введите текст плюса'
+						mods=['modal'])
+					+btn-submit('Предложить плюс')(mods=['modal'])
+			+modal('Предложить минус:')(id='suggestMinus')
+				form(
+					action='#'
+					name='suggestMinus')
+					p.modal__text Предложение своего минуса закона:
+					+textarea(
+						name='actMinus'
+						placeholder='Введите текст минуса'
+						mods=['modal'])
+					+btn-submit('Предложить минус')(mods=['modal'])
+
 
 		if withKlichko === true
 			+klichko

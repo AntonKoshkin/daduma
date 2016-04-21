@@ -2,7 +2,7 @@ extends ../blocks/template/template
 
 block page_id
 	-var page_id = 'index'
-	-var withKlichko = false
+	-var withKlichko = true
 
 block title
 	title Народная база законов
@@ -94,45 +94,63 @@ block content
 						.about-act__diagrams
 							.about-act__type.about-act__type--show
 								+diagram('main', 'bars')
-								+diagram('main', 'bars')
-								+diagram('main', 'bars')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-								+diagram('main', 'pie')
-					.about-act__legends
-						+abActLeg('Проголосовали За', 'green')
-						+abActLeg('Проголосовали Против', 'red')
-						+abActLeg('Воздержались', 'gray')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								+diagram('main', 'pie', 'Описание категории')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 				+abActCont('Хронология закона')
 					+scrl
 						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga deleniti quibusdam iste, commodi, tenetur numquam minus temporibus repudiandae explicabo soluta provident hic, ex. Exercitationem odio qui nemo, aspernatur aperiam delectus.
@@ -199,62 +217,62 @@ block content
 			+usage
 				+usItem(
 					'#',
-					'http://placekitten.com/315/130',
+					'img/usage__1.jpg',
 					'Разнообразный и богатый опыт',
 					'Эксперимент проверки позиций, занимаемых участниками вотношении поставленных задач.')
 				+usItem(
 					'#',
-					'http://placekitten.com/315/130',
+					'img/usage__2.jpg',
 					'Структура организации',
 					'Представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.')
 				+usItem(
 					'#',
-					'http://placekitten.com/315/130',
+					'img/usage__3.jpg',
 					'Разнообразный и богатый опыт сложившаяся структура организации',
 					'Равным образом постоянный количественный рост и сфера нашей активности.')
 				+usItem(
 					'#',
-					'http://placekitten.com/315/130',
+					'img/usage__1.jpg',
 					'Разнообразный и богатый опыт',
 					'Эксперимент проверки позиций, занимаемых участниками вотношении поставленных задач.')
 				+usItem(
 					'#',
-					'http://placekitten.com/315/130',
+					'img/usage__2.jpg',
 					'Структура организации',
 					'Представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.')
 
 		+section('Что Вы думаете по этому поводу?')(id='comments')
 			.page__comments
 				+comment(
-					'http://placekitten.com/50/50',
+					'http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png',
 					'TheDark KNIGHT',
 					'05.03.2016 08:36',
 					'2016-03-05T08:36',
 					15,
 					'Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.')(liked)
 				+comment(
-					'http://placekitten.com/50/50',
+					'http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png',
 					'TheDark KNIGHT',
 					'05.03.2016 08:36',
 					'2016-03-05T08:36',
 					235,
 					'Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.')
 				+comment(
-					'http://placekitten.com/50/50',
+					'http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png',
 					'TheDark KNIGHT',
 					'05.03.2016 08:36',
 					'2016-03-05T08:36',
 					1,
 					'Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.')
 				+comment(
-					'http://placekitten.com/50/50',
+					'http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png',
 					'TheDark KNIGHT',
 					'05.03.2016 08:36',
 					'2016-03-05T08:36',
 					79,
 					'Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.')
 				+comment(
-					'http://placekitten.com/50/50',
+					'http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png',
 					'TheDark KNIGHT',
 					'05.03.2016 08:36',
 					'2016-03-05T08:36',

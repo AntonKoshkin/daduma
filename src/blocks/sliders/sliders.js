@@ -25,25 +25,23 @@ jQuery(document).ready(function($) {
 		nav			: true,
 	});
 
-	$('.usage__img').load(function() {
-		$('.usage').owlCarousel({
-			dots			: true,
-			dotsEach		: 1,
-			loop			: true,
-			mouseDrag	: false,
-			responsive	: {
-				0		: {
-					autoHeight	: true,
-					items			: 1,
-				},
-				700	: {
-					items			: 2,
-				},
-				980	: {
-					items			: 3,
-				},
+	$('.usage').owlCarousel({
+		dots			: true,
+		dotsEach		: 1,
+		loop			: true,
+		mouseDrag	: false,
+		responsive	: {
+			0		: {
+				autoHeight	: true,
+				items			: 1,
 			},
-		});
+			700	: {
+				items			: 2,
+			},
+			980	: {
+				items			: 3,
+			},
+		},
 	});
 
 });

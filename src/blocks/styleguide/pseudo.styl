@@ -1,6 +1,7 @@
 $pseudo
 	content ''
 	position absolute
+	display inline-block
 
 $pseudo-right
 	@extend $pseudo
@@ -8,6 +9,12 @@ $pseudo-right
 	top 50%
 	right 0
 	transform translateY(-50%)
+
+$pseudo-right-top
+	@extend $pseudo
+	
+	top 0
+	right 0
 
 $pseudo-left
 	@extend $pseudo
@@ -41,6 +48,15 @@ $pseudo-center
 	top 50%
 	left 50%
 	transform translate(-50%, -50%)
+
+$pseudo-center-old
+	@extend $pseudo
+	
+	top 0
+	right 0
+	bottom 0
+	left 0
+	margin auto
 
 $pseudo-top
 	@extend $pseudo
