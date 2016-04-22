@@ -28,6 +28,9 @@
 		min-width mobile-width - 20px
 		max-width 100%
 	
+	&--show &__content
+		animation fadeIn .3s linear
+	
 	&__close
 		@extend $btn-reset, $pseudo-right-top
 		size 16px
@@ -75,3 +78,4 @@
 			
 		&__title
 			margin-bottom 30px
+			white-space nowrap

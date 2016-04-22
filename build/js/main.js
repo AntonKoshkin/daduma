@@ -4059,14 +4059,6 @@ jQuery(document).ready(function($) {
 
 // open/close subitems
 jQuery(document).ready(function($) {
-	$('body').on('click', '.navigation__item--openable .navigation__link', function(event) {
-		event.preventDefault();
-		
-		$(this)
-			.siblings('.navigation__subnav')
-			.toggleClass('navigation__subnav--open');
-	});
-
 	$('body').on('click', '.navigation__bg', function(event) {
 		event.preventDefault();
 
@@ -4074,6 +4066,51 @@ jQuery(document).ready(function($) {
 		$('html').css('overflow-y', 'auto');
 	});
 });
+
+// minimize text in act description
+// function expanderShow() {
+// 	var
+// 		descHeight	=	$('.act__description').height(),
+// 		wrapHeight	=	$('.act__text-wrapper').height(),
+// 		expand		=	$('.act__expand'),
+// 		expander		=	$('.act__expander');
+
+// 	if (descHeight < wrapHeight) {
+// 		$('.act__description').addClass('act__description--collapse');
+// 	} else {
+// 		$('.act__description').removeClass('act__description--collapse');
+// 	}
+// }
+
+// $(document).ready(function() {
+// 	expanderShow();
+
+// 	$(window).resize(function(event) {
+// 		expanderShow();
+// 	});
+
+// 	$('body').on('click', '.act__expander', function(event) {
+// 		event.preventDefault();
+		
+// 		var
+// 			wrapHeight	=	$('.act__text-wrapper').height(),
+// 			condition	= $(this).text();
+		
+// 		if (condition === 'Развернуть') {
+// 			$(this)
+// 				.text('Свернуть');
+
+// 			$('.act__description--collapse')
+// 				.css('max-height', wrapHeight);
+// 		} else {
+// 			$(this)
+// 				.text('Развернуть');
+
+// 			$('.act__description--collapse')
+// 				.css('max-height', '9em');
+// 		}
+// 	});
+// });
 
 // tabs in block about-act
 jQuery(document).ready(function($) {
@@ -4246,18 +4283,24 @@ jQuery(document).ready(function($) {
 	$('.usage').owlCarousel({
 		dots			: true,
 		dotsEach		: 1,
-		loop			: true,
+		loop			: false,
 		mouseDrag	: false,
 		responsive	: {
 			0		: {
 				autoHeight	: true,
 				items			: 1,
+				slideBy		: 1,
+				dotsEach		: 1,
 			},
 			700	: {
 				items			: 2,
+				slideBy		: 2,
+				dotsEach		: 2,
 			},
 			980	: {
 				items			: 3,
+				slideBy		: 3,
+				dotsEach		: 3,
 			},
 		},
 	});
@@ -4347,11 +4390,74 @@ $(document).ready(function() {
 });
 
 // modal
+// modal closing
 $(document).ready(function() {
-	$('body').on('click', '.modal__bg, .modal__close', function(event) {
+	$('body').on('click', '.modal__bg, .modal__close, .btn-submit--modal .btn-submit__input', function(event) {
 		event.preventDefault();
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+	});
+});
+
+// modal opening
+$(document).ready(function() {
+	$('body').on('click', '[data-modal-link]', function(event) {
+		event.preventDefault();
+		var modalWindow = $(this).attr('data-modal-link');
+
+		$(modalWindow).addClass('modal--show');
+	});
+});
+
+// text expander
+function expand() {
+	$('.expand').each(function(index, el) {
+		var
+			outHeight	=	$(el).find('.expand__text-wrapper').height(),
+			inHeight		=	$(el).find('.expand__text').height(),
+			expWrap		=	$(el).find('.expand__expand'),
+			expBtn		=	$(el).find('.expand__expand');
+
+		if (outHeight < inHeight) {
+			$(el).addClass('expand--collapse');
+		} else {
+			$(el).removeClass('expand--collapse');
+		}
+	});
+}
+
+$(document).ready(function() {
+	expand();
+
+	$(window).resize(function(event) {
+		expand();
+	});
+
+	$('body').on('click', '.expand__expander', function(event) {
+		event.preventDefault();
+		
+		var
+			tHeight		=	$(this)
+									.closest('.expand')
+									.find('.expand__text')
+									.height(),
+			condition	=	$(this).text();
+		
+		if (condition === 'Развернуть') {
+			$(this)
+				.text('Свернуть')
+				.closest('.expand--collapse')
+				.find('.expand__text-wrapper')
+				.css('max-height', tHeight);
+
+			console.log(tHeight)
+		} else {
+			$(this)
+				.text('Развернуть')
+				.closest('.expand--collapse')
+				.find('.expand__text-wrapper')
+				.css('max-height', '9em');
+		}
 	});
 });

@@ -1,0 +1,35 @@
+.breadcrumbs
+	padding 17px 10px
+	
+	&__list
+		list-style-type none
+	
+	&__item
+		display inline-block
+		
+		&:not(:last-child)
+			padding-right 16px
+			position relative
+			
+			&:before
+				@extend $pseudo-right
+				
+				width 6px
+				height 1px
+				background-color black
+				right 5px
+			
+			&:after
+				@extend $pseudo-right
+				triangle right 3px 2px black
+				
+				right 5px
+		
+	&__link
+		@extend $very-small-text
+
+	&__item:not(:last-child) &__link
+		text-decoration underline
+	
+	&__item:last-child &__link
+		color blue

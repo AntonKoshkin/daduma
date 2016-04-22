@@ -28,18 +28,24 @@ jQuery(document).ready(function($) {
 	$('.usage').owlCarousel({
 		dots			: true,
 		dotsEach		: 1,
-		loop			: true,
+		loop			: false,
 		mouseDrag	: false,
 		responsive	: {
 			0		: {
 				autoHeight	: true,
 				items			: 1,
+				slideBy		: 1,
+				dotsEach		: 1,
 			},
 			700	: {
 				items			: 2,
+				slideBy		: 2,
+				dotsEach		: 2,
 			},
 			980	: {
 				items			: 3,
+				slideBy		: 3,
+				dotsEach		: 3,
 			},
 		},
 	});

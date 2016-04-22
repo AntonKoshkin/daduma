@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Народная база законов</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/>
+		<meta name="theme-color" content="#4b5a6e"/>
+		<meta name="application-name" content="Сайт про законы"/>
+		<meta name="msapplication-tooltip" content="Сайт в законе"/>
+		<meta name="msapplication-starturl" content="./"/>
+		<meta name="msapplication-navbutton-color" content="#4b5a6e"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="format-detection" content="telephone=no"/><!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body class="page">
+		<header class="header">
+			<div class="header__wrapper">
+				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button><a href="/" class="logo logo--header">
+					<p class="logo__text">Народная база законов</p></a>
+				<nav class="navigation">
+					<div class="navigation__bg"></div>
+					<ul class="navigation__list">
+						<li class="navigation__item navigation__item--openable"><a href="#" class="navigation__link">Законы</a>
+							<div class="navigation__subnav">
+								<ul class="navigation__sublist">
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Все</a></li>
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Популярные</a></li>
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Новые</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Пользователи</a></li>
+						<li class="navigation__item"><a href="#" class="navigation__link">Обратная связь</a></li>
+					</ul>
+				</nav>
+				<button type="button" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
+			</div>
+		</header>
+		<main class="main main--news">
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+					<li class="breadcrumbs__item"><a class="breadcrumbs__link">Последние новости</a></li>
+				</ul>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper"><a href="/" class="logo logo--footer">
+					<p class="logo__text">Народная база законов</p></a>
+				<div class="social"><a target="_blank" href="http://vk.com/" class="social__link social__link--vk">Мы в VKontakte</a><a target="_blank" href="http://facebook.com/" class="social__link social__link--fb">Мы в Facebook</a>
+				</div>
+			</div>
+		</footer>
+		<div class="page__modals">
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Спасибо, Ваш голос учтен!</p>
+					<div class="rate">
+						<div class="rate__content">
+							<p class="rate__title">Оцените закон:</p>
+							<div class="rate__stars">
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="5" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="4" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="3" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="2" class="rate__input"/>
+								</label>
+								<label class="rate__label">
+									<input type="radio" name="userRate" value="1" class="rate__input"/>
+								</label>
+							</div>
+						</div>
+					</div>
+					<form action="#" name="userComment">
+						<p class="modal__text">Оставьте комментарий:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="suggestPlus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Предложить плюс:</p>
+					<form action="#" name="suggestPlus">
+						<p class="modal__text">Предложение своего плюса закона:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="actPlus" placeholder="Введите текст плюса" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Предложить плюс" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="suggestMinus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="modal__content">
+					<button type="button" id="closeModal" class="modal__close"></button>
+					<p class="modal__title modal__title">Предложить минус:</p>
+					<form action="#" name="suggestMinus">
+						<p class="modal__text">Предложение своего минуса закона:</p>
+						<div class="textarea textarea--modal">
+							<textarea name="actMinus" placeholder="Введите текст минуса" class="textarea__input"></textarea>
+						</div>
+						<div class="btn-submit btn-submit--modal">
+							<input type="submit" value="Предложить минус" class="btn-submit__input"/>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="klichko"><img src="img/klichko.png" alt="" class="klichko__img"/>
+			<p class="klichko__perl">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать.</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

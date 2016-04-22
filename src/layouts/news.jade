@@ -1,0 +1,13 @@
+extends ../blocks/template/template
+
+block page_id
+	-var page_id = 'index'
+	-var withKlichko = true
+
+block title
+	title Народная база законов
+
+block content
+	+main(class='main--news')
+		+breadcrumbs
+			+brItem('Последние новости')

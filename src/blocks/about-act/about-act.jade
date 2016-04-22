@@ -6,6 +6,7 @@ mixin abAct
 
 mixin abActTab(title, isBtn)
 	if isBtn === true
+		// этот линк ведет на страницу с обсуждением закона, виден только на мобилках
 		a.about-act__tab.about-act__tab--btn(
 			href='#comments')!=title
 	else
@@ -16,8 +17,9 @@ mixin abActTab(title, isBtn)
 mixin abActCont(title, isBtn)
 	if isBtn === true
 		.about-act__content.about-act__content--btn
+			// этот линк прокручивает экран к комментам, виден на планшетах и десктопах
 			a.about-act__cont-title.about-act__cont-title--btn(
-				href='#comments')!=title
+				href='/discuss.html')!=title
 	else
 		.about-act__content(class=attributes.class)
 			h4.about-act__cont-title!=title

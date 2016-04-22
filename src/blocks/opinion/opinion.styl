@@ -32,9 +32,12 @@
 	
 	&__text
 		color gray
-		margin-bottom 20px
 		font-style italic
 		font-family yefimov
+		margin-bottom 2px
+		
+		&:last-of-type
+			margin-bottom 20px
 	
 	&__name
 		font-style normal
@@ -55,4 +58,5 @@
 			padding-right 100px
 		
 		&__text
-			padding-top 10px
+			&:first-child
+				padding-top 10px

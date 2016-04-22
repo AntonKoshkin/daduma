@@ -5,9 +5,15 @@ mixin act
 				block
 
 mixin actParam(title, text)
-	.act__param
-		+sTitle(title)
-		+mText(text)
+	if block
+		.act__param
+			+sTitle(title)
+			p.main-text
+				block
+	else
+		.act__param
+			+sTitle(title)
+			+mText(text)
 
 mixin actFace
 	.act__face
@@ -37,3 +43,19 @@ mixin actDesc(title)
 				href='#'
 				download) Скачать полный текст закона
 			span.act__download-statistic (скачали 18 953 раз)
+
+mixin actAutor(autors)
+	p.act__autors
+		-var i = 0
+		each link, autor in autors
+			if i === 0
+				a.act__autor(
+					href=link
+					target='_blank')=autor
+				-i = i + 1
+			else
+				| , 
+				a.act__autor(
+					href=link
+					target='_blank')=autor
+				-i = i + 1

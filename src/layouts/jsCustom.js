@@ -13,6 +13,9 @@
 // open/close subitems
 //= ../blocks/navigation/navigation.js
 
+// minimize text in act description
+//= ../blocks/act/act.js
+
 // tabs in block about-act
 //= ../blocks/about-act/about-act.js
 
@@ -33,3 +36,6 @@
 
 // modal
 //= ../blocks/modal/modal.js
+
+// text expander
+//= ../blocks/expand/expand.js

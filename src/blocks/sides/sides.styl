@@ -55,6 +55,9 @@
 			color gray
 			padding-left 40px
 			position relative
+			
+			&:first-letter
+				text-transform uppercase
 				
 			&:before
 				@extend $pseudo-left-top
@@ -72,17 +75,19 @@
 				bicon(galka, 16)
 	
 	&__suggestion
+		margin-bottom 20px
+	
+	&__sugg-btn
 		@extend $btn-reset, $not-so-small-text
 		
 		text-transform uppercase
 		text-decoration underline
-		margin-bottom 20px
 		padding 5px
 		
-	&__content--green &__suggestion
+	&__content--green &__sugg-btn
 		color green
 	
-	&__content--red &__suggestion
+	&__content--red &__sugg-btn
 		color pink
 	
 	@media (min-width tablet)

@@ -2,10 +2,12 @@ mixin btn(text, icon, isLink)
 	if isLink === true
 		a.btn(
 			href=attributes.href
+			data-modal-link=attributes['data-modal-link']
 			class='btn--'+icon)
 			span.btn__text!=text
 	else
 		button.btn(
 			type='button'
+			data-modal-link=attributes['data-modal-link']
 			class='btn--'+icon)
 			span.btn__text!=text

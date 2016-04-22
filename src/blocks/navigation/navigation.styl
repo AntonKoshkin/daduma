@@ -101,15 +101,15 @@
 		
 		&__subnav
 			position absolute
-			top calc(100% + 16px)
+			top 100%
 			left 15px
 			padding 5px 0
 			display none
 			background-color white
 			min-width 100px
-			
-			&--open
-				display block
+		
+		&__item:hover &__subnav
+			display block
 		
 		&__sublink
 			@extend $very-small-text

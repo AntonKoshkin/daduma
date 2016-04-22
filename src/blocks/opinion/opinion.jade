@@ -3,7 +3,7 @@ mixin opinion
 		if block
 			block
 
-mixin opItem(img, text, name, link)
+mixin opItem(img, name, link)
 	.opinion__item
 		.opinion__face
 			// изображения необходимо кропать под квадрат
@@ -11,8 +11,12 @@ mixin opItem(img, text, name, link)
 				src=img
 				alt='Фото эксперта')
 		blockquote.opinion__bq
-			p.opinion__text!=text
+			if block
+				block
 			cite.opinion__name
 				a(
 					href!=link
 					target='_blank')!=name
+
+mixin opItemPar(text)
+	p.opinion__text!=text

@@ -1,18 +1,22 @@
 mixin cBar(foor, neutral, against)
+	-var summ = foor + neutral + against
+	-var foorWidth = Math.floor(foor/summ*100)
+	-var neutralWidth = Math.floor(neutral/summ*100)
+	-var againstWidth = Math.floor(against/summ*100)
 	.color-bar
 		.color-bar__strips
 			// красной и зеленой полоскам задается ширина, серая меняется сама
 			// зеленая полоса (за)
 			.color-bar__green(
-				style='width:'+foor+'%')
+				style='width:'+foorWidth+'%')
 			.color-bar__gray
 			// красная полоса (против)
 			.color-bar__red(
-				style='width:'+against+'%')
+				style='width:'+againstWidth+'%')
 			.color-bar__strip-bar
 		.color-bar__numbers
 			.color-bar__number.color-bar__number--for(
-				style='width:'+foor+'%')=foor
+				style='width:'+foorWidth+'%')=foor
 			.color-bar__number.color-bar__number--neutral=neutral
 			.color-bar__number.color-bar__number--against(
-				style='width:'+against+'%')=against
+				style='width:'+againstWidth+'%')=against

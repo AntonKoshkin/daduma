@@ -23,8 +23,12 @@ mixin side(color)
 
 mixin sugg(side)
 	if side === 'green'
-		button.sides__suggestion(
-			type='button') Предложить плюс
+		.sides__suggestion
+			button.sides__sugg-btn(
+				data-modal-link='#suggestPlus'
+				type='button') Предложить плюс
 	if side === 'red'
-		button.sides__suggestion(
-			type='button') Предложить минус
+		.sides__suggestion
+			button.sides__sugg-btn(
+				data-modal-link='#suggestMinus'
+				type='button') Предложить минус
