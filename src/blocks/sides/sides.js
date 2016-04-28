@@ -14,3 +14,25 @@ jQuery(document).ready(function($) {
 			.removeClass('sides__content--show');
 	});
 });
+
+// $(document).ready(function() {
+// 	var
+// 		leftSide		=	$('.sides__content--green .sides__text'),
+// 		rightSide	=	$('.sides__content--red .sides__text');
+
+// 	if (leftSide.outerHeight() > rightSide.outerHeight()) {
+// 		var
+// 			rsHeight	=	rightSide.outerHeight(),
+// 			lsPars	=	leftSide.find('p');
+
+// 		lsPars.each(function(index, el) {
+// 			if (($(el).position().top + $(el).outerHeight()) > rightSide.height()) {
+// 				console.log($(el).position().top + $(el).outerHeight() + '   ' + rightSide.height());
+
+// 				rsHeight -= $(el).outerHeight();
+// 			}
+// 		});
+
+// 		leftSide.height(rsHeight);
+// 	}
+// });

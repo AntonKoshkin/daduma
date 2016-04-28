@@ -1,0 +1,10 @@
+mixin sEnter
+	.soc-enter
+		if block
+			block
+
+mixin sEnterItem(name, title)
+	a.soc-enter__item(
+		class='soc-enter__item--'+name
+		href='#')
+		span.soc-enter__text!=title

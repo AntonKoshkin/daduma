@@ -1,0 +1,30 @@
+.expand
+	&__text-wrapper
+		slow max-height
+		
+		overflow hidden
+	
+	&__expand
+		width 100%
+		display none
+	
+	&--collapse &__expand
+		display block
+	
+	&__expander
+		@extend $btn-reset, $small-text
+		
+		font-weight bold
+		text-decoration underline
+
+.act
+	.expand
+		margin-bottom 20px
+		
+		&__text-wrapper
+			max-height 9em
+
+.comment
+	.expand
+		&__text-wrapper
+			max-height 3em

@@ -13,11 +13,13 @@ mixin comment(img, name, date, datetime, likes, text)
 		time.comment__date(
 			datetime!=datetime)=date
 		.comment__letter
-			.comment__small-text
-				// текст комментария вставляется в 2 блока одинаковый
-				.comment__text-wrapper
-					p.comment__text!=text
-				button.comment__more(type='button') Развернуть комментарий
-			.comment__full-text
+			//- .comment__small-text
+			//- 	// текст комментария вставляется в 2 блока одинаковый
+			//- 	.comment__text-wrapper
+			//- 		p.comment__text!=text
+			//- 	button.comment__more(type='button') Развернуть комментарий
+			//- .comment__full-text
+			//- 	p.comment__text!=text
+			//- 	button.comment__more(type='button') Свернуть комментарий
+			+expand(3)
 				p.comment__text!=text
-				button.comment__more(type='button') Свернуть комментарий

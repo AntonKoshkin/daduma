@@ -1,0 +1,12 @@
+mixin fBack(title)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'feedback--' + mod
+
+	.feedback(class=mods)
+		+close
+		p.feedback__title!=title
+		.feedback__body
+			if block
+				block

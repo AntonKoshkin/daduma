@@ -25,6 +25,9 @@ $(document).ready(function() {
 		event.preventDefault();
 		
 		var
+			numOfLines	=	$(this)
+									.closest('.expand')
+									.attr('data-num-of-lines'),
 			tHeight		=	$(this)
 									.closest('.expand')
 									.find('.expand__text')
@@ -37,14 +40,12 @@ $(document).ready(function() {
 				.closest('.expand--collapse')
 				.find('.expand__text-wrapper')
 				.css('max-height', tHeight);
-
-			console.log(tHeight)
 		} else {
 			$(this)
 				.text('Развернуть')
 				.closest('.expand--collapse')
 				.find('.expand__text-wrapper')
-				.css('max-height', '9em');
+				.css('max-height', numOfLines+'em');
 		}
 	});
 });

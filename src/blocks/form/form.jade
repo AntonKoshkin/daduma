@@ -1,0 +1,13 @@
+mixin form(name)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'form--' + mod
+
+	form.form(
+		id=attributes.id
+		class=mods
+		action=''
+		name=name)
+		if block
+			block

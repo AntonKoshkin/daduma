@@ -1,4 +1,6 @@
 .btn-submit
+	margin-bottom 15px
+
 	&__input
 		@extend $btn-reset, $not-so-small-text
 		simple-btn-color blue
@@ -7,11 +9,19 @@
 		font-weight regular
 		padding 13px 19px 9px
 		border-bottom 4px solid blue-dark
-		margin-bottom 15px
-		outline none
 	
 	&--modal
 		text-align center
+		margin-bottom 0
+	
+	&--enter
+	&--ask-pass
+	&--feedback
+		text-align center
+		margin-bottom 0
+	
+	&--reg
+		margin-bottom 0
 
 	&--modal &__input
 		btn-hover pink
@@ -20,10 +30,30 @@
 		background none
 		color black
 		padding 11px 25px
-		margin-bottom 0
 	
-	@media (min-width desktop)
-		text-align right
-		
+	&--reg &__input
+	&--enter &__input
+	&--ask-pass &__input
+	&--feedback &__input
+		simple-btn-color pink
+		background-color pink
+		border-color lightness(pink, 55%)
+	
+	&--enter &__input
+		padding-left 35px
+		padding-right 35px
+
+	@media (min-width tablet)
+		&--feedback
 		&--modal
 			text-align left
+
+.form--login
+	.btn-submit
+		width 100%
+	
+	@media (min-width modal-bp)
+		
+		.btn-submit
+			&--enter
+				width auto

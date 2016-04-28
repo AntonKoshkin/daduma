@@ -1,0 +1,7 @@
+mixin wModal(title)
+	.white-modal
+		.white-modal__content
+			+close
+			p.white-modal__title!=title
+			if block
+				block

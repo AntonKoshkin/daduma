@@ -1,0 +1,48 @@
+.input
+	margin-bottom 15px
+	
+	&__input
+		@extend $small-text
+		
+		font-weight regular
+		padding 18px 23px
+		border 1px solid gray-lighter
+		width 100%
+
+	&__error
+		@extend $extra-small-text
+		
+		display none
+		color red
+		font-weight light
+		margin-bottom 1px
+	
+	&--margined
+		margin-bottom 30px
+
+.form--login
+	.input
+		width 100%
+
+// errors
+errors()
+	for error in arguments
+		.input--{error}
+			.input__input
+				margin-bottom 0
+				border-color red
+				
+			.input__error--{error}
+				display block
+
+errors(
+	no-login,
+	no-mail,
+	no-pass,
+	not-reged-mail,
+	reged-login,
+	reged-mail,
+	short-login,
+	short-pass,
+	wrong,
+	wrong-mail)

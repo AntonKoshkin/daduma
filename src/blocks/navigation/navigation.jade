@@ -13,13 +13,13 @@ mixin navItem(title, href, hasSub)
 					+subItem('Новые', '#')
 	else
 		li.navigation__item
-			a.navigation__link(href=href)=title
+			a.navigation__link(
+				href=href
+				data-modal-link=attributes['data-modal-link'])=title
 
 mixin navigation
 	nav.navigation
 		.navigation__bg
 		ul.navigation__list
-			+navItem('Законы', '#', true)
-			+navItem('Новости', '/news.html')
-			+navItem('Пользователи', '#')
-			+navItem('Обратная связь', '#')
+			if block
+				block

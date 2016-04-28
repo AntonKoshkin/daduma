@@ -36,6 +36,15 @@ include ../modal/modal
 include ../rate/rate
 include ../about-act/chronos
 include ../breadcrumbs/breadcrumbs
+include ../expand/expand
+include ../soc-enter/soc-enter
+include ../input/input
+include ../checkbox/checkbox
+include ../form/form
+include ../login/login
+include ../close/close
+include ../feedback/feedback
+include ../white-modal/white-modal
 
 include ../klichko/klichko
 
@@ -51,7 +60,12 @@ html(lang="ru")
 			+burger
 			+logo('header')
 			+navigation
-			+btn('Войти / Зарегистрироваться', 'person')
+				+navItem('Законы', '#', true)
+				+navItem('Новости', '/news.html')
+				+navItem('Пользователи', '#')
+				+navItem('Обратная связь', '#')(data-modal-link='#feedback')
+			+btn('Войти / Зарегистрироваться', 'person')(
+				data-modal-link='#login')
 
 		block content
 
@@ -62,38 +76,180 @@ html(lang="ru")
 				+socItem('fb', 'Мы в Facebook', 'http://facebook.com/')
 		
 		.page__modals
-			+modal('Спасибо, Ваш голос учтен!')(id='voteCounted')
+			//- +modal('Спасибо, Ваш голос учтен!')(id='voteCounted')
 				+rate
-				form(
-					action='#'
-					name='userComment')
-					p.modal__text Оставьте комментарий:
+				//- form(
+				//- 	action='#'
+				//- 	name='userComment')
+				+form('suggestComment')(id='suggestComment')
+					p.form__text Оставьте комментарий:
 					+textarea(
 						name='comment'
 						placeholder='Введите текст комментария'
 						mods=['modal'])
 					+btn-submit('Оставить комментарий')(mods=['modal'])
-			+modal('Предложить плюс:')(id='suggestPlus')
-				form(
-					action='#'
-					name='suggestPlus')
-					p.modal__text Предложение своего плюса закона:
+			
+			//- +modal('Предложить плюс:')(id='suggestPlus')
+				//- form(
+				//- 	action='#'
+				//- 	name='suggestPlus')
+				+form('suggestPlus')(id='suggestPlus')
+					p.form__text Предложение своего плюса закона:
 					+textarea(
 						name='actPlus'
 						placeholder='Введите текст плюса'
 						mods=['modal'])
 					+btn-submit('Предложить плюс')(mods=['modal'])
-			+modal('Предложить минус:')(id='suggestMinus')
-				form(
-					action='#'
-					name='suggestMinus')
-					p.modal__text Предложение своего минуса закона:
+			
+			//- +modal('Предложить минус:')(id='suggestMinus')
+				//- form(
+				//- 	action='#'
+				//- 	name='suggestMinus')
+				+form('suggestMinus')(id='suggestMinus')
+					p.form__text Предложение своего минуса закона:
 					+textarea(
 						name='actMinus'
 						placeholder='Введите текст минуса'
 						mods=['modal'])
 					+btn-submit('Предложить минус')(mods=['modal'])
 
+			//- +modal('Забыли Пароль?', true)(id='remindPass')
+				//- form.modal__ask-pass(
+				//- 	action='#'
+				//- 	name='askPass')
+				+form('userRemind')(id='userRemind')
+					p.form__text
+						| Не может вспомнить пароль для входа в свой аккаунт?
+						br
+						| Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.
+					+input('email')(
+							placeholder='Введите e-mail'
+							name='email'
+							mods=['margined']
+							errors=[
+								['no-mail','Введите e-mail'],
+								['not-reged-mail', 'Данный e-mail не зарегистрирован'],
+								['wrong-mail', 'Введенный e-mail имеет неверный формат']
+							])
+					+btn-submit('Отправьте мне пароль!')(mods=['ask-pass'])
+			
+			+modal('Обратная связь', true)(id='feedback')
+				+form('userFeedback')(id='userFeedback')
+
+			+modal('login')
+				+login('Личный кабинет')
+					+form('userLogin')(
+						id='userLogin'
+						mods=['show', 'login'])
+						+input('text')(
+							placeholder='Введите логин'
+							name='login')
+						+input('password')(
+							placeholder='Введите пароль'
+							name='password'
+							errors=[
+								['no-pass','Введите пароль'],
+								['short-pass', 'Пароль не должен быть короче 6 символов']
+							]
+							mods=['margined'])
+						+checkbox('remember', 'Запомнить меня')(mods=['no-margin'])
+						button.form__forgot(
+							type='button'
+							data-modal-link='#forgot') Забыли пароль?
+						+btn-submit('Войти')(mods=['enter'])
+
+					+form('userReg')(
+						id='userReg'
+						mods=['login'])
+						+input('text')(
+							placeholder='Введите логин'
+							name='login'
+							errors=[
+								['no-login','Введите логин'],
+								['reged-login', 'Логин занят'],
+								['short-login', 'Логин должен быть длиннее 3 символов']
+							])
+						+input('email')(
+							placeholder='Введите e-mail'
+							name='email'
+							errors=[
+								['no-mail','Введите e-mail'],
+								['reged-mail', 'Данный e-mail уже зарегистрирован'],
+								['wrong-mail', 'Введенный e-mail имеет неверный формат']
+							])
+						+input('password')(
+							placeholder='Введите пароль'
+							name='password'
+							errors=[
+								['no-pass','Введите пароль'],
+								['short-pass', 'Пароль не должен быть короче 6 символов']
+							]
+							mods=['margined'])
+						.recapcha
+						+btn-submit('Зарегистрироваться')(mods=['reg'])
+
+			+modal('forgot')
+				+fBack('Забыли пароль?')
+					+form('forgotPass')
+						p.form__text
+							| Не может вспомнить пароль для входа в свой аккаунт?
+							br
+							| Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.
+						+input('email')(
+							placeholder='Введите e-mail'
+							name='email'
+							errors=[
+								['no-mail','Введите e-mail'],
+								['not-reged-mail', 'Данный e-mail не зарегистрирован'],
+								['wrong-mail', 'Введенный e-mail имеет неверный формат']
+							])
+						+btn-submit('Отправьте мне пароль!')(mods=['ask-pass'])
+
+			+modal('feedback')
+				+fBack('Обратная связь')
+					+form('userFeedback')
+						+input('email')(
+							placeholder='Введите e-mail'
+							name='email'
+							errors=[
+								['no-mail','Введите e-mail'],
+								['wrong-mail', 'Введенный e-mail имеет неверный формат']
+							])
+						+textarea(
+							placeholder='Введите текст комментария'
+							name='comment'
+							mods=['modal'])
+						+btn-submit('Отправить сообщение')(mods=['feedback'])
+
+			
+			+modal('voteCounted')(id='voteCounted')
+				+wModal('Спасибо, Ваш голос учтен!')
+					+form('voting')
+						+rate
+						+textarea(
+							label='Оставьте комментарий:'
+							placeholder='Введите текст комментария'
+							name='comment'
+							mods=['modal'])
+						+btn-submit('Оставить комментарий')(mods=['modal'])
+
+			+modal('suggestPlus')(id='suggestPlus')
+				+wModal('Предложить плюс:')
+					+form('comment')
+						+textarea(
+							placeholder='Введите текст комментария'
+							name='comment'
+							mods=['modal'])
+						+btn-submit('Оставить комментарий')(mods=['modal'])
+
+			+modal('suggestMinus')(id='suggestMinus')
+				+wModal('Предложить минус:')
+					+form('comment')
+						+textarea(
+							placeholder='Введите текст комментария'
+							name='comment'
+							mods=['modal'])
+						+btn-submit('Оставить комментарий')(mods=['modal'])
 
 		if withKlichko === true
 			+klichko

@@ -37,7 +37,7 @@ module.exports = function() {
 				// fonts({
 				// 	formats: 'woff'
 				// }),
-				short(),
+				// short(),
 				flexFix(),
 				prefixes({browsers: [
 					'> 1%',

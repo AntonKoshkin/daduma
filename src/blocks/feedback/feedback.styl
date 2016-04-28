@@ -1,0 +1,32 @@
+.feedback
+	position absolute
+	width 100%
+	top 0
+	left 0
+	background-color white
+
+	&__title
+		@extend $mid-big-text
+		
+		color white
+		background-color blue
+		font-family yefimov
+		font-weight regular
+		text-align center
+		padding 13px 0
+	
+	&__body
+		padding 20px 15px 30px
+
+	@media (min-width modal-bp)
+		max-width 480px
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+		
+		&__body
+			padding 30px
+
+.modal--show
+	.feedback
+		animation fadeIn .3s linear

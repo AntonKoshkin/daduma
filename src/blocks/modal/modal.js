@@ -14,6 +14,12 @@ $(document).ready(function() {
 		event.preventDefault();
 		var modalWindow = $(this).attr('data-modal-link');
 
+		if ($(this).closest('.modal')) {
+			$(this)
+				.closest('.modal')
+				.removeClass('modal--show');
+		}
+
 		$(modalWindow).addClass('modal--show');
 	});
 });

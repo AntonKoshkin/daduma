@@ -6,3 +6,6 @@
 
 // threedotter
 //= ../blocks/dotdotdot/dotdotdot.js
+
+// custom scroll
+//= ../blocks/template/slim-scroll.js

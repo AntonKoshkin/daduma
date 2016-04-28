@@ -1,0 +1,94 @@
+.soc-enter
+	margin-bottom 25px
+	margin-left -15px
+	margin-right -15px
+	
+	&__item
+		@extend $small-text
+		
+		color white
+		font-weight medium
+		display block
+		text-align center
+		padding 18px 0
+		
+		&--facebook
+			background-color soc-fb
+		
+		&--twitter
+			background-color soc-tw
+		
+		&--vkontakte
+			background-color soc-vk
+		
+		&--google-plus
+			background-color soc-gp
+		
+		&--classmates
+			background-color soc-cm
+	
+	&__text
+		padding-left 30px
+		position relative
+		
+		&:before
+			@extend $pseudo-left
+			size 20px
+
+	&__item--facebook &__text
+		&:before
+			bicon(social.white.fb)
+			
+	&__item--twitter &__text
+		&:before
+			bicon(social.white.twitter)
+			
+	&__item--vkontakte &__text
+		&:before
+			bicon(social.white.vk)
+			
+	&__item--google-plus &__text
+		&:before
+			bicon(social.white.gPlus)
+			
+	&__item--classmates &__text
+		&:before
+			bicon(social.white.ok)
+	
+	@media (min-width modal-bp)
+		margin-left 0
+		margin-right 0
+		display flex
+		flex-wrap wrap
+		
+		&__item
+			margin-bottom 7px
+			
+			&--facebook
+				width 100%
+			
+			&--twitter
+			&--google-plus
+			&--vkontakte
+			&--classmates
+				flex-basis 40%
+				flex-grow 1
+			
+			&--twitter
+			&--vkontakte
+				margin-right 7px
+
+			&--facebook
+				order 1
+
+			&--twitter
+				order 2
+
+			&--google-plus
+				order 3
+
+			&--vkontakte
+				order 4
+
+			&--classmates
+				order 5

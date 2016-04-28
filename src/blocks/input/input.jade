@@ -1,0 +1,20 @@
+mixin input(type)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'input--' + mod
+
+	.input(class=mods)
+		input.input__input(
+			type=type
+			id=attributes.id
+			placeholder!=attributes.placeholder
+			autocomplete=attributes.autocomplete || 'off'
+			name=attributes.name)
+		.input__errors
+			if attributes.errors
+				each error in attributes.errors
+					p.input__error(
+						class='input__error--'+error[0])!=error[1]
+		if block
+			block

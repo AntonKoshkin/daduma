@@ -40,10 +40,10 @@
 						</li>
 						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
 						<li class="navigation__item"><a href="#" class="navigation__link">Пользователи</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Обратная связь</a></li>
+						<li class="navigation__item"><a href="#" data-modal-link="#feedback" class="navigation__link">Обратная связь</a></li>
 					</ul>
 				</nav>
-				<button type="button" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
+				<button type="button" data-modal-link="#login" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
 			</div>
 		</header>
 		<main class="main main--bg">
@@ -79,7 +79,7 @@
 			</section>
 			<section class="act">
 				<div class="act__wrapper">
-					<div class="act__face"><img src="http://placekitten.com/300/200" alt="Исображение документа" class="act__img"/>
+					<div class="act__face"><img src="http://cont.ws/uploads/pic/2016/4/dc77208950025a3282c3d8c851444709.jpg" alt="Исображение документа" class="act__img"/>
 						<div class="rating">
 							<div class="rating__visual">
 								<!-- рейтинг есть ширина блока rating__stars-->
@@ -95,7 +95,8 @@
 								<time datetime="2016-03-18" class="act__date-time--fat">18.03.2016</time>
 							</p>
 						</div>
-						<div class="expand">
+						<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+						<div data-num-of-lines='9' class="expand">
 							<div class="expand__text-wrapper">
 								<div class="expand__text">
 									<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
@@ -525,6 +526,9 @@
 								<p>юридическое лицо, имеющее право взыскивать задолженность, должно заниматься этим в качестве основного рода деятельности и иметь уставный капитал не менее 10 миллионов рублей;</p>
 								<p>введение реестра профессиональных взыскателей и установление требования к ним.</p>
 							</div>
+							<div class="sides__expand">
+								<button class="sides__expander">Больше плюсов</button>
+							</div>
 							<div class="sides__suggestion">
 								<button data-modal-link="#suggestPlus" type="button" class="sides__sugg-btn">Предложить плюс</button>
 							</div>
@@ -537,7 +541,8 @@
 								<p>риск роста числа "черных" взыскателей;</p>
 								<p>возрастание нагрузки на судебную систему, а между тем тяжбы могут длиться годами и за это время будут начисляться проценты;</p>
 								<p>в проекте пока не отмечено, какое ведомство будет контролировать соблюдение закона;</p>
-								<p>реализация механизма получения дополнительного согласия на переуступку долга вызовет сложности на практике: собирать подписи с должников после того, как они уже допустили просрочку, почти невозможно. Это вынудит банки получать такое согласие с клиента «заранее» – еще при выдаче кредита.</p>
+								<p>в проекте пока не отмечено, какое ведомство будет контролировать соблюдение закона;</p>
+								<p>реализация механизма получения дополнительного согласия на переуступку долга вызовет сложности на практике: собирать подписи с должников после того, как они уже допустили просрочку, почти невозможно. Это вынудит банки получать такое </p>
 							</div>
 							<div class="sides__suggestion">
 								<button data-modal-link="#suggestMinus" type="button" class="sides__sugg-btn">Предложить минус</button>
@@ -626,16 +631,16 @@
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
-								<div class="comment__small-text">
-									<!-- текст комментария вставляется в 2 блока одинаковый-->
-									<div class="comment__text-wrapper">
-										<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+								<div data-num-of-lines='3' class="expand">
+									<div class="expand__text-wrapper">
+										<div class="expand__text">
+											<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+										</div>
 									</div>
-									<button type="button" class="comment__more">Развернуть комментарий</button>
-								</div>
-								<div class="comment__full-text">
-									<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
-									<button type="button" class="comment__more">Свернуть комментарий</button>
+									<div class="expand__expand">
+										<button class="expand__expander">Развернуть</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -646,16 +651,16 @@
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
-								<div class="comment__small-text">
-									<!-- текст комментария вставляется в 2 блока одинаковый-->
-									<div class="comment__text-wrapper">
-										<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+								<div data-num-of-lines='3' class="expand">
+									<div class="expand__text-wrapper">
+										<div class="expand__text">
+											<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+										</div>
 									</div>
-									<button type="button" class="comment__more">Развернуть комментарий</button>
-								</div>
-								<div class="comment__full-text">
-									<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
-									<button type="button" class="comment__more">Свернуть комментарий</button>
+									<div class="expand__expand">
+										<button class="expand__expander">Развернуть</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -666,16 +671,16 @@
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
-								<div class="comment__small-text">
-									<!-- текст комментария вставляется в 2 блока одинаковый-->
-									<div class="comment__text-wrapper">
-										<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+								<div data-num-of-lines='3' class="expand">
+									<div class="expand__text-wrapper">
+										<div class="expand__text">
+											<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+										</div>
 									</div>
-									<button type="button" class="comment__more">Развернуть комментарий</button>
-								</div>
-								<div class="comment__full-text">
-									<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
-									<button type="button" class="comment__more">Свернуть комментарий</button>
+									<div class="expand__expand">
+										<button class="expand__expander">Развернуть</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -686,16 +691,16 @@
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
-								<div class="comment__small-text">
-									<!-- текст комментария вставляется в 2 блока одинаковый-->
-									<div class="comment__text-wrapper">
-										<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+								<div data-num-of-lines='3' class="expand">
+									<div class="expand__text-wrapper">
+										<div class="expand__text">
+											<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+										</div>
 									</div>
-									<button type="button" class="comment__more">Развернуть комментарий</button>
-								</div>
-								<div class="comment__full-text">
-									<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
-									<button type="button" class="comment__more">Свернуть комментарий</button>
+									<div class="expand__expand">
+										<button class="expand__expander">Развернуть</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -706,16 +711,16 @@
 							<p class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
-								<div class="comment__small-text">
-									<!-- текст комментария вставляется в 2 блока одинаковый-->
-									<div class="comment__text-wrapper">
-										<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+								<div data-num-of-lines='3' class="expand">
+									<div class="expand__text-wrapper">
+										<div class="expand__text">
+											<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+										</div>
 									</div>
-									<button type="button" class="comment__more">Развернуть комментарий</button>
-								</div>
-								<div class="comment__full-text">
-									<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
-									<button type="button" class="comment__more">Свернуть комментарий</button>
+									<div class="expand__expand">
+										<button class="expand__expander">Развернуть</button>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -801,74 +806,199 @@
 			</div>
 		</footer>
 		<div class="page__modals">
-			<div id="voteCounted" class="modal">
+			<div id="Обратная связь" class="modal">
 				<div class="modal__bg"></div>
-				<div class="modal__content">
-					<button type="button" id="closeModal" class="modal__close"></button>
-					<p class="modal__title modal__title">Спасибо, Ваш голос учтен!</p>
-					<div class="rate">
-						<div class="rate__content">
-							<p class="rate__title">Оцените закон:</p>
-							<div class="rate__stars">
-								<label class="rate__label">
-									<input type="radio" name="userRate" value="5" class="rate__input"/>
-								</label>
-								<label class="rate__label">
-									<input type="radio" name="userRate" value="4" class="rate__input"/>
-								</label>
-								<label class="rate__label">
-									<input type="radio" name="userRate" value="3" class="rate__input"/>
-								</label>
-								<label class="rate__label">
-									<input type="radio" name="userRate" value="2" class="rate__input"/>
-								</label>
-								<label class="rate__label">
-									<input type="radio" name="userRate" value="1" class="rate__input"/>
-								</label>
-							</div>
+				<form id="userFeedback" action="" name="userFeedback" class="form">
+				</form>
+			</div>
+			<div id="login" class="modal">
+				<div class="modal__bg"></div>
+				<div class="login">
+					<button type="button" class="close"></button>
+					<p class="login__title">Личный кабинет</p>
+					<div class="login__body">
+						<div class="soc-enter"><a href="#" class="soc-enter__item soc-enter__item--facebook"><span class="soc-enter__text">Войти через Facebook</span></a><a href="#" class="soc-enter__item soc-enter__item--twitter"><span class="soc-enter__text">Twitter</span></a><a href="#" class="soc-enter__item soc-enter__item--vkontakte"><span class="soc-enter__text">Вконтакте</span></a><a href="#" class="soc-enter__item soc-enter__item--google-plus"><span class="soc-enter__text">Google plus</span></a><a href="#" class="soc-enter__item soc-enter__item--classmates"><span class="soc-enter__text">Одноклассники</span></a>
+						</div>
+						<p class="login__tabs">
+							<button type="button" data-binded-form="#userLogin" class="login__btn login__btn--active">Войти</button><span class="login__or">или</span>
+							<button type="button" data-binded-form="#userReg" class="login__btn">Зарегистрироваться</button>
+						</p>
+						<div class="login__forms">
+							<form id="userLogin" action="" name="userLogin" class="form form--show form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--no-margin">
+									<label for="remember" class="checkbox__label">
+										<input type="checkbox" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
+									</label>
+								</div>
+								<button type="button" data-modal-link="#forgot" class="form__forgot">Забыли пароль?</button>
+								<div class="btn-submit btn-submit--enter">
+									<input type="submit" value="Войти" class="btn-submit__input"/>
+								</div>
+							</form>
+							<form id="userReg" action="" name="userReg" class="form form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
+										<p class="input__error input__error--reged-login">Логин занят</p>
+										<p class="input__error input__error--short-login">Логин должен быть длиннее 3 символов</p>
+									</div>
+								</div>
+								<div class="input">
+									<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="recapcha"></div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Зарегистрироваться" class="btn-submit__input"/>
+								</div>
+							</form>
 						</div>
 					</div>
-					<form action="#" name="userComment">
-						<p class="modal__text">Оставьте комментарий:</p>
-						<div class="textarea textarea--modal">
-							<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
-						</div>
-						<div class="btn-submit btn-submit--modal">
-							<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
-						</div>
-					</form>
+				</div>
+			</div>
+			<div id="forgot" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Забыли пароль?</p>
+					<div class="feedback__body">
+						<form action="" name="forgotPass" class="form">
+							<p class="form__text">Не может вспомнить пароль для входа в свой аккаунт?<br/>Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.</p>
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--not-reged-mail">Данный e-mail не зарегистрирован</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--ask-pass">
+								<input type="submit" value="Отправьте мне пароль!" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="feedback" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Обратная связь</p>
+					<div class="feedback__body">
+						<form action="" name="userFeedback" class="form">
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--feedback">
+								<input type="submit" value="Отправить сообщение" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Спасибо, Ваш голос учтен!</p>
+						<form action="" name="voting" class="form">
+							<div class="rate">
+								<div class="rate__content">
+									<p class="rate__title">Оцените закон:</p>
+									<div class="rate__stars">
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="5" class="rate__input"/>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="4" class="rate__input"/>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="3" class="rate__input"/>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="2" class="rate__input"/>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="1" class="rate__input"/>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<label class="textarea__label">Оставьте комментарий:</label>
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div id="suggestPlus" class="modal">
 				<div class="modal__bg"></div>
-				<div class="modal__content">
-					<button type="button" id="closeModal" class="modal__close"></button>
-					<p class="modal__title modal__title">Предложить плюс:</p>
-					<form action="#" name="suggestPlus">
-						<p class="modal__text">Предложение своего плюса закона:</p>
-						<div class="textarea textarea--modal">
-							<textarea name="actPlus" placeholder="Введите текст плюса" class="textarea__input"></textarea>
-						</div>
-						<div class="btn-submit btn-submit--modal">
-							<input type="submit" value="Предложить плюс" class="btn-submit__input"/>
-						</div>
-					</form>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить плюс:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div id="suggestMinus" class="modal">
 				<div class="modal__bg"></div>
-				<div class="modal__content">
-					<button type="button" id="closeModal" class="modal__close"></button>
-					<p class="modal__title modal__title">Предложить минус:</p>
-					<form action="#" name="suggestMinus">
-						<p class="modal__text">Предложение своего минуса закона:</p>
-						<div class="textarea textarea--modal">
-							<textarea name="actMinus" placeholder="Введите текст минуса" class="textarea__input"></textarea>
-						</div>
-						<div class="btn-submit btn-submit--modal">
-							<input type="submit" value="Предложить минус" class="btn-submit__input"/>
-						</div>
-					</form>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить минус:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

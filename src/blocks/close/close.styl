@@ -1,0 +1,29 @@
+.close
+	@extend $btn-reset, $pseudo-right-top
+	size 16px
+	
+	top 10px
+	right  @top
+	
+	&:before
+	&:after
+		@extend $pseudo
+		
+		top -5px
+		right @top
+		bottom  @top
+		left  @top
+		margin auto
+		width 20px
+		height 2px
+		background-color pink
+		transform-origin center
+	
+	&:before
+		transform rotate(45deg)
+	
+	&:after
+		transform rotate(-45deg)
+	
+	// @media(min-width tablet)
+	// 	display none

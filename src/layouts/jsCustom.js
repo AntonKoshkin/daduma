@@ -39,3 +39,12 @@
 
 // text expander
 //= ../blocks/expand/expand.js
+
+// custom scrolling
+//= ../blocks/scrl-area/scrl-area.js
+
+// login tabs
+//= ../blocks/login/login.js
+
+// modals closer
+//= ../blocks/close/close.js

@@ -1,0 +1,27 @@
+mixin login(title)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'login--' + mod
+
+	.login(class=mods)
+		+close
+		p.login__title!=title
+		.login__body
+			+sEnter
+				+sEnterItem('facebook', 'Войти через Facebook')
+				+sEnterItem('twitter', 'Twitter')
+				+sEnterItem('vkontakte', 'Вконтакте')
+				+sEnterItem('google-plus', 'Google plus')
+				+sEnterItem('classmates', 'Одноклассники')
+			p.login__tabs
+				button.login__btn.login__btn--active(
+					type='button'
+					data-binded-form='#userLogin') Войти
+				span.login__or или
+				button.login__btn(
+					type='button'
+					data-binded-form='#userReg') Зарегистрироваться
+			.login__forms
+				if block
+					block

@@ -1,7 +1,9 @@
-mixin expand
-	.expand
+mixin expand(num)
+	// в дата-атрибуте содержится количество строк, на которые сворачивается текст
+	.expand(data-num-of-lines=num)
 		.expand__text-wrapper
 			.expand__text
-				//- text
+				if block
+					block
 		.expand__expand
-			button.expand__expander
+			button.expand__expander Развернуть
