@@ -9,3 +9,6 @@
 
 // custom scroll
 //= ../blocks/template/slim-scroll.js
+
+// number increaser
+//= ../blocks/number/counter.js

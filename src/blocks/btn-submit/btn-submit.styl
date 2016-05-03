@@ -3,12 +3,12 @@
 
 	&__input
 		@extend $btn-reset, $not-so-small-text
-		simple-btn-color blue
+		simple-btn-color blue-light
 
 		color white
 		font-weight regular
 		padding 13px 19px 9px
-		border-bottom 4px solid blue-dark
+		border-bottom 4px solid lightness(blue-light, 50%)
 	
 	&--modal
 		text-align center

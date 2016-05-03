@@ -34,22 +34,25 @@
 		padding-bottom 0
 	
 	&--stat &__description
-		color gray-light
+		color gray
 
 	&__legend
 		@extend $not-so-small-text
 		
 		font-weight regular
 		margin-bottom 10px
-		padding-left 46px
+		// padding-left 46px
+		padding-left 20px
 		position relative
 		margin-left 5px
 		
 		&:before
 			@extend $pseudo-left
+			size 10px
 			
-			width 30px
-			height 3px
+			// width 30px
+			// height 3px
+			border-radius 50%
 		
 		&--red
 			&:before

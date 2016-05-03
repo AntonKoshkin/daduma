@@ -46,7 +46,8 @@
 	
 	&__text
 		text-align justify
-		margin-bottom 35px
+		// margin-bottom 35px
+		margin-bottom 10px
 		overflow hidden
 		position relative
 		
@@ -91,6 +92,18 @@
 	
 	&__content--red &__sugg-btn
 		color pink
+	
+	&__expand
+		display none
+		text-align left
+		padding-left 60px
+	
+	&__expander
+		@extend $btn-reset, $small-text
+		
+		font-weight semibold
+		text-decoration underline
+		margin-bottom 20px
 	
 	@media (min-width tablet)
 		&__wrapper

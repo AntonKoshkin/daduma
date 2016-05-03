@@ -45,6 +45,8 @@ include ../login/login
 include ../close/close
 include ../feedback/feedback
 include ../white-modal/white-modal
+include ../timeline/timeline
+include ../quote/quote
 
 include ../klichko/klichko
 
@@ -76,63 +78,6 @@ html(lang="ru")
 				+socItem('fb', 'Мы в Facebook', 'http://facebook.com/')
 		
 		.page__modals
-			//- +modal('Спасибо, Ваш голос учтен!')(id='voteCounted')
-				+rate
-				//- form(
-				//- 	action='#'
-				//- 	name='userComment')
-				+form('suggestComment')(id='suggestComment')
-					p.form__text Оставьте комментарий:
-					+textarea(
-						name='comment'
-						placeholder='Введите текст комментария'
-						mods=['modal'])
-					+btn-submit('Оставить комментарий')(mods=['modal'])
-			
-			//- +modal('Предложить плюс:')(id='suggestPlus')
-				//- form(
-				//- 	action='#'
-				//- 	name='suggestPlus')
-				+form('suggestPlus')(id='suggestPlus')
-					p.form__text Предложение своего плюса закона:
-					+textarea(
-						name='actPlus'
-						placeholder='Введите текст плюса'
-						mods=['modal'])
-					+btn-submit('Предложить плюс')(mods=['modal'])
-			
-			//- +modal('Предложить минус:')(id='suggestMinus')
-				//- form(
-				//- 	action='#'
-				//- 	name='suggestMinus')
-				+form('suggestMinus')(id='suggestMinus')
-					p.form__text Предложение своего минуса закона:
-					+textarea(
-						name='actMinus'
-						placeholder='Введите текст минуса'
-						mods=['modal'])
-					+btn-submit('Предложить минус')(mods=['modal'])
-
-			//- +modal('Забыли Пароль?', true)(id='remindPass')
-				//- form.modal__ask-pass(
-				//- 	action='#'
-				//- 	name='askPass')
-				+form('userRemind')(id='userRemind')
-					p.form__text
-						| Не может вспомнить пароль для входа в свой аккаунт?
-						br
-						| Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.
-					+input('email')(
-							placeholder='Введите e-mail'
-							name='email'
-							mods=['margined']
-							errors=[
-								['no-mail','Введите e-mail'],
-								['not-reged-mail', 'Данный e-mail не зарегистрирован'],
-								['wrong-mail', 'Введенный e-mail имеет неверный формат']
-							])
-					+btn-submit('Отправьте мне пароль!')(mods=['ask-pass'])
-			
 			+modal('Обратная связь', true)(id='feedback')
 				+form('userFeedback')(id='userFeedback')
 
@@ -251,8 +196,9 @@ html(lang="ru")
 							mods=['modal'])
 						+btn-submit('Оставить комментарий')(mods=['modal'])
 
-		if withKlichko === true
-			+klichko
+		//- if withKlichko === true
+		//- 	+klichko
+		+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
 		script(
 			src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 		script window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')

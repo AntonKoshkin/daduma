@@ -1,24 +1,67 @@
 .rating
-	text-align center
+	// text-align center
 	
-	&__visual
-		bicon(star.gray, 12)
+	// &__visual
+	// 	bicon(star.gray, 12)
 		
-		width 60px
-		display inline-block
-		margin-right 13px
+	// 	width 60px
+	// 	display inline-block
+	// 	margin-right 13px
 	
-	&__stars
-		bicon(star.yellow, 12)
+	// &__stars
+	// 	bicon(star.yellow, 12)
+	
+	// &__visual
+	// &__stars
+	// 	height 12px
+	// 	background-position 0 50%
+	// 	background-repeat repeat-x
+	
+	// &__number
+	// 	@extend $small-text
+	
+	// 	font-family yefimov
+	// 	color black
 	
 	&__visual
-	&__stars
-		height 12px
-		background-position 0 50%
-		background-repeat repeat-x
+		position relative
 	
-	&__number
-		@extend $small-text
+	&__title
+		@extend $very-small-text
+		
+		margin-bottom 15px
+
+	&__strip
+		// @extend $pseudo-left
+		
+		height 2px
+		width 100%
+		background linear-gradient(to right,
+			pink 0%,
+			pink 25%,
+			green 75%,
+			green 100%)
 	
-		font-family yefimov
-		color black
+	&__circle
+		position relative
+
+	&__round
+		@extend $pseudo, $extra-small-text
+		size 26px
+		
+		border-radius 50%
+		right 0
+		top 50%
+		transform translate(50%, -50%)
+		color white
+		line-height 24px
+		text-align center
+		
+		&--green
+			background-color green
+		
+		&--gray
+			background-color gray-light
+		
+		&--red
+			background-color pink

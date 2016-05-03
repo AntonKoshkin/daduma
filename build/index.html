@@ -81,11 +81,18 @@
 				<div class="act__wrapper">
 					<div class="act__face"><img src="http://cont.ws/uploads/pic/2016/4/dc77208950025a3282c3d8c851444709.jpg" alt="Исображение документа" class="act__img"/>
 						<div class="rating">
+							<p class="rating__title">Оценка пользователей:</p>
 							<div class="rating__visual">
-								<!-- рейтинг есть ширина блока rating__stars-->
+								<div class="rating__strip"></div>
+								<!-- рейтинг идет от -5 до 5, следовательно если рейтинг 0, то ширина будет 50%, -5 = 0%, 5= 100%-->
 								<!-- указывается ширина в процентах соответственно рейтинга-->
-								<div style="width:33%" class="rating__stars"></div>
-							</div><span class="rating__number">3.3</span>
+								<div style="width:75%" class="rating__circle">
+									<!-- у спана модификаторы цвета-->
+									<!-- .rating__round--green - зеленый цвет-->
+									<!-- .rating__round--red - красный цвет-->
+									<!-- значение у спана это рейтинг, деленный на--><span class="rating__round rating__round--green">2.5</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="act__desc">
@@ -95,33 +102,23 @@
 								<time datetime="2016-03-18" class="act__date-time--fat">18.03.2016</time>
 							</p>
 						</div>
-						<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
-						<div data-num-of-lines='9' class="expand">
-							<div class="expand__text-wrapper">
-								<div class="expand__text">
-									<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
-									</p>
-									<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
-									</p>
+						<div class="act__text-desc">
+							<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+							<div data-num-of-lines='9' class="expand">
+								<div class="expand__text-wrapper">
+									<div class="expand__text">
+										<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
+										</p>
+										<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
+										</p>
+									</div>
 								</div>
-							</div>
-							<div class="expand__expand">
-								<button class="expand__expander">Развернуть</button>
+								<div class="expand__expand">
+									<button class="expand__expander">Развернуть</button>
+								</div>
 							</div>
 						</div>
 						<div class="act__params">
-							<div class="act__param">
-								<h4 class="small-title">Тип:
-								</h4>
-								<p class="main-text">Директива правительства
-								</p>
-							</div>
-							<div class="act__param">
-								<h4 class="small-title">Субъект:
-								</h4>
-								<p class="main-text">Санкт-петербург, Ленинградская область
-								</p>
-							</div>
 							<div class="act__param">
 								<h4 class="small-title">Статус:
 								</h4>
@@ -184,18 +181,6 @@
 					<div class="detail">
 						<div class="detail__content">
 							<h2 class="detail__title">Подробная информация</h2>
-							<div class="act__param">
-								<h4 class="small-title">Тип:
-								</h4>
-								<p class="main-text">Директива правительства
-								</p>
-							</div>
-							<div class="act__param">
-								<h4 class="small-title">Субъект:
-								</h4>
-								<p class="main-text">Санкт-петербург, Ленинградская область
-								</p>
-							</div>
 							<div class="act__param">
 								<h4 class="small-title">Статус:
 								</h4>
@@ -444,56 +429,51 @@
 							<h4 class="about-act__cont-title">Хронология закона</h4>
 							<div class="about-act__cont-content">
 								<div class="about-act__inner">
-									<div class="scrl-area">
-										<div class="scrl-area__canvas text">
-											<h3 class="scrl-area__title">Хронология закона:</h3>
-											<h3>1.1 Регистрация в САДД ГД</h3>
-											<p>17.02.2016 17:31</p>
-											<p>зарегистрирован и направлен Председателю Государственной Думы</p>
-											<h3>1.2 Направление в профильный комитет</h3>
-											<p>17.02.2016 19:18</p>
-											<p>направлен в Комитет Государственной Думы по финансовому рынку</p>
-											<h3>0.2 Регистрация писем</h3>
-											<p>18.02.2016</p>
-											<p>дополнение состава инициаторов законопроекта (Н.Н.Гончар)</p>
-											<h3>0.2 Регистрация писем</h3>
-											<p>18.02.2016</p>
-											<p>дополнение состава инициаторов законопроекта (С.Н.Рябухин)</p>
-											<h3>2.1 Профильный комитет</h3>
-											<p>16.03.2016</p>
-											<p>174 п.5</p>
-											<p>предложить принять законопроект к рассмотрению (срок представления отзывов, предложений и замечаний в комитет 22.03.2016)</p>
-											<h3>0.2 Регистрация писем</h3>
-											<p>16.03.2016</p>
-											<p>предложить принять законопроект к рассмотрению (срок представления отзывов, предложений и замечаний в комитет 22.03.2016)</p>
-											<h3>2.2 Совет Государственной Думы (предварительное рассмотрение)</h3>
-											<p>17.03.2016</p>
-											<p>288, п.78</p>
-											<p>назначить ответственный комитет (Комитет Государственной Думы по финансовому рынку); представить отзывы, предложения и замечания к законопроекту (срок представления отзывов, предложений и замечаний в комитет 22.03.2016); подготовить законопроект к рассмотрению Государственной Думой; назначить комитет-соисполнитель (Комитет Государственной Думы по вопросам собственности)</p>
-											<h3>3.2 Совет Государственной Думы (первое чтение)</h3>
-											<p>24.03.2016</p>
-											<p>290, п.2</p>
-											<p>перенести рассмотрение законопроекта</p>
-											<h3>3.2 Совет Государственной Думы (первое чтение)</h3>
-											<p>25.03.2016</p>
-											<p>292, п.1</p>
-											<p>внести законопроект на рассмотрение Государственной Думы (предлагаемая дата рассмотрения Государственной Думой 15.04.2016)</p>
-											<h3>3.2 Совет Государственной Думы (первое чтение)</h3>
-											<p>11.04.2016</p>
-											<p>293, п.5</p>
-											<p>перенести рассмотрение законопроекта (предлагаемая дата рассмотрения Государственной Думой 12.04.2016)</p>
-											<h3>3.1 Ответственный комитет (первое чтение)</h3>
-											<p>11.04.2016</p>
-											<p>179 п.10</p>
-											<p>предложить принять законопроект в первом чтении (предлагаемая дата рассмотрения Государственной Думой 12.04.2016)</p>
-											<h3>3.2 Совет Государственной Думы (первое чтение)</h3>
-											<p>11.04.2016</p>
-											<p>293, п.5</p>
-											<p>перенести рассмотрение законопроекта</p>
-											<h3>3.3 Государственная Дума (первое чтение)</h3>
-											<p>12.04.2016</p>
-											<p>8636-6 ГД</p>
-											<p>принять законопроект в первом чтении; представить поправки к законопроекту в пятидневный срок со дня принятия постановления</p>
+									<!-- для подсветки соответствующего этапа предусмотрены модификаторы-->
+									<!-- .timeline--two, .timeline--three, .timeline--four, .timeline--five, .timeline--six, .timeline--seven, .timeline--eight-->
+									<!-- по умолчанию подсвечивается первый этап, каждый из вышеописанных модификаторов подсвечивает следующий (то есть .timeline--five подсветит все, включая пятый, добавлять нужно только один модификатор единовременно)-->
+									<div class="timeline timeline--two">
+										<div class="timeline__items">
+											<div class="timeline__item">
+												<div class="timeline__number"><span>1</span></div>
+												<p class="timeline__date">21.03.16</p>
+												<p class="timeline__title">Внесение законопроекта в ГД</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>2</span></div>
+												<p class="timeline__date">15.04.16</p>
+												<p class="timeline__title">Предварительное рассмотрение</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>3</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Первое чтение</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>4</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Второе чтение</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>5</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Опубликование</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>6</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Рассмотрение президентом</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>7</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Рассмотрение в СФ</p>
+											</div>
+											<div class="timeline__item">
+												<div class="timeline__number"><span>8</span></div>
+												<p class="timeline__date"></p>
+												<p class="timeline__title">Третье чтение</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -527,7 +507,7 @@
 								<p>введение реестра профессиональных взыскателей и установление требования к ним.</p>
 							</div>
 							<div class="sides__expand">
-								<button class="sides__expander">Больше плюсов</button>
+								<button class="sides__expander">Развернуть</button>
 							</div>
 							<div class="sides__suggestion">
 								<button data-modal-link="#suggestPlus" type="button" class="sides__sugg-btn">Предложить плюс</button>
@@ -551,46 +531,54 @@
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section section--red-border">
 				<div class="section__wrapper">
 					<h2 class="section__title">Мнения экспертов и известных людей по законопроекту:</h2>
 					<div class="opinion">
-						<div class="opinion__item">
-							<div class="opinion__face">
-								<!-- изображения необходимо кропать под квадрат--><img src="http://www.vitki.org/wp-content/uploads/2012/06/%D0%9A%D0%A2%D0%9E-%D0%A1%D0%9A%D0%90%D0%97%D0%90%D0%9B-%D0%A7%D0%A2%D0%9E-%D0%9F%D0%A3%D0%A2%D0%98%D0%9D-%D0%A1%D0%A3%D0%9C%D0%90%D0%A1%D0%A8%D0%95%D0%94%D0%A8%D0%98%D0%99-2.jpg" alt="Фото эксперта" class="opinion__img"/>
-							</div>
-							<blockquote class="opinion__bq">
-								<p class="opinion__text">Деятельность квази-коллекторов преступную надо прекратить. Беспредел, связанный с нарушением закона, с угрозами, с насилием - и психологическим насилием, и физическим. Это абсолютно неприемлемо.</p>
-								<p class="opinion__text">Но такой вид деятельности, как работа по долговым обязательствам, применяется во многих странах, это нормальный инструмент в рыночных отношениях, и нельзя, конечно, чтобы люди безответственно относились к получению денег и не думали о том, как они будут отдавать. Ведь несправедливо, если у вас возьмут деньги, а потом отдавать не будут.</p>
-								<cite class="opinion__name"><a href="http://putin.kremlin.ru/" target="_blank">В.В. Путин, Президент РФ</a></cite>
-							</blockquote>
+						<div class="opinion__tabs">
+							<div class="opinion__tab opinion__tab--active"><img src="http://goo.gl/jZCLyk" alt="" class="opinion__thumb"/></div>
+							<div class="opinion__tab"><img src="http://goo.gl/8xF0Cu" alt="" class="opinion__thumb"/></div>
+							<div class="opinion__tab"><img src="https://goo.gl/WhpvUu" alt="" class="opinion__thumb"/></div>
+							<div class="opinion__tab"><img src="http://goo.gl/irgQPx" alt="" class="opinion__thumb"/></div>
 						</div>
-						<div class="opinion__item">
-							<div class="opinion__face">
-								<!-- изображения необходимо кропать под квадрат--><img src="http://council.gov.ru/media/persons/186x248/41d5a9d66ee5bc56652c.jpg" alt="Фото эксперта" class="opinion__img"/>
+						<div class="opinion__content">
+							<div class="opinion__item opinion__item--show">
+								<div class="opinion__face">
+									<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/jZCLyk" alt="Фото эксперта" class="opinion__img"/>
+								</div>
+								<blockquote class="opinion__bq">
+									<p class="opinion__text">Деятельность квази-коллекторов преступную надо прекратить. Беспредел, связанный с нарушением закона, с угрозами, с насилием - и психологическим насилием, и физическим. Это абсолютно неприемлемо.</p>
+									<p class="opinion__text">Но такой вид деятельности, как работа по долговым обязательствам, применяется во многих странах, это нормальный инструмент в рыночных отношениях, и нельзя, конечно, чтобы люди безответственно относились к получению денег и не думали о том, как они будут отдавать. Ведь несправедливо, если у вас возьмут деньги, а потом отдавать не будут.</p>
+									<cite class="opinion__name"><a href="http://putin.kremlin.ru/" target="_blank">В.В. Путин, Президент РФ</a></cite>
+								</blockquote>
 							</div>
-							<blockquote class="opinion__bq">
-								<p class="opinion__text">Таким образом мы оградим граждан от общения с сомнительными личностями из непонятных организаций, которые действуют под вывеской коллекторских агентств.</p>
-								<cite class="opinion__name"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B2%D0%B8%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BD%D0%B0" target="_blank">В.И. Матвиенко, Председатель Совета Федерации</a></cite>
-							</blockquote>
-						</div>
-						<div class="opinion__item">
-							<div class="opinion__face">
-								<!-- изображения необходимо кропать под квадрат--><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Aman_Tuleyev,_June_2010.jpeg/270px-Aman_Tuleyev,_June_2010.jpeg" alt="Фото эксперта" class="opinion__img"/>
+							<div class="opinion__item">
+								<div class="opinion__face">
+									<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/8xF0Cu" alt="Фото эксперта" class="opinion__img"/>
+								</div>
+								<blockquote class="opinion__bq">
+									<p class="opinion__text">Таким образом мы оградим граждан от общения с сомнительными личностями из непонятных организаций, которые действуют под вывеской коллекторских агентств.</p>
+									<cite class="opinion__name"><a href="http://goo.gl/pPTcl2" target="_blank">В.И. Матвиенко, Председатель Совета Федерации</a></cite>
+								</blockquote>
 							</div>
-							<blockquote class="opinion__bq">
-								<p class="opinion__text">Ни один коллектор не имеет права "вышибать" долги... Другого выхода нет. Мы не можем допустить, чтобы наших людей убивали... Все бандиты и вымогатели должны быть привлечены к уголовной ответственности.</p>
-								<cite class="opinion__name"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D0%BB%D0%B5%D0%B5%D0%B2,_%D0%90%D0%BC%D0%B0%D0%BD_%D0%93%D1%83%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87" target="_blank">А.Г. Тулеев, губернатор Кемеровской области</a></cite>
-							</blockquote>
-						</div>
-						<div class="opinion__item">
-							<div class="opinion__face">
-								<!-- изображения необходимо кропать под квадрат--><img src="http://www.napca.ru/upload/medialibrary/ffc/ffcc2c50cf605cb660475965ffe35ff7.jpeg" alt="Фото эксперта" class="opinion__img"/>
+							<div class="opinion__item">
+								<div class="opinion__face">
+									<!-- изображения необходимо кропать под квадрат--><img src="https://goo.gl/WhpvUu" alt="Фото эксперта" class="opinion__img"/>
+								</div>
+								<blockquote class="opinion__bq">
+									<p class="opinion__text">Ни один коллектор не имеет права "вышибать" долги... Другого выхода нет. Мы не можем допустить, чтобы наших людей убивали... Все бандиты и вымогатели должны быть привлечены к уголовной ответственности.</p>
+									<cite class="opinion__name"><a href="https://goo.gl/dgeAUP" target="_blank">А.Г. Тулеев, губернатор Кемеровской области</a></cite>
+								</blockquote>
 							</div>
-							<blockquote class="opinion__bq">
-								<p class="opinion__text">Сейчас законопроект существенно ограничивает в правах сотрудников служб взыскания — даже в тех случаях, когда они не нарушают права заемщика... в нынешнем варианте он позволяет заемщику и вовсе отказаться от взаимодействия с коллектором, однако это может сказаться на ухудшении качества обслуживания банковских кредитов.</p>
-								<cite class="opinion__name"><a href="http://www.napca.ru/ob-assotsiatsii/struktura/boris-borisovich-voronin/?clear_cache=Y" target="_blank">Б.Б. Воронин, директор Национальной ассоциации профессиональных коллекторских агентств</a></cite>
-							</blockquote>
+							<div class="opinion__item">
+								<div class="opinion__face">
+									<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/irgQPx" alt="Фото эксперта" class="opinion__img"/>
+								</div>
+								<blockquote class="opinion__bq">
+									<p class="opinion__text">Сейчас законопроект существенно ограничивает в правах сотрудников служб взыскания — даже в тех случаях, когда они не нарушают права заемщика... в нынешнем варианте он позволяет заемщику и вовсе отказаться от взаимодействия с коллектором, однако это может сказаться на ухудшении качества обслуживания банковских кредитов.</p>
+									<cite class="opinion__name"><a href="http://goo.gl/hi9gfB" target="_blank">Б.Б. Воронин, директор Национальной ассоциации профессиональных коллекторских агентств</a></cite>
+								</blockquote>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -745,15 +733,15 @@
 					<h2 class="section__title">Статистика нашего портала:</h2>
 					<div class="page__numbers">
 						<div class="number">
-							<p class="number__quantity">[<span class="number__quantity--sum">8354</span>]</p>
+							<p class="number__quantity">[<span data-from="0" data-to='8354' class="number__quantity--sum">0</span>]</p>
 							<p class="number__caption">Всего<br>пользователей</p>
 						</div>
 						<div class="number">
-							<p class="number__quantity">[<span class="number__quantity--sum">1264</span>]</p>
+							<p class="number__quantity">[<span data-from="0" data-to='1264' class="number__quantity--sum">0</span>]</p>
 							<p class="number__caption">Экспертов<br>зарегистрировано</p>
 						</div>
 						<div class="number">
-							<p class="number__quantity">[<span class="number__quantity--sum">813</span>]</p>
+							<p class="number__quantity">[<span data-from="0" data-to='813' class="number__quantity--sum">0</span>]</p>
 							<p class="number__caption">Законов<br>опубликовано</p>
 						</div>
 					</div>
@@ -1002,8 +990,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="klichko"><img src="img/klichko.png" alt="" class="klichko__img"/>
-			<p class="klichko__perl">А сегодня в завтрашний день не все могут смотреть. Вернее смотреть могут не только лишь все, мало кто может это делать.</p>
+		<div class="quote">
+			<div class="quote__quote">
+				<p class="quote__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.</p>
+			</div>
+			<div class="quote__face"><img src="/img/medved.png" alt="" class="quote__img"/></div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>

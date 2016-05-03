@@ -1,7 +1,29 @@
 mixin rating(value)
 	.rating
+		//- .rating__visual
+		//- 	// рейтинг есть ширина блока rating__stars
+		//- 	// указывается ширина в процентах соответственно рейтинга
+		//- 	.rating__stars(style='width:'+value+'%')
+		//- span.rating__number!=value/10
+		p.rating__title Оценка пользователей:
 		.rating__visual
-			// рейтинг есть ширина блока rating__stars
+			.rating__strip
+			// рейтинг идет от -5 до 5, следовательно если рейтинг 0, то ширина будет 50%, -5 = 0%, 5= 100%
 			// указывается ширина в процентах соответственно рейтинга
-			.rating__stars(style='width:'+value+'%')
-		span.rating__number!=value/10
+			if value > 5
+				-var width = 100
+			else if value < -5
+				-var width = 0
+			else
+				-var width = 50 + value * 10
+			.rating__circle(style='width:'+width+'%')
+				// у спана модификаторы цвета
+				// .rating__round--green - зеленый цвет
+				// .rating__round--red - красный цвет
+				// значение у спана это рейтинг, деленный на
+				if value < 0
+					span.rating__round.rating__round--red=value
+				else if value === 0
+					span.rating__round.rating__round--gray=value
+				if value > 0
+					span.rating__round.rating__round--green=value

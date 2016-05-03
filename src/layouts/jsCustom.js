@@ -48,3 +48,12 @@
 
 // modals closer
 //= ../blocks/close/close.js
+
+// opinion tabs
+//= ../blocks/opinion/opinion.js
+
+// number increaser
+//= ../blocks/number/number.js
+
+// js for quote
+//= ../blocks/quote/quote.js

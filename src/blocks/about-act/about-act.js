@@ -11,9 +11,7 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '.about-act__cont-title:not(.about-act__cont-title--btn)', function(event) {
 		event.preventDefault();
 
-		var contPos	= 0;
-
-		if (window.matchMedia('(max-width: 940px)').matches) {
+		if (window.matchMedia('(max-width: 979px)').matches) {
 			$(this)
 				.next('.about-act__cont-content')
 				.slideToggle(300)

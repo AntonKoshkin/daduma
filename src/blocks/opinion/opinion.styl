@@ -1,6 +1,55 @@
 .opinion
 	text-align center
 	
+	&__tabs
+		@extend $font-reset
+		
+		position absolute
+		bottom 0
+		left 0
+		width 100%
+		text-align center
+		transform translateY(50%)
+
+	&__tab
+		size 30px
+		
+		overflow hidden
+		display inline-block
+		border-radius 50%
+		cursor pointer
+		background-color white
+		
+		&--active
+			box-shadow 0 0 0 2px pink
+
+		&:not(:last-child)
+			margin-right 10px
+		
+		&:before
+			@extend $font-reset
+			
+			content ''
+			width 0
+			height 100%
+			display inline-block
+			vertical-align middle
+	
+	&__thumb
+		width 100%
+		vertical-align middle
+		
+		&:hover
+			opacity .7
+	
+	&__item
+		visibility hidden
+		position absolute
+		
+		&--show
+			visibility visible
+			position static
+	
 	&__face
 		@extend $font-reset
 		size 100px

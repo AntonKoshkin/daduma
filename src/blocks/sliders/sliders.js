@@ -16,14 +16,14 @@ jQuery(document).ready(function($) {
 		},
 	});
 
-	$('.opinion').owlCarousel({
-		autoHeight	: true,
-		dots			: false,
-		items			: 1,
-		loop			: true,
-		mouseDrag	: false,
-		nav			: true,
-	});
+	// $('.opinion').owlCarousel({
+	// 	autoHeight	: true,
+	// 	dots			: false,
+	// 	items			: 1,
+	// 	loop			: true,
+	// 	mouseDrag	: false,
+	// 	nav			: true,
+	// });
 
 	$('.usage').owlCarousel({
 		dots			: true,

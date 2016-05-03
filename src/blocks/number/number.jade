@@ -2,6 +2,8 @@ mixin number(num, text)
 	.number
 		p.number__quantity
 			| [
-			span.number__quantity--sum=num
+			span.number__quantity--sum(
+				data-from='0'
+				data-to=num) 0
 			| ]
 		p.number__caption!=text

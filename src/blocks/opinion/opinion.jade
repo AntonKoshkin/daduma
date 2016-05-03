@@ -4,7 +4,12 @@ mixin opinion
 			block
 
 mixin opItem(img, name, link)
-	.opinion__item
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'opinion__item--' + mod
+
+	.opinion__item(class=mods)
 		.opinion__face
 			// изображения необходимо кропать под квадрат
 			img.opinion__img(
@@ -20,3 +25,13 @@ mixin opItem(img, name, link)
 
 mixin opItemPar(text)
 	p.opinion__text!=text
+
+mixin opTab(img)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'opinion__tab--' + mod
+	.opinion__tab(class=mods)
+		img.opinion__thumb(
+			src=img
+			alt='')

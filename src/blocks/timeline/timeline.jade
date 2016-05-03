@@ -1,0 +1,20 @@
+mixin timeline
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'timeline--' + mod
+	
+	// для подсветки соответствующего этапа предусмотрены модификаторы
+	// .timeline--two, .timeline--three, .timeline--four, .timeline--five, .timeline--six, .timeline--seven, .timeline--eight
+	// по умолчанию подсвечивается первый этап, каждый из вышеописанных модификаторов подсвечивает следующий (то есть .timeline--five подсветит все, включая пятый, добавлять нужно только один модификатор единовременно)
+	.timeline(class=mods)
+		.timeline__items
+			if block
+				block
+
+mixin tlItem(number, date, title)
+	.timeline__item
+		.timeline__number
+			span=number
+		p.timeline__date=date
+		p.timeline__title=title

@@ -1,7 +1,13 @@
 mixin section(title)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'section--' + mod
+
 	section.section(
 		id=attributes.id
-		class=attributes.class)
+		class=attributes.class
+		class=mods)
 		.section__wrapper
 			h2.section__title!=title
 			if block

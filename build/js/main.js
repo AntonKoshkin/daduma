@@ -99,9 +99,7 @@ jQuery(document).ready(function($) {
 	$('body').on('click', '.about-act__cont-title:not(.about-act__cont-title--btn)', function(event) {
 		event.preventDefault();
 
-		var contPos	= 0;
-
-		if (window.matchMedia('(max-width: 940px)').matches) {
+		if (window.matchMedia('(max-width: 979px)').matches) {
 			$(this)
 				.next('.about-act__cont-content')
 				.slideToggle(300)
@@ -209,6 +207,88 @@ jQuery(document).ready(function($) {
 
 // tabs in block sides
 jQuery(document).ready(function($) {
+	if ($(window).width() > 962) {
+		$('.sides__text')
+			.filter(':first')
+			.find('p')
+			.each(function(index, el) {
+				var
+					thisP = $(el),
+					siblP = $('.sides__content--red .sides__text')
+									.find('p').eq(thisP.index());
+
+				if (thisP.height() > siblP.height()) {
+					siblP.height(thisP.height());
+				} else {
+					thisP.height(siblP.height());
+				}
+			});
+	
+
+		var
+			numOfP	= 0,
+			anexp		= 0;
+
+		$('.sides__text')
+			.each(function(index, el) {
+				var a = $(el)
+							.find('p')
+							.length;
+
+				if (a > numOfP) {
+					numOfP = a;
+				}
+
+				if ($(el).outerHeight() > anexp) {
+					anexp = $(el).outerHeight();
+				}
+			});
+
+		if (numOfP > 4) {
+			// $('.sides').addClass('sides--expandable');
+			var fullHeight	= 0;
+
+			$('.sides__expand').show();
+
+			if ($('.sides__content--green p')
+					.length >= $('.sides__content--red p').length) {
+
+				$('.sides__content--green p')
+					.each(function(index, el) {
+						if (index < 4) {
+							fullHeight += $(el).outerHeight();
+						}
+					});
+
+			} else {
+				$('.sides__content--red p')
+					.each(function(index, el) {
+						if (index < 4) {
+							fullHeight += $(el).outerHeight();
+						}
+					});
+			}
+
+			$('.sides__text').height(fullHeight);
+		}
+	}
+
+	$('body').on('click', '.sides__expander', function(event) {
+		event.preventDefault();
+		
+		if ($('.sides__text').outerHeight() > fullHeight) {
+			$('.sides__text')
+				.animate({'height': fullHeight}, 300);
+
+			$(this).text('Развернуть');
+		} else {
+			$('.sides__text')
+				.animate({'height': anexp}, 300);
+
+			$(this).text('Свернуть');
+		}
+	});
+
 	$('body').on('click', '.sides__title', function(event) {
 		event.preventDefault();
 		
@@ -224,28 +304,6 @@ jQuery(document).ready(function($) {
 			.removeClass('sides__content--show');
 	});
 });
-
-// $(document).ready(function() {
-// 	var
-// 		leftSide		=	$('.sides__content--green .sides__text'),
-// 		rightSide	=	$('.sides__content--red .sides__text');
-
-// 	if (leftSide.outerHeight() > rightSide.outerHeight()) {
-// 		var
-// 			rsHeight	=	rightSide.outerHeight(),
-// 			lsPars	=	leftSide.find('p');
-
-// 		lsPars.each(function(index, el) {
-// 			if (($(el).position().top + $(el).outerHeight()) > rightSide.height()) {
-// 				console.log($(el).position().top + $(el).outerHeight() + '   ' + rightSide.height());
-
-// 				rsHeight -= $(el).outerHeight();
-// 			}
-// 		});
-
-// 		leftSide.height(rsHeight);
-// 	}
-// });
 
 // settings for all sliders on the page
 jQuery(document).ready(function($) {
@@ -266,14 +324,14 @@ jQuery(document).ready(function($) {
 		},
 	});
 
-	$('.opinion').owlCarousel({
-		autoHeight	: true,
-		dots			: false,
-		items			: 1,
-		loop			: true,
-		mouseDrag	: false,
-		nav			: true,
-	});
+	// $('.opinion').owlCarousel({
+	// 	autoHeight	: true,
+	// 	dots			: false,
+	// 	items			: 1,
+	// 	loop			: true,
+	// 	mouseDrag	: false,
+	// 	nav			: true,
+	// });
 
 	$('.usage').owlCarousel({
 		dots			: true,
@@ -504,6 +562,58 @@ $(document).ready(function() {
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+	});
+});
+
+// opinion tabs
+$(document).ready(function() {
+	$('body').on('click', '.opinion__tab', function(event) {
+		event.preventDefault();
+		
+		$('.opinion__item')
+			.eq($(this).index())
+			.addClass('opinion__item--show')
+			.siblings()
+			.removeClass('opinion__item--show');
+
+		$(this)
+			.addClass('opinion__tab--active')
+			.siblings()
+			.removeClass('opinion__tab--active');
+	});
+});
+
+// number increaser
+$(document).ready(function() {
+	$(window).scroll(function(event) {
+		if (($('.number__quantity--sum').offset().top - $(window).height() + 100) <= $(window).scrollTop()) {
+			if ($('.number__quantity--sum').attr('data-finished') !== 'finished') {
+				$('.number__quantity--sum').spincrement({
+					thousandSeparator		: ' ',
+					duration					: 2000,
+				});
+
+				$('.number__quantity--sum').attr('data-finished', 'finished');
+			}
+		}
+	});
+});
+
+// js for quote
+jQuery(document).ready(function($) {
+	$('body').on('click', '.quote__img', function(event) {
+		event.preventDefault();
+
+		console.log('qwe');
+		
+		$('.quote__img')
+			.addClass('quote__img--tuda-suda')
+			.delay(300)
+			.queue(function() {
+				$(this)
+					.removeClass('quote__img--tuda-suda')
+					.dequeue();
+			});
 	});
 });
 // slider
@@ -5009,3 +5119,132 @@ jQuery(window).load(function(){
   });
 
 })(jQuery);
+
+// number increaser
+/**
+ * jQuery Spincrement plugin
+ *
+ * Plugin structure based on: http://blog.jeremymartin.name/2008/02/building-your-first-jquery-plugin-that.html
+ * Leveraging of jQuery animate() based on: http://www.bennadel.com/blog/2007-Using-jQuery-s-animate-Method-To-Power-Easing-Based-Iteration.htm
+ * Easing function from jQuery Easing plugin: http://gsgd.co.uk/sandbox/jquery/easing/
+ * Thousands separator code: http://www.webmasterworld.com/forum91/8.htm
+ *
+ * @author John J. Camilleri
+ * @version 1.2
+ */
+
+/* global jQuery */
+
+(function ($) {
+  // Custom easing function
+  $.extend($.easing, {
+    // This is ripped directly from the jQuery easing plugin (easeOutExpo), from: http://gsgd.co.uk/sandbox/jquery/easing/
+    spincrementEasing: function (x, t, b, c, d) {
+      return (t === d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b
+    }
+  })
+
+  // Spincrement function
+  $.fn.spincrement = function (opts) {
+    // Default values
+    var defaults = {
+      from: 0,
+      to: null,
+      decimalPlaces: null,
+      decimalPoint: '.',
+      thousandSeparator: ',',
+      duration: 1000, // ms; TOTAL length animation
+      leeway: 50, // percent of duraion
+      easing: 'spincrementEasing',
+      fade: true,
+      complete: null
+    }
+    var options = $.extend(defaults, opts)
+
+    // Function for formatting number
+    var re_thouSep = new RegExp(/^(-?[0-9]+)([0-9]{3})/)
+    function format (num, dp) {
+      num = num.toFixed(dp) // converts to string!
+
+      // Non "." decimal point
+      if ((dp > 0) && (options.decimalPoint !== '.')) {
+        num = num.replace('.', options.decimalPoint)
+      }
+
+      // Thousands separator
+      if (options.thousandSeparator) {
+        while (re_thouSep.test(num)) {
+          num = num.replace(re_thouSep, '$1' + options.thousandSeparator + '$2')
+        }
+      }
+      return num
+    }
+
+    // Apply to each matching item
+    return this.each(function () {
+      // Get handle on current obj
+      var obj = $(this)
+
+      // Set params FOR THIS ELEM
+      var from = options.from
+      if (obj.attr('data-from')) {
+        from = parseFloat(obj.attr('data-from'))
+      }
+
+      var to
+      if (obj.attr('data-to')) {
+        to = parseFloat(obj.attr('data-to'))
+      } else if (options.to !== null) {
+        to = options.to
+      } else {
+        var re = new RegExp(options.thousandSeparator, 'g')
+        to = parseFloat(obj.text().replace(re, ''))
+      }
+
+      var duration = options.duration
+      if (options.leeway) {
+        // If leeway is set, randomise duration a little
+        duration += Math.round(options.duration * ((Math.random() * 2) - 1) * options.leeway / 100)
+      }
+
+      var dp
+      if (obj.attr('data-dp')) {
+        dp = parseInt(obj.attr('data-dp'), 10)
+      } else if (options.decimalPlaces !== null) {
+        dp = options.decimalPlaces
+      } else {
+        var ix = obj.text().indexOf(options.decimalPoint)
+        dp = (ix > -1) ? obj.text().length - (ix + 1) : 0
+      }
+
+      // Start
+      obj.css('counter', from)
+      if (options.fade) obj.css('opacity', 0)
+      obj.animate(
+        {
+          counter: to,
+          opacity: 1
+        },
+        {
+          easing: options.easing,
+          duration: duration,
+
+          // Invoke the callback for each step.
+          step: function (progress) {
+            obj.html(format(progress * to, dp))
+          },
+          complete: function () {
+            // Cleanup
+            obj.css('counter', null)
+            obj.html(format(to, dp))
+
+            // user's callback
+            if (options.complete) {
+              options.complete(obj)
+            }
+          }
+        }
+      )
+    })
+  }
+})(jQuery)

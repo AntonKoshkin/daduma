@@ -5,17 +5,21 @@
 	&__quantity
 		@extend $title-h0
 		
-		color pink
+		color gray-light
 		font-weight regular
 		margin-bottom 5px
 		
 		&--sum
-			color blue
+			color blue-light
 			display inline-block
 			padding 0px 10px
 	
 	&__caption
 		@extend $not-so-small-text
 		
-		color gray-light
+		color gray
 		font-weight regular
+	
+	@media (min-width desktop)
+		// width 33.33%
+		flex-basis 33%
