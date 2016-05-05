@@ -1,3 +1,12 @@
+$one-row
+	white-space nowrap
+
+$dotted
+	@extend $one-row
+	
+	overflow hidden
+	text-overflow ellipsis
+
 $reg-text
 	font-weight regular
 
@@ -60,6 +69,11 @@ $title
 	@extend $line-height
 	
 	font-family yefimov
+
+$title--1
+	@extend $title
+	
+	font-size 1.9375rem
 
 $title-h0
 	@extend $title

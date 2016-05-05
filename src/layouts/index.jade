@@ -1,8 +1,9 @@
 extends ../blocks/template/template
 
 block page_id
-	-var page_id = 'index'
-	-var withKlichko = false
+	-var page_id		= 'index'
+	-var withKlichko	= false
+	-var qoute			= true
 
 block title
 	title Народная база законов
@@ -106,7 +107,12 @@ block content
 					.about-act__diagram-pack
 						.about-act__diagrams
 							.about-act__type.about-act__type--show
-								+diagram('main', 'bars')
+								+diagram('main', 'bars', 'Мужчины')
+								+diagram('main', 'bars', 'Женщины')
+								.about-act__legends
+									+abActLeg('Проголосовали За', 'green')
+									+abActLeg('Проголосовали Против', 'red')
+									+abActLeg('Воздержались', 'gray')
 							.about-act__type
 								+diagram('main', 'pie', 'Описание категории')
 								+diagram('main', 'pie', 'Описание категории')
@@ -172,10 +178,10 @@ block content
 						+tlItem(2, '15.04.16', 'Предварительное рассмотрение')
 						+tlItem(3, '', 'Первое чтение')
 						+tlItem(4, '', 'Второе чтение')
-						+tlItem(5, '', 'Опубликование')
-						+tlItem(6, '', 'Рассмотрение президентом')
-						+tlItem(7, '', 'Рассмотрение в СФ')
-						+tlItem(8, '', 'Третье чтение')
+						+tlItem(5, '', 'Третье чтение')
+						+tlItem(6, '', 'Рассмотрение в СФ')
+						+tlItem(7, '', 'Рассмотрение президентом')
+						+tlItem(8, '', 'Опубликование')
 				+abActCont('Обсудить закон', true)
 
 		+sides
@@ -208,7 +214,11 @@ block content
 					p реализация механизма получения дополнительного согласия на переуступку долга вызовет сложности на практике: собирать подписи с должников после того, как они уже допустили просрочку, почти невозможно. Это вынудит банки получать такое 
 				+sugg('red')
 		
-		+section('Мнения экспертов и известных людей по законопроекту:')(mods=['red-border'])
+		// если отзыв негативный, то к .section добавляется класс .opinion__wrapper--red
+		// если отзыв положительный, то к .section добавляется класс .opinion__wrapper--green
+		// если отзыв нейтральный, то к .section добавляется класс .opinion__wrapper--gray
+		+section('Мнения экспертов и известных людей по законопроекту:')(
+			class='opinion__wrapper--green')
 			+opinion
 				.opinion__tabs
 					+opTab('http://goo.gl/jZCLyk')(mods=['active'])

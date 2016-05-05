@@ -1,0 +1,37 @@
+mixin oneStat(title, img)
+	if attributes.age
+		.one-stat
+			+pageTitle(3, title)(mods=['margined'])
+			.one-stat__diagram
+				img.one-stat__img(
+					src='/img/one-stat__img--'+img+'.png'
+					alt='')
+			.one-stat__legend.one-stat__legend--gender
+				p.one-stat__gender.one-stat__gender--male Мужчины
+				p.one-stat__gender.one-stat__gender--female Женщины
+
+	else
+		.one-stat
+			+pageTitle(3, title)(mods=['margined'])
+			.one-stat__diagram
+				img.one-stat__img(
+					src='/img/one-stat__img--'+img+'.png'
+					alt='')
+			.one-stat__legend
+				if block
+					block
+
+mixin osLegend(left, right)
+	.one-stat__leg-col.one-stat__leg-col--left
+		p.one-stat__leg-item.one-stat__leg-item--left
+			span.one-stat__leg-text Город
+		each lItem in left
+			p.one-stat__leg-item.one-stat__leg-item--left
+					span.one-stat__leg-text!=lItem
+
+	.one-stat__leg-col.one-stat__leg-col--right
+		p.one-stat__leg-item.one-stat__leg-item--right
+			span.one-stat__leg-text Кол-во, %
+		each rItem in right
+			p.one-stat__leg-item.one-stat__leg-item--right
+					span.one-stat__leg-text!=rItem

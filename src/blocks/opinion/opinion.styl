@@ -1,15 +1,42 @@
 .opinion
 	text-align center
 	
+	&__wrapper
+		&--red
+			.section__wrapper
+				padding-top 30px
+				border-color pink
+			
+			.opinion__tab--active
+				box-shadow 0 0 0 2px pink
+		
+		&--green
+			.section__wrapper
+				padding-top 30px
+				border-color green
+			
+			.opinion__tab--active
+				box-shadow 0 0 0 2px green
+		
+		&--gray
+			.section__wrapper
+				padding-top 30px
+				border-color gray-lighter
+			
+			.opinion__tab--active
+				box-shadow 0 0 0 2px gray-lighter
+	
 	&__tabs
 		@extend $font-reset
 		
 		position absolute
-		bottom 0
+		// bottom 0
+		top 0
 		left 0
 		width 100%
 		text-align center
-		transform translateY(50%)
+		// transform translateY(50%)
+		transform translateY(-50%)
 
 	&__tab
 		size 30px

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Пользователи</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/>
+		<meta name="theme-color" content="#4b5a6e"/>
+		<meta name="application-name" content="Сайт про законы"/>
+		<meta name="msapplication-tooltip" content="Сайт в законе"/>
+		<meta name="msapplication-starturl" content="./"/>
+		<meta name="msapplication-navbutton-color" content="#4b5a6e"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="format-detection" content="telephone=no"/><!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	<body class="page">
+		<header class="header">
+			<div class="header__wrapper">
+				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button><a href="/" class="logo logo--header">
+					<p class="logo__text">Народная база законов</p></a>
+				<nav class="navigation">
+					<div class="navigation__bg"></div>
+					<ul class="navigation__list">
+						<li class="navigation__item navigation__item--openable"><a href="#" class="navigation__link">Законы</a>
+							<div class="navigation__subnav">
+								<ul class="navigation__sublist">
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Все</a></li>
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Популярные</a></li>
+									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Новые</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
+						<li class="navigation__item"><a href="/users.html" class="navigation__link">Пользователи</a></li>
+						<li class="navigation__item"><a href="#" data-modal-link="#feedback" class="navigation__link">Обратная связь</a></li>
+					</ul>
+				</nav>
+				<button type="button" data-modal-link="#login" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
+			</div>
+		</header>
+		<main class="main main--bg">
+			<div class="page__content">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link">Статистика пользователей</a></li>
+					</ul>
+				</div>
+				<h1 class="page__title page__title--h1">Статистика пользователей</h1>
+				<section class="page__stats">
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Пол / Возраст</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--bars.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend one-stat__legend--gender">
+							<p class="one-stat__gender one-stat__gender--male">Мужчины</p>
+							<p class="one-stat__gender one-stat__gender--female">Женщины</p>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Статус</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--1.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">холост/не замужем</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">женат/замужем</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Карьера</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--2.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Штатный сотрудник</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Руководитель ср. звена</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Топ-менеджер</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Предприниматель</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Фрилансер</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Безработный</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Религия</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--3.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Христианство</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Ислам</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Иудаизм</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Буддизм</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Индуизм</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Другое</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Образование</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--4.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Среднее</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Технической</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Высшее</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Ученая степень</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">География</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--5.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Москва</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Санкт-Петербург</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Самара</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Анапа</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Краснодар</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Другие</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="one-stat">
+						<h3 class="page__title page__title--h3 page__title--margined">Политические убеждения</h3>
+						<div class="one-stat__diagram"><img src="/img/one-stat__img--6.png" alt="" class="one-stat__img"/></div>
+						<div class="one-stat__legend">
+							<div class="one-stat__leg-col one-stat__leg-col--left">
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Город</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Единая Россия</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Яблоко</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">ЛДПР</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">СПС</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">КПРФ</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">СР</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text">Другое</span></p>
+							</div>
+							<div class="one-stat__leg-col one-stat__leg-col--right">
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">32,5</span></p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper"><a href="/" class="logo logo--footer">
+					<p class="logo__text">Народная база законов</p></a>
+				<div class="social"><a target="_blank" href="http://vk.com/" class="social__link social__link--vk">Мы в VKontakte</a><a target="_blank" href="http://facebook.com/" class="social__link social__link--fb">Мы в Facebook</a>
+				</div>
+			</div>
+		</footer>
+		<div class="page__modals">
+			<div id="Обратная связь" class="modal">
+				<div class="modal__bg"></div>
+				<form id="userFeedback" action="" name="userFeedback" class="form">
+				</form>
+			</div>
+			<div id="login" class="modal">
+				<div class="modal__bg"></div>
+				<div class="login">
+					<button type="button" class="close"></button>
+					<p class="login__title">Личный кабинет</p>
+					<div class="login__body">
+						<div class="soc-enter"><a href="#" class="soc-enter__item soc-enter__item--facebook"><span class="soc-enter__text">Войти через Facebook</span></a><a href="#" class="soc-enter__item soc-enter__item--twitter"><span class="soc-enter__text">Twitter</span></a><a href="#" class="soc-enter__item soc-enter__item--vkontakte"><span class="soc-enter__text">Вконтакте</span></a><a href="#" class="soc-enter__item soc-enter__item--google-plus"><span class="soc-enter__text">Google plus</span></a><a href="#" class="soc-enter__item soc-enter__item--classmates"><span class="soc-enter__text">Одноклассники</span></a>
+						</div>
+						<p class="login__tabs">
+							<button type="button" data-binded-form="#userLogin" class="login__btn login__btn--active">Войти</button><span class="login__or">или</span>
+							<button type="button" data-binded-form="#userReg" class="login__btn">Зарегистрироваться</button>
+						</p>
+						<div class="login__forms">
+							<form id="userLogin" action="" name="userLogin" class="form form--show form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--no-margin">
+									<label for="remember" class="checkbox__label">
+										<input type="checkbox" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
+									</label>
+								</div>
+								<button type="button" data-modal-link="#forgot" class="form__forgot">Забыли пароль?</button>
+								<div class="btn-submit btn-submit--enter">
+									<input type="submit" value="Войти" class="btn-submit__input"/>
+								</div>
+							</form>
+							<form id="userReg" action="" name="userReg" class="form form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
+										<p class="input__error input__error--reged-login">Логин занят</p>
+										<p class="input__error input__error--short-login">Логин должен быть длиннее 3 символов</p>
+									</div>
+								</div>
+								<div class="input">
+									<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="recapcha"></div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Зарегистрироваться" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="forgot" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Забыли пароль?</p>
+					<div class="feedback__body">
+						<form action="" name="forgotPass" class="form">
+							<p class="form__text">Не может вспомнить пароль для входа в свой аккаунт?<br/>Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.</p>
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--not-reged-mail">Данный e-mail не зарегистрирован</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--ask-pass">
+								<input type="submit" value="Отправьте мне пароль!" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="feedback" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Обратная связь</p>
+					<div class="feedback__body">
+						<form action="" name="userFeedback" class="form">
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--feedback">
+								<input type="submit" value="Отправить сообщение" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Спасибо, Ваш голос учтен!</p>
+						<form action="" name="voting" class="form">
+							<div class="rate">
+								<div class="rate__content">
+									<p class="rate__title">Оцените закон:</p>
+									<div class="rate__stars">
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input checked="" type="radio" name="userRate" value="0" class="rate__input"/><span class="rate__value">0</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<label class="textarea__label">Оставьте комментарий:</label>
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestPlus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить плюс:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestMinus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить минус:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="error">
+			<p class="error__text">Медведеву не нравится, когда в него тыкают!</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

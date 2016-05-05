@@ -8,12 +8,12 @@ html
 	-moz-osx-font-smoothing auto
 
 .page
-	background-color gray-body
+	background-color #fb
 	min-width 320px
 	
-	@media (min-width tablet)
-		background-position center top
-	
+	&__content
+		padding 0 10px
+
 	&__comments
 		margin-bottom 30px
 	
@@ -22,10 +22,38 @@ html
 	
 	&__diags
 		display none
-
+	
+	&__title
+		@extend $title
+		
+		&--h1
+			@extend $title--1
+			
+			font-weight light
+			margin-bottom 25px
+		
+		&--h2
+		&--h3
+			@extend $title-h2
+		
+		&--centered
+			text-align center
+		
+		&--margined
+			margin-bottom 25px
+	
+	&__stats
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+		
 	@media (min-width tablet)
+		background-position center top
+		
 		&__content
-			margin-top 0
+			max-width 1200px
+			margin auto
+			padding 0 20px
 			
 		&__numbers
 			display flex

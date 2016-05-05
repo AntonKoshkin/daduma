@@ -2,8 +2,8 @@
 	text-align center
 	margin-bottom 30px
 	
-	&__content
-		display inline-block
+	// &__content
+	// 	display inline-block
 		
 	&__title
 		@extend $very-small-text
@@ -11,28 +11,82 @@
 		margin-bottom 5px
 	
 	&__stars
-		@extend $font-reset
+		display flex
+		flex-wrap nowrap
+		justify-content space-around
+		position relative
 		
-		direction rtl
-		cursor default
-		transform translateX(2px)
-	
-	&__stars:hover &__label
-		bicon(star.withPad.gray)
-	
+		&:before
+			@extend $pseudo-bottom-fullwidth
+			
+			border-bottom 1px solid gray-lighter
+			bottom 4px
+
 	&__label
-		bicon(star.withPad.gray, 20)
+		cursor pointer
+
+	&__input
+		@extend $hidden-input
+	
+	&__value
+		@extend $small-text
 		
 		display inline-block
 		position relative
-		cursor pointer
+		padding-bottom 15px
+		color gray-light
+		
+		&:after
+			@extend $pseudo-bottom
+			size 10px
+			
+			border-radius 50%
+			border 1px solid gray-lighter
+			background-color white
+		
+	&__label:not(:nth-child(n+6)) &__value
+		&:before
+			@extend $pseudo
+			
+			content '-'
+			left -8px
 	
-	&__stars &__label:hover
-	&__label--active
-	&__label:hover ~ &__label
-	&__label--active ~ &__label
-		bicon(star.withPad.yellow)
+	&__input:checked + &__value
+		color black
+		
+		&:after
+			background-color gray-light
+			border-color gray-light
+	
+	&__label:not(:nth-child(n+6)) &__input:checked + &__value
+		&:after
+			background-color pink
+			border-color pink
+	
+	&__label:nth-child(n+7) &__input:checked + &__value
+		&:after
+			background-color green-kisliy
+			border-color green-kisliy
 
-	&__input
-		position absolute
-		clip rect(0, 0, 0, 0)
+	// &__stars
+	// 	@extend $font-reset
+		
+	// 	direction rtl
+	// 	cursor default
+	// 	transform translateX(2px)
+	
+	// &__stars:hover &__label
+	// 	bicon(star.withPad.gray)
+	
+	// &__label
+	// 	bicon(star.withPad.gray, 20)
+		
+	// 	display inline-block
+	// 	position relative
+	// 	cursor pointer
+	
+	// &__stars &__label:hover
+	// &__label--active
+	// &__label:hover ~ &__label
+	// &__label--active ~ &__label
+	// 	bicon(star.withPad.yellow)

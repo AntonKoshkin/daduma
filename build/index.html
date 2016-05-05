@@ -39,7 +39,7 @@
 							</div>
 						</li>
 						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
-						<li class="navigation__item"><a href="#" class="navigation__link">Пользователи</a></li>
+						<li class="navigation__item"><a href="/users.html" class="navigation__link">Пользователи</a></li>
 						<li class="navigation__item"><a href="#" data-modal-link="#feedback" class="navigation__link">Обратная связь</a></li>
 					</ul>
 				</nav>
@@ -286,6 +286,13 @@
 											<div class="about-act__type about-act__type--show">
 												<div class="diagram">
 													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+													<p class="diagram__description">Мужчины</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+													<p class="diagram__description">Женщины</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
 												</div>
 											</div>
 											<div class="about-act__type">
@@ -457,22 +464,22 @@
 											<div class="timeline__item">
 												<div class="timeline__number"><span>5</span></div>
 												<p class="timeline__date"></p>
-												<p class="timeline__title">Опубликование</p>
+												<p class="timeline__title">Третье чтение</p>
 											</div>
 											<div class="timeline__item">
 												<div class="timeline__number"><span>6</span></div>
 												<p class="timeline__date"></p>
-												<p class="timeline__title">Рассмотрение президентом</p>
+												<p class="timeline__title">Рассмотрение в СФ</p>
 											</div>
 											<div class="timeline__item">
 												<div class="timeline__number"><span>7</span></div>
 												<p class="timeline__date"></p>
-												<p class="timeline__title">Рассмотрение в СФ</p>
+												<p class="timeline__title">Рассмотрение президентом</p>
 											</div>
 											<div class="timeline__item">
 												<div class="timeline__number"><span>8</span></div>
 												<p class="timeline__date"></p>
-												<p class="timeline__title">Третье чтение</p>
+												<p class="timeline__title">Опубликование</p>
 											</div>
 										</div>
 									</div>
@@ -531,7 +538,10 @@
 					</div>
 				</div>
 			</section>
-			<section class="section section--red-border">
+			<!-- если отзыв негативный, то к .section добавляется класс .opinion__wrapper--red-->
+			<!-- если отзыв положительный, то к .section добавляется класс .opinion__wrapper--green-->
+			<!-- если отзыв нейтральный, то к .section добавляется класс .opinion__wrapper--gray-->
+			<section class="section opinion__wrapper--green">
 				<div class="section__wrapper">
 					<h2 class="section__title">Мнения экспертов и известных людей по законопроекту:</h2>
 					<div class="opinion">
@@ -927,19 +937,37 @@
 									<p class="rate__title">Оцените закон:</p>
 									<div class="rate__stars">
 										<label class="rate__label">
-											<input type="radio" name="userRate" value="5" class="rate__input"/>
+											<input type="radio" name="userRate" value="-5" class="rate__input"/><span class="rate__value">5</span>
 										</label>
 										<label class="rate__label">
-											<input type="radio" name="userRate" value="4" class="rate__input"/>
+											<input type="radio" name="userRate" value="-4" class="rate__input"/><span class="rate__value">4</span>
 										</label>
 										<label class="rate__label">
-											<input type="radio" name="userRate" value="3" class="rate__input"/>
+											<input type="radio" name="userRate" value="-3" class="rate__input"/><span class="rate__value">3</span>
 										</label>
 										<label class="rate__label">
-											<input type="radio" name="userRate" value="2" class="rate__input"/>
+											<input type="radio" name="userRate" value="-2" class="rate__input"/><span class="rate__value">2</span>
 										</label>
 										<label class="rate__label">
-											<input type="radio" name="userRate" value="1" class="rate__input"/>
+											<input type="radio" name="userRate" value="-1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input checked="" type="radio" name="userRate" value="0" class="rate__input"/><span class="rate__value">0</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="5" class="rate__input"/><span class="rate__value">5</span>
 										</label>
 									</div>
 								</div>
@@ -990,11 +1018,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="quote">
-			<div class="quote__quote">
-				<p class="quote__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.</p>
-			</div>
-			<div class="quote__face"><img src="/img/medved.png" alt="" class="quote__img"/></div>
+		<div class="error">
+			<p class="error__text">Медведеву не нравится, когда в него тыкают!</p>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>

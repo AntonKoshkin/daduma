@@ -1,0 +1,17 @@
+mixin sDiag(img)
+	.stat-diagram
+		.stat-diagram__bars
+			img.stat-diagram__img(
+				src=img
+				alt='')
+		.stat-diagram__legend
+			if block
+				block
+
+mixin sdlItem(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'stat-diagram__leg-item--' + mod
+
+	p.stat-diagram__leg-item(class=mods)!=text

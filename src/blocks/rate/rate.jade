@@ -3,28 +3,51 @@ mixin rate
 		.rate__content
 			p.rate__title Оцените закон:
 			.rate__stars
-				label.rate__label
-					input.rate__input(
-						type='radio'
-						name='userRate'
-						value='5')
-				label.rate__label
-					input.rate__input(
-						type='radio'
-						name='userRate'
-						value='4')
-				label.rate__label
-					input.rate__input(
-						type='radio'
-						name='userRate'
-						value='3')
-				label.rate__label
-					input.rate__input(
-						type='radio'
-						name='userRate'
-						value='2')
-				label.rate__label
-					input.rate__input(
-						type='radio'
-						name='userRate'
-						value='1')
+				//- label.rate__label
+				//- 	input.rate__input(
+				//- 		type='radio'
+				//- 		name='userRate'
+				//- 		value='5')
+				//- label.rate__label
+				//- 	input.rate__input(
+				//- 		type='radio'
+				//- 		name='userRate'
+				//- 		value='4')
+				//- label.rate__label
+				//- 	input.rate__input(
+				//- 		type='radio'
+				//- 		name='userRate'
+				//- 		value='3')
+				//- label.rate__label
+				//- 	input.rate__input(
+				//- 		type='radio'
+				//- 		name='userRate'
+				//- 		value='2')
+				//- label.rate__label
+				//- 	input.rate__input(
+				//- 		type='radio'
+				//- 		name='userRate'
+				//- 		value='1')
+				-var i = -5
+				while i <= 5
+					label.rate__label
+						if i === 0
+							input.rate__input(
+								checked=''
+								type='radio'
+								name='userRate'
+								value=i)
+							span.rate__value=i
+						else if i < 0
+							input.rate__input(
+								type='radio'
+								name='userRate'
+								value=i)
+							span.rate__value=-i
+						else
+							input.rate__input(
+								type='radio'
+								name='userRate'
+								value=i)
+							span.rate__value=i
+					-i++

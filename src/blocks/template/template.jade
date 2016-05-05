@@ -47,6 +47,10 @@ include ../feedback/feedback
 include ../white-modal/white-modal
 include ../timeline/timeline
 include ../quote/quote
+include ../error/error
+include ../page/page
+//- include ../stat-diagram/stat-diagram
+include ../one-stat/one-stat
 
 include ../klichko/klichko
 
@@ -64,7 +68,7 @@ html(lang="ru")
 			+navigation
 				+navItem('Законы', '#', true)
 				+navItem('Новости', '/news.html')
-				+navItem('Пользователи', '#')
+				+navItem('Пользователи', '/users.html')
 				+navItem('Обратная связь', '#')(data-modal-link='#feedback')
 			+btn('Войти / Зарегистрироваться', 'person')(
 				data-modal-link='#login')
@@ -196,9 +200,12 @@ html(lang="ru")
 							mods=['modal'])
 						+btn-submit('Оставить комментарий')(mods=['modal'])
 
+		+error('Медведеву не нравится, когда в него тыкают!')
+
 		//- if withKlichko === true
 		//- 	+klichko
-		+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
+		if quote === true
+			+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
 		script(
 			src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 		script window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')

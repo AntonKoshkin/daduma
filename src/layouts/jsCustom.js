@@ -57,3 +57,6 @@
 
 // js for quote
 //= ../blocks/quote/quote.js
+
+// error showing
+//= ../blocks/error/error.js

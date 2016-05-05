@@ -1,0 +1,8 @@
+mixin error(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'error--' + mod
+
+	.error(class=mods)
+		p.error__text!=text
