@@ -27,9 +27,18 @@
 		
 	&__link
 		@extend $very-small-text
+		
+		vertical-align top
 
 	&__item:not(:last-child) &__link
 		text-decoration underline
 	
+	&__item:last-child
+		max-width 100%
+	
 	&__item:last-child &__link
+		@extend $dotted
+		
 		color blue
+		pointer-events none
+		display block

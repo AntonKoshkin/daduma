@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title>Народная база законов</title>
+		<title>Новости</title>
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -20,6 +20,7 @@
 		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
 		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 	</head>
 	<body class="page">
 		<header class="header">
@@ -29,12 +30,12 @@
 				<nav class="navigation">
 					<div class="navigation__bg"></div>
 					<ul class="navigation__list">
-						<li class="navigation__item navigation__item--openable"><a href="#" class="navigation__link">Законы</a>
+						<li class="navigation__item navigation__item--openable"><span class="navigation__link">Законы</span>
 							<div class="navigation__subnav">
 								<ul class="navigation__sublist">
-									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Все</a></li>
-									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Популярные</a></li>
-									<li class="navigation__subitem"><a href="#" class="navigation__sublink">Новые</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Все</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Популярные</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Новые</a></li>
 								</ul>
 							</div>
 						</li>
@@ -47,11 +48,61 @@
 			</div>
 		</header>
 		<main class="main main--news">
-			<div class="breadcrumbs">
-				<ul class="breadcrumbs__list">
-					<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
-					<li class="breadcrumbs__item"><a class="breadcrumbs__link">Последние новости</a></li>
-				</ul>
+			<div class="page__content">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Последние новости</a></li>
+					</ul>
+				</div>
+				<section class="page__news">
+					<div class="page__head">
+						<h1 class="page__title page__title--h1 page__title--news">Последние новости</h1>
+						<div class="search">
+							<form action="" name="search" class="form">
+								<input type="text" placeholder="Поиск новостей по ключевой фразе" autocomplete="true" class="search__input"/>
+								<input type="submit" value="" class="search__btn"/>
+							</form>
+						</div>
+					</div>
+					<article class="one-news"><a href="news-single.html" title="Читать полностью" class="one-news__link"></a>
+						<div class="one-news__face"><img src="/img/one-news__img--1.jpg" alt="" class="one-news__img"/></div>
+						<div class="one-news__tad">
+							<h3 class="page__title page__title--h3 page__title--one-news">СКР добился возбуждения уголовного дела против судьи из Чечни со второй попытки</h3>
+							<time datetime="2005-12-15" class="one-news__date">15 декабря, 2005</time>
+						</div><a href="#" title="Категория новости" class="one-news__category">Категория</a>
+						<p class="one-news__text">Сегодня ВККС дала согласие на возбуждение уголовного дела против судьи АС Чеченской Республики Алу Бачаева. Его подозревали в вынесении заведомо неправосудных решений. Два года назад ВККС не дала согласия следователям, однако по их жалобе Верховный суд решение коллегии отменил.</p>
+					</article>
+					<article class="one-news"><a href="news-single.html" title="Читать полностью" class="one-news__link"></a>
+						<div class="one-news__face"><img src="/img/one-news__img--2.jpg" alt="" class="one-news__img"/></div>
+						<div class="one-news__tad">
+							<h3 class="page__title page__title--h3 page__title--one-news">В рентных отношениях выявили нарушения закона</h3>
+							<time datetime="2023-01-17" class="one-news__date">17 января, 2023</time>
+						</div><a href="#" title="Категория новости" class="one-news__category">Категория</a>
+						<p class="one-news__text">Министерство юстиции (Минюст) России готовит законопроект для улучшения правового регулирования рентных отношений, сообщается на сайте ведомства. Документ предлагает внести изменения в Гражданский кодекс (ГК) РФ. Сейчас он проходит общественные обсуждения, которые продлятся до 20 апреля 2016 года.</p>
+					</article>
+					<article class="one-news"><a href="news-single.html" title="Читать полностью" class="one-news__link"></a>
+						<div class="one-news__face"><img src="/img/one-news__img--1.jpg" alt="" class="one-news__img"/></div>
+						<div class="one-news__tad">
+							<h3 class="page__title page__title--h3 page__title--one-news">СКР добился возбуждения уголовного дела против судьи из Чечни со второй попытки</h3>
+							<time datetime="2005-12-15" class="one-news__date">15 декабря, 2005</time>
+						</div><a href="#" title="Категория новости" class="one-news__category">Категория</a>
+						<p class="one-news__text">Сегодня ВККС дала согласие на возбуждение уголовного дела против судьи АС Чеченской Республики Алу Бачаева. Его подозревали в вынесении заведомо неправосудных решений. Два года назад ВККС не дала согласия следователям, однако по их жалобе Верховный суд решение коллегии отменил.</p>
+					</article>
+					<article class="one-news"><a href="news-single.html" title="Читать полностью" class="one-news__link"></a>
+						<div class="one-news__face"><img src="/img/one-news__img--2.jpg" alt="" class="one-news__img"/></div>
+						<div class="one-news__tad">
+							<h3 class="page__title page__title--h3 page__title--one-news">В рентных отношениях выявили нарушения закона</h3>
+							<time datetime="2023-01-17" class="one-news__date">17 января, 2023</time>
+						</div><a href="#" title="Категория новости" class="one-news__category">Категория</a>
+						<p class="one-news__text">Министерство юстиции (Минюст) России готовит законопроект для улучшения правового регулирования рентных отношений, сообщается на сайте ведомства. Документ предлагает внести изменения в Гражданский кодекс (ГК) РФ. Сейчас он проходит общественные обсуждения, которые продлятся до 20 апреля 2016 года.</p>
+					</article>
+					<div class="pagination pagination--news">
+						<button type="button" class="pagination__btn pagination__btn--prev">Назад</button>
+						<p class="pagination__page">Страница<span class="pagination__page--number">1</span><span class="pagination__page--gray">из 50</span></p>
+						<button type="button" class="pagination__btn pagination__btn--next">Дальше</button>
+					</div>
+				</section>
 			</div>
 		</main>
 		<footer class="footer">

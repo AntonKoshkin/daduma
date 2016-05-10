@@ -1,5 +1,6 @@
 .act
-	padding 82px 0 0
+	// padding 82px 0 0
+	padding 20px 0 0
 
 	&__wrapper
 		@extend $pad-row
@@ -61,7 +62,8 @@
 		&__desc
 			@extend $row
 			
-			width 75%
+			&:not(.act__desc--fullwidth)
+				width 75%
 		
 		&__title
 			width 75%

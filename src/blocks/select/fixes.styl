@@ -1,0 +1,58 @@
+.select2-selection
+	position relative
+	line-height 1em
+	font-size 0
+	
+	&:before
+		@extend $pseudo-right
+		triangle down 3px 2px black
+		right 10px
+		
+	&__choice
+		@extend $small-text
+		
+		&__remove
+			size 10px
+			position relative
+			
+			&:before
+			&:after
+				@extend $pseudo-center-old
+				
+				width 10px
+				height 1px
+				background-color black
+				transform-origin center
+			
+			&:before
+				transform rotate(-45deg)
+			
+			&:after
+				transform rotate(45deg)
+	
+	&__render
+		display flex
+		flex-wrap wrap
+		justify-content flex-start
+
+.select2-search
+	flex-basis 100%
+	flex-shrink 1
+
+.select2-container
+	&--default&--focus
+	&--default
+		.select2-selection
+			&--multiple
+				border 1px solid gray-lighter
+
+	.select2-search--inline
+		.select2-search__field
+			font-size .875rem
+			width 100% !important
+			margin-top 0
+			padding 14px 10px
+
+.select2-results
+	&__option
+		@extend $small-text

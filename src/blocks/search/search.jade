@@ -1,0 +1,15 @@
+mixin search
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'search--' + mod
+
+	.search
+		+form('search')
+			input.search__input(
+				type='text'
+				placeholder=attributes.placeholder
+				autocomplete=attributes.autocomplete || 'off')
+			input.search__btn(
+				type='submit'
+				value='')

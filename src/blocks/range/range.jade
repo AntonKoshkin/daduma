@@ -1,0 +1,12 @@
+mixin range(id)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'input--' + mod
+
+	.range(class=mods)
+		.range__label(for=id)
+		.range__input(
+			id=id)
+		//- p.range__min
+		//- p.range__max

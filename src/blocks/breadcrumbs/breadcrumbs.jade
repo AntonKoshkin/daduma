@@ -6,6 +6,7 @@ mixin breadcrumbs
 			if block
 				block
 
-mixin brItem(text)
+mixin brItem(text, link)
 	li.breadcrumbs__item
-		a.breadcrumbs__link!=text
+		a.breadcrumbs__link(
+			href=link)!=text

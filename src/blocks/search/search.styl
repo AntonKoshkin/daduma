@@ -1,0 +1,27 @@
+.search
+	@extend $font-reset
+	
+	flex-grow 1
+	position relative
+	order 1
+	flex-basis 100%
+	margin-bottom 20px
+	
+	&__input
+		@extend $very-small-text
+		
+		padding 10px
+		padding-right 40px
+		width 100%
+		border 1px solid gray-lighter
+	
+	&__btn
+		@extend $btn-reset, $pseudo-right
+		bicon(magnifier.black, 16, 38)
+	
+	@media (min-width tablet)
+		order 2
+		flex-basis 25%
+		min-width 25%
+		margin-bottom 0
+		flex-shrink 1

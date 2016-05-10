@@ -1,0 +1,30 @@
+mixin statusBar(condition)
+	-var width = Math.round(100 / 8 * condition)
+	.status-bar
+		// этому элементу ширина задается мануально
+		.status-bar__bg(style='width: ' + width + '%')
+		.status-bar__text
+			case condition
+				when 1
+					| Внесение в ГД
+					
+				when 2
+					| Предварительное рассмотрение
+					
+				when 3
+					| Первое чтение
+					
+				when 4
+					| Второе чтение
+					
+				when 5
+					| Третье чтение
+					
+				when 6
+					| Рассмотрение в СФ
+					
+				when 7
+					| Рассмотрение президентом
+					
+				when 8
+					| Опубликование

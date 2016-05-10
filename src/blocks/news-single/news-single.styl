@@ -1,0 +1,80 @@
+.news-single
+	padding-top 30px
+	
+	&__title
+		@extend $not-so-big-text
+		
+		font-family yefimov
+		font-weight regular
+		margin-bottom 10px
+	
+	&__date
+		@extend $very-small-text, $one-row
+		
+		color gray-light
+		font-weight light
+		display block
+	
+	&__category
+		@extend $very-small-text
+		
+		color pink
+		text-decoration underline
+		display inline-block
+		font-weight light
+		margin-bottom 10px
+	
+	&__body
+		background-color white
+		border 1px solid gray-lighter
+		padding 20px
+		margin-bottom 20px
+	
+	&__face
+		overflow hidden
+		margin-bottom 10px
+	
+	&__img
+		width 100%
+	
+	&__text
+		p
+			@extend $small-text
+			
+			font-weight light
+			color gray
+			text-align justify
+			line-height 1.5em
+			
+			&:not(:last-child)
+				margin-bottom 20px
+	
+	@media (min-width tablet)
+		&__head
+			display flex
+			justify-content space-between
+			flex-wrap wrap
+			margin-bottom 15px
+		
+		&__title
+			width 100%
+			order 1
+			font-size 1.9375rem
+		
+		&__date
+			order 3
+		
+		&__category
+			order 2
+		
+		&__face
+			float left
+			max-width 50%
+			margin-right 20px
+			margin-bottom 5px
+			margin-top 4px
+			max-height 300px
+		
+		&__text
+			p
+				color black

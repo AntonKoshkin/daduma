@@ -1,0 +1,12 @@
+mixin select(subj)
+	.select
+		select.select__select(
+			id=attributes.id
+			name=subj
+			style='width:50%'
+			multiple=attributes.multiple)
+			if block
+				block
+
+mixin sOption(value, title)
+	option.select__option(value=value)!=title

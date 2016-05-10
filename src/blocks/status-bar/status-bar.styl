@@ -1,0 +1,24 @@
+.status-bar
+	position relative
+	background-color #fb
+
+	&__bg
+		height 18px
+		background linear-gradient(115deg,
+			green 0%,
+			green 33%,
+			lightness(green, 65%) 33%,
+			lightness(green, 65%) 100%)
+	
+	&__text
+		@extend $pseudo-center, $very-small-text, $one-row
+
+
+.one-law
+	.status-bar
+		flex-basis 100%
+		flex-shrink 1
+		flex-grow 1
+	
+		@media (min-width tablet)
+			display none

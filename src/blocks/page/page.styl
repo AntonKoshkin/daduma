@@ -26,6 +26,8 @@ html
 	&__title
 		@extend $title
 		
+		word-break break-word
+		
 		&--h1
 			@extend $title--1
 			
@@ -41,11 +43,28 @@ html
 		
 		&--margined
 			margin-bottom 25px
+		
+		&--news
+			margin-bottom 0
+			order 2
+		
+		&--one-news
+			margin-bottom 5px
 	
 	&__stats
 		display flex
 		flex-wrap wrap
 		justify-content flex-start
+	
+	&__head
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		align-items center
+		margin-bottom 15px
+	
+	&__news
+		margin-bottom 50px
 		
 	@media (min-width tablet)
 		background-position center top
@@ -64,6 +83,35 @@ html
 			display flex
 			flex-wrap nowrap
 			justify-content space-around
+		
+		&__title
+			&--news
+				order 1
+				margin-right 80px
+			
+			&--laws
+				margin-right 80px
+				margin-bottom 0
+				order 1
+			
+			&--one-news
+				flex-basis 100%
+				flex-shrink 1
+				margin-bottom 0
+				margin-right 10px
+		
+		&__head
+			flex-wrap nowrap
+		
+		&__header
+			display flex
+			flex-wrap wrap
+			width 100%
+		
+		&__laws
+			display flex
+			flex-wrap wrap
+			justify-content space-between
 
 .recapcha
 	width 302px

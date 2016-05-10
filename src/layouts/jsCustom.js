@@ -60,3 +60,15 @@
 
 // error showing
 //= ../blocks/error/error.js
+
+// select
+//= ../blocks/select/select.js
+
+// datepicker
+//= ../blocks/datepicker/datepicker.js
+
+// range
+//= ../blocks/range/range.js
+
+// extended search opening
+//= ../blocks/extended-search/extended-search.js

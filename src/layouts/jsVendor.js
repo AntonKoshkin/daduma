@@ -1,3 +1,6 @@
+// jquery ui
+//= ../blocks/ui/ui.js
+
 // slider
 //= ../blocks/sliders/owl.carousel.js
 
@@ -12,3 +15,6 @@
 
 // number increaser
 //= ../blocks/number/counter.js
+
+// select plugin
+//= ../blocks/select/plugin.js

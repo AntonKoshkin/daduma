@@ -1,5 +1,10 @@
 mixin pag(page, pages)
-	.pagination
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'pagination--' + mod
+
+	.pagination(class=mods)
 		button.pagination__btn.pagination__btn--prev(type='button') Назад
 		p.pagination__page
 			| Страница

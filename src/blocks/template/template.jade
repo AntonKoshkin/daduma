@@ -51,6 +51,15 @@ include ../error/error
 include ../page/page
 //- include ../stat-diagram/stat-diagram
 include ../one-stat/one-stat
+include ../search/search
+include ../one-news/one-news
+include ../news-single/news-single
+include ../extended-search/extended-search
+include ../select/select
+include ../datepicker/datepicker
+include ../range/range
+include ../one-law/one-law
+include ../status-bar/status-bar
 
 include ../klichko/klichko
 
@@ -66,7 +75,7 @@ html(lang="ru")
 			+burger
 			+logo('header')
 			+navigation
-				+navItem('Законы', '#', true)
+				+navItem('Законы', true)
 				+navItem('Новости', '/news.html')
 				+navItem('Пользователи', '/users.html')
 				+navItem('Обратная связь', '#')(data-modal-link='#feedback')

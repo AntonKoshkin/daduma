@@ -3,6 +3,7 @@
 const
 	concat	= require('gulp-concat'),
 	config	= require('./config'),
+	debug		= require('gulp-debug'),
 	filter	= require('gulp-filter'),
 	gulp		= require('gulp'),
 	gulpIf	= require('gulp-if'),
@@ -26,6 +27,7 @@ module.exports = function() {
 			.pipe(jsHint())
 			.pipe(jsHint.reporter(stylish))
 			.pipe(f.restore)
+			.pipe(debug())
 			.pipe(concat('main.js'))
 			.pipe(gulpIf(
 				!config.isDev,

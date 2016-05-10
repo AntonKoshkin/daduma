@@ -14,7 +14,10 @@ module.exports = {
 				'!src/blocks/**/svg-*.svg',
 			],
 			jade			: 'src/layouts/*.jade',
-			js				: 'src/layouts/*.js',
+			js				: [
+				'src/layouts/jsVendor.js',
+				'src/layouts/jsCustom.js'
+			],
 			pngSprite	: 'src/blocks/**/png-*.png',
 			stylus		: 'src/layouts/style.styl',
 			svgSprite	: 'src/blocks/**/svg-*.svg',

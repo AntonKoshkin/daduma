@@ -1,0 +1,12 @@
+mixin datepicker
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'datepicker--' + mod
+
+	.datepicker(
+		class=mods)
+		input.datepicker__input(
+			placeholder=attributes.placeholder
+			id=attributes.id
+			type=text)

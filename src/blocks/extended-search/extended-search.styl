@@ -1,0 +1,64 @@
+.extended-search
+	&__expander
+		display flex
+		justify-content flex-end
+	
+	&__expand
+		@extend $btn-reset, $very-small-text
+		
+		font-weight medium
+		text-decoration underline
+		margin-bottom 20px
+	
+	&__body
+		display none
+		background-color white
+		padding 10px
+		flex-wrap wrap
+	
+	&--opened &__body
+		display flex
+		justify-content space-between
+	
+	&__item
+		flex-basis 100%
+		margin-bottom 10px
+		
+		&--flex
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+		
+		&--half
+			flex-basis calc(50% - 5px)
+	
+	&__title
+		@extend $small-text
+		
+		font-weight medium
+		margin-bottom 5px
+	
+	&__item--flex &__title
+		flex-basis 100%
+
+	@media (min-width tablet)
+		&__body
+			flex-wrap nowrap
+		
+		&__item
+			flex-basis calc(25% - 5px)
+			flex-shrink 1
+			
+			&--half
+				flex-basis calc(12.5% - 5px)
+			
+
+.page__laws
+	.extended-search
+		@media (min-width tablet)
+			order 3
+			width 100%
+			margin-top 10px
+			
+			&--opened
+				margin-bottom 20px

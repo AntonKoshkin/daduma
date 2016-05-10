@@ -1,0 +1,23 @@
+mixin extendedSearch
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'extended-search--' + mod
+
+	.extended-search(class=mods)
+		.extended-search__expander
+			button.extended-search__expand Расширенный фильтр
+		.extended-search__body
+			if block
+				block
+
+mixin esItem(title)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'extended-search__item--' + mod
+
+	.extended-search__item(class=mods)
+		p.extended-search__title!=title
+		if block
+			block

@@ -23,14 +23,14 @@ mixin oneStat(title, img)
 
 mixin osLegend(left, right)
 	.one-stat__leg-col.one-stat__leg-col--left
-		p.one-stat__leg-item.one-stat__leg-item--left
+		//- p.one-stat__leg-item.one-stat__leg-item--left
 			span.one-stat__leg-text Город
 		each lItem in left
 			p.one-stat__leg-item.one-stat__leg-item--left
 					span.one-stat__leg-text!=lItem
 
 	.one-stat__leg-col.one-stat__leg-col--right
-		p.one-stat__leg-item.one-stat__leg-item--right
+		//- p.one-stat__leg-item.one-stat__leg-item--right
 			span.one-stat__leg-text Кол-во, %
 		each rItem in right
 			p.one-stat__leg-item.one-stat__leg-item--right

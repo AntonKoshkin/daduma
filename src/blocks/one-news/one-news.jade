@@ -1,0 +1,17 @@
+mixin oneNews(href, title, date, datetime, img, text)
+	article.one-news
+		a.one-news__link(
+			href=href
+			title='Читать полностью')
+		.one-news__face
+			img.one-news__img(
+				src=img
+				alt='')
+		.one-news__tad
+			+pageTitle(3, title)(mods=['one-news'])
+			time.one-news__date(
+				datetime=datetime)=date
+		a.one-news__category(
+			href='#'
+			title='Категория новости') Категория
+		p.one-news__text=text

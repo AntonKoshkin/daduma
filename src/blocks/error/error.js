@@ -9,6 +9,6 @@ $(document).ready(function() {
 				$('.error')
 					.removeClass('error--show')
 					.dequeue();
-			})
+			});
 	});
 });

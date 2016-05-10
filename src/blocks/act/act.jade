@@ -24,7 +24,12 @@ mixin actFace
 			block
 
 mixin actDesc(title)
-	.act__desc
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'act__desc--' + mod
+
+	.act__desc(class=mods)
 		h2.act__title!=title
 		.act__date
 			p.act__date-time
@@ -34,15 +39,16 @@ mixin actDesc(title)
 		if block
 			block
 
-		.act__download
-			// классы значков форматов:
-			// pdf - act__link--pdf
-			// doc - act__link--doc
-			// docx - act__link--docx
-			a.act__link.act__link--docx(
-				href='#'
-				download) Скачать полный текст закона
-			span.act__download-statistic (скачали 18 953 раз)
+		if !attributes.discuss
+			.act__download
+				// классы значков форматов:
+				// pdf - act__link--pdf
+				// doc - act__link--doc
+				// docx - act__link--docx
+				a.act__link.act__link--docx(
+					href='#'
+					download) Скачать полный текст закона
+				span.act__download-statistic (скачали 18 953 раз)
 
 mixin actAutor(autors)
 	p.act__autors

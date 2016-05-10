@@ -2,15 +2,15 @@ mixin subItem(title, href)
 	li.navigation__subitem
 		a.navigation__sublink(href=href)=title
 
-mixin navItem(title, href, hasSub)
-	if hasSub === true
+mixin navItem(title, href)
+	if href === true
 		li.navigation__item.navigation__item--openable
-			a.navigation__link(href=href)=title
+			span.navigation__link=title
 			.navigation__subnav
 				ul.navigation__sublist
-					+subItem('Все', '#')
-					+subItem('Популярные', '#')
-					+subItem('Новые', '#')
+					+subItem('Все', '/laws.html')
+					+subItem('Популярные', '/laws.html')
+					+subItem('Новые', '/laws.html')
 	else
 		li.navigation__item
 			a.navigation__link(
