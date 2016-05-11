@@ -4,7 +4,7 @@ $(document).ready(function() {
 		
 		$('.error')
 			.addClass('error--show')
-			.delay(5000)
+			.delay(3000)
 			.queue(function() {
 				$('.error')
 					.removeClass('error--show')

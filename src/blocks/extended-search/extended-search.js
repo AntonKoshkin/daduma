@@ -4,6 +4,7 @@ $(document).ready(function() {
 		
 		$(this)
 			.closest('.extended-search')
-			.toggleClass('extended-search--opened');
+			.find('.extended-search__body')
+			.slideToggle(300);
 	});
 });

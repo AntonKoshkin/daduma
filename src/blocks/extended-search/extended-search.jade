@@ -8,8 +8,9 @@ mixin extendedSearch
 		.extended-search__expander
 			button.extended-search__expand Расширенный фильтр
 		.extended-search__body
-			if block
-				block
+			.extended-search__items
+				if block
+					block
 
 mixin esItem(title)
 	if attributes.mods

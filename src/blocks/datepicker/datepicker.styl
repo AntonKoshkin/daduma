@@ -1,9 +1,43 @@
 .datepicker
+	margin-bottom 20px
+	position relative
+	
+	&:before
+		@extend $pseudo-left, $very-small-text
+		
+		left 7px
+		color gray-lighter
+	
+	&--start
+		&:before
+			content 'с'
+	
+	&--end
+		&:before
+			content 'по'
+	
 	&__input
-		@extend $small-text
+		@extend $very-small-text
 		
 		width 100%
-		
+		border 1px solid gray-lighter
+		border-radius 3px
+		padding 12.5px 6px 12.5px 25px
+		position relative
+		background-color transparent
 	
 	@media(min-width tablet)
-		flex-basis 50%
+		margin-bottom 0
+		
+		&--half
+			width calc(50% - 5px)
+			display inline-block
+			
+			&:first-child
+				margin-right 5px
+			
+			&:last-child
+				margin-left 5px
+
+.ui-datepicker
+	z-index 6 !important

@@ -4,12 +4,15 @@
 	font-size 0
 	
 	&:before
-		@extend $pseudo-right
+		@extend $pseudo
 		triangle down 3px 2px black
+		top 20px
 		right 10px
 		
 	&__choice
 		@extend $small-text
+
+		margin-bottom 5px
 		
 		&__remove
 			size 10px
@@ -30,14 +33,16 @@
 			&:after
 				transform rotate(45deg)
 	
-	&__render
+	&__rendered
 		display flex
 		flex-wrap wrap
+		align-items center
 		justify-content flex-start
+		padding 5px
 
 .select2-search
-	flex-basis 100%
-	flex-shrink 1
+	flex-basis 10%
+	flex-grow 1
 
 .select2-container
 	&--default&--focus
@@ -51,8 +56,28 @@
 			font-size .875rem
 			width 100% !important
 			margin-top 0
-			padding 14px 10px
+			padding 7px 10px
 
 .select2-results
 	&__option
 		@extend $small-text
+	
+		&:not(:last-child)
+			border-bottom 1px solid gray-lighter
+		
+.select2-container--default
+	.select2-results
+		&__option
+			&--highlighted[aria-selected]
+				background-color #fb
+				color black
+
+.select2-dropdown
+	border 1px solid gray-lighter
+	border-radius 0 0 3px 3px
+	overflow hidden
+
+.select2-container--default
+	.select2-results
+		> .select2-results__options
+			max-height 123px

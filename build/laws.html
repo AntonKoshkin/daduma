@@ -41,7 +41,9 @@
 						</li>
 						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
 						<li class="navigation__item"><a href="/users.html" class="navigation__link">Пользователи</a></li>
-						<li class="navigation__item"><a href="#" data-modal-link="#feedback" class="navigation__link">Обратная связь</a></li>
+						<li class="navigation__item">
+							<button type="button" data-modal-link="#feedback" class="navigation__link navigation__link--btn">Обратная связь</button>
+						</li>
 					</ul>
 				</nav>
 				<button type="button" data-modal-link="#login" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
@@ -63,64 +65,68 @@
 								<input type="submit" value="" class="search__btn"/>
 							</form>
 						</div>
-						<div class="extended-search extended-search--opened">
+						<div class="extended-search">
 							<div class="extended-search__expander">
 								<button class="extended-search__expand">Расширенный фильтр</button>
 							</div>
 							<div class="extended-search__body">
-								<div class="extended-search__item">
-									<p class="extended-search__title">Тематика</p>
-									<div class="select">
-										<select id="subj" name="subj" style="width:50%" multiple="multiple" class="select__select">
-											<option value="mvd" class="select__option">МВД</option>
-											<option value="gibdd" class="select__option">ГИБДД</option>
-											<option value="medicine" class="select__option">Медицина</option>
-											<option value="finance" class="select__option">Финансы и рынки</option>
-											<option value="policy" class="select__option">Политика</option>
-											<option value="education" class="select__option">Образование</option>
-											<option value="military" class="select__option">Вооруженные силы</option>
-											<option value="realty" class="select__option">Недвижимость</option>
-											<option value="manRights" class="select__option">Права человека</option>
-										</select>
-									</div>
-								</div>
-								<div class="extended-search__item extended-search__item--flex">
-									<p class="extended-search__title">Период публикации</p>
-									<div class="extended-search__item--half">
-										<div class="datepicker datepicker--half">
-											<input placeholder="с" id="publStart" class="datepicker__input"/>
+								<div class="extended-search__items">
+									<div class="extended-search__item">
+										<p class="extended-search__title">Тематика</p>
+										<div class="select">
+											<select id="subj" name="subj" style="width:50%" multiple="multiple" class="select__select">
+												<option value="mvd" class="select__option">МВД</option>
+												<option value="gibdd" class="select__option">ГИБДД</option>
+												<option value="medicine" class="select__option">Медицина</option>
+												<option value="finance" class="select__option">Финансы и рынки</option>
+												<option value="policy" class="select__option">Политика</option>
+												<option value="education" class="select__option">Образование</option>
+												<option value="military" class="select__option">Вооруженные силы</option>
+												<option value="realty" class="select__option">Недвижимость</option>
+												<option value="manRights" class="select__option">Права человека</option>
+												<option value="smallMidBusiness" class="select__option">Малый и средний бизнес</option>
+											</select>
 										</div>
 									</div>
-									<div class="extended-search__item--half">
-										<div class="datepicker datepicker--half">
-											<input placeholder="по" id="publEnd" class="datepicker__input"/>
+									<div class="extended-search__item">
+										<p class="extended-search__title">Период публикации</p>
+										<div class="datepicker datepicker--half datepicker--start">
+											<input id="publStart" class="datepicker__input"/>
+										</div>
+										<div class="datepicker datepicker--half datepicker--end">
+											<input id="publEnd" class="datepicker__input"/>
 										</div>
 									</div>
-								</div>
-								<div class="extended-search__item extended-search__item--half">
-									<p class="extended-search__title">Плюсы</p>
-									<div class="range input--green">
-										<div for="pluses" class="range__label"></div>
-										<div id="pluses" class="range__input"></div>
+									<div class="extended-search__item extended-search__item--half">
+										<p class="extended-search__title">Плюсы</p>
+										<div class="range range--green">
+											<div for="pluses" class="range__label"></div>
+											<div id="pluses" class="range__input"></div>
+											<div class="range__values"><span class="range__min-value">0</span><span class="range__max-value">25</span></div>
+										</div>
 									</div>
-								</div>
-								<div class="extended-search__item extended-search__item--half">
-									<p class="extended-search__title">Минусы</p>
-									<div class="range input--red">
-										<div for="minuses" class="range__label"></div>
-										<div id="minuses" class="range__input"></div>
+									<div class="extended-search__item extended-search__item--half">
+										<p class="extended-search__title">Минусы</p>
+										<div class="range range--red">
+											<div for="minuses" class="range__label"></div>
+											<div id="minuses" class="range__input"></div>
+											<div class="range__values"><span class="range__min-value">0</span><span class="range__max-value">25</span></div>
+										</div>
 									</div>
-								</div>
-								<div class="extended-search__item">
-									<p class="extended-search__title">Статус</p>
-									<div class="select">
-										<select id="status" name="status" style="width:50%" multiple="multiple" class="select__select">
-											<option value="mvd" class="select__option">МВД</option>
-											<option value="gibdd" class="select__option">ГИБДД</option>
-											<option value="medicine" class="select__option">Медицина</option>
-											<option value="finance" class="select__option">Финансы и рынки</option>
-											<option value="policy" class="select__option">Политика</option>
-										</select>
+									<div class="extended-search__item">
+										<p class="extended-search__title">Статус</p>
+										<div class="select">
+											<select id="status" name="status" style="width:50%" multiple="multiple" class="select__select">
+												<option value="firstStage" class="select__option">Внесение в ГД</option>
+												<option value="secondStage" class="select__option">Предв. рассмотрение</option>
+												<option value="thirdStage" class="select__option">Первое чтение</option>
+												<option value="fourthStage" class="select__option">Второе чтение</option>
+												<option value="fifthStage" class="select__option">Третье чтение</option>
+												<option value="sixthStage" class="select__option">Рассмотрение в СФ</option>
+												<option value="seventhStage" class="select__option">Рассмотрение президентом</option>
+												<option value="eighth" class="select__option">Опубликование</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -128,20 +134,22 @@
 						<h1 class="page__title page__title--h1 page__title--laws">База законов</h1>
 					</div>
 					<div class="page__laws">
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--gibdd.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -173,20 +181,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--minfin.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -218,20 +228,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--minobr.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -263,20 +275,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--minstroy.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -308,20 +322,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--minzdrav.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -353,20 +369,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--mvd.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -398,20 +416,22 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--rf.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
 									</div>
-								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">
@@ -443,20 +463,69 @@
 								</div>
 							</div>
 						</article>
-						<article class="one-law">
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
 							<div class="one-law__header">
 								<div class="one-law__face"><img src="/img/one-law__banner--vs.png" alt="" class="one-law__img"/></div>
-								<div class="status-bar">
-									<!-- этому элементу ширина задается мануально-->
-									<div style="width: 13%" class="status-bar__bg"></div>
-									<div class="status-bar__text">Внесение в ГД
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
 									</div>
 								</div>
-								<div class="one-law__results">
-									<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
-									<p class="one-law__result one-law__result--green">КПРФ - За</p>
-									<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
-									<p class="one-law__result one-law__result--green">СР - За</p>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">4.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--mineconom.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
 								</div>
 							</div>
 							<div class="one-law__body">

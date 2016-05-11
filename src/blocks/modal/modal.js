@@ -5,6 +5,7 @@ $(document).ready(function() {
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+		$('html').removeClass('no-scroll');
 	});
 });
 
@@ -18,8 +19,10 @@ $(document).ready(function() {
 			$(this)
 				.closest('.modal')
 				.removeClass('modal--show');
+			$('html').addClass('no-scroll');
 		}
 
 		$(modalWindow).addClass('modal--show');
+		$('html').addClass('no-scroll');
 	});
 });

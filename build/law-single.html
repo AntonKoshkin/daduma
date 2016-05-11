@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Пользователи</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/>
+		<meta name="theme-color" content="#4b5a6e"/>
+		<meta name="application-name" content="Сайт про законы"/>
+		<meta name="msapplication-tooltip" content="Сайт в законе"/>
+		<meta name="msapplication-starturl" content="./"/>
+		<meta name="msapplication-navbutton-color" content="#4b5a6e"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="format-detection" content="telephone=no"/><!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	</head>
+	<body class="page">
+		<header class="header">
+			<div class="header__wrapper">
+				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button><a href="/" class="logo logo--header">
+					<p class="logo__text">Народная база законов</p></a>
+				<nav class="navigation">
+					<div class="navigation__bg"></div>
+					<ul class="navigation__list">
+						<li class="navigation__item navigation__item--openable"><span class="navigation__link">Законы</span>
+							<div class="navigation__subnav">
+								<ul class="navigation__sublist">
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Все</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Популярные</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Новые</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
+						<li class="navigation__item"><a href="/users.html" class="navigation__link">Пользователи</a></li>
+						<li class="navigation__item">
+							<button type="button" data-modal-link="#feedback" class="navigation__link navigation__link--btn">Обратная связь</button>
+						</li>
+					</ul>
+				</nav>
+				<button type="button" data-modal-link="#login" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
+			</div>
+		</header>
+		<main class="main main--bg">
+			<div class="page__content">
+				<div class="breadcrumbs">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link">База законов</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link">Закон об антитеррористической деятельности РФ и противо действии коррупции на территории Руси матушки</a></li>
+					</ul>
+				</div>
+				<div class="page__law">
+					<section class="act">
+						<div class="act__wrapper">
+							<div class="act__face"><img src="http://cont.ws/uploads/pic/2016/4/dc77208950025a3282c3d8c851444709.jpg" alt="Исображение документа" class="act__img"/>
+								<div class="rating">
+									<p class="rating__title">Оценка пользователей:</p>
+									<div class="rating__visual">
+										<div class="rating__strip"></div>
+										<!-- рейтинг идет от -5 до 5, следовательно если рейтинг 0, то ширина будет 50%, -5 = 0%, 5= 100%-->
+										<!-- указывается ширина в процентах соответственно рейтинга-->
+										<div style="width:75%" class="rating__circle">
+											<!-- у спана модификаторы цвета-->
+											<!-- .rating__round--green - зеленый цвет-->
+											<!-- .rating__round--red - красный цвет-->
+											<!-- значение у спана это рейтинг, деленный на--><span class="rating__round rating__round--green">2.5</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="act__desc">
+								<h2 class="act__title">Закон о коллекторах</h2>
+								<div class="act__date">
+									<p class="act__date-time">Опубликован: 
+										<time datetime="2016-03-18" class="act__date-time--fat">18.03.2016</time>
+									</p>
+								</div>
+								<div class="act__text-desc">
+									<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+									<div data-num-of-lines='9' class="expand">
+										<div class="expand__text-wrapper">
+											<div class="expand__text">
+												<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
+												</p>
+												<p class="main-text act__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками. Предусматривается запрет на применение физической силы, угрозы ее применения, причинение вреда здоровью и имуществу, психологическое давление и введение в заблуждение. Коллекторы отныне не вправе распространять информацию о долге третьим лицам, в том числе родственникам и сослуживцам должника, а также размещать такого рода сведения в интернете, на стенах зданий или жилых домов. Также документ содержит в себе ряд требований, которым должна соответствовать организация по взысканию долгов. Одновременно с этим ужесточается ответственность за несоблюдение указанных норм.
+												</p>
+											</div>
+										</div>
+										<div class="expand__expand">
+											<button class="expand__expander">Развернуть</button>
+										</div>
+									</div>
+								</div>
+								<div class="act__params">
+									<div class="act__param">
+										<h4 class="small-title">Статус:
+										</h4>
+										<p class="main-text">первое чтение
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Авторы:
+										</h4>
+										<p class="main-text">
+											<p class="act__autors"><a href="link" target="_blank" class="act__autor">В.И.Матвиенко</a>, <a href="link" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a>, <a href="link" target="_blank" class="act__autor">С.Е.Нарышкин</a>, <a href="link" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
+											</p>
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Масштаб:
+										</h4>
+										<p class="main-text">федеральный
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Номер законопроекта:
+										</h4>
+										<p class="main-text">№ 999547-6
+										</p>
+									</div>
+								</div>
+								<div class="act__download">
+									<!-- классы значков форматов:-->
+									<!-- pdf - act__link--pdf-->
+									<!-- doc - act__link--doc-->
+									<!-- docx - act__link--docx--><a href="#" download="download" class="act__link act__link--docx">Скачать полный текст закона</a><span class="act__download-statistic">(скачали 18 953 раз)</span>
+								</div>
+							</div>
+							<div class="voiting">
+								<div class="voiting__btns">
+									<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-up"><span class="btn__text">Проголосовать &laquo;За&raquo;</span></button>
+									<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-down"><span class="btn__text">Проголосовать &laquo;Против&raquo;</span></button>
+									<button type="button" data-modal-link="#voteCounted" class="btn btn--neutral"><span class="btn__text">Воздержаться</span></button>
+								</div>
+								<div class="voiting__bar">
+									<div class="color-bar">
+										<div class="color-bar__strips">
+											<!-- красной и зеленой полоскам задается ширина, серая меняется сама-->
+											<!-- зеленая полоса (за)-->
+											<div style="width:14%" class="color-bar__green"></div>
+											<div class="color-bar__gray"></div>
+											<!-- красная полоса (против)-->
+											<div style="width:65%" class="color-bar__red"></div>
+											<div class="color-bar__strip-bar"></div>
+										</div>
+										<div class="color-bar__numbers">
+											<div style="width:14%" class="color-bar__number color-bar__number--for">79</div>
+											<div class="color-bar__number color-bar__number--neutral">104</div>
+											<div style="width:65%" class="color-bar__number color-bar__number--against">345</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="detail">
+								<div class="detail__content">
+									<h2 class="detail__title">Подробная информация</h2>
+									<div class="act__param">
+										<h4 class="small-title">Статус:
+										</h4>
+										<p class="main-text">первое чтение
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Авторы:
+										</h4>
+										<p class="main-text">
+											<p class="act__autors"><a href="link" target="_blank" class="act__autor">В.И.Матвиенко</a>, <a href="link" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a>, <a href="link" target="_blank" class="act__autor">С.Е.Нарышкин</a>, <a href="link" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
+											</p>
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Масштаб:
+										</h4>
+										<p class="main-text">федеральный
+										</p>
+									</div>
+									<div class="act__param">
+										<h4 class="small-title">Номер законопроекта:
+										</h4>
+										<p class="main-text">№ 999547-6
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="about-act">
+						<div class="about-act__wrapper">
+							<div class="about-act__tabs">
+								<button type="button" class="about-act__tab about-act__tab--active">Результаты голосований в гос. думе</button>
+								<button type="button" class="about-act__tab">Статистика по закону</button>
+								<button type="button" class="about-act__tab">Хронология закона</button>
+								<!-- этот линк ведет на страницу с обсуждением закона, виден только на мобилках--><a href="#comments" class="about-act__tab about-act__tab--btn">Обсудить закон</a>
+							</div>
+							<div class="about-act__contents">
+								<div class="about-act__content">
+									<h4 class="about-act__cont-title">Результаты голосований в гос. думе</h4>
+									<div class="about-act__cont-content">
+										<div class="about-act__inner">
+											<div class="about-act__diagram-pack">
+												<div class="about-act__diagrams">
+													<div class="diagram">
+														<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+														<p class="diagram__description">Фракция Всероссийской политической партии "ЕДИНАЯ РОССИЯ"</p>
+													</div>
+													<div class="diagram">
+														<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+														<p class="diagram__description">Фракция Политической партии "Коммунистическая партия Российской Федерации"</p>
+													</div>
+													<div class="diagram">
+														<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+														<p class="diagram__description">Фракция Политической партии СПРАВЕДЛИВАЯ РОССИЯ</p>
+													</div>
+													<div class="diagram">
+														<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+														<p class="diagram__description">Фракция Политической партии "Либерально-демократическая партия России"</p>
+													</div>
+													<div class="diagram">
+														<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+														<p class="diagram__description">Общая статистика по всем партиям</p>
+													</div>
+												</div>
+											</div>
+											<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--blue">Не голосовали</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="about-act__content about-act__content--show">
+									<h4 class="about-act__cont-title">Статистика по закону</h4>
+									<div class="about-act__cont-content">
+										<div class="about-act__inner">
+											<div class="type-tabs">
+												<div class="type-tabs__tab type-tabs__tab--active">
+													<h5 class="type-tabs__title">Пол/возраст</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">Образование</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">Статус</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">География</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">Карьера</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">Религия</h5>
+												</div>
+												<div class="type-tabs__tab">
+													<h5 class="type-tabs__title">Политика</h5>
+												</div>
+												<div class="type-tabs__slice"></div>
+											</div>
+											<div class="about-act__diagram-pack">
+												<div class="about-act__diagrams">
+													<div class="about-act__type about-act__type--show">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+															<p class="diagram__description">Мужчины</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+															<p class="diagram__description">Женщины</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+													<div class="about-act__type">
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="diagram">
+															<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+															<p class="diagram__description">Описание категории</p>
+														</div>
+														<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="about-act__content">
+									<h4 class="about-act__cont-title">Хронология закона</h4>
+									<div class="about-act__cont-content">
+										<div class="about-act__inner">
+											<!-- для подсветки соответствующего этапа предусмотрены модификаторы-->
+											<!-- .timeline--two, .timeline--three, .timeline--four, .timeline--five, .timeline--six, .timeline--seven, .timeline--eight-->
+											<!-- по умолчанию подсвечивается первый этап, каждый из вышеописанных модификаторов подсвечивает следующий (то есть .timeline--five подсветит все, включая пятый, добавлять нужно только один модификатор единовременно)-->
+											<div class="timeline timeline--two">
+												<div class="timeline__items">
+													<div class="timeline__item">
+														<div class="timeline__number"><span>1</span></div>
+														<p class="timeline__date">21.03.16</p>
+														<p class="timeline__title">Внесение законопроекта в ГД</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>2</span></div>
+														<p class="timeline__date">15.04.16</p>
+														<p class="timeline__title">Предварительное рассмотрение</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>3</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Первое чтение</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>4</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Второе чтение</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>5</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Третье чтение</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>6</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Рассмотрение в СФ</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>7</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Рассмотрение президентом</p>
+													</div>
+													<div class="timeline__item">
+														<div class="timeline__number"><span>8</span></div>
+														<p class="timeline__date"></p>
+														<p class="timeline__title">Опубликование</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="about-act__content about-act__content--btn">
+									<!-- этот линк прокручивает экран к комментам, виден на планшетах и десктопах--><a href="/discuss.html" class="about-act__cont-title about-act__cont-title--btn">Обсудить закон</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="sides">
+						<div class="sides__wrapper">
+							<div class="sides__titles">
+								<buttons type="button" class="sides__title sides__title--green sides__title--active">Плюсы<span class="sides__title--invise"> законопроекта</span></buttons>
+								<buttons type="button" class="sides__title sides__title--red">Минусы<span class="sides__title--invise"> законопроекта</span></buttons>
+							</div>
+							<div class="sides__contents">
+								<div class="sides__content sides__content--show sides__content--green">
+									<div class="sides__text">
+										<p>Запрет на применение коллекторами физической силы, угрозы ее применения, причинение вреда здоровью, повреждение имущества, психологическое давление, оскорбления и введение в заблуждение;</p>
+										<p>закон не позволяет сообщать о долге третьим лицам, включая родственников и сослуживцев, размещать сведения о должнике в интернете или на жилом доме;</p>
+										<p>коллектор не может приходить к должнику, звонить или писать ему в рабочие дни с 22:00 до 8:00 и выходные и праздничные дни с 20:00 до 9:00. Он может встречаться с должником не более одного раза в неделю, а также звонить не более одного раза в сутки, но не более двух раз в неделю и не более восьми раз в месяц. Отправлять электронные сообщения должнику можно только два раза в сутки, четыре раза в неделю и шестнадцать раз в месяц. Каждый раз кредитор или коллектор должен представляться, сообщать о наличии долга и оставлять контактные данные;</p>
+										<p>кредитор может привлечь коллектора только с письменного согласия должника, заключенного после возникновения просрочки (такое согласие можно отозвать по истечение 3 месяцев с момента возникновения задолженности). Причем кредитор не вправе обращаться за содействием одновременно к двум или более коллекторам для общения с должником;</p>
+										<p>должник в любой момент может отказаться от общения с кредитором или коллектором, назначив вместо себя адвоката;</p>
+										<p>кредитор или коллектор не может общаться с недееспособными или лицами, ограниченными в дееспособности; с людьми, которые находятся на лечении в больнице; с инвалидами 1-й группы; с несовершеннолетними;</p>
+										<p>для связи с должником коллектор не вправе использовать устройства, скрывающие номер его телефона и адрес электронной почты, а также вести переговоры из-за рубежа;</p>
+										<p>увеличение в десять раз — до 2 миллионов рублей — штрафа за нарушение регламента взаимодействия взыскателя с должником, причем правила распространяются и на банки, микрофинансовые организации и других кредиторов;</p>
+										<p>коллекторской деятельностью не смогут заниматься граждане, имеющие судимость за преступления против личности, в сфере экономики и общественной безопасности, а также руководители "с испорченной деловой репутацией";</p>
+										<p>юридическое лицо, имеющее право взыскивать задолженность, должно заниматься этим в качестве основного рода деятельности и иметь уставный капитал не менее 10 миллионов рублей;</p>
+										<p>введение реестра профессиональных взыскателей и установление требования к ним.</p>
+									</div>
+									<div class="sides__expand">
+										<button class="sides__expander">Развернуть</button>
+									</div>
+									<div class="sides__suggestion">
+										<button data-modal-link="#suggestPlus" type="button" class="sides__sugg-btn">Предложить плюс</button>
+									</div>
+								</div>
+								<div class="sides__content sides__content--red">
+									<div class="sides__text">
+										<p>Банки будут вынуждены поднять ставки, чтобы переложить риски, кредиты станут еще менее доступными (в стоимость кредитов будут закладываться возможные судебные расходы);</p>
+										<p>расплывчатость формулировок и отсутствие толкования некоторых терминов;</p>
+										<p>действие закона пока что не распространяется на индивидуальных предпринимателей, а также на обязательства неденежного характера;</p>
+										<p>риск роста числа "черных" взыскателей;</p>
+										<p>возрастание нагрузки на судебную систему, а между тем тяжбы могут длиться годами и за это время будут начисляться проценты;</p>
+										<p>в проекте пока не отмечено, какое ведомство будет контролировать соблюдение закона;</p>
+										<p>в проекте пока не отмечено, какое ведомство будет контролировать соблюдение закона;</p>
+										<p>реализация механизма получения дополнительного согласия на переуступку долга вызовет сложности на практике: собирать подписи с должников после того, как они уже допустили просрочку, почти невозможно. Это вынудит банки получать такое </p>
+									</div>
+									<div class="sides__suggestion">
+										<button data-modal-link="#suggestMinus" type="button" class="sides__sugg-btn">Предложить минус</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section opinion__wrapper--green">
+						<div class="section__wrapper">
+							<h2 class="section__title">Мнения экспертов и известных людей по законопроекту:</h2>
+							<div class="opinion">
+								<div class="opinion__tabs">
+									<div class="opinion__tab opinion__tab--active"><img src="http://goo.gl/jZCLyk" alt="" class="opinion__thumb"/></div>
+									<div class="opinion__tab"><img src="http://goo.gl/8xF0Cu" alt="" class="opinion__thumb"/></div>
+									<div class="opinion__tab"><img src="https://goo.gl/WhpvUu" alt="" class="opinion__thumb"/></div>
+									<div class="opinion__tab"><img src="http://goo.gl/irgQPx" alt="" class="opinion__thumb"/></div>
+								</div>
+								<div class="opinion__content">
+									<div class="opinion__item opinion__item--show">
+										<div class="opinion__face">
+											<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/jZCLyk" alt="Фото эксперта" class="opinion__img"/>
+										</div>
+										<blockquote class="opinion__bq">
+											<p class="opinion__text">Деятельность квази-коллекторов преступную надо прекратить. Беспредел, связанный с нарушением закона, с угрозами, с насилием - и психологическим насилием, и физическим. Это абсолютно неприемлемо.</p>
+											<p class="opinion__text">Но такой вид деятельности, как работа по долговым обязательствам, применяется во многих странах, это нормальный инструмент в рыночных отношениях, и нельзя, конечно, чтобы люди безответственно относились к получению денег и не думали о том, как они будут отдавать. Ведь несправедливо, если у вас возьмут деньги, а потом отдавать не будут.</p>
+											<cite class="opinion__name"><a href="http://putin.kremlin.ru/" target="_blank">В.В. Путин, Президент РФ</a></cite>
+										</blockquote>
+									</div>
+									<div class="opinion__item">
+										<div class="opinion__face">
+											<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/8xF0Cu" alt="Фото эксперта" class="opinion__img"/>
+										</div>
+										<blockquote class="opinion__bq">
+											<p class="opinion__text">Таким образом мы оградим граждан от общения с сомнительными личностями из непонятных организаций, которые действуют под вывеской коллекторских агентств.</p>
+											<cite class="opinion__name"><a href="http://goo.gl/pPTcl2" target="_blank">В.И. Матвиенко, Председатель Совета Федерации</a></cite>
+										</blockquote>
+									</div>
+									<div class="opinion__item">
+										<div class="opinion__face">
+											<!-- изображения необходимо кропать под квадрат--><img src="https://goo.gl/WhpvUu" alt="Фото эксперта" class="opinion__img"/>
+										</div>
+										<blockquote class="opinion__bq">
+											<p class="opinion__text">Ни один коллектор не имеет права "вышибать" долги... Другого выхода нет. Мы не можем допустить, чтобы наших людей убивали... Все бандиты и вымогатели должны быть привлечены к уголовной ответственности.</p>
+											<cite class="opinion__name"><a href="https://goo.gl/dgeAUP" target="_blank">А.Г. Тулеев, губернатор Кемеровской области</a></cite>
+										</blockquote>
+									</div>
+									<div class="opinion__item">
+										<div class="opinion__face">
+											<!-- изображения необходимо кропать под квадрат--><img src="http://goo.gl/irgQPx" alt="Фото эксперта" class="opinion__img"/>
+										</div>
+										<blockquote class="opinion__bq">
+											<p class="opinion__text">Сейчас законопроект существенно ограничивает в правах сотрудников служб взыскания — даже в тех случаях, когда они не нарушают права заемщика... в нынешнем варианте он позволяет заемщику и вовсе отказаться от взаимодействия с коллектором, однако это может сказаться на ухудшении качества обслуживания банковских кредитов.</p>
+											<cite class="opinion__name"><a href="http://goo.gl/hi9gfB" target="_blank">Б.Б. Воронин, директор Национальной ассоциации профессиональных коллекторских агентств</a></cite>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section section--small-pad">
+						<div class="section__wrapper">
+							<h2 class="section__title">Примеры применения закона и зарубежный опыт:</h2>
+							<div class="usage">
+								<article class="usage__item"><a href="https://news.google.ru/" target="_blank" class="usage__content">
+										<div class="usage__face"><img src="img/usage__1.jpg" alt="" class="usage__img"/></div>
+										<div class="usage__desc">
+											<div class="usage__name">Разнообразный и богатый опыт</div>
+											<div class="usage__text">Во Франции всего несколько сотен коллекторских компаний, которые в обязательном порядке получают разрешение на работу в прокуратуре, осуществляющей контроль за ними. Они действуют от лица кредитора по заключенному с ним соглашению, за что получают вознаграждение в размере 10-20 процентов от возвращенной суммы. Так как методы физического воздействия здесь дело подсудное, пытаются давить на неплательщиков психологически. В частности, письмами, по форме и содержанию здорово смахивающими на вполне официальные, что может заставить незнающих людей всерьез разволноваться. Но во французском уголовном кодексе есть статья, согласно которой "фабрикация печатных актов, напоминающих административные документы, что подрывает доверие к государственным структурам", наказывается тюремным заключением до одного года и штрафом в 15 тысяч евро. То же самое касается постоянных телефонных звонков. Реально добиться возврата долга полностью или частично во Франции можно только по решению суда с помощью судебного пристава.</div>
+										</div></a></article>
+								<article class="usage__item"><a href="https://news.google.ru/" target="_blank" class="usage__content">
+										<div class="usage__face"><img src="img/usage__3.jpg" alt="" class="usage__img"/></div>
+										<div class="usage__desc">
+											<div class="usage__name">Разнообразный и богатый опыт сложившаяся структура организации</div>
+											<div class="usage__text">В США деятельность коллекторских агентств регламентируется специальным законом, а надзор над его исполнением и работой коллекторов осуществляют сразу два ведомства - Федеральная торговая комиссия (ФТК) США и Бюро по финансовой защите потребителей при Федеральной резервной системе (ФРС). Многие штаты накладывают на коллекторов дополнительные требования, например, обязанность иметь специальную лицензию. Компаниям запрещается звонить должнику с 9 вечера до 8 утра, использовать ненормативную или оскорбительную лексику, звонить по месту работы, вымогать суммы, не предусмотренные договором, угрожать арестом и т.д. Кроме того, коллектор обязан представляться, указывать уполномочившую его компанию и кредитора, а также уведомлять о правах должника потребовать проверку подлинности долга. Если будет доказана ошибка коллекторов, то их могут обязать оплатить все расходы на юридические процедуры и компенсировать моральный ущерб в размере до 1 тысячи долларов.</div>
+										</div></a></article>
+								<article class="usage__item"><a href="https://news.google.ru/" target="_blank" class="usage__content">
+										<div class="usage__face"><img src="img/usage__1.jpg" alt="" class="usage__img"/></div>
+										<div class="usage__desc">
+											<div class="usage__name">Разнообразный и богатый опыт</div>
+											<div class="usage__text">В Великобритании наравне с коллекторами существует институт бейлифов: это государственные, частные компании или лица, которые назначаются судом для выполнения его решений о взыскании долгов. Права и обязанности бейлифов регулируются законом. Деятельность же коллекторов находится под контролем финансового регулятора Великобритании FCA, который фиксирует случаи насилия, шантажа и других нарушений. По закону за подобные действия предусмотрен штраф до £100 или до £400 при повторном нарушении.</div>
+										</div></a></article>
+							</div>
+						</div>
+					</section>
+					<section id="comments" class="section">
+						<div class="section__wrapper">
+							<h2 class="section__title">Что Вы думаете по этому поводу?</h2>
+							<div class="page__comments">
+								<div class="comment">
+									<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+										<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like comment__like--liked">15</span>
+									</div>
+									<p class="comment__name">TheDark KNIGHT</p>
+									<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
+									<div class="comment__letter">
+										<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+										<div data-num-of-lines='3' class="expand">
+											<div class="expand__text-wrapper">
+												<div class="expand__text">
+													<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+												</div>
+											</div>
+											<div class="expand__expand">
+												<button class="expand__expander">Развернуть</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+										<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">235</span>
+									</div>
+									<p class="comment__name">TheDark KNIGHT</p>
+									<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
+									<div class="comment__letter">
+										<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+										<div data-num-of-lines='3' class="expand">
+											<div class="expand__text-wrapper">
+												<div class="expand__text">
+													<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария. Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+												</div>
+											</div>
+											<div class="expand__expand">
+												<button class="expand__expander">Развернуть</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+										<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">1</span>
+									</div>
+									<p class="comment__name">TheDark KNIGHT</p>
+									<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
+									<div class="comment__letter">
+										<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+										<div data-num-of-lines='3' class="expand">
+											<div class="expand__text-wrapper">
+												<div class="expand__text">
+													<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+												</div>
+											</div>
+											<div class="expand__expand">
+												<button class="expand__expander">Развернуть</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+										<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">79</span>
+									</div>
+									<p class="comment__name">TheDark KNIGHT</p>
+									<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
+									<div class="comment__letter">
+										<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+										<div data-num-of-lines='3' class="expand">
+											<div class="expand__text-wrapper">
+												<div class="expand__text">
+													<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+												</div>
+											</div>
+											<div class="expand__expand">
+												<button class="expand__expander">Развернуть</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment">
+									<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+										<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">22</span>
+									</div>
+									<p class="comment__name">TheDark KNIGHT</p>
+									<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
+									<div class="comment__letter">
+										<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
+										<div data-num-of-lines='3' class="expand">
+											<div class="expand__text-wrapper">
+												<div class="expand__text">
+													<p class="comment__text">Деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Что дополняет вторую строку моего коментария.</p>
+												</div>
+											</div>
+											<div class="expand__expand">
+												<button class="expand__expander">Развернуть</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination">
+								<button type="button" class="pagination__btn pagination__btn--prev">Назад</button>
+								<p class="pagination__page">Страница<span class="pagination__page--number">2</span><span class="pagination__page--gray">из 50</span></p>
+								<button type="button" class="pagination__btn pagination__btn--next">Дальше</button>
+							</div>
+							<form action="#" name="leaveComment" class="page__leave-comment">
+								<div class="textarea">
+									<textarea name="commentMessage" id="comment" placeholder="Оставить комментарий" required="" class="textarea__input"></textarea>
+								</div>
+								<div class="btn-submit">
+									<input type="submit" value="Комментировать" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper"><a href="/" class="logo logo--footer">
+					<p class="logo__text">Народная база законов</p></a>
+				<div class="social"><a target="_blank" href="http://vk.com/" class="social__link social__link--vk">Мы в VKontakte</a><a target="_blank" href="http://facebook.com/" class="social__link social__link--fb">Мы в Facebook</a>
+				</div>
+			</div>
+		</footer>
+		<div class="page__modals">
+			<div id="Обратная связь" class="modal">
+				<div class="modal__bg"></div>
+				<form id="userFeedback" action="" name="userFeedback" class="form">
+				</form>
+			</div>
+			<div id="login" class="modal">
+				<div class="modal__bg"></div>
+				<div class="login">
+					<button type="button" class="close"></button>
+					<p class="login__title">Личный кабинет</p>
+					<div class="login__body">
+						<div class="soc-enter"><a href="#" class="soc-enter__item soc-enter__item--facebook"><span class="soc-enter__text">Войти через Facebook</span></a><a href="#" class="soc-enter__item soc-enter__item--twitter"><span class="soc-enter__text">Twitter</span></a><a href="#" class="soc-enter__item soc-enter__item--vkontakte"><span class="soc-enter__text">Вконтакте</span></a><a href="#" class="soc-enter__item soc-enter__item--google-plus"><span class="soc-enter__text">Google plus</span></a><a href="#" class="soc-enter__item soc-enter__item--classmates"><span class="soc-enter__text">Одноклассники</span></a>
+						</div>
+						<p class="login__tabs">
+							<button type="button" data-binded-form="#userLogin" class="login__btn login__btn--active">Войти</button><span class="login__or">или</span>
+							<button type="button" data-binded-form="#userReg" class="login__btn">Зарегистрироваться</button>
+						</p>
+						<div class="login__forms">
+							<form id="userLogin" action="" name="userLogin" class="form form--show form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--no-margin">
+									<label for="remember" class="checkbox__label">
+										<input type="checkbox" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
+									</label>
+								</div>
+								<button type="button" data-modal-link="#forgot" class="form__forgot">Забыли пароль?</button>
+								<div class="btn-submit btn-submit--enter">
+									<input type="submit" value="Войти" class="btn-submit__input"/>
+								</div>
+							</form>
+							<form id="userReg" action="" name="userReg" class="form form--login">
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
+										<p class="input__error input__error--reged-login">Логин занят</p>
+										<p class="input__error input__error--short-login">Логин должен быть длиннее 3 символов</p>
+									</div>
+								</div>
+								<div class="input">
+									<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="recapcha"></div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Зарегистрироваться" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="forgot" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Забыли пароль?</p>
+					<div class="feedback__body">
+						<form action="" name="forgotPass" class="form">
+							<p class="form__text">Не может вспомнить пароль для входа в свой аккаунт?<br/>Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.</p>
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--not-reged-mail">Данный e-mail не зарегистрирован</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--ask-pass">
+								<input type="submit" value="Отправьте мне пароль!" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="feedback" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Обратная связь</p>
+					<div class="feedback__body">
+						<form action="" name="userFeedback" class="form">
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--feedback">
+								<input type="submit" value="Отправить сообщение" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Спасибо, Ваш голос учтен!</p>
+						<form action="" name="voting" class="form">
+							<div class="rate">
+								<div class="rate__content">
+									<p class="rate__title">Оцените закон:</p>
+									<div class="rate__stars">
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input checked="" type="radio" name="userRate" value="0" class="rate__input"/><span class="rate__value">0</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<label class="textarea__label">Оставьте комментарий:</label>
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestPlus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить плюс:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestMinus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить минус:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="error">
+			<p class="error__text">Медведеву не нравится, когда в него тыкают!</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

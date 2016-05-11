@@ -11,6 +11,13 @@ mixin navItem(title, href)
 					+subItem('Все', '/laws.html')
 					+subItem('Популярные', '/laws.html')
 					+subItem('Новые', '/laws.html')
+
+	else if href === 'btn'
+		li.navigation__item
+			button.navigation__link.navigation__link--btn(
+				type='button'
+				data-modal-link=attributes['data-modal-link'])=title
+
 	else
 		li.navigation__item
 			a.navigation__link(

@@ -5,5 +5,6 @@ $(document).ready(function() {
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+		$('html').removeClass('no-scroll');
 	});
 });

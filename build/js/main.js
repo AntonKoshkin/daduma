@@ -3819,6 +3819,44 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 
 }));
 
+// datepicker localisation
+(function(factory) {
+	if (typeof define === 'function' && define.amd) {
+
+		// AMD. Register as an anonymous module.
+		define(['../widgets/datepicker'], factory);
+	} else {
+
+		// Browser globals
+		factory(jQuery.datepicker);
+	}
+}
+(function(datepicker) {
+
+datepicker.regional.ru = {
+	closeText: 'Закрыть',
+	prevText: '&#x3C;Пред',
+	nextText: 'След&#x3E;',
+	currentText: 'Сегодня',
+	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+	'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+	'Июл','Авг','Сен','Окт','Ноя','Дек'],
+	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+	weekHeader: 'Нед',
+	dateFormat: 'dd.mm.yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: '' };
+datepicker.setDefaults(datepicker.regional.ru);
+
+return datepicker.regional.ru;
+
+}));
+
 // slider
 /**
  * Owl carousel
@@ -14531,6 +14569,7 @@ $(document).ready(function() {
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+		$('html').removeClass('no-scroll');
 	});
 });
 
@@ -14544,9 +14583,11 @@ $(document).ready(function() {
 			$(this)
 				.closest('.modal')
 				.removeClass('modal--show');
+			$('html').addClass('no-scroll');
 		}
 
 		$(modalWindow).addClass('modal--show');
+		$('html').addClass('no-scroll');
 	});
 });
 
@@ -14643,6 +14684,7 @@ $(document).ready(function() {
 		$(this)
 			.closest('.modal')
 			.removeClass('modal--show');
+		$('html').removeClass('no-scroll');
 	});
 });
 
@@ -14705,7 +14747,7 @@ $(document).ready(function() {
 		
 		$('.error')
 			.addClass('error--show')
-			.delay(5000)
+			.delay(3000)
 			.queue(function() {
 				$('.error')
 					.removeClass('error--show')
@@ -14740,6 +14782,7 @@ $(document).ready(function() {
 		defaultDate		: '-1w',
 		changeMonth		: true,
 		numberOfMonths	: 1,
+		maxDate			: '+0w',
 		onClose			: function(selectedDate) {
 			$('#publEnd').datepicker('option', 'minDate', selectedDate);
 		}
@@ -14754,29 +14797,118 @@ $(document).ready(function() {
 			$('#publStart').datepicker('option', 'maxDate', selectedDate);
 		}
 	});
+
+	$.datepicker.setDefaults($.datepicker.regional['ru']);
 });
 
 // range
 jQuery(document).ready(function($) {
 	$('#pluses').slider({
 		range		: true,
-		min		: 0,
-		max		: 500,
-		values	: [75, 300],
-		// slide		: function(event, ui) {
-		// 	$('.range__min').text('$' + ui.values[0] + ' - $' + ui.values[1]);
-		// },
+		min		: 5,
+		max		: 25,
+		values	: [5, 25],
+		step		: 1,
+		slide		: function(event, ui) {
+
+			$('.range--green .range__min-value')
+				.text(ui.values[0]);
+
+			$('.range--green .range__max-value')
+				.text(ui.values[1]);
+
+			$('.range--green')
+				.find('.range__min-value')
+				.css('left', (100 / ($(this)
+					.slider('option', 'max') - $(this)
+						.slider('option', 'min'))) * (ui.values[0] - $(this)
+							.slider('option', 'min')) + '%');
+
+			$('.range--green')
+				.find('.range__max-value')
+				.css('left', (100 / ($(this)
+					.slider('option', 'max') - $(this)
+						.slider('option', 'min'))) * (ui.values[1] - $(this)
+							.slider('option', 'min')) + '%');
+		},
 	});
 
 	$('#minuses').slider({
 		range		: true,
-		min		: 0,
-		max		: 500,
-		values	: [75, 300],
-		// slide		: function(event, ui) {
-		// 	$('.range__min').text('$' + ui.values[0] + ' - $' + ui.values[1]);
-		// },
+		min		: 5,
+		max		: 25,
+		values	: [5, 25],
+		step		: 1,
+		slide		: function(event, ui) {
+			$('.range--red .range__min-value')
+				.text(ui.values[0]);
+
+			$('.range--red .range__max-value')
+				.text(ui.values[1]);
+
+			$('.range--red')
+				.find('.range__min-value')
+				.css('left', (100 / ($(this)
+					.slider('option', 'max') - $(this)
+						.slider('option', 'min'))) * (ui.values[0] - $(this)
+							.slider('option', 'min')) + '%');
+
+			$('.range--red')
+				.find('.range__max-value')
+				.css('left', (100 / ($(this)
+					.slider('option', 'max') - $(this)
+						.slider('option', 'min'))) * (ui.values[1] - $(this)
+							.slider('option', 'min')) + '%');
+		},
 	});
+
+	step	=	100 / ($(this)
+							.closest('.range')
+							.find('.range__input')
+							.slider('option', 'max') - $(this)
+																	.closest('.range')
+																	.find('.range__input')
+																	.slider('option', 'min'));
+
+	$('.range--green')
+		.find('.range__min-value')
+		.css('left', 100 / ($('#pluses').closest('.range').find('.range__input').slider('option', 'max') -
+			$('#pluses').closest('.range').find('.range__input').slider('option', 'min')) *
+			($('#pluses').slider('option', 'values')[0] -
+			$('#pluses').slider('option', 'min')) + '%');
+
+	$('.range--green')
+		.find('.range__max-value')
+		.css('left', 100 / ($('#pluses').closest('.range').find('.range__input').slider('option', 'max') -
+			$('#pluses').closest('.range').find('.range__input').slider('option', 'min')) *
+			($('#pluses').slider('option', 'values')[1] -
+			$('#pluses').slider('option', 'min')) + '%');
+
+	$('.range--red')
+		.find('.range__min-value')
+		.css('left', 100 / ($('#minuses').closest('.range').find('.range__input').slider('option', 'max') -
+			$('#minuses').closest('.range').find('.range__input').slider('option', 'min')) *
+			($('#minuses').slider('option', 'values')[0] -
+			$('#minuses').slider('option', 'min')) + '%');
+
+	$('.range--red')
+		.find('.range__max-value')
+		.css('left', 100 / ($('#minuses').closest('.range').find('.range__input').slider('option', 'max') -
+			$('#minuses').closest('.range').find('.range__input').slider('option', 'min')) *
+			($('#minuses').slider('option', 'values')[1] -
+			$('#minuses').slider('option', 'min')) + '%');
+
+	$('.range--green .range__min-value')
+		.text($('#pluses').slider('option', 'values')[0]);
+		
+	$('.range--green .range__max-value')
+		.text($('#pluses').slider('option', 'values')[1]);
+
+	$('.range--red .range__min-value')
+		.text($('#minuses').slider('option', 'values')[0]);
+		
+	$('.range--red .range__max-value')
+		.text($('#minuses').slider('option', 'values')[1]);
 });
 
 // extended search opening
@@ -14786,6 +14918,7 @@ $(document).ready(function() {
 		
 		$(this)
 			.closest('.extended-search')
-			.toggleClass('extended-search--opened');
+			.find('.extended-search__body')
+			.slideToggle(300);
 	});
 });

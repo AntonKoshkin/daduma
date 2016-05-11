@@ -1,6 +1,6 @@
 mixin oneLaw(link, icon, voteRess, status, title, text, date, datetime, commNums, pluses, minuses, rating)
 	article.one-law
-		//- a.one-law__link(
+		a.one-law__link(
 			href=link
 			title='Перейти к закону')
 		.one-law__header
@@ -8,19 +8,20 @@ mixin oneLaw(link, icon, voteRess, status, title, text, date, datetime, commNums
 				img.one-law__img(
 					src='/img/one-law__banner--'+icon+'.png'
 					alt='')
-			+statusBar(status)
-			.one-law__results
-				each item in voteRess
-					case item[1]
-						when 'didnt'
-							p.one-law__result.one-law__result--gray
-								| #{item[0]} - Не голосовали
-						when 'for'
-							p.one-law__result.one-law__result--green
-								| #{item[0]} - За
-						when 'against'
-							p.one-law__result.one-law__result--red
-								| #{item[0]} - Против
+			.one-law__stats
+				+statusBar(status)
+				.one-law__results
+					each item in voteRess
+						case item[1]
+							when 'didnt'
+								p.one-law__result.one-law__result--gray
+									| #{item[0]} - Не голосовали
+							when 'for'
+								p.one-law__result.one-law__result--green
+									| #{item[0]} - За
+							when 'against'
+								p.one-law__result.one-law__result--red
+									| #{item[0]} - Против
 
 		.one-law__body
 			h3.one-law__title!=title

@@ -1,6 +1,9 @@
 // jquery ui
 //= ../blocks/ui/ui.js
 
+// datepicker localisation
+//= ../blocks/ui/datepicker-loc.js
+
 // slider
 //= ../blocks/sliders/owl.carousel.js
 

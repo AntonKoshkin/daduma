@@ -2,6 +2,7 @@
 	&__expander
 		display flex
 		justify-content flex-end
+		align-items flex-start
 	
 	&__expand
 		@extend $btn-reset, $very-small-text
@@ -12,11 +13,13 @@
 	
 	&__body
 		display none
+		margin-bottom 20px
+
+	&__items
+		display none
 		background-color white
 		padding 10px
 		flex-wrap wrap
-	
-	&--opened &__body
 		display flex
 		justify-content space-between
 	
@@ -42,15 +45,17 @@
 		flex-basis 100%
 
 	@media (min-width tablet)
-		&__body
+		&__items
 			flex-wrap nowrap
+			justify-content space-between
+			padding 20px 10px
 		
 		&__item
-			flex-basis calc(25% - 5px)
+			flex-basis calc(25% - 8px)
 			flex-shrink 1
 			
 			&--half
-				flex-basis calc(12.5% - 5px)
+				flex-basis calc(12.5% - 8px)
 			
 
 .page__laws
@@ -62,3 +67,6 @@
 			
 			&--opened
 				margin-bottom 20px
+			
+			&__item
+				margin-bottom 0

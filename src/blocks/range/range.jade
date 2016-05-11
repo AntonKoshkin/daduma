@@ -2,11 +2,14 @@ mixin range(id)
 	if attributes.mods
 		-var mods = []
 		each mod, i in attributes.mods
-			-mods[i] = 'input--' + mod
+			-mods[i] = 'range--' + mod
 
 	.range(class=mods)
 		.range__label(for=id)
 		.range__input(
 			id=id)
+		.range__values
+			span.range__min-value 0
+			span.range__max-value 25
 		//- p.range__min
 		//- p.range__max

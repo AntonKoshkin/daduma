@@ -66,7 +66,7 @@ include ../klichko/klichko
 block page_id
 
 <!DOCTYPE html>
-html(lang="ru")
+html(lang='ru')
 	head
 		block title
 		include head
@@ -78,7 +78,7 @@ html(lang="ru")
 				+navItem('Законы', true)
 				+navItem('Новости', '/news.html')
 				+navItem('Пользователи', '/users.html')
-				+navItem('Обратная связь', '#')(data-modal-link='#feedback')
+				+navItem('Обратная связь', 'btn')(data-modal-link='#feedback')
 			+btn('Войти / Зарегистрироваться', 'person')(
 				data-modal-link='#login')
 
@@ -215,6 +215,7 @@ html(lang="ru")
 		//- 	+klichko
 		if quote === true
 			+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
+		
 		script(
 			src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 		script window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')

@@ -3,6 +3,7 @@ $(document).ready(function() {
 		defaultDate		: '-1w',
 		changeMonth		: true,
 		numberOfMonths	: 1,
+		maxDate			: '+0w',
 		onClose			: function(selectedDate) {
 			$('#publEnd').datepicker('option', 'minDate', selectedDate);
 		}
@@ -17,4 +18,6 @@ $(document).ready(function() {
 			$('#publStart').datepicker('option', 'maxDate', selectedDate);
 		}
 	});
+
+	$.datepicker.setDefaults($.datepicker.regional['ru']);
 });

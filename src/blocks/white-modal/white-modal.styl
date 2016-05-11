@@ -20,12 +20,13 @@
 		text-align center
 		margin-bottom 15px
 	
-	@media (min-width tablet)
-		top 50%
-		transform translate(-50%, -50%)
-		
+	@media (min-width modal-bp)
 		&__title
 			margin-bottom 30px
+		
+		@media (min-height 444px)
+			top 50%
+			transform translate(-50%, -50%)
 
 .modal--show
 	.white-modal

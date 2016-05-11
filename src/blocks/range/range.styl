@@ -1,0 +1,74 @@
+.range
+	margin-top 25px
+	margin-bottom 20px
+	margin-right 5px
+	margin-left 5px
+	
+	&__input
+		border 0
+		height 2px
+		background-color gray-lighter
+	
+	&__values
+		position relative
+	
+	&__min-value
+	&__max-value
+		@extend $small-text
+		
+		position absolute
+		display inline-block
+		top 5px
+		transform translateX(-50%)
+	
+	&--green &__min-value
+	&--green &__max-value
+		color green
+	
+	&--red &__min-value
+	&--red &__max-value
+		color pink
+
+	&__min-value
+		left 0
+		
+	&__max-value
+		left 100%
+		
+// plugin fixes
+.range
+	.ui-slider-horizontal
+		.ui-slider-range
+			background none
+
+	.ui-widget-content
+		.ui-state-default
+			size 10px
+			
+			cursor pointer
+			top -4px
+			margin-left -5px
+			background none
+			border 0
+			border-radius 50%
+			
+			&:before
+				@extend $pseudo-bottom
+
+.range--green
+	.ui-slider-horizontal
+		.ui-slider-range
+			background-color green
+
+	.ui-widget-content
+		.ui-state-default
+			background-color green
+
+.range--red
+	.ui-slider-horizontal
+		.ui-slider-range
+			background-color pink
+
+	.ui-widget-content
+		.ui-state-default
+			background-color pink
