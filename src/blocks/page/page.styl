@@ -68,6 +68,22 @@ html
 	
 	&__news
 		margin-bottom 50px
+	
+	&__laws
+		&--laws
+			width 100%
+	
+	&__nothing
+		@extend $big-text
+		
+		font-family yefimov
+		text-align center
+		width 100%
+		padding-top 20px
+		padding-bottom 20px
+		margin-top 10px
+		margin-bottom 30px
+		background-color white
 		
 	@media (min-width tablet)
 		background-position center top
@@ -112,9 +128,10 @@ html
 			width 100%
 		
 		&__laws
-			display flex
-			flex-wrap wrap
-			justify-content space-between
+			&--laws
+				display flex
+				flex-wrap wrap
+				justify-content space-between
 
 .recapcha
 	width 302px

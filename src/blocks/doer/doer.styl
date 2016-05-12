@@ -1,0 +1,47 @@
+.doer
+	width 100%
+	background-color white
+	padding 10px
+	margin-bottom 50px
+	
+	&__face
+		overflow hidden
+		margin-bottom 23px
+		text-align center
+	
+	&__img
+		width 100%
+		max-width 450px
+	
+	&__block
+		margin-bottom 23px
+	
+	&__text
+		@extend $small-text
+		
+		color gray
+	
+	&__desc &__text
+		margin-bottom 23px
+	
+	&__title
+		@extend $small-text
+		
+		font-family yefimov
+		font-weight regular
+		margin-bottom 5px
+	
+	@media (min-width tablet)
+		border 1px solid gray-lighter
+		display flex
+		max-width desktop-width
+		margin 0 auto 50px
+		
+		&__face
+			width 270px
+			margin-right 25px
+			flex-shrink 0
+		
+		&__info
+			flex-basis 100%
+			flex-shrink 1

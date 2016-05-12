@@ -34,3 +34,10 @@ mixin pageTitle(h, title)
 			h1.page__title.page__title--h1(
 				contenteditable=attributes.edit
 				class=mods)!=title
+
+mixin pageNothing(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'page__nothing--' + mod
+	p.page__nothing!=text

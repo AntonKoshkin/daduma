@@ -5,8 +5,9 @@
 		display flex
 		flex-wrap nowrap
 		flex-basis 50%
-		justify-content space-between
+		justify-content center
 		margin-bottom 0
+		align-items center
 		
 	&__showing
 		margin 0 auto 10px
@@ -16,8 +17,11 @@
 	&--stat &__showing
 		flex-grow 0
 		width 135px
+		margin 0 75px 0 0
 	
 	&__img
+		width 100%
+		
 		&--pie
 		&--pie-deputy
 			size 135px
@@ -35,6 +39,9 @@
 	
 	&--stat &__description
 		color gray
+	
+	&--stat &__legends
+		margin-bottom 36px
 
 	&__legend
 		@extend $not-so-small-text
@@ -69,6 +76,10 @@
 		&--green
 			&:before
 				background-color green
+		
+		&--cyan
+			&:before
+				background-color #00bcd4
 		
 		&--gray
 			color gray-light

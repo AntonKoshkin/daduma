@@ -1,0 +1,36 @@
+mixin doer(img)
+	.doer
+		.doer__face
+			img.doer__img(
+				src=img
+				alt='Имя деятеля')
+
+		.doer__info
+			if block
+				block
+
+mixin dDesc
+	.doer__desc
+		if block
+			block
+
+mixin dBlock
+	.doer__block
+		if block
+			block
+
+mixin dTitle(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'doer__title--' + mod
+
+	p.doer__title!=text
+
+mixin dText(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'doer__text--' + mod
+
+	p.doer__text!=text
