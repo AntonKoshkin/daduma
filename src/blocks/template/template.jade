@@ -68,6 +68,8 @@ include ../info/info
 include ../gang/gang
 include ../loader/loader
 include ../crop/crop
+include ../button/button
+include ../law-filter/law-filter
 
 include ../klichko/klichko
 
@@ -263,16 +265,26 @@ html(lang='ru')
 					+crop
 					+form('crop')
 						+input('hidden')(mods=['no-margin'])
-						+btn-submit('Загрузить изображение')(
-							mods=['crop']
-							id='uploadCrop')
+						//- +btn-submit('Загрузить изображение')(
+						//- 	mods=['crop']
+						//- 	id='uploadCrop')
+						+button('Загрузить изображение')(
+							id='uploadCrop'
+							mods=['center'])
 
 			+modal('wrongFile')(
 				id='wrongFile')
-				+wModal('Неверный формат фото', 'Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Надо JPG, JPEG или PNG. Попробуйте еще разок.')
-					+btn-submit('Ок, исправлюсь')(
-						id='uploadCrop'
-						mods=['confirm', 'just-close'])
+				+wModal('Неверный формат фото', 'Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Допустимые форматы - JPG, JPEG, PNG')
+					+button('Ок')(
+						data-act='closeModal'
+						mods=['center'])
+
+			+modal('tooBigFile')(
+				id='tooBigFile')
+				+wModal('Слишком большое фото', 'Вы пытаетесь загрузить слишком большую фотографию. Размер фото не должен превышать 5МБ.')
+					+button('Ок')(
+						data-act='closeModal'
+						mods=['center'])
 
 			+modal('editProfile')(id='editProfile')
 

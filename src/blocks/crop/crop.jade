@@ -1,3 +1,12 @@
 mixin crop
 	.crop
 		.crop__area
+		.crop__btns
+			button.crop__rotate.crop__rotate--wise(
+				type='button'
+				id='rotateWise'
+				data-rotate='90deg')
+			button.crop__rotate.crop__rotate--counter-wise(
+				type='button'
+				id='rotateCounterWise'
+				data-rotate='-90deg')

@@ -15106,7 +15106,6 @@ S2.define('jquery.select2',[
         data.circle = self.options.viewport.type === 'circle';
         data.url = self.data.url;
 
-        console.log(data);
         prom = new Promise(function (resolve, reject) {
             if (type === 'canvas') {
                 resolve(_getCanvasResult.call(self, self.elements.preview, data));
@@ -15716,7 +15715,7 @@ $(document).ready(function() {
 // modal
 // modal closing
 $(document).ready(function() {
-	$('body').on('click', '.modal__bg, .modal__close, .btn-submit--just-close .btn-submit__input, .btn-submit--modal .btn-submit__input', function(event) {
+	$('body').on('click', '.modal__bg, .modal__close, .btn-submit--modal .btn-submit__input', function(event) {
 		event.preventDefault();
 		$(this)
 			.closest('.modal')
@@ -16078,13 +16077,38 @@ $(document).ready(function() {
 });
 
 // crop
-function demoUpload() {
+function popupResult(result) {
+	var html;
+	if (result.html) {
+		html = result.html;
+	}
+	if (result.src) {
+		html = '<img src=\'' + result.src + '\' />';
+	}
+
+	$.ajax({
+		type		: 'GET',
+		url		: 'path/to/php_file',
+		data		: {
+			select1	: html
+		},
+		error		: console.log('error'),
+		success	: console.log('success'),
+	});
+	
+	// location.reload();
+}
+
+function cropUpload() {
 	var $uploadCrop;
 
 	function readFile(input) {
 		if (input.files && input.files[0]) {
 			var
 				reader	=	new FileReader(),
+				fileSize	=	input
+									.files[0]
+									.size,
 				exp		=	input
 									.files[0]
 									.name
@@ -16093,9 +16117,9 @@ function demoUpload() {
 
 			reader.onload = function(e) {
 				$uploadCrop.croppie('bind', {
-					url: e.target.result
+					url			: e.target.result,
+					orientation	: 1,
 				});
-				// $('.upload-demo').addClass('ready');
 				$('#uploadPhoto').removeClass('modal--show');
 				$('#crop').addClass('modal--show');
 				$('html').addClass('no-scroll');
@@ -16103,36 +16127,41 @@ function demoUpload() {
 
 			$('#uploadPhoto').addClass('modal--show');
 
-			if(exp === 'jpg' || exp === 'jpeg' || exp === 'png') {
+			if (!(exp === 'jpg' || exp === 'jpeg' || exp === 'png')) {
+				$('#uploadPhoto').removeClass('modal--show');
+				$('#wrongFile').addClass('modal--show');
+
+			} else if (fileSize > 5242880) {
+				$('#uploadPhoto').removeClass('modal--show');
+				$('#tooBigFile').addClass('modal--show');
+
+			} else {
 				reader.readAsDataURL(input.files[0]);
 				document
 					.querySelector('.upload-btn--profile')
 					.innerHTML	=	document.querySelector('.upload-btn--profile').innerHTML;
-			} else {
-				$('#uploadPhoto').removeClass('modal--show');
-				$('#wrongFile').addClass('modal--show');
 			}
 		}
 	}
 
 	$uploadCrop = $('.crop__area').croppie({
-		viewport	: {
-			width		: 265,
-			height	: 265,
-		},
-		boundary	: {
+		enableOrientation	: true,
+		exif					: true,
+		boundary				: {
 			width		: $('.crop__area').width(),
 			height	: $('.crop__area').width(),
 		},
-		exif: true,
+		viewport				: {
+			width		: 265,
+			height	: 265,
+		},
 	});
 
 	$('body').on('change', '#upload', function() {
 		readFile(this);
 	});
 
-	$('.body').on('click', '#uploadCrop input', function (ev) {
-		ev.preventDefault();
+	$('body').on('click', '#uploadCrop', function(ev) {
 
 		$uploadCrop
 			.croppie('result', {
@@ -16143,14 +16172,29 @@ function demoUpload() {
 				popupResult({
 					src: resp,
 				});
-				// слать тут
 			});
+	});
+
+	$('body').on('click', '.crop__rotate', function(event) {
+		$uploadCrop
+			.croppie('rotate', parseInt($(this).data('rotate')));
 	});
 }
 
-
 jQuery(document).ready(function($) {
-	demoUpload();
+	cropUpload();
+});
 
-
+// button
+jQuery(document).ready(function($) {
+	$('body').on('click', '.button', function(event) {
+		event.preventDefault();
+		switch ($(this).find('.button__btn').data('act')) {
+			case 'closeModal':
+				$(this)
+					.closest('.modal')
+					.removeClass('modal--show');
+				break;
+		}
+	});
 });

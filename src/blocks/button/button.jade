@@ -1,0 +1,11 @@
+mixin button(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'button--' + mod
+
+	.button(class=mods)
+		button.button__btn(
+			type='button'
+			data-act=attributes['data-act']
+			id=attributes.id)!=text

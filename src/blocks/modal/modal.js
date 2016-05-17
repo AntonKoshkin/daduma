@@ -1,6 +1,6 @@
 // modal closing
 $(document).ready(function() {
-	$('body').on('click', '.modal__bg, .modal__close, .btn-submit--just-close .btn-submit__input, .btn-submit--modal .btn-submit__input', function(event) {
+	$('body').on('click', '.modal__bg, .modal__close, .btn-submit--modal .btn-submit__input', function(event) {
 		event.preventDefault();
 		$(this)
 			.closest('.modal')

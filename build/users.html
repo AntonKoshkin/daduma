@@ -485,13 +485,17 @@
 						<p class="white-modal__text">Выбранная область будет показываться на Вашей странице. Если изображение ориентировано неправильно, фотографию можно повернуть.</p>
 						<div class="crop">
 							<div class="crop__area"></div>
+							<div class="crop__btns">
+								<button type="button" id="rotateWise" data-rotate="90deg" class="crop__rotate crop__rotate--wise"></button>
+								<button type="button" id="rotateCounterWise" data-rotate="-90deg" class="crop__rotate crop__rotate--counter-wise"></button>
+							</div>
 						</div>
 						<form action="" name="crop" class="form">
 							<div class="input input--no-margin">
 								<input type="hidden" autocomplete="off" class="input__input"/>
 							</div>
-							<div class="btn-submit btn-submit--crop">
-								<input type="submit" value="Загрузить изображение" class="btn-submit__input"/>
+							<div class="button button--center">
+								<button type="button" id="uploadCrop" class="button__btn">Загрузить изображение</button>
 							</div>
 						</form>
 					</div>
@@ -503,9 +507,22 @@
 					<div class="white-modal__content">
 						<button type="button" class="close"></button>
 						<p class="white-modal__title">Неверный формат фото</p>
-						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Надо JPG, JPEG или PNG. Попробуйте еще разок.</p>
-						<div class="btn-submit btn-submit--confirm btn-submit--just-close">
-							<input type="submit" value="Ок, исправлюсь" class="btn-submit__input"/>
+						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Допустимые форматы - JPG, JPEG, PNG</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tooBigFile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Слишком большое фото</p>
+						<p class="white-modal__text">Вы пытаетесь загрузить слишком большую фотографию. Размер фото не должен превышать 5МБ.</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
 						</div>
 					</div>
 				</div>

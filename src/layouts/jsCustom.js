@@ -75,3 +75,6 @@
 
 // crop
 //= ../blocks/crop/crop.js
+
+// button
+//= ../blocks/button/button.js

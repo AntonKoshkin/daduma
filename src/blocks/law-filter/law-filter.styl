@@ -1,0 +1,23 @@
+.law-filter
+	margin-bottom 15px
+	text-align right
+	order 3
+	width 100%
+	
+	&__text
+		@extend $small-text
+		
+		display block
+	
+	&__btn
+		@extend $btn-reset, $small-text
+		
+		color blue-light
+		margin-left 10px
+		
+		&:hover
+			text-decoration underline
+	
+	@media (min-width tablet)
+		&__text
+			display inline-block

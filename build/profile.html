@@ -68,12 +68,7 @@
 				</div>
 				<div class="profile">
 					<!-- если фото нет, то добавить класс profile__face--no-photo-->
-					<div class="profile__face profile__face--no-photo"><img src="/img/profile__img.png" alt="" class="profile__no-img"/>
-						<div class="upload-btn upload-btn--profile">
-							<label ng-show="" class="upload-btn__label">
-								<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
-							</label>
-						</div><img src="/img/profile__img.png" alt="" class="profile__img"/>
+					<div class="profile__face"><img src="http://placehold.it/300?text=no+photo" alt="" class="profile__img"/><img src="/img/profile__img.png" alt="" class="profile__no-img"/>
 						<div class="upload-btn upload-btn--profile">
 							<label ng-show="" class="upload-btn__label">
 								<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
@@ -117,23 +112,531 @@
 						</div>
 						<div class="profile__footer">
 							<p class="profile__text">Партии, которые придерживаются<br>такого же мнения о законах:</p>
-							<div class="gang">
+							<div class="gang gang--fourth">
 								<div class="gang__face"><img src="/img/gang__img--sr.png" class="gang__img"/></div>
-								<p class="gang__percent">95%</p>
+								<p class="gang__percent">17,5%</p>
 							</div>
-							<div class="gang">
+							<div class="gang gang--second">
 								<div class="gang__face"><img src="/img/gang__img--ldpr.png" class="gang__img"/></div>
-								<p class="gang__percent">81%</p>
+								<p class="gang__percent">25,3%</p>
 							</div>
-							<div class="gang">
+							<div class="gang gang--first">
 								<div class="gang__face"><img src="/img/gang__img--kprf.png" class="gang__img"/></div>
-								<p class="gang__percent">35%</p>
+								<p class="gang__percent">35,1%</p>
 							</div>
-							<div class="gang">
+							<div class="gang gang--third">
 								<div class="gang__face"><img src="/img/gang__img--er.png" class="gang__img"/></div>
-								<p class="gang__percent">18%</p>
+								<p class="gang__percent">22,1%</p>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="page__laws">
+					<div class="page__header">
+						<div class="search">
+							<form action="" name="search" class="form">
+								<input type="text" placeholder="Поиск новостей по ключевой фразе" autocomplete="true" class="search__input"/>
+								<input type="submit" value="" class="search__btn"/>
+							</form>
+						</div>
+						<div class="extended-search">
+							<div class="extended-search__expander">
+								<button class="extended-search__expand">Расширенный фильтр</button>
+							</div>
+							<div class="extended-search__body">
+								<div class="extended-search__items">
+									<div class="extended-search__item">
+										<p class="extended-search__title">Тематика</p>
+										<div class="select">
+											<select id="subj" name="subj" style="width:50%" multiple="multiple" class="select__select">
+												<option value="mvd" class="select__option">МВД</option>
+												<option value="gibdd" class="select__option">ГИБДД</option>
+												<option value="medicine" class="select__option">Медицина</option>
+												<option value="finance" class="select__option">Финансы и рынки</option>
+												<option value="policy" class="select__option">Политика</option>
+												<option value="education" class="select__option">Образование</option>
+												<option value="military" class="select__option">Вооруженные силы</option>
+												<option value="realty" class="select__option">Недвижимость</option>
+												<option value="manRights" class="select__option">Права человека</option>
+												<option value="smallMidBusiness" class="select__option">Малый и средний бизнес</option>
+											</select>
+										</div>
+									</div>
+									<div class="extended-search__item">
+										<p class="extended-search__title">Период публикации</p>
+										<div class="datepicker datepicker--half datepicker--start">
+											<input id="publStart" class="datepicker__input"/>
+										</div>
+										<div class="datepicker datepicker--half datepicker--end">
+											<input id="publEnd" class="datepicker__input"/>
+										</div>
+									</div>
+									<div class="extended-search__item extended-search__item--half">
+										<p class="extended-search__title">Плюсы</p>
+										<div class="range range--green">
+											<div for="pluses" class="range__label"></div>
+											<div id="pluses" class="range__input"></div>
+											<div class="range__values"><span class="range__min-value">0</span><span class="range__max-value">25</span></div>
+										</div>
+									</div>
+									<div class="extended-search__item extended-search__item--half">
+										<p class="extended-search__title">Минусы</p>
+										<div class="range range--red">
+											<div for="minuses" class="range__label"></div>
+											<div id="minuses" class="range__input"></div>
+											<div class="range__values"><span class="range__min-value">0</span><span class="range__max-value">25</span></div>
+										</div>
+									</div>
+									<div class="extended-search__item">
+										<p class="extended-search__title">Статус</p>
+										<div class="select">
+											<select id="status" name="status" style="width:50%" multiple="multiple" class="select__select">
+												<option value="firstStage" class="select__option">Внесение в ГД</option>
+												<option value="secondStage" class="select__option">Предв. рассмотрение</option>
+												<option value="thirdStage" class="select__option">Первое чтение</option>
+												<option value="fourthStage" class="select__option">Второе чтение</option>
+												<option value="fifthStage" class="select__option">Третье чтение</option>
+												<option value="sixthStage" class="select__option">Рассмотрение в СФ</option>
+												<option value="seventhStage" class="select__option">Рассмотрение президентом</option>
+												<option value="eighth" class="select__option">Опубликование</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="law-filter"><span class="law-filter__text">Показывать законы:</span>
+							<button type="button" id="filterAll" class="law-filter__btn">Все</button>
+							<button type="button" id="filterNew" class="law-filter__btn">Новые</button>
+							<button type="button" id="filterMy" class="law-filter__btn">Мои</button>
+							<button type="button" id="filterPopular" class="law-filter__btn">Популярные</button>
+						</div>
+					</div>
+					<div class="page__laws--laws">
+						<p class="page__nothing">По Вашему запросу ничего не найдено</p>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--gibdd.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--red">4.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--minfin.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>153</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--red">2</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--minobr.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>3</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>123</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--red">1.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--minstroy.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>153</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>226</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--gray">0</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--minzdrav.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>3</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>0</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">2</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--mvd.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>46</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">2.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--rf.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">3</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--vs.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">4.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+							<div class="one-law__header">
+								<div class="one-law__face"><img src="/img/one-law__banner--mineconom.png" alt="" class="one-law__img"/></div>
+								<div class="one-law__stats">
+									<div class="status-bar">
+										<!-- этому элементу ширина задается мануально-->
+										<div style="width: 13%" class="status-bar__bg"></div>
+										<div class="status-bar__text">Внесение в ГД
+										</div>
+									</div>
+									<div class="one-law__results">
+										<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+										<p class="one-law__result one-law__result--green">КПРФ - За</p>
+										<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+										<p class="one-law__result one-law__result--green">СР - За</p>
+									</div>
+								</div>
+							</div>
+							<div class="one-law__body">
+								<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+								<div class="one-law__text">
+									<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+								</div>
+							</div>
+							<div class="one-law__foot">
+								<div class="one-law__footer">
+									<div class="one-law__half">
+										<p class="one-law__text">Дата публикации:</p>
+										<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+									</div>
+									<div class="one-law__half one-law__half--grades">
+										<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+										<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+									</div>
+								</div>
+								<div class="one-law__footer">
+									<div class="one-law__half one-law__half--comms">
+										<p class="one-law__text">Комментариев:</p>
+										<p class="one-law__text one-law__text--bold">216</p>
+									</div>
+									<div class="one-law__half">
+										<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--green">4.5</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</article>
 					</div>
 				</div>
 			</div>
@@ -419,13 +922,17 @@
 						<p class="white-modal__text">Выбранная область будет показываться на Вашей странице. Если изображение ориентировано неправильно, фотографию можно повернуть.</p>
 						<div class="crop">
 							<div class="crop__area"></div>
+							<div class="crop__btns">
+								<button type="button" id="rotateWise" data-rotate="90deg" class="crop__rotate crop__rotate--wise"></button>
+								<button type="button" id="rotateCounterWise" data-rotate="-90deg" class="crop__rotate crop__rotate--counter-wise"></button>
+							</div>
 						</div>
 						<form action="" name="crop" class="form">
 							<div class="input input--no-margin">
 								<input type="hidden" autocomplete="off" class="input__input"/>
 							</div>
-							<div class="btn-submit btn-submit--crop">
-								<input type="submit" value="Загрузить изображение" class="btn-submit__input"/>
+							<div class="button button--center">
+								<button type="button" id="uploadCrop" class="button__btn">Загрузить изображение</button>
 							</div>
 						</form>
 					</div>
@@ -437,9 +944,22 @@
 					<div class="white-modal__content">
 						<button type="button" class="close"></button>
 						<p class="white-modal__title">Неверный формат фото</p>
-						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Надо JPG, JPEG или PNG. Попробуйте еще разок.</p>
-						<div class="btn-submit btn-submit--confirm btn-submit--just-close">
-							<input type="submit" value="Ок, исправлюсь" class="btn-submit__input"/>
+						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Допустимые форматы - JPG, JPEG, PNG</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tooBigFile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Слишком большое фото</p>
+						<p class="white-modal__text">Вы пытаетесь загрузить слишком большую фотографию. Размер фото не должен превышать 5МБ.</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
 						</div>
 					</div>
 				</div>
