@@ -1,0 +1,58 @@
+mixin profile(name)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'profile--' + mod
+
+	.profile(class=mods)
+		if attributes['no-photo'] === ''
+			// если фото нет, то добавить класс profile__face--no-photo
+			.profile__face.profile__face--no-photo
+				img.profile__no-img(
+					src='/img/profile__img.png'
+					alt='')
+				+uploadBtn('Загрузить новую фотографию')(
+					accept='image/jpg, image/jpeg, image/png'
+					mods=['profile']
+					id='upload')
+				img.profile__img(
+					src='/img/profile__img.png'
+					alt='')
+				+uploadBtn('Загрузить новую фотографию')(
+					accept='image/jpg, image/jpeg, image/png'
+					mods=['profile']
+					id='upload')
+		
+		else
+			// если фото нет, то добавить класс profile__face--no-photo
+			.profile__face
+				img.profile__img(
+					src='/img/profile__img.png'
+					alt='')
+				+uploadBtn('Загрузить новую фотографию')(
+					accept='image/jpg, image/jpeg, image/png'
+					mods=['profile']
+					id='upload')
+				img.profile__no-img(
+					src='/img/profile__img.png'
+					alt='')
+				+uploadBtn('Загрузить новую фотографию')(
+					accept='image/jpg, image/jpeg, image/png'
+					mods=['profile']
+					id='upload')
+
+		.profile__desc
+			.profile__header
+				p.profile__name!=name
+				button.profile__edit-btn(
+					type='button'
+					data-modal-link='#editProfile') изменить информацию
+			.profile__info
+				if block
+					block
+			.profile__footer
+				p.profile__text Партии, которые придерживаются<br>такого же мнения о законах:
+				+gang('sr', 95)
+				+gang('ldpr', 81)
+				+gang('kprf', 35)
+				+gang('er', 18)

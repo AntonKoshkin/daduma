@@ -21,3 +21,6 @@
 
 // select plugin
 //= ../blocks/select/plugin.js
+
+// crop
+//= ../../bower_components/Croppie/croppie.js

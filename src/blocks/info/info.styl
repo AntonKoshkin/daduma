@@ -1,0 +1,29 @@
+.info
+	display flex
+	flex-shrink 1
+	min-width 0
+	padding-right 5px
+	flex-grow 1
+	
+	&__left
+		flex-shrink 0
+		width 100px
+
+	&__right
+		flex-basis 100%
+		flex-shrink 1
+		min-width 0
+	
+	&__item
+		@extend $small-text
+		
+		margin-bottom 15px
+	
+	&__left &__item
+		color gray-light
+	
+	&__right &__item
+		@extend $dotted
+
+	@media (min-width tablet)
+		width 50%

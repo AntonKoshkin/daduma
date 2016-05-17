@@ -11,8 +11,8 @@ mixin input(type)
 			placeholder!=attributes.placeholder
 			autocomplete=attributes.autocomplete || 'off'
 			name=attributes.name)
-		.input__errors
-			if attributes.errors
+		if attributes.errors
+			.input__errors
 				each error in attributes.errors
 					p.input__error(
 						class='input__error--'+error[0])!=error[1]

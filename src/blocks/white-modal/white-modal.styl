@@ -13,6 +13,10 @@
 		max-width 360px
 		margin auto
 	
+	&--crop &__content
+		padding 20px 10px
+		max-width none
+	
 	&__title
 		@extend $big-text
 		
@@ -20,13 +24,30 @@
 		text-align center
 		margin-bottom 15px
 	
+	&--left-title &__title
+		text-align left
+	
+	&__text
+		@extend $small-text
+		
+		margin-bottom 20px
+	
 	@media (min-width modal-bp)
+		&--crop &__content
+			padding 20px
+			
 		&__title
 			margin-bottom 30px
 		
 		@media (min-height 444px)
-			top 50%
-			transform translate(-50%, -50%)
+			&:not(.white-modal--crop)
+				top 50%
+				transform translate(-50%, -50%)
+		
+		@media (min-height 830px)
+			&--crop
+				top 50%
+				transform translate(-50%, -50%)
 
 .modal--show
 	.white-modal

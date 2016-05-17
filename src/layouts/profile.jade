@@ -1,0 +1,23 @@
+extends ../blocks/template/template
+
+block page_id
+	-var page_id		= 'profile'
+	-var withKlichko	= false
+	-var qoute			= false
+
+block title
+	title Профиль
+
+block content
+	+main(class='main--profile')
+		.page__content
+			+breadcrumbs
+				+brItem('Профиль', '')
+		
+			.page__profile
+				+pageTitle(1, 'Профиль')(mods=['profile'])
+				+confirmation(mods=['show'])
+
+			+profile('МаеИмя')(no-photo='')
+				+info(1, ['Мужской', '28 лет', 'Высшее специальное', 'Не женат'])
+				+info(2, ['Санкт-Петербург', 'Безработный  (топ-менеджер)', '-', 'ЛДПР'])

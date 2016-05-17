@@ -20,6 +20,7 @@
     "normalize-styl": "*",
     "flex-grid-framework": "^1.2.1",
     "slick-carousel": "^1.5.9",
-    "scroll-up-bar": "^0.3.0"
+    "scroll-up-bar": "^0.3.0",
+    "Croppie": "croppie#^2.1.0"
   }
 }

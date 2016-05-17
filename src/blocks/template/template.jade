@@ -61,6 +61,13 @@ include ../range/range
 include ../one-law/one-law
 include ../status-bar/status-bar
 include ../doer/doer
+include ../confirmation/confirmation
+include ../upload-btn/upload-btn
+include ../profile/profile
+include ../info/info
+include ../gang/gang
+include ../loader/loader
+include ../crop/crop
 
 include ../klichko/klichko
 
@@ -100,16 +107,22 @@ html(lang='ru')
 					+form('userLogin')(
 						id='userLogin'
 						mods=['show', 'login'])
+
+						// ошибки включаются добавлением модификатора с названием элемента ошибки к .input
+						// то есть если к .input добавить input--no-login, то появится ошибка "введите логин" и тд.
+						// ошибки на этом поле
+						// input--no-login
 						+input('text')(
 							placeholder='Введите логин'
-							name='login')
+							name='login'
+							errors=[['no-login', 'Введите логин']])
+
+						// ошибки на этом поле
+						// input--no-pass
 						+input('password')(
 							placeholder='Введите пароль'
 							name='password'
-							errors=[
-								['no-pass','Введите пароль'],
-								['short-pass', 'Пароль не должен быть короче 6 символов']
-							]
+							errors=[['no-pass','Введите пароль']]
 							mods=['margined'])
 						+checkbox('remember', 'Запомнить меня')(mods=['no-margin'])
 						button.form__forgot(
@@ -120,6 +133,11 @@ html(lang='ru')
 					+form('userReg')(
 						id='userReg'
 						mods=['login'])
+
+						// ошибки на этом поле
+						// input--no-login
+						// input--reged-login
+						// input--short-login
 						+input('text')(
 							placeholder='Введите логин'
 							name='login'
@@ -136,6 +154,10 @@ html(lang='ru')
 								['reged-mail', 'Данный e-mail уже зарегистрирован'],
 								['wrong-mail', 'Введенный e-mail имеет неверный формат']
 							])
+
+						// ошибки на этом поле
+						// input--no-pass
+						// input--short-pass
 						+input('password')(
 							placeholder='Введите пароль'
 							name='password'
@@ -154,6 +176,11 @@ html(lang='ru')
 							| Не может вспомнить пароль для входа в свой аккаунт?
 							br
 							| Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.
+
+						// ошибки на этом поле
+						// input--no-email
+						// input--not-reged-email
+						// input--wrong-mail
 						+input('email')(
 							placeholder='Введите e-mail'
 							name='email'
@@ -209,6 +236,45 @@ html(lang='ru')
 							name='comment'
 							mods=['modal'])
 						+btn-submit('Оставить комментарий')(mods=['modal'])
+
+			+modal('confirmEmail')(
+				id='confirmEmail')
+				+wModal('Подтверждение e-mail адреса', 'Чтобы подтвердить регистрацию, пожалуйста, введите проверочный код, который пришел Вам на e-mail')(mods=['left-title'])
+					+form('confirmEmail')(mods=['confirm'])
+
+						// ошибки на этом поле
+						// input--wrong-code
+						+input('text')(
+							name='mail'
+							errors=[
+								['wrong-code', 'Код введен неверно']
+							])
+						+btn-submit('Подтвердить e-mail')(mods=['confirm'])
+
+			+modal('uploadPhoto')(
+				id='uploadPhoto')
+				+wModal('Загрузка новой фотографии', 'Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, JPEG или PNG.')
+					+loader
+
+			+modal('crop')(
+				id='crop'
+				mods=['crop'])
+				+wModal('Обрезка фотографии', 'Выбранная область будет показываться на Вашей странице. Если изображение ориентировано неправильно, фотографию можно повернуть.')(mods=['crop', 'left-title'])
+					+crop
+					+form('crop')
+						+input('hidden')(mods=['no-margin'])
+						+btn-submit('Загрузить изображение')(
+							mods=['crop']
+							id='uploadCrop')
+
+			+modal('wrongFile')(
+				id='wrongFile')
+				+wModal('Неверный формат фото', 'Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Надо JPG, JPEG или PNG. Попробуйте еще разок.')
+					+btn-submit('Ок, исправлюсь')(
+						id='uploadCrop'
+						mods=['confirm', 'just-close'])
+
+			+modal('editProfile')(id='editProfile')
 
 		+error('Медведеву не нравится, когда в него тыкают!')
 

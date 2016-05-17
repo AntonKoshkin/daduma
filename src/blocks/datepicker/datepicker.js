@@ -19,5 +19,5 @@ $(document).ready(function() {
 		}
 	});
 
-	$.datepicker.setDefaults($.datepicker.regional['ru']);
+	$.datepicker.setDefaults($.datepicker.regional.ru);
 });

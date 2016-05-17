@@ -1,0 +1,17 @@
+mixin uploadBtn(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'upload-btn--' + mod
+
+	.upload-btn(class=mods)
+		label.upload-btn__label(
+			for=id
+			ng-show='')
+			input.upload-btn__input(
+				type='file'
+				accept=attributes.accept
+				id=attributes.id
+				ng-click=''
+				data-modal-link=attributes['data-modal-link'])
+			span.upload-btn__text=text

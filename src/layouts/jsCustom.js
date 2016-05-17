@@ -72,3 +72,6 @@
 
 // extended search opening
 //= ../blocks/extended-search/extended-search.js
+
+// crop
+//= ../blocks/crop/crop.js

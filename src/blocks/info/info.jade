@@ -1,0 +1,25 @@
+mixin info(item, info)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'info--' + mod
+
+	.info(class=mods)
+		if item === 1
+			.info__left
+				p.info__item Пол
+				p.info__item Возраст
+				p.info__item Образование
+				p.info__item Не женат
+		else if item === 2
+			.info__left
+				p.info__item Город
+				p.info__item Карьера
+				p.info__item Религия
+				p.info__item Политика
+
+		.info__right
+			p.info__item!=info[0]
+			p.info__item!=info[1]
+			p.info__item!=info[2]
+			p.info__item!=info[3]

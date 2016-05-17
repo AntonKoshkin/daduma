@@ -1,0 +1,12 @@
+mixin confirmation
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'confirmation--' + mod
+
+	// если мыло не подтверждено, то приписать класс confirmation--show
+	.confirmation(class=mods)
+		p.confirmation__text Внимание! Для дальнейшей работы с сайтом Вам необходимо 
+			button.confirmation__link(
+				type='button'
+				data-modal-link='#confirmEmail') подтвердить Ваш e-mail

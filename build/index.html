@@ -828,16 +828,22 @@
 						</p>
 						<div class="login__forms">
 							<form id="userLogin" action="" name="userLogin" class="form form--show form--login">
+								<!-- ошибки включаются добавлением модификатора с названием элемента ошибки к .input-->
+								<!-- то есть если к .input добавить input--no-login, то появится ошибка "введите логин" и тд.-->
+								<!-- ошибки на этом поле-->
+								<!-- input--no-login-->
 								<div class="input">
 									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
 									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
 									</div>
 								</div>
+								<!-- ошибки на этом поле-->
+								<!-- input--no-pass-->
 								<div class="input input--margined">
 									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
 									<div class="input__errors">
 										<p class="input__error input__error--no-pass">Введите пароль</p>
-										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
 									</div>
 								</div>
 								<div class="checkbox checkbox--no-margin">
@@ -851,6 +857,10 @@
 								</div>
 							</form>
 							<form id="userReg" action="" name="userReg" class="form form--login">
+								<!-- ошибки на этом поле-->
+								<!-- input--no-login-->
+								<!-- input--reged-login-->
+								<!-- input--short-login-->
 								<div class="input">
 									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
 									<div class="input__errors">
@@ -867,6 +877,9 @@
 										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
 									</div>
 								</div>
+								<!-- ошибки на этом поле-->
+								<!-- input--no-pass-->
+								<!-- input--short-pass-->
 								<div class="input input--margined">
 									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
 									<div class="input__errors">
@@ -891,6 +904,10 @@
 					<div class="feedback__body">
 						<form action="" name="forgotPass" class="form">
 							<p class="form__text">Не может вспомнить пароль для входа в свой аккаунт?<br/>Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.</p>
+							<!-- ошибки на этом поле-->
+							<!-- input--no-email-->
+							<!-- input--not-reged-email-->
+							<!-- input--wrong-mail-->
 							<div class="input">
 								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
 								<div class="input__errors">
@@ -1021,6 +1038,77 @@
 						</form>
 					</div>
 				</div>
+			</div>
+			<div id="confirmEmail" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal white-modal--left-title">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Подтверждение e-mail адреса</p>
+						<p class="white-modal__text">Чтобы подтвердить регистрацию, пожалуйста, введите проверочный код, который пришел Вам на e-mail</p>
+						<form action="" name="confirmEmail" class="form form--confirm">
+							<!-- ошибки на этом поле-->
+							<!-- input--wrong-code-->
+							<div class="input">
+								<input type="text" autocomplete="off" name="mail" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--wrong-code">Код введен неверно</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--confirm">
+								<input type="submit" value="Подтвердить e-mail" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="uploadPhoto" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Загрузка новой фотографии</p>
+						<p class="white-modal__text">Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, JPEG или PNG.</p>
+						<div class="loader"></div>
+					</div>
+				</div>
+			</div>
+			<div id="crop" class="modal modal--crop">
+				<div class="modal__bg"></div>
+				<div class="white-modal white-modal--crop white-modal--left-title">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Обрезка фотографии</p>
+						<p class="white-modal__text">Выбранная область будет показываться на Вашей странице. Если изображение ориентировано неправильно, фотографию можно повернуть.</p>
+						<div class="crop">
+							<div class="crop__area"></div>
+						</div>
+						<form action="" name="crop" class="form">
+							<div class="input input--no-margin">
+								<input type="hidden" autocomplete="off" class="input__input"/>
+							</div>
+							<div class="btn-submit btn-submit--crop">
+								<input type="submit" value="Загрузить изображение" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="wrongFile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Неверный формат фото</p>
+						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Надо JPG, JPEG или PNG. Попробуйте еще разок.</p>
+						<div class="btn-submit btn-submit--confirm btn-submit--just-close">
+							<input type="submit" value="Ок, исправлюсь" class="btn-submit__input"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="editProfile" class="modal">
+				<div class="modal__bg"></div>
 			</div>
 		</div>
 		<div class="error">

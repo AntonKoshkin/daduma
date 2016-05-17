@@ -8,9 +8,19 @@
 	min-width mobile-width
 	overflow auto
 	
+	&--crop
+		display block
+		overflow hidden
+		top -10000px
+		left -10000px
+	
 	&--show
 		display block
 	
+	&--crop&--show
+		top 0
+		left 0
+
 	&__bg
 		slow background-color
 		
@@ -24,6 +34,12 @@
 		
 		&:hover
 			background-color rgba(black, .75)
+	
+	&--crop &__bg
+		display none
+	
+	&--crop&--show &__bg
+		display block
 
 .modal--no-line
 	.modal

@@ -1,0 +1,29 @@
+.confirmation
+	@extend $font-reset
+	
+	background-color pink
+	padding 9px 10px
+	margin-left -10px
+	margin-right -10px
+	display none
+	
+	&--show
+		display block
+
+	&__text
+		@extend $very-small-text
+		
+		color white
+		text-align center
+	
+	&__link
+		@extend $btn-reset
+		
+		text-decoration underline
+	
+	@media (min-width tablet)
+		flex-basis 100%
+		flex-shrink 1
+		align-self center
+		margin-left 0
+		margin-right 0

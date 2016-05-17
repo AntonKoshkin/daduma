@@ -1,0 +1,11 @@
+mixin gang(party, percent)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'gang--' + mod
+
+	.gang(class=mods)
+		.gang__face
+			img.gang__img(
+				src='/img/gang__img--'+party+'.png')
+		p.gang__percent=percent+'%'

@@ -1,7 +1,16 @@
-mixin wModal(title)
-	.white-modal
+mixin wModal(title, desc)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'white-modal--' + mod
+
+	.white-modal(class=mods)
 		.white-modal__content
 			+close
 			p.white-modal__title!=title
+
+			if desc
+				p.white-modal__text!=desc
+
 			if block
 				block
