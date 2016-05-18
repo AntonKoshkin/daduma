@@ -1,0 +1,26 @@
+mixin radio(name, id, text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'radio--' + mod
+
+	if text === false
+		.radio.radio--party(class=mods)
+			label.radio__label(for=id)
+				input.radio__input(
+					checked=attributes.checked
+					type='radio'
+					name=name
+					id=id)
+				img.radio__img(
+					src='/img/gang__img--'+attributes.src+'.png'
+					alt=attributes.alt || '')
+	else
+		.radio(class=mods)
+			label.radio__label(for=id)
+				input.radio__input(
+					checked=attributes.checked
+					type='radio'
+					name=name
+					id=id)
+				span.radio__text!=text

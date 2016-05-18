@@ -1,4 +1,7 @@
 .social
+	&--righted
+		text-align right
+		
 	&__link
 		@extend $font-reset
 		slow(opacity)
@@ -6,13 +9,29 @@
 		display inline-block
 		opacity .15
 		
-		&--vk
+		&--gh
 			&:before
-				bicon(social.vk, 32)
+				bicon(social.gh, 32)
+		
+		&--gp
+			&:before
+				bicon(social.gp, 32)
+		
+		&--ms
+			&:before
+				bicon(social.ms, 32)
 		
 		&--fb
 			&:before
 				bicon(social.fb, 32)
+		
+		&--tw
+			&:before
+				bicon(social.tw, 32)
+		
+		&--vk
+			&:before
+				bicon(social.vk, 32)
 		
 		&:not(:last-child)
 			margin-right 15px
@@ -23,4 +42,6 @@
 		&:before
 			content ''
 			display inline-block
-			
+		
+		&--linked
+			display none

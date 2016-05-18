@@ -1,0 +1,7 @@
+mixin variants(num)
+	-var n = 1
+	.variants
+		ul.variants_list
+			while n <= num
+				li.variants__item(
+					ng-click='') option #{n++}

@@ -155,7 +155,7 @@
 								</div>
 								<div class="checkbox checkbox--no-margin">
 									<label for="remember" class="checkbox__label">
-										<input type="checkbox" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
+										<input type="checkbox" name="remember" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
 									</label>
 								</div>
 								<button type="button" data-modal-link="#forgot" class="form__forgot">Забыли пароль?</button>
@@ -177,7 +177,7 @@
 									</div>
 								</div>
 								<div class="input">
-									<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+									<input type="email" placeholder="Введите e-mail" autocomplete="on" name="email" class="input__input"/>
 									<div class="input__errors">
 										<p class="input__error input__error--no-mail">Введите e-mail</p>
 										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
@@ -188,7 +188,7 @@
 								<!-- input--no-pass-->
 								<!-- input--short-pass-->
 								<div class="input input--margined">
-									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<input type="password" placeholder="Введите пароль" autocomplete="on" name="password" class="input__input"/>
 									<div class="input__errors">
 										<p class="input__error input__error--no-pass">Введите пароль</p>
 										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
@@ -418,6 +418,18 @@
 					</div>
 				</div>
 			</div>
+			<div id="emailChanged" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">E-mail подтвержден</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div id="tooBigFile" class="modal">
 				<div class="modal__bg"></div>
 				<div class="white-modal">
@@ -431,8 +443,392 @@
 					</div>
 				</div>
 			</div>
-			<div id="editProfile" class="modal">
+			<div id="editAccount" class="modal">
 				<div class="modal__bg"></div>
+				<div class="settings">
+					<div class="settings__tabs">
+						<div class="settings__tab settings__tab--active settings__tab--account"><span class="settings__tab-name">Настройки аккаунта</span></div>
+						<div class="settings__tab settings__tab--security"><span class="settings__tab-name">Настройки безопасности</span></div>
+						<div class="settings__tab settings__tab--keyholder"><span class="settings__tab-name">Управление ключами</span></div>
+						<div class="settings__tab settings__tab--agreement"><span class="settings__tab-name">Лицензионное соглашение</span></div>
+						<div class="settings__tab settings__tab--delete"><span class="settings__tab-name">Удаление аккаунта</span></div>
+					</div>
+					<div class="settings__contents">
+						<button type="button" class="close close--settings"></button>
+						<div class="settings__content settings__content--show">
+							<h3 class="page__title page__title--h3 page__title--settings">Настройки аккаунта</h3>
+							<form action="" name="accountSettings" class="form">
+								<p class="settings__text settings__text--fat">E-mail</p>
+								<p class="settings__text settings__text--margined">Если необходимо, укажите новую электронную почту</p>
+								<div class="input input--settings input--s-margined">
+									<input type="email" autocomplete="on" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--s-margined">
+									<label for="noEmailNotification" class="checkbox__label">
+										<input type="checkbox" name="noEmailNotification" id="noEmailNotification" class="checkbox__input"/><span class="checkbox__text">Отключить уведомления по e-mail</span>
+									</label>
+								</div>
+								<p class="settings__text settings__text--fat">Текущий пароль</p>
+								<p class="settings__text settings__text--margined">Чтобы изменения вступили в силу, введите текущий пароль</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg btn-submit--lefted">
+									<input type="submit" value="Применить изменения" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Настройки безопасности</h3>
+							<form action="" name="securitySettings" class="form">
+								<h3 class="page__title page__title--h3">Изменение пароля</h3>
+								<p class="settings__text settings__text--fat">Текущий пароль</p>
+								<p class="settings__text settings__text--margined">Чтобы изменения вступили в силу, введите текущий пароль</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<p class="settings__text settings__text--fat">Новый пароль</p>
+								<p class="settings__text settings__text--margined">Пароль не должен быть короче 8 символов</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<p class="settings__text settings__text--fat settings__text--margined">Новый пароль еще раз</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg btn-submit--lefted">
+									<input type="submit" value="Применить изменения" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Ключница</h3>
+							<div class="keyholder">
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вконтакте</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face"><img src="/img/keyholder__img--img.png" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h3 class="page__title page__title--h3">Привязать аккаунт</h3>
+							<p class="settings__text settings__text--margined">Привязка учетных записей социальных сетей (можно сразу нескольких) к аккаунту позволит Вам входить в проект в один клик.</p>
+							<div class="social"><a target="_blank" href="#" class="social__link social__link--vk social__link--linked">Vkontakte</a><a target="_blank" href="#" class="social__link social__link--fb social__link--linked">Facebook</a><a target="_blank" href="#" class="social__link social__link--tw">Twitter</a><a target="_blank" href="#" class="social__link social__link--gp">Google Plus</a><a target="_blank" href="#" class="social__link social__link--gh">GitHub</a><a target="_blank" href="#" class="social__link social__link--ms">Microsoft</a>
+							</div>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Лицензионное соглашение</h3>
+							<div class="scrl-area">
+								<div class="scrl-area__canvas text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>Какой-то заголовок</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>1. Можно с цифрой</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>1. Можно с цифрой</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+								</div>
+							</div>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Удаление аккаунта</h3>
+							<h3 class="page__title page__title--h3">Вы действительно хотите удалить аккаунт?</h3>
+							<div class="button button--keyholder button--margined">
+								<button type="button" data-open-hidden="confirmDelete" class="button__btn">Удалить аккаунт</button>
+							</div>
+							<div id="confirmDelete" class="hidden-area">
+								<div class="hidden-area__content">
+									<form action="" name="confirmDelete" class="form">
+										<p class="settings__text settings__text--margined">Чтобы подтвердить удаление аккаунта введите текущий пароль</p>
+										<div class="input input--settings input--s-margined">
+											<input type="password" autocomplete="off" name="password" class="input__input"/>
+											<div class="input__errors">
+												<p class="input__error input__error--no-pass">Введите пароль</p>
+												<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+											</div>
+										</div>
+										<div class="btn-submit btn-submit--reg btn-submit--lefted">
+											<input type="submit" value="Подтвердить удаление" class="btn-submit__input"/>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="editProfile" class="modal modal--show">
+				<div class="modal__bg"></div>
+				<div class="profile-sets">
+					<button type="button" class="close"></button>
+					<div class="profile-sets__head">
+						<div class="profile-sets__face"><img src="/img/profile-sets__img--avatar.jpg" alt="" class="profile-sets__img"/><img src="/img/profile-sets__img.png" alt="" class="profile-sets__no-img"/>
+							<div class="upload-btn upload-btn--profile-sets">
+								<label ng-show="" class="upload-btn__label">
+									<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
+								</label>
+							</div>
+						</div>
+						<p class="profile-sets__name">Obolduy</p>
+					</div>
+					<div class="profile-sets__body">
+						<form action="" name="profileSets" class="form">
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Город:</p>
+								<div class="select">
+									<select id="profileCity" name="city" style="width:50%" class="select__select">
+									</select>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Пол:</p>
+								<div class="radio radio--lower-case">
+									<label for="male" class="radio__label">
+										<input type="radio" name="gender" id="male" class="radio__input"/><span class="radio__text">Мужской</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="female" class="radio__label">
+										<input type="radio" name="gender" id="female" class="radio__input"/><span class="radio__text">Женский</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Возраст:</p>
+								<div class="radio radio--lower-case">
+									<label for="17-" class="radio__label">
+										<input type="radio" name="age" id="17-" class="radio__input"/><span class="radio__text">< 17</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="18-30" class="radio__label">
+										<input type="radio" name="age" id="18-30" class="radio__input"/><span class="radio__text">18 - 30</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="30-50" class="radio__label">
+										<input type="radio" name="age" id="30-50" class="radio__input"/><span class="radio__text">30 - 50</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="50+" class="radio__label">
+										<input type="radio" name="age" id="50+" class="radio__input"/><span class="radio__text">> 50</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Образование:</p>
+								<div class="radio radio--lower-case">
+									<label for="secindary" class="radio__label">
+										<input type="radio" name="education" id="secindary" class="radio__input"/><span class="radio__text">Среднее</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="technical" class="radio__label">
+										<input type="radio" name="education" id="technical" class="radio__input"/><span class="radio__text">Техническое</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="higher" class="radio__label">
+										<input type="radio" name="education" id="higher" class="radio__input"/><span class="radio__text">Высшее</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="degree" class="radio__label">
+										<input type="radio" name="education" id="degree" class="radio__input"/><span class="radio__text">Ученая степень</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Статус:</p>
+								<div class="radio radio--lower-case">
+									<label for="no" class="radio__label">
+										<input type="radio" name="married" id="no" class="radio__input"/><span class="radio__text">Холост / не замужем</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="yeas" class="radio__label">
+										<input type="radio" name="married" id="yeas" class="radio__input"/><span class="radio__text">Женат / замужем</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Карьера:</p>
+								<div class="radio radio--lower-case">
+									<label for="staff" class="radio__label">
+										<input type="radio" name="career" id="staff" class="radio__input"/><span class="radio__text">Штатный сотрудник</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="chief" class="radio__label">
+										<input type="radio" name="career" id="chief" class="radio__input"/><span class="radio__text">Руководитель среднего звена</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="masterChief" class="radio__label">
+										<input type="radio" name="career" id="masterChief" class="radio__input"/><span class="radio__text">Топ-менеджер</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="businessman" class="radio__label">
+										<input type="radio" name="career" id="businessman" class="radio__input"/><span class="radio__text">Предприниматель</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="freelancer" class="radio__label">
+										<input type="radio" name="career" id="freelancer" class="radio__input"/><span class="radio__text">Фрилансер</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="idler" class="radio__label">
+										<input type="radio" name="career" id="idler" class="radio__input"/><span class="radio__text">Безработный</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Религия:</p>
+								<div class="radio radio--lower-case">
+									<label for="christianity" class="radio__label">
+										<input type="radio" name="religion" id="christianity" class="radio__input"/><span class="radio__text">Христианство</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="islam" class="radio__label">
+										<input type="radio" name="religion" id="islam" class="radio__input"/><span class="radio__text">Ислам</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="judaism" class="radio__label">
+										<input type="radio" name="religion" id="judaism" class="radio__input"/><span class="radio__text">Иудаизм</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="buddhism" class="radio__label">
+										<input type="radio" name="religion" id="buddhism" class="radio__input"/><span class="radio__text">Буддизм</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="hinduism" class="radio__label">
+										<input type="radio" name="religion" id="hinduism" class="radio__input"/><span class="radio__text">Индуизм</span>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="other" class="radio__label">
+										<input type="radio" name="religion" id="other" class="radio__input"/><span class="radio__text">Другое</span>
+									</label>
+								</div>
+							</div>
+							<div class="profile-sets__line">
+								<p class="profile-sets__title">Политика:</p>
+								<div class="radio radio--party">
+									<label for="apple" class="radio__label">
+										<input type="radio" name="politics" id="apple" class="radio__input"/><img src="/img/gang__img--apple.png" alt="Яблоко" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="er" class="radio__label">
+										<input type="radio" name="politics" id="er" class="radio__input"/><img src="/img/gang__img--er.png" alt="Единая Россия" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="kprf" class="radio__label">
+										<input type="radio" name="politics" id="kprf" class="radio__input"/><img src="/img/gang__img--kprf.png" alt="КПРФ" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="ldpr" class="radio__label">
+										<input type="radio" name="politics" id="ldpr" class="radio__input"/><img src="/img/gang__img--ldpr.png" alt="ЛДПР" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="pd" class="radio__label">
+										<input type="radio" name="politics" id="pd" class="radio__input"/><img src="/img/gang__img--pd.png" alt="Правое дело" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="pr" class="radio__label">
+										<input type="radio" name="politics" id="pr" class="radio__input"/><img src="/img/gang__img--pr.png" alt="Патриоты России" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--party">
+									<label for="sr" class="radio__label">
+										<input type="radio" name="politics" id="sr" class="radio__input"/><img src="/img/gang__img--sr.png" alt="Справедоивая Россия" class="radio__img"/>
+									</label>
+								</div>
+								<div class="radio radio--lower-case">
+									<label for="other" class="radio__label">
+										<input type="radio" name="politics" id="other" class="radio__input"/><span class="radio__text">Другое</span>
+									</label>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--reg">
+								<input type="submit" value="Подтвердить" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="error">

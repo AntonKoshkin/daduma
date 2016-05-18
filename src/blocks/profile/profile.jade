@@ -36,9 +36,12 @@ mixin profile(name)
 		.profile__desc
 			.profile__header
 				p.profile__name!=name
-				button.profile__edit-btn(
+				button.profile__btn.profile__btn--profile(
 					type='button'
 					data-modal-link='#editProfile') изменить информацию
+				button.profile__btn.profile__btn--settings(
+					type='button'
+					data-modal-link='#editAccount') настройки профиля
 			.profile__info
 				if block
 					block

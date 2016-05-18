@@ -15575,6 +15575,59 @@ jQuery(document).ready(function($) {
 	});
 });
 
+// text expander
+function expand() {
+	$('.expand').each(function(index, el) {
+		var
+			outHeight	=	$(el).find('.expand__text-wrapper').height(),
+			inHeight		=	$(el).find('.expand__text').height(),
+			expWrap		=	$(el).find('.expand__expand'),
+			expBtn		=	$(el).find('.expand__expand');
+
+		if (outHeight < inHeight) {
+			$(el).addClass('expand--collapse');
+		} else {
+			$(el).removeClass('expand--collapse');
+		}
+	});
+}
+
+$(document).ready(function() {
+	expand();
+
+	$(window).resize(function(event) {
+		expand();
+	});
+
+	$('body').on('click', '.expand__expander', function(event) {
+		event.preventDefault();
+		
+		var
+			numOfLines	=	$(this)
+									.closest('.expand')
+									.attr('data-num-of-lines'),
+			tHeight		=	$(this)
+									.closest('.expand')
+									.find('.expand__text')
+									.height(),
+			condition	=	$(this).text();
+		
+		if (condition === 'Развернуть') {
+			$(this)
+				.text('Свернуть')
+				.closest('.expand--collapse')
+				.find('.expand__text-wrapper')
+				.css('max-height', tHeight);
+		} else {
+			$(this)
+				.text('Развернуть')
+				.closest('.expand--collapse')
+				.find('.expand__text-wrapper')
+				.css('max-height', numOfLines+'em');
+		}
+	});
+});
+
 // settings for all sliders on the page
 jQuery(document).ready(function($) {
 	$('.promo__perks').owlCarousel({
@@ -15744,66 +15797,13 @@ $(document).ready(function() {
 	});
 });
 
-// text expander
-function expand() {
-	$('.expand').each(function(index, el) {
-		var
-			outHeight	=	$(el).find('.expand__text-wrapper').height(),
-			inHeight		=	$(el).find('.expand__text').height(),
-			expWrap		=	$(el).find('.expand__expand'),
-			expBtn		=	$(el).find('.expand__expand');
-
-		if (outHeight < inHeight) {
-			$(el).addClass('expand--collapse');
-		} else {
-			$(el).removeClass('expand--collapse');
-		}
-	});
-}
-
-$(document).ready(function() {
-	expand();
-
-	$(window).resize(function(event) {
-		expand();
-	});
-
-	$('body').on('click', '.expand__expander', function(event) {
-		event.preventDefault();
-		
-		var
-			numOfLines	=	$(this)
-									.closest('.expand')
-									.attr('data-num-of-lines'),
-			tHeight		=	$(this)
-									.closest('.expand')
-									.find('.expand__text')
-									.height(),
-			condition	=	$(this).text();
-		
-		if (condition === 'Развернуть') {
-			$(this)
-				.text('Свернуть')
-				.closest('.expand--collapse')
-				.find('.expand__text-wrapper')
-				.css('max-height', tHeight);
-		} else {
-			$(this)
-				.text('Развернуть')
-				.closest('.expand--collapse')
-				.find('.expand__text-wrapper')
-				.css('max-height', numOfLines+'em');
-		}
-	});
-});
-
 // custom scrolling
 $(document).ready(function() {
 	$('.scrl-area__canvas').slimScroll({
-		height			: '300px',
-		railColor		: '#555',
-		railVisible		: true,
-		alwaysVisible	: true,
+		allowPageScroll	: false,
+		distance				: 0,
+		height				: 350,
+		size					: 5,
 	});
 });
 
@@ -15912,20 +15912,70 @@ $(document).ready(function() {
 // select
 $(document).ready(function() {
 	$('#subj').select2({
-	  placeholder		: 'Выберите тематику',
-	  closeOnSelect	: true,
-	  width				: '100%',
-	  language			: 'ru',
-	  minimumResultsForSearch: Infinity,
+	  placeholder					: 'Выберите тематику',
+	  closeOnSelect				: true,
+	  width							: '100%',
+	  language						: 'ru',
+	  minimumResultsForSearch	: Infinity,
 	  // allowClear: true
 	});
+
 	$('#status').select2({
-	  placeholder		: 'Выберите статус',
-	  closeOnSelect	: true,
-	  width				: '100%',
-	  language			: 'ru',
-	  minimumResultsForSearch: Infinity,
+	  placeholder					: 'Выберите статус',
+	  closeOnSelect				: true,
+	  width							: '100%',
+	  language						: 'ru',
+	  minimumResultsForSearch	: Infinity,
 	  // allowClear: true
+	});
+
+	var cityData = [
+		{
+			id		: 0,
+			text	: 'Москва',
+		},
+		{
+			id		: 1,
+			text	: 'Санкт-Петербург',
+		},
+		{
+			id		: 2,
+			text	: 'Курск',
+		},
+		{
+			id		: 3,
+			text	: 'Москва',
+		},
+		{
+			id		: 4,
+			text	: 'Санкт-Петербург',
+		},
+		{
+			id		: 5,
+			text	: 'Курск',
+		},
+		{
+			id		: 6,
+			text	: 'Москва',
+		},
+		{
+			id		: 7,
+			text	: 'Санкт-Петербург',
+		},
+		{
+			id		: 8,
+			text	: 'Курск',
+		},
+	];
+
+	$('#profileCity').select2({
+		placeholder					: 'Город',
+		closeOnSelect				: true,
+		width							: '100%',
+		language						: 'ru',
+		minimumResultsForSearch	: 5,
+		data							: cityData,
+		allowClear					: true,
 	});
 });
 
@@ -16187,14 +16237,115 @@ jQuery(document).ready(function($) {
 
 // button
 jQuery(document).ready(function($) {
-	$('body').on('click', '.button', function(event) {
+	$('body').on('click', '.button__btn', function(event) {
 		event.preventDefault();
-		switch ($(this).find('.button__btn').data('act')) {
+		switch ($(this).data('act')) {
 			case 'closeModal':
 				$(this)
 					.closest('.modal')
 					.removeClass('modal--show');
 				break;
 		}
+
+		if ($(this).attr('data-open-hidden')) {
+			var outer = $('#'+$(this).attr('data-open-hidden'));
+
+			if (!outer.hasClass('hidden-area--open')) {
+				outer.addClass('hidden-area--open');
+			}
+		}
+	});
+});
+
+// settings tabs
+jQuery(document).ready(function($) {
+	$('body').on('click', '.settings__tab', function(event) {
+		event.preventDefault();
+		
+		$(this)
+			.addClass('settings__tab--active')
+			.siblings()
+			.removeClass('settings__tab--active')
+			.closest('.settings')
+			.find('.settings__content')
+			.eq($(this).index())
+			.addClass('settings__content--show')
+			.siblings()
+			.removeClass('settings__content--show');
+	});
+});
+
+// keyholder
+jQuery(document).ready(function($) {
+	$('.keyholder').slimscroll({
+		allowPageScroll	: false,
+		distance				: 0,
+		height				: 260,
+		size					: 5,
+	});
+});
+
+// variants
+$('.variants')
+	.hide();
+
+jQuery(document).ready(function($) {
+	// open/close by changing text in input/select
+	$('body').on('input', '.input__input', function(event) {
+		if ($(this).val() !== '') {
+			$(this)
+				.siblings('.variants')
+				.show();
+		} else {
+			$(this)
+				.siblings('.variants')
+				.hide();
+		}
+	});
+
+	$('body').on('click', '.custom-select__input', function(event) {
+		event.preventDefault();
+
+		$(this)
+			.next('.variants')
+			.toggle();
+	});
+
+	// click on variant
+	$('body').on('click', '.variants__item', function(event) {
+		event.preventDefault();
+
+		$(this)
+			.closest('.variants')
+			.hide()
+			.siblings('input')
+			.val($(this).text());
+	});
+
+	// close when ESC pressed
+	$('.input, .select').keyup(function(event) {
+		if ((event.keyCode === 27) && ($(this).find('.variants').length)) {
+			$(this)
+			.find('.variants')
+			.hide();
+		}
+	});
+
+	// close on focusOut FUCKES UP CLICK ON VARIANTS!!!
+	// $('.input, .select').focusout(function(event) {
+	// 	if ($(this).find('.variants').length) {
+	// 		$(this)
+	// 			.find('.variants')
+	// 			.hide();
+	// 	}
+	// });
+
+	// close when click on eraser
+	$('body').on('click', '.eraser', function(event) {
+		event.preventDefault();
+
+		$(this)
+			.siblings('.variants')
+			.hide();
 	});
 });

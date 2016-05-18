@@ -37,7 +37,7 @@
 		padding-right 10px
 		margin-bottom 15px
 	
-	&__edit-btn
+	&__btn
 		@extend $btn-reset, $small-text
 		
 		color blue-light
@@ -45,10 +45,16 @@
 		font-size 0
 		
 		&:before
-			bicon(pencil.blue, 16)
-			
 			display inline-block
 			content ''
+		
+		&--profile
+			&:before
+				bicon(pencil.blue, 16)
+		
+		&--settings
+			&:before
+				bicon(cogwheel.blue, 16)
 	
 	&__info
 		margin-bottom 15px
@@ -86,17 +92,28 @@
 		
 		&__name
 			margin-bottom 0
+			flex-basis 100%
+			flex-shrink 1
 		
-		&__edit-btn
-			font-size .875rem
-			padding-left 25px
+		&__btn
+			flex-shrink 0
+			
+			&--profile
+				font-size .875rem
+				padding-left 25px
+				margin-right 10px
 
-			&:before
-				position absolute
-				left 0
-				top 50%
-				transform translateY(-50%)
-		
+				&:before
+					position absolute
+					left 0
+					top 50%
+					transform translateY(-50%)
+			
+			&--settings
+				&:hover
+					&:before
+						animation rotation .3s linear infinite
+
 		&__info
 			margin-bottom 0
 		

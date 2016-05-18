@@ -8,6 +8,7 @@ mixin checkbox(id, title)
 		label.checkbox__label(for=id)
 			input.checkbox__input(
 				type='checkbox'
+				name=id
 				id=id)
 			span.checkbox__text!=title
 		if block

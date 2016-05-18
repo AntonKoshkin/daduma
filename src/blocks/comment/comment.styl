@@ -17,14 +17,21 @@
 		margin-bottom 5px
 		margin-top 4px
 		position relative
+		border-radius 50%
+		overflow hidden
+		
+		&--no-photo
+			background-image url('/img/comment__img.png')
 	
 	&__img
 		width 100%
+		
+	&__face--no-photo &__img
+		display none
 	
 	&__name
 		@extend $small-text
 		
-		// color blue
 		color blue-light
 		font-weight medium
 	

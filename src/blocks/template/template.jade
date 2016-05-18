@@ -1,77 +1,4 @@
-//- includes
-include svg-sprite
-
-include ../header/header
-include ../main/main
-include ../footer/footer
-
-include ../logo/logo
-include ../navigation/navigation
-include ../btn/btn
-include ../burger/burger
-include ../main-text/main-text
-include ../small-title/small-title
-include ../promo/promo
-include ../act/act
-include ../rating/rating
-include ../voiting/voiting
-include ../color-bar/color-bar
-include ../detail/detail
-include ../about-act/about-act
-include ../diagram/diagram
-include ../type-tabs/type-tabs
-include ../scrl-area/scrl-area
-include ../text/text
-include ../sides/sides
-include ../section/section
-include ../opinion/opinion
-include ../usage/usage
-include ../comment/comment
-include ../textarea/textarea
-include ../btn-submit/btn-submit
-include ../pagination/pagination
-include ../number/number
-include ../social/social
-include ../modal/modal
-include ../rate/rate
-include ../about-act/chronos
-include ../breadcrumbs/breadcrumbs
-include ../expand/expand
-include ../soc-enter/soc-enter
-include ../input/input
-include ../checkbox/checkbox
-include ../form/form
-include ../login/login
-include ../close/close
-include ../feedback/feedback
-include ../white-modal/white-modal
-include ../timeline/timeline
-include ../quote/quote
-include ../error/error
-include ../page/page
-//- include ../stat-diagram/stat-diagram
-include ../one-stat/one-stat
-include ../search/search
-include ../one-news/one-news
-include ../news-single/news-single
-include ../extended-search/extended-search
-include ../select/select
-include ../datepicker/datepicker
-include ../range/range
-include ../one-law/one-law
-include ../status-bar/status-bar
-include ../doer/doer
-include ../confirmation/confirmation
-include ../upload-btn/upload-btn
-include ../profile/profile
-include ../info/info
-include ../gang/gang
-include ../loader/loader
-include ../crop/crop
-include ../button/button
-include ../law-filter/law-filter
-
-include ../klichko/klichko
+include blocks
 
 block page_id
 
@@ -150,6 +77,7 @@ html(lang='ru')
 							])
 						+input('email')(
 							placeholder='Введите e-mail'
+							autocomplete='on'
 							name='email'
 							errors=[
 								['no-mail','Введите e-mail'],
@@ -162,6 +90,7 @@ html(lang='ru')
 						// input--short-pass
 						+input('password')(
 							placeholder='Введите пароль'
+							autocomplete='on'
 							name='password'
 							errors=[
 								['no-pass','Введите пароль'],
@@ -208,8 +137,7 @@ html(lang='ru')
 							name='comment'
 							mods=['modal'])
 						+btn-submit('Отправить сообщение')(mods=['feedback'])
-
-			
+	
 			+modal('voteCounted')(id='voteCounted')
 				+wModal('Спасибо, Ваш голос учтен!')
 					+form('voting')
@@ -265,9 +193,6 @@ html(lang='ru')
 					+crop
 					+form('crop')
 						+input('hidden')(mods=['no-margin'])
-						//- +btn-submit('Загрузить изображение')(
-						//- 	mods=['crop']
-						//- 	id='uploadCrop')
 						+button('Загрузить изображение')(
 							id='uploadCrop'
 							mods=['center'])
@@ -279,6 +204,13 @@ html(lang='ru')
 						data-act='closeModal'
 						mods=['center'])
 
+			+modal('emailChanged')(
+				id='emailChanged')
+				+wModal('E-mail подтвержден')
+					+button('Ок')(
+						data-act='closeModal'
+						mods=['center'])
+
 			+modal('tooBigFile')(
 				id='tooBigFile')
 				+wModal('Слишком большое фото', 'Вы пытаетесь загрузить слишком большую фотографию. Размер фото не должен превышать 5МБ.')
@@ -286,7 +218,220 @@ html(lang='ru')
 						data-act='closeModal'
 						mods=['center'])
 
-			+modal('editProfile')(id='editProfile')
+			+modal('editAccount')(
+				id='editAccount')
+				+settings
+					+setTabs
+						+setTab('account', 'Настройки аккаунта')(mods=['active'])
+						+setTab('security', 'Настройки безопасности')
+						+setTab('keyholder', 'Управление ключами')
+						+setTab('agreement', 'Лицензионное соглашение')
+						+setTab('delete', 'Удаление аккаунта')
+					
+					+setConts
+						+setCont(mods=['show'])
+							+pageTitle(3, 'Настройки аккаунта')(mods=['settings'])
+							+form('accountSettings')
+								+setText('E-mail')(mods=['fat'])
+								+setText('Если необходимо, укажите новую электронную почту')(mods=['margined'])
+								+input('email')(
+									mods=['settings', 's-margined']
+									name='email'
+									autocomplete='on'
+									errors=[
+										['no-mail','Введите e-mail'],
+										['reged-mail', 'Данный e-mail уже зарегистрирован'],
+										['wrong-mail', 'Введенный e-mail имеет неверный формат']
+									])
+								+checkbox('noEmailNotification', 'Отключить уведомления по e-mail')(mods=['s-margined'])
+								+setText('Текущий пароль')(mods=['fat'])
+								+setText('Чтобы изменения вступили в силу, введите текущий пароль')(mods=['margined'])
+								+input('password')(
+									mods=['settings', 's-margined']
+									autocomplete='on'
+									name='password'
+									errors=[
+										['no-pass','Введите пароль'],
+										['wrong-pass', 'Неверный пароль']
+									])
+								+btn-submit('Применить изменения')(
+									mods=['reg', 'lefted'])
+						
+						+setCont
+							+pageTitle(3, 'Настройки безопасности')(mods=['settings'])
+							+form('securitySettings')
+								+pageTitle(3, 'Изменение пароля')
+
+								+setText('Текущий пароль')(mods=['fat'])
+								+setText('Чтобы изменения вступили в силу, введите текущий пароль')(mods=['margined'])
+								+input('password')(
+									mods=['settings', 's-margined']
+									autocomplete='on'
+									name='password'
+									errors=[
+										['no-pass','Введите пароль'],
+										['wrong-pass', 'Неверный пароль']
+									])
+
+								+setText('Новый пароль')(mods=['fat'])
+								+setText('Пароль не должен быть короче 8 символов')(mods=['margined'])
+								+input('password')(
+									mods=['settings', 's-margined']
+									autocomplete='on'
+									name='password'
+									errors=[
+										['no-pass','Введите пароль'],
+										['wrong-pass', 'Неверный пароль']
+									])
+
+								+setText('Новый пароль еще раз')(
+									mods=['fat', 'margined'])
+								+input('password')(
+									mods=['settings', 's-margined']
+									autocomplete='on'
+									name='password'
+									errors=[
+										['no-pass','Введите пароль'],
+										['wrong-pass', 'Неверный пароль']
+									])
+
+								+btn-submit('Применить изменения')(
+									mods=['reg', 'lefted'])
+
+						+setCont
+							+pageTitle(3, 'Ключница')(mods=['settings'])
+							+keyholder
+								+khItem('Вконтакте', 'img', 'Оболбос Оболбосов')
+								+khItem('Вфейсбуке', false, 'Оболбос Оболбосов')
+								+khItem('Вфейсбуке', false, 'Оболбос Оболбосов')
+								+khItem('Вфейсбуке', false, 'Оболбос Оболбосов')
+
+							+pageTitle(3, 'Привязать аккаунт')
+							+setText('Привязка учетных записей социальных сетей (можно сразу нескольких) к аккаунту позволит Вам входить в проект в один клик.')(mods=['margined'])
+							+social('righted')
+								+socItem('vk', 'Vkontakte', '#')(mods=['linked'])
+								+socItem('fb', 'Facebook', '#')(mods=['linked'])
+								+socItem('tw', 'Twitter', '#')
+								+socItem('gp', 'Google Plus', '#')
+								+socItem('gh', 'GitHub', '#')
+								+socItem('ms', 'Microsoft', '#')
+
+						+setCont
+							+pageTitle(3, 'Лицензионное соглашение')(
+								mods=['settings'])
+							+scrl
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+
+								+textTitle('Какой-то заголовок')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+
+								+textTitle('1. Можно с цифрой')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+
+								+textTitle('1. Можно с цифрой')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+								+textPar('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.')
+						
+						+setCont
+							+pageTitle(3, 'Удаление аккаунта')(mods=['settings'])
+							+pageTitle(3, 'Вы действительно хотите удалить аккаунт?')
+							+button('Удалить аккаунт')(
+								mods=['keyholder', 'margined']
+								data-open-hidden='confirmDelete')
+							+hiddenArea('confirmDelete')
+								+form('confirmDelete')
+									+setText('Чтобы подтвердить удаление аккаунта введите текущий пароль')(mods=['margined'])
+									+input('password')(
+										mods=['settings', 's-margined']
+										name='password'
+										errors=[
+											['no-pass','Введите пароль'],
+											['wrong-pass', 'Неверный пароль']
+										])
+									+btn-submit('Подтвердить удаление')(
+										mods=['reg', 'lefted'])
+
+			+modal('editProfile')(
+				mods=['show']
+				id='editProfile')
+				+profileSets('avatar', 'Obolduy')
+					+psLine('Город')
+						+select('city')(id='profileCity')
+						
+
+						//- +input('text')(
+						//- 	name='city'
+						//- 	errors=[
+						//- 		['wrong-city', 'Такого города нет']
+						//- 	]
+						//- 	mods=['margined'])
+						//- 	+variants(5)
+
+					+psLine('Пол')
+						+radio('gender', 'male', 'Мужской')(mods=['lower-case'])
+						+radio('gender', 'female', 'Женский')(mods=['lower-case'])
+
+					+psLine('Возраст')
+						+radio('age', '17-', '< 17')(mods=['lower-case'])
+						+radio('age', '18-30', '18 - 30')(mods=['lower-case'])
+						+radio('age', '30-50', '30 - 50')(mods=['lower-case'])
+						+radio('age', '50+', '> 50')(mods=['lower-case'])
+
+					+psLine('Образование')
+						+radio('education', 'secindary', 'Среднее')(mods=['lower-case'])
+						+radio('education', 'technical', 'Техническое')(mods=['lower-case'])
+						+radio('education', 'higher', 'Высшее')(mods=['lower-case'])
+						+radio('education', 'degree', 'Ученая степень')(mods=['lower-case'])
+
+					+psLine('Статус')
+						+radio('married', 'no', 'Холост / не замужем')(mods=['lower-case'])
+						+radio('married', 'yeas', 'Женат / замужем')(mods=['lower-case'])
+
+					+psLine('Карьера')
+						+radio('career', 'staff', 'Штатный сотрудник')(mods=['lower-case'])
+						+radio('career', 'chief', 'Руководитель среднего звена')(mods=['lower-case'])
+						+radio('career', 'masterChief', 'Топ-менеджер')(mods=['lower-case'])
+						+radio('career', 'businessman', 'Предприниматель')(mods=['lower-case'])
+						+radio('career', 'freelancer', 'Фрилансер')(mods=['lower-case'])
+						+radio('career', 'idler', 'Безработный')(mods=['lower-case'])
+
+					+psLine('Религия')
+						+radio('religion', 'christianity', 'Христианство')(mods=['lower-case'])
+						+radio('religion', 'islam', 'Ислам')(mods=['lower-case'])
+						+radio('religion', 'judaism', 'Иудаизм')(mods=['lower-case'])
+						+radio('religion', 'buddhism', 'Буддизм')(mods=['lower-case'])
+						+radio('religion', 'hinduism', 'Индуизм')(mods=['lower-case'])
+						+radio('religion', 'other', 'Другое')(mods=['lower-case'])
+
+					+psLine('Политика')
+						+radio('politics', 'apple', false)(
+							src='apple'
+							alt='Яблоко')
+						+radio('politics', 'er', false)(
+							src='er'
+							alt='Единая Россия')
+						+radio('politics', 'kprf', false)(
+							src='kprf'
+							alt='КПРФ')
+						+radio('politics', 'ldpr', false)(
+							src='ldpr'
+							alt='ЛДПР')
+						+radio('politics', 'pd', false)(
+							src='pd'
+							alt='Правое дело')
+						+radio('politics', 'pr', false)(
+							src='pr'
+							alt='Патриоты России')
+						+radio('politics', 'sr', false)(
+							src='sr'
+							alt='Справедоивая Россия')
+						+radio('politics', 'other', 'Другое')(mods=['lower-case'])
 
 		+error('Медведеву не нравится, когда в него тыкают!')
 

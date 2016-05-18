@@ -1,5 +1,6 @@
 .input
 	margin-bottom 15px
+	position relative
 	
 	&__input
 		@extend $small-text
@@ -19,6 +20,12 @@
 	
 	&--margined
 		margin-bottom 30px
+	
+	&-s-margined
+		margin-bottom 20px
+	
+	&--settings &__input
+		padding 13px 23px
 
 .form--login
 	.input
@@ -45,5 +52,7 @@ errors(
 	short-login,
 	short-pass,
 	wrong,
+	wrong-city,
 	wrong-code,
-	wrong-mail)
+	wrong-mail,
+	wrong-pass)

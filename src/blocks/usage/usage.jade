@@ -5,9 +5,7 @@ mixin usage
 
 mixin usItem(link, img, title, text)
 	article.usage__item
-		a.usage__content(
-			href=link
-			target='_blank')
+		.usage__content
 			.usage__face
 				img.usage__img(
 					src=img
@@ -15,3 +13,5 @@ mixin usItem(link, img, title, text)
 			.usage__desc
 				.usage__name!=title
 				.usage__text!=text
+				//- +expand(10)
+				//- 	p.usage__text!=text

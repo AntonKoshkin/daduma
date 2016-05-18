@@ -1,0 +1,39 @@
+.keyholder
+	// overflow auto
+	// height 260px
+	
+	&__item
+		margin-bottom 20px
+	
+	&__content
+		padding 15px 0
+		display flex
+		justify-content space-between
+		align-items center
+		border-top 1px solid gray-lighter
+		border-bottom @border-top
+	
+	&__face
+		size 40px
+		
+		overflow hidden
+		border-radius 50%
+		flex-shrink 0
+		margin-right 10px
+		
+		&--no-photo
+			background-image url('/img/keyholder__img--placeholder.png')
+			background-size 100% 100%
+	
+	&__img
+		width 100%
+	
+	&__face--no-photo &__img
+		display none
+	
+	&__name
+		@extend $small-text
+		
+		font-weight medium
+		flex-basis 100%
+		flex-shrink 1

@@ -1,2 +1,9 @@
 mixin close
-	button.close(type='button')
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'close--' + mod
+
+	button.close(
+		type='button'
+		class=mods)

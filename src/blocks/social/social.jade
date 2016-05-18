@@ -1,10 +1,21 @@
 mixin social
-	.social
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'social--' + mod
+
+	.social(class=mods)
 		if block
 			block
 
-mixin socItem(clas, text, href)
+mixin socItem(icon, text, href)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'social__link--' + mod
+
 	a.social__link(
-		class='social__link--'+clas
+		class='social__link--'+icon
+		class=mods
 		target='_blank'
 		href=href)!=text

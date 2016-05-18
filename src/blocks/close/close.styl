@@ -25,5 +25,11 @@
 	&:after
 		transform rotate(-45deg)
 	
-	// @media(min-width tablet)
-	// 	display none
+	&--settings
+		top 15px
+		right @top
+	
+	@media (min-width tablet)
+		&--settings
+			top 10px
+			right @top

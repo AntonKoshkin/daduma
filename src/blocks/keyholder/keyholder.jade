@@ -1,0 +1,23 @@
+mixin keyholder
+	.keyholder
+		if block
+			block
+
+mixin khItem(socNet, img, name)
+	.keyholder__item
+		+pageTitle(3, socNet)(mods=['keyholder'])
+		.keyholder__content
+			if img === false
+				.keyholder__face.keyholder__face--no-photo
+					img.keyholder__img(
+						src=''
+						alt='')
+			else
+				.keyholder__face
+					img.keyholder__img(
+						src='/img/keyholder__img--'+img+'.png'
+						alt='')
+			p.keyholder__name!=name
+			+button('Отключить')(
+				mods=['keyholder']
+				data-act='unlink')

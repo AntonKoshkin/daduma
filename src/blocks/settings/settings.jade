@@ -1,0 +1,44 @@
+mixin settings
+	.settings
+		if block
+			block
+
+mixin setTabs
+	.settings__tabs
+		if block
+			block
+
+mixin setConts
+	.settings__contents
+		+close(mods=['settings'])
+		if block
+			block
+
+mixin setTab(tab, name)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'settings__tab--' + mod
+
+	.settings__tab(
+		class=mods
+		class='settings__tab--'+tab)
+		span.settings__tab-name!=name
+
+mixin setCont
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'settings__content--' + mod
+
+	.settings__content(class=mods)
+		if block
+			block
+
+mixin setText(text)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'settings__text--' + mod
+
+	p.settings__text(class=mods)!=text

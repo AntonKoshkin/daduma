@@ -1,0 +1,10 @@
+mixin hiddenArea(name)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'hidden-area--' + mod
+
+	.hidden-area(id=name)
+		.hidden-area__content
+			if block
+				block

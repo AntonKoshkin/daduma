@@ -1,25 +1,29 @@
 mixin comment(img, name, date, datetime, likes, text)
 	.comment
-		.comment__face
-			img.comment__img(
-				src!=img
-				alt='')
-			// если коммент лайкнут, то у него есть класс comment__like--liked
-			if attributes.liked
-				span.comment__like.comment__like--liked=likes
-			else
-				span.comment__like=likes
+		// если фото нет, то добавить модификатор .comment__face--no-photo
+		if attributes['no-photo'] === ''
+			.comment__face.comment__face--no-photo
+				img.comment__img(
+					src!=img
+					alt='')
+				// если коммент лайкнут, то у него есть класс comment__like--liked
+				if attributes.liked
+					span.comment__like.comment__like--liked=likes
+				else
+					span.comment__like=likes
+		else
+			.comment__face
+				img.comment__img(
+					src!=img
+					alt='')
+				// если коммент лайкнут, то у него есть класс comment__like--liked
+				if attributes.liked
+					span.comment__like.comment__like--liked=likes
+				else
+					span.comment__like=likes
 		p.comment__name!=name
 		time.comment__date(
 			datetime!=datetime)=date
 		.comment__letter
-			//- .comment__small-text
-			//- 	// текст комментария вставляется в 2 блока одинаковый
-			//- 	.comment__text-wrapper
-			//- 		p.comment__text!=text
-			//- 	button.comment__more(type='button') Развернуть комментарий
-			//- .comment__full-text
-			//- 	p.comment__text!=text
-			//- 	button.comment__more(type='button') Свернуть комментарий
 			+expand(3)
 				p.comment__text!=text

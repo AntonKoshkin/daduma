@@ -25,6 +25,9 @@
 // tabs in block sides
 //= ../blocks/sides/sides.js
 
+// text expander
+//= ../blocks/expand/expand.js
+
 // settings for all sliders on the page
 //= ../blocks/sliders/sliders.js
 
@@ -36,9 +39,6 @@
 
 // modal
 //= ../blocks/modal/modal.js
-
-// text expander
-//= ../blocks/expand/expand.js
 
 // custom scrolling
 //= ../blocks/scrl-area/scrl-area.js
@@ -78,3 +78,12 @@
 
 // button
 //= ../blocks/button/button.js
+
+// settings tabs
+//= ../blocks/settings/settings.js
+
+// keyholder
+//= ../blocks/keyholder/keyholder.js
+
+// variants
+//= ../blocks/variants/variants.js
