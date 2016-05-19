@@ -1,4 +1,4 @@
-.profile-sets
+.commenter
 	width 100%
 	max-height 100%
 	left 50%
@@ -36,15 +36,18 @@
 		font-family yefimov
 		text-align center
 		margin-bottom 40px
-	
+		
 	&__line
+		display flex
 		margin-bottom 20px
+		align-items center
 	
 	&__title
 		padding-left 50px
 		position relative
 		padding 7px 0
-		margin-bottom 10px
+		min-width 180px
+		flex-shrink 0
 		
 		&:before
 			@extend $pseudo-left
@@ -80,33 +83,39 @@
 		&--politics
 			&:before
 				bicon(profile.handshake, 32)
+	
+	&__text
+		@extend $small-text
+		
+		flex-basis 100%
+		flex-shrink 1
+		
+		&--lower
+			text-transform lowercase
 
-	&__variants
-		display flex
-		flex-wrap wrap
-		justify-content flex-start
-		align-items center
-		position relative
-
-	@media (min-width tablet)
+	&__party
+		height 34px
+		width auto
+	
+	@media (min-width 760px)
 		padding-left 30px
 		padding-right 30px
+		padding-bottom 20px
 		
-		&__line
+		&__body
 			display flex
 		
-		&__variants
-			flex-basis 100%
-			flex-shrink 1
-
-		&__title
-			min-width 180px
-			flex-shrink 0
-
-		@media (min-height 900px)
+		&__half
+			width 50%
+		
+		&__line
+			&:last-child
+				margin-bottom 0
+		
+		@media (min-height 500px)
 			top 50%
 			transform translate(-50%, -50%)
 
 .modal--show
-	.profile-sets
+	.commenter
 		animation fadeIn .3s linear

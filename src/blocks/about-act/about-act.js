@@ -42,9 +42,7 @@ jQuery(document).ready(function($) {
 			.find('.about-act__cont-content')
 			.hide();
 	});
-});
 
-jQuery(document).ready(function($) {
 	var windWidth = $(window).outerWidth(),
 		resizedWidth = $(window).outerWidth(),
 		breakpoint = 962;
@@ -69,6 +67,4 @@ jQuery(document).ready(function($) {
 			$('.about-act__cont-content').hide();
 		}
 	});
-
-
 });

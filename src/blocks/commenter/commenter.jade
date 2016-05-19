@@ -1,0 +1,45 @@
+mixin commenter(img, name)
+	.commenter
+		+close
+		.commenter__content
+			.commenter__head
+				// если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo
+				// либо просто в срц фото втыкать заглушку
+				if img === false
+					.commenter__face.commenter__face--no-photo
+						img.commenter__img(
+							src=''
+							alt='')
+						img.commenter__no-img(
+							src='/img/commenter__img.png'
+							alt='')
+				else
+					.commenter__face
+						img.commenter__img(
+							src='/img/commenter__img--'+img+'.jpg'
+							alt='')
+						img.commenter__no-img(
+							src='/img/commenter__img.png'
+							alt='')
+				p.commenter__name!=name
+			.commenter__body
+					if block
+						block
+
+mixin cHalf
+	.commenter__half
+		if block
+			block
+
+mixin cLine(title, icon, text, img)
+	.commenter__line
+		p.commenter__title(
+			class='commenter__title--'+icon)!=title+':'
+		if text === false
+			img.commenter__party(
+				src='/img/gang__img--'+img+'.png')
+		else
+			if attributes.lower === ''
+				p.commenter__text.commenter__text--lower!=text
+			else
+				p.commenter__text!=text

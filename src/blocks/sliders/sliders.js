@@ -16,6 +16,22 @@ jQuery(document).ready(function($) {
 		},
 	});
 
+	// $('body').on('click', '.about-act__cont-title', function(event) {
+	// 	$('.about-act__diagrams').owlCarousel({
+	// 		dots			: false,
+	// 		loop			: true,
+	// 		mouseDrag	: true,
+	// 		autoHeight	: false,
+	// 		responsive	: {
+	// 			0		: {
+	// 				items		: 1,
+	// 				slideBy	: 1,
+	// 			},
+	// 		},
+	// 	});
+	// });
+
+
 	// $('.opinion').owlCarousel({
 	// 	autoHeight	: true,
 	// 	dots			: false,
@@ -49,5 +65,4 @@ jQuery(document).ready(function($) {
 			},
 		},
 	});
-
 });

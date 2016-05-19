@@ -28,9 +28,6 @@ html(lang='ru')
 				+socItem('fb', 'Мы в Facebook', 'http://facebook.com/')
 		
 		.page__modals
-			+modal('Обратная связь', true)(id='feedback')
-				+form('userFeedback')(id='userFeedback')
-
 			+modal('login')
 				+login('Личный кабинет')
 					+form('userLogin')(
@@ -358,58 +355,74 @@ html(lang='ru')
 										mods=['reg', 'lefted'])
 
 			+modal('editProfile')(
-				mods=['show']
 				id='editProfile')
 				+profileSets('avatar', 'Obolduy')
-					+psLine('Город')
-						+select('city')(id='profileCity')
-						
+					+psLine('Город', 'city')
+						+select('city')(
+							id='profileCity'
+							mods=['city'])
 
-						//- +input('text')(
-						//- 	name='city'
-						//- 	errors=[
-						//- 		['wrong-city', 'Такого города нет']
-						//- 	]
-						//- 	mods=['margined'])
-						//- 	+variants(5)
+					+psLine('Пол', 'gender')
+						+radio('gender', 'male', 'Мужской')(
+							mods=['lower-case'])
+						+radio('gender', 'female', 'Женский')(
+							mods=['lower-case'])
 
-					+psLine('Пол')
-						+radio('gender', 'male', 'Мужской')(mods=['lower-case'])
-						+radio('gender', 'female', 'Женский')(mods=['lower-case'])
+					+psLine('Возраст', 'age')
+						+radio('age', '17-', '< 17')(
+							mods=['lower-case'])
+						+radio('age', '18-30', '18 - 30')(
+							mods=['lower-case'])
+						+radio('age', '30-50', '30 - 50')(
+							mods=['lower-case'])
+						+radio('age', '50+', '> 50')(
+							mods=['lower-case'])
 
-					+psLine('Возраст')
-						+radio('age', '17-', '< 17')(mods=['lower-case'])
-						+radio('age', '18-30', '18 - 30')(mods=['lower-case'])
-						+radio('age', '30-50', '30 - 50')(mods=['lower-case'])
-						+radio('age', '50+', '> 50')(mods=['lower-case'])
+					+psLine('Образование', 'edu')
+						+radio('education', 'secindary', 'Среднее')(
+							mods=['lower-case'])
+						+radio('education', 'technical', 'Техническое')(
+							mods=['lower-case'])
+						+radio('education', 'higher', 'Высшее')(
+							mods=['lower-case'])
+						+radio('education', 'degree', 'Ученая степень')(
+							mods=['lower-case'])
 
-					+psLine('Образование')
-						+radio('education', 'secindary', 'Среднее')(mods=['lower-case'])
-						+radio('education', 'technical', 'Техническое')(mods=['lower-case'])
-						+radio('education', 'higher', 'Высшее')(mods=['lower-case'])
-						+radio('education', 'degree', 'Ученая степень')(mods=['lower-case'])
+					+psLine('Статус', 'status')
+						+radio('married', 'no', 'Холост / не замужем')(
+							mods=['lower-case'])
+						+radio('married', 'yeas', 'Женат / замужем')(
+							mods=['lower-case'])
 
-					+psLine('Статус')
-						+radio('married', 'no', 'Холост / не замужем')(mods=['lower-case'])
-						+radio('married', 'yeas', 'Женат / замужем')(mods=['lower-case'])
+					+psLine('Карьера', 'career')
+						+radio('career', 'staff', 'Штатный сотрудник')(
+							mods=['lower-case'])
+						+radio('career', 'chief', 'Руководитель среднего звена')(
+							mods=['lower-case'])
+						+radio('career', 'masterChief', 'Топ-менеджер')(
+							mods=['lower-case'])
+						+radio('career', 'businessman', 'Предприниматель')(
+							mods=['lower-case'])
+						+radio('career', 'freelancer', 'Фрилансер')(
+							mods=['lower-case'])
+						+radio('career', 'idler', 'Безработный')(
+							mods=['lower-case'])
 
-					+psLine('Карьера')
-						+radio('career', 'staff', 'Штатный сотрудник')(mods=['lower-case'])
-						+radio('career', 'chief', 'Руководитель среднего звена')(mods=['lower-case'])
-						+radio('career', 'masterChief', 'Топ-менеджер')(mods=['lower-case'])
-						+radio('career', 'businessman', 'Предприниматель')(mods=['lower-case'])
-						+radio('career', 'freelancer', 'Фрилансер')(mods=['lower-case'])
-						+radio('career', 'idler', 'Безработный')(mods=['lower-case'])
+					+psLine('Религия', 'religion')
+						+radio('religion', 'christianity', 'Христианство')(
+							mods=['lower-case'])
+						+radio('religion', 'islam', 'Ислам')(
+							mods=['lower-case'])
+						+radio('religion', 'judaism', 'Иудаизм')(
+							mods=['lower-case'])
+						+radio('religion', 'buddhism', 'Буддизм')(
+							mods=['lower-case'])
+						+radio('religion', 'hinduism', 'Индуизм')(
+							mods=['lower-case'])
+						+radio('religion', 'otherRel', 'Другое')(
+							mods=['lower-case'])
 
-					+psLine('Религия')
-						+radio('religion', 'christianity', 'Христианство')(mods=['lower-case'])
-						+radio('religion', 'islam', 'Ислам')(mods=['lower-case'])
-						+radio('religion', 'judaism', 'Иудаизм')(mods=['lower-case'])
-						+radio('religion', 'buddhism', 'Буддизм')(mods=['lower-case'])
-						+radio('religion', 'hinduism', 'Индуизм')(mods=['lower-case'])
-						+radio('religion', 'other', 'Другое')(mods=['lower-case'])
-
-					+psLine('Политика')
+					+psLine('Политика', 'politics')
 						+radio('politics', 'apple', false)(
 							src='apple'
 							alt='Яблоко')
@@ -430,13 +443,27 @@ html(lang='ru')
 							alt='Патриоты России')
 						+radio('politics', 'sr', false)(
 							src='sr'
-							alt='Справедоивая Россия')
-						+radio('politics', 'other', 'Другое')(mods=['lower-case'])
+							alt='Справедливая Россия')
+						+radio('politics', 'otherPol', 'Другое')(
+							mods=['lower-case'])
+
+			+modal('commenterInfo')(
+				id='commenterInfo')
+				+commenter('avatar', 'Obolduy')
+					+cHalf
+						+cLine('Город', 'city', 'Санкт-Петербург')
+						+cLine('Пол', 'gender', '-')(lower='')
+						+cLine('Возраст', 'age', '< 17')(lower='')
+						+cLine('Образование', 'edu', '-')(lower='')
+
+					+cHalf
+						+cLine('Статус', 'status', 'Холост / не замужем')(lower='')
+						+cLine('Карьера', 'career', 'Безработный')(lower='')
+						+cLine('Религия', 'religion', 'Другое')(lower='')
+						+cLine('Политика', 'politics', false, 'ldpr')(lower='')
 
 		+error('Медведеву не нравится, когда в него тыкают!')
 
-		//- if withKlichko === true
-		//- 	+klichko
 		if quote === true
 			+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
 		

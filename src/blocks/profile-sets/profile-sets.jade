@@ -1,40 +1,45 @@
 mixin profileSets(img, name)
 	.profile-sets
 		+close
-		.profile-sets__head
-			if img === false
-				.profile-sets__face.profile-sets__face--no-photo
-					img.profile-sets__img(
-						src=''
-						alt='')
-					img.profile-sets__no-img(
-						src='/img/profile-sets__img.png'
-						alt='')
-					+uploadBtn('Загрузить новую фотографию')(
-						accept='image/jpg, image/jpeg, image/png'
-						mods=['profile-sets']
-						id='upload')
-			else
-				.profile-sets__face
-					img.profile-sets__img(
-						src='/img/profile-sets__img--'+img+'.jpg'
-						alt='')
-					img.profile-sets__no-img(
-						src='/img/profile-sets__img.png'
-						alt='')
-					+uploadBtn('Загрузить новую фотографию')(
-						accept='image/jpg, image/jpeg, image/png'
-						mods=['profile-sets']
-						id='upload')
-			p.profile-sets__name!=name
-		.profile-sets__body
-			+form('profileSets')
-				if block
-					block
-				+btn-submit('Подтвердить')(mods=['reg'])
+		.profile-sets__content
+			.profile-sets__head
+				// если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo
+				// либо просто в срц фото втыкать заглушку
+				if img === false
+					.profile-sets__face.profile-sets__face--no-photo
+						img.profile-sets__img(
+							src=''
+							alt='')
+						img.profile-sets__no-img(
+							src='/img/profile-sets__img.png'
+							alt='')
+						+uploadBtn('Загрузить новую фотографию')(
+							accept='image/jpg, image/jpeg, image/png'
+							mods=['profile-sets']
+							id='upload')
+				else
+					.profile-sets__face
+						img.profile-sets__img(
+							src='/img/profile-sets__img--'+img+'.jpg'
+							alt='')
+						img.profile-sets__no-img(
+							src='/img/profile-sets__img.png'
+							alt='')
+						+uploadBtn('Загрузить новую фотографию')(
+							accept='image/jpg, image/jpeg, image/png'
+							mods=['profile-sets']
+							id='upload')
+				p.profile-sets__name!=name
+			.profile-sets__body
+				+form('profileSets')
+					if block
+						block
+					+btn-submit('Подтвердить')(mods=['reg'])
 
-mixin psLine(title)
+mixin psLine(title, icon)
 	.profile-sets__line
-		p.profile-sets__title!=title+':'
-		if block
-			block
+		p.profile-sets__title(
+			class='profile-sets__title--'+icon)!=title+':'
+		.profile-sets__variants
+			if block
+				block

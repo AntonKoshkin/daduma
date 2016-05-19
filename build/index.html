@@ -636,10 +636,10 @@
 					<div class="page__comments">
 						<div class="comment">
 							<!-- если фото нет, то добавить модификатор .comment__face--no-photo-->
-							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+							<div data-modal-link="#commenterInfo" class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like comment__like--liked">15</span>
 							</div>
-							<p class="comment__name">TheDark KNIGHT</p>
+							<p data-modal-link="#commenterInfo" class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
 								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
@@ -657,10 +657,10 @@
 						</div>
 						<div class="comment">
 							<!-- если фото нет, то добавить модификатор .comment__face--no-photo-->
-							<div class="comment__face comment__face--no-photo"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+							<div data-modal-link="#commenterInfo" class="comment__face comment__face--no-photo"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">235</span>
 							</div>
-							<p class="comment__name">TheDark KNIGHT</p>
+							<p data-modal-link="#commenterInfo" class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
 								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
@@ -678,10 +678,10 @@
 						</div>
 						<div class="comment">
 							<!-- если фото нет, то добавить модификатор .comment__face--no-photo-->
-							<div class="comment__face comment__face--no-photo"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+							<div data-modal-link="#commenterInfo" class="comment__face comment__face--no-photo"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">1</span>
 							</div>
-							<p class="comment__name">TheDark KNIGHT</p>
+							<p data-modal-link="#commenterInfo" class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
 								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
@@ -699,10 +699,10 @@
 						</div>
 						<div class="comment">
 							<!-- если фото нет, то добавить модификатор .comment__face--no-photo-->
-							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+							<div data-modal-link="#commenterInfo" class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">79</span>
 							</div>
-							<p class="comment__name">TheDark KNIGHT</p>
+							<p data-modal-link="#commenterInfo" class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
 								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
@@ -720,10 +720,10 @@
 						</div>
 						<div class="comment">
 							<!-- если фото нет, то добавить модификатор .comment__face--no-photo-->
-							<div class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
+							<div data-modal-link="#commenterInfo" class="comment__face"><img src="http://www.parkplacehomesonline.com/wp-content/uploads/2014/03/faceholder.png" alt="" class="comment__img"/>
 								<!-- если коммент лайкнут, то у него есть класс comment__like--liked--><span class="comment__like">22</span>
 							</div>
-							<p class="comment__name">TheDark KNIGHT</p>
+							<p data-modal-link="#commenterInfo" class="comment__name">TheDark KNIGHT</p>
 							<time datetime="2016-03-05T08:36" class="comment__date">05.03.2016 08:36</time>
 							<div class="comment__letter">
 								<!-- в дата-атрибуте содержится количество строк, на которые сворачивается текст-->
@@ -823,11 +823,6 @@
 			</div>
 		</footer>
 		<div class="page__modals">
-			<div id="Обратная связь" class="modal">
-				<div class="modal__bg"></div>
-				<form id="userFeedback" action="" name="userFeedback" class="form">
-				</form>
-			</div>
 			<div id="login" class="modal">
 				<div class="modal__bg"></div>
 				<div class="login">
@@ -1326,214 +1321,285 @@
 					</div>
 				</div>
 			</div>
-			<div id="editProfile" class="modal modal--show">
+			<div id="editProfile" class="modal">
 				<div class="modal__bg"></div>
 				<div class="profile-sets">
 					<button type="button" class="close"></button>
-					<div class="profile-sets__head">
-						<div class="profile-sets__face"><img src="/img/profile-sets__img--avatar.jpg" alt="" class="profile-sets__img"/><img src="/img/profile-sets__img.png" alt="" class="profile-sets__no-img"/>
-							<div class="upload-btn upload-btn--profile-sets">
-								<label ng-show="" class="upload-btn__label">
-									<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
-								</label>
+					<div class="profile-sets__content">
+						<div class="profile-sets__head">
+							<!-- если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo-->
+							<!-- либо просто в срц фото втыкать заглушку-->
+							<div class="profile-sets__face"><img src="/img/profile-sets__img--avatar.jpg" alt="" class="profile-sets__img"/><img src="/img/profile-sets__img.png" alt="" class="profile-sets__no-img"/>
+								<div class="upload-btn upload-btn--profile-sets">
+									<label ng-show="" class="upload-btn__label">
+										<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
+									</label>
+								</div>
+							</div>
+							<p class="profile-sets__name">Obolduy</p>
+						</div>
+						<div class="profile-sets__body">
+							<form action="" name="profileSets" class="form">
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--city">Город:</p>
+									<div class="profile-sets__variants">
+										<div class="select select--city">
+											<select id="profileCity" name="city" style="width:50%" class="select__select">
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--gender">Пол:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="male" class="radio__label">
+												<input type="radio" name="gender" id="male" class="radio__input"/><span class="radio__text">Мужской</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="female" class="radio__label">
+												<input type="radio" name="gender" id="female" class="radio__input"/><span class="radio__text">Женский</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--age">Возраст:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="17-" class="radio__label">
+												<input type="radio" name="age" id="17-" class="radio__input"/><span class="radio__text">< 17</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="18-30" class="radio__label">
+												<input type="radio" name="age" id="18-30" class="radio__input"/><span class="radio__text">18 - 30</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="30-50" class="radio__label">
+												<input type="radio" name="age" id="30-50" class="radio__input"/><span class="radio__text">30 - 50</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="50+" class="radio__label">
+												<input type="radio" name="age" id="50+" class="radio__input"/><span class="radio__text">> 50</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--edu">Образование:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="secindary" class="radio__label">
+												<input type="radio" name="education" id="secindary" class="radio__input"/><span class="radio__text">Среднее</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="technical" class="radio__label">
+												<input type="radio" name="education" id="technical" class="radio__input"/><span class="radio__text">Техническое</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="higher" class="radio__label">
+												<input type="radio" name="education" id="higher" class="radio__input"/><span class="radio__text">Высшее</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="degree" class="radio__label">
+												<input type="radio" name="education" id="degree" class="radio__input"/><span class="radio__text">Ученая степень</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--status">Статус:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="no" class="radio__label">
+												<input type="radio" name="married" id="no" class="radio__input"/><span class="radio__text">Холост / не замужем</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="yeas" class="radio__label">
+												<input type="radio" name="married" id="yeas" class="radio__input"/><span class="radio__text">Женат / замужем</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--career">Карьера:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="staff" class="radio__label">
+												<input type="radio" name="career" id="staff" class="radio__input"/><span class="radio__text">Штатный сотрудник</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="chief" class="radio__label">
+												<input type="radio" name="career" id="chief" class="radio__input"/><span class="radio__text">Руководитель среднего звена</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="masterChief" class="radio__label">
+												<input type="radio" name="career" id="masterChief" class="radio__input"/><span class="radio__text">Топ-менеджер</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="businessman" class="radio__label">
+												<input type="radio" name="career" id="businessman" class="radio__input"/><span class="radio__text">Предприниматель</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="freelancer" class="radio__label">
+												<input type="radio" name="career" id="freelancer" class="radio__input"/><span class="radio__text">Фрилансер</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="idler" class="radio__label">
+												<input type="radio" name="career" id="idler" class="radio__input"/><span class="radio__text">Безработный</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--religion">Религия:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="christianity" class="radio__label">
+												<input type="radio" name="religion" id="christianity" class="radio__input"/><span class="radio__text">Христианство</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="islam" class="radio__label">
+												<input type="radio" name="religion" id="islam" class="radio__input"/><span class="radio__text">Ислам</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="judaism" class="radio__label">
+												<input type="radio" name="religion" id="judaism" class="radio__input"/><span class="radio__text">Иудаизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="buddhism" class="radio__label">
+												<input type="radio" name="religion" id="buddhism" class="radio__input"/><span class="radio__text">Буддизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="hinduism" class="radio__label">
+												<input type="radio" name="religion" id="hinduism" class="radio__input"/><span class="radio__text">Индуизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="otherRel" class="radio__label">
+												<input type="radio" name="religion" id="otherRel" class="radio__input"/><span class="radio__text">Другое</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--politics">Политика:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--party">
+											<label for="apple" class="radio__label">
+												<input type="radio" name="politics" id="apple" class="radio__input"/><img src="/img/gang__img--apple.png" alt="Яблоко" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="er" class="radio__label">
+												<input type="radio" name="politics" id="er" class="radio__input"/><img src="/img/gang__img--er.png" alt="Единая Россия" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="kprf" class="radio__label">
+												<input type="radio" name="politics" id="kprf" class="radio__input"/><img src="/img/gang__img--kprf.png" alt="КПРФ" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="ldpr" class="radio__label">
+												<input type="radio" name="politics" id="ldpr" class="radio__input"/><img src="/img/gang__img--ldpr.png" alt="ЛДПР" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="pd" class="radio__label">
+												<input type="radio" name="politics" id="pd" class="radio__input"/><img src="/img/gang__img--pd.png" alt="Правое дело" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="pr" class="radio__label">
+												<input type="radio" name="politics" id="pr" class="radio__input"/><img src="/img/gang__img--pr.png" alt="Патриоты России" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="sr" class="radio__label">
+												<input type="radio" name="politics" id="sr" class="radio__input"/><img src="/img/gang__img--sr.png" alt="Справедливая Россия" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="otherPol" class="radio__label">
+												<input type="radio" name="politics" id="otherPol" class="radio__input"/><span class="radio__text">Другое</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Подтвердить" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="commenterInfo" class="modal">
+				<div class="modal__bg"></div>
+				<div class="commenter">
+					<button type="button" class="close"></button>
+					<div class="commenter__content">
+						<div class="commenter__head">
+							<!-- если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo-->
+							<!-- либо просто в срц фото втыкать заглушку-->
+							<div class="commenter__face"><img src="/img/commenter__img--avatar.jpg" alt="" class="commenter__img"/><img src="/img/commenter__img.png" alt="" class="commenter__no-img"/></div>
+							<p class="commenter__name">Obolduy</p>
+						</div>
+						<div class="commenter__body">
+							<div class="commenter__half">
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--city">Город:</p>
+									<p class="commenter__text">Санкт-Петербург</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--gender">Пол:</p>
+									<p class="commenter__text commenter__text--lower">-</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--age">Возраст:</p>
+									<p class="commenter__text commenter__text--lower">< 17</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--edu">Образование:</p>
+									<p class="commenter__text commenter__text--lower">-</p>
+								</div>
+							</div>
+							<div class="commenter__half">
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--status">Статус:</p>
+									<p class="commenter__text commenter__text--lower">Холост / не замужем</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--career">Карьера:</p>
+									<p class="commenter__text commenter__text--lower">Безработный</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--religion">Религия:</p>
+									<p class="commenter__text commenter__text--lower">Другое</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--politics">Политика:</p><img src="/img/gang__img--ldpr.png" class="commenter__party"/>
+								</div>
 							</div>
 						</div>
-						<p class="profile-sets__name">Obolduy</p>
-					</div>
-					<div class="profile-sets__body">
-						<form action="" name="profileSets" class="form">
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Город:</p>
-								<div class="select">
-									<select id="profileCity" name="city" style="width:50%" class="select__select">
-									</select>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Пол:</p>
-								<div class="radio radio--lower-case">
-									<label for="male" class="radio__label">
-										<input type="radio" name="gender" id="male" class="radio__input"/><span class="radio__text">Мужской</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="female" class="radio__label">
-										<input type="radio" name="gender" id="female" class="radio__input"/><span class="radio__text">Женский</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Возраст:</p>
-								<div class="radio radio--lower-case">
-									<label for="17-" class="radio__label">
-										<input type="radio" name="age" id="17-" class="radio__input"/><span class="radio__text">< 17</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="18-30" class="radio__label">
-										<input type="radio" name="age" id="18-30" class="radio__input"/><span class="radio__text">18 - 30</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="30-50" class="radio__label">
-										<input type="radio" name="age" id="30-50" class="radio__input"/><span class="radio__text">30 - 50</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="50+" class="radio__label">
-										<input type="radio" name="age" id="50+" class="radio__input"/><span class="radio__text">> 50</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Образование:</p>
-								<div class="radio radio--lower-case">
-									<label for="secindary" class="radio__label">
-										<input type="radio" name="education" id="secindary" class="radio__input"/><span class="radio__text">Среднее</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="technical" class="radio__label">
-										<input type="radio" name="education" id="technical" class="radio__input"/><span class="radio__text">Техническое</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="higher" class="radio__label">
-										<input type="radio" name="education" id="higher" class="radio__input"/><span class="radio__text">Высшее</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="degree" class="radio__label">
-										<input type="radio" name="education" id="degree" class="radio__input"/><span class="radio__text">Ученая степень</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Статус:</p>
-								<div class="radio radio--lower-case">
-									<label for="no" class="radio__label">
-										<input type="radio" name="married" id="no" class="radio__input"/><span class="radio__text">Холост / не замужем</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="yeas" class="radio__label">
-										<input type="radio" name="married" id="yeas" class="radio__input"/><span class="radio__text">Женат / замужем</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Карьера:</p>
-								<div class="radio radio--lower-case">
-									<label for="staff" class="radio__label">
-										<input type="radio" name="career" id="staff" class="radio__input"/><span class="radio__text">Штатный сотрудник</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="chief" class="radio__label">
-										<input type="radio" name="career" id="chief" class="radio__input"/><span class="radio__text">Руководитель среднего звена</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="masterChief" class="radio__label">
-										<input type="radio" name="career" id="masterChief" class="radio__input"/><span class="radio__text">Топ-менеджер</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="businessman" class="radio__label">
-										<input type="radio" name="career" id="businessman" class="radio__input"/><span class="radio__text">Предприниматель</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="freelancer" class="radio__label">
-										<input type="radio" name="career" id="freelancer" class="radio__input"/><span class="radio__text">Фрилансер</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="idler" class="radio__label">
-										<input type="radio" name="career" id="idler" class="radio__input"/><span class="radio__text">Безработный</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Религия:</p>
-								<div class="radio radio--lower-case">
-									<label for="christianity" class="radio__label">
-										<input type="radio" name="religion" id="christianity" class="radio__input"/><span class="radio__text">Христианство</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="islam" class="radio__label">
-										<input type="radio" name="religion" id="islam" class="radio__input"/><span class="radio__text">Ислам</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="judaism" class="radio__label">
-										<input type="radio" name="religion" id="judaism" class="radio__input"/><span class="radio__text">Иудаизм</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="buddhism" class="radio__label">
-										<input type="radio" name="religion" id="buddhism" class="radio__input"/><span class="radio__text">Буддизм</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="hinduism" class="radio__label">
-										<input type="radio" name="religion" id="hinduism" class="radio__input"/><span class="radio__text">Индуизм</span>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="other" class="radio__label">
-										<input type="radio" name="religion" id="other" class="radio__input"/><span class="radio__text">Другое</span>
-									</label>
-								</div>
-							</div>
-							<div class="profile-sets__line">
-								<p class="profile-sets__title">Политика:</p>
-								<div class="radio radio--party">
-									<label for="apple" class="radio__label">
-										<input type="radio" name="politics" id="apple" class="radio__input"/><img src="/img/gang__img--apple.png" alt="Яблоко" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="er" class="radio__label">
-										<input type="radio" name="politics" id="er" class="radio__input"/><img src="/img/gang__img--er.png" alt="Единая Россия" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="kprf" class="radio__label">
-										<input type="radio" name="politics" id="kprf" class="radio__input"/><img src="/img/gang__img--kprf.png" alt="КПРФ" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="ldpr" class="radio__label">
-										<input type="radio" name="politics" id="ldpr" class="radio__input"/><img src="/img/gang__img--ldpr.png" alt="ЛДПР" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="pd" class="radio__label">
-										<input type="radio" name="politics" id="pd" class="radio__input"/><img src="/img/gang__img--pd.png" alt="Правое дело" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="pr" class="radio__label">
-										<input type="radio" name="politics" id="pr" class="radio__input"/><img src="/img/gang__img--pr.png" alt="Патриоты России" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--party">
-									<label for="sr" class="radio__label">
-										<input type="radio" name="politics" id="sr" class="radio__input"/><img src="/img/gang__img--sr.png" alt="Справедоивая Россия" class="radio__img"/>
-									</label>
-								</div>
-								<div class="radio radio--lower-case">
-									<label for="other" class="radio__label">
-										<input type="radio" name="politics" id="other" class="radio__input"/><span class="radio__text">Другое</span>
-									</label>
-								</div>
-							</div>
-							<div class="btn-submit btn-submit--reg">
-								<input type="submit" value="Подтвердить" class="btn-submit__input"/>
-							</div>
-						</form>
 					</div>
 				</div>
 			</div>

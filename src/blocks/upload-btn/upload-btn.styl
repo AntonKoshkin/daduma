@@ -16,6 +16,30 @@
 		right 5px
 		border-radius 50%
 		background-color pink
+		display none
+	
+	&__label
+		cursor pointer
+		position relative
+		text-align center
+	
+	&:not(&--profile-sets) &__label
+		display block
+		background-color rgba(black, .5)
+		padding 12px 0
+		
+		&:before
+			bicon(upload.image, 16)
+			
+			left 20px
+			display inline-block
+			content ''
+			margin-right 16px
+			vertical-align middle
+	
+	&--profile-sets &__label
+		position absolute
+		size 100%
 		
 		&:before
 		&:after
@@ -30,25 +54,6 @@
 		&:after
 			width 10px
 			height 2px
-	
-	&__label
-		cursor pointer
-		padding 12px 0
-		position relative
-		text-align center
-	
-	&:not(&--profile-sets) &__label
-		display block
-		background-color rgba(black, .5)
-		
-		&:before
-			bicon(upload.image, 16)
-			
-			left 20px
-			display inline-block
-			content ''
-			margin-right 16px
-			vertical-align middle
 
 	&__input
 		display none
