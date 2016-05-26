@@ -1,0 +1,17 @@
+extends ../blocks/template/template
+
+block page_id
+	-var page_id		= 'unsubscribed'
+	-var withKlichko	= false
+	-var qoute			= false
+
+block title
+	title Профиль
+
+block content
+	+main(class='main--unsubscribed')
+		.page__content
+			+notPage(mods=['unsubscribed'])
+				+npTitle('Вы отписались от почтовой рассылки DaDuma')
+				+npText('Вы можете настроить нотификации на странице ')
+					+npLink('/profile.html', 'профиля')

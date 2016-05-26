@@ -1,13 +1,16 @@
 .select2-selection
 	position relative
 	line-height 1em
-	font-size 0
+	// font-size 0
 	
 	// &:before
 	// 	@extend $pseudo
 	// 	triangle down 3px 2px black
 	// 	top 20px
 	// 	right 10px
+	
+	&__clear
+		font-size 0
 		
 	&__choice
 		@extend $small-text
@@ -81,3 +84,27 @@
 	.select2-results
 		> .select2-results__options
 			max-height 123px
+
+.select
+	&--city
+		.select2-selection
+			&__clear
+				font-size 0
+			
+			&__rendered
+				padding-top 0
+				padding-bottom 0
+				font-size 14px
+
+.extended-search
+	.select2-selection
+		&__choice
+			slow background-color
+			
+			background-color #f9
+			border none
+			padding 4px 5px
+			margin 2px
+			
+			&:hover
+				background-color #eb

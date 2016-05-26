@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Профиль</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta property="og:image" content="http://zak.k-dev.ru/img/logo.jpg"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png"/>
+		<meta name="theme-color" content="#4b5a6e"/>
+		<meta name="application-name" content="Сайт про законы"/>
+		<meta name="msapplication-tooltip" content="Сайт в законе"/>
+		<meta name="msapplication-starturl" content="./"/>
+		<meta name="msapplication-navbutton-color" content="#4b5a6e"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="format-detection" content="telephone=no"/><!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<script src="js/flexbox-polifill.js"></script><script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';};if(top.VBArray){document.documentElement.className+=' ie11';}</script>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:400,300,500,600&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	</head>
+	<body class="page">
+		<header class="header">
+			<div class="header__wrapper">
+				<button type="button" class="burger"><span class="burger__strip"></span><span class="burger__strip"></span><span class="burger__strip"></span></button><a href="/" class="logo logo--header">
+					<p class="logo__text">Народная база законов</p></a>
+				<nav class="navigation">
+					<div class="navigation__bg"></div>
+					<ul class="navigation__list">
+						<li class="navigation__item navigation__item--openable"><span class="navigation__link">Законы</span>
+							<div class="navigation__subnav">
+								<ul class="navigation__sublist">
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Все</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Популярные</a></li>
+									<li class="navigation__subitem"><a href="/laws.html" class="navigation__sublink">Новые</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation__item"><a href="/news.html" class="navigation__link">Новости</a></li>
+						<li class="navigation__item"><a href="/users.html" class="navigation__link">Пользователи</a></li>
+						<li class="navigation__item">
+							<button type="button" data-modal-link="#feedback" class="navigation__link navigation__link--btn">Обратная связь</button>
+						</li>
+					</ul>
+				</nav>
+				<button type="button" data-modal-link="#login" class="btn btn--person"><span class="btn__text">Войти / Зарегистрироваться</span></button>
+			</div>
+		</header>
+		<main class="main main--404">
+			<div class="page__content">
+				<div class="not-page">
+					<div class="not-page__face"><img src="/img/404.png" alt="404" class="not-page__img"/></div>
+					<h1 class="not-page__title">Поздравляем!</h1>
+					<p class="not-page__text">Вы нашли нашу секретную страницу. Никому об этом не говорите.<br>Как налюбуетесь - вернитесь на <a href="/index.html" class="not-page__link">главную</a>.</p>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__wrapper"><a href="/" class="logo logo--footer">
+					<p class="logo__text">Народная база законов</p></a>
+				<div class="social"><a target="_blank" href="http://vk.com/" class="social__link social__link--vk">Мы в VKontakte</a><a target="_blank" href="http://facebook.com/" class="social__link social__link--fb">Мы в Facebook</a>
+				</div>
+			</div>
+		</footer>
+		<div class="page__modals">
+			<div id="login" class="modal">
+				<div class="modal__bg"></div>
+				<div class="login">
+					<button type="button" class="close"></button>
+					<p class="login__title">Личный кабинет</p>
+					<div class="login__body">
+						<div class="soc-enter"><a href="#" class="soc-enter__item soc-enter__item--facebook"><span class="soc-enter__text">Войти через Facebook</span></a><a href="#" class="soc-enter__item soc-enter__item--twitter"><span class="soc-enter__text">Twitter</span></a><a href="#" class="soc-enter__item soc-enter__item--vkontakte"><span class="soc-enter__text">Вконтакте</span></a><a href="#" class="soc-enter__item soc-enter__item--google-plus"><span class="soc-enter__text">Google plus</span></a><a href="#" class="soc-enter__item soc-enter__item--classmates"><span class="soc-enter__text">Одноклассники</span></a>
+						</div>
+						<p class="login__tabs">
+							<button type="button" data-binded-form="#userLogin" class="login__btn login__btn--active">Войти</button><span class="login__or">или</span>
+							<button type="button" data-binded-form="#userReg" class="login__btn">Зарегистрироваться</button>
+						</p>
+						<div class="login__forms">
+							<form id="userLogin" action="" name="userLogin" class="form form--show form--login">
+								<!-- ошибки включаются добавлением модификатора с названием элемента ошибки к .input-->
+								<!-- то есть если к .input добавить input--no-login, то появится ошибка "введите логин" и тд.-->
+								<!-- ошибки на этом поле-->
+								<!-- input--no-login-->
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
+									</div>
+								</div>
+								<!-- ошибки на этом поле-->
+								<!-- input--no-pass-->
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="off" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--no-margin">
+									<label for="remember" class="checkbox__label">
+										<input type="checkbox" name="remember" id="remember" class="checkbox__input"/><span class="checkbox__text">Запомнить меня</span>
+									</label>
+								</div>
+								<button type="button" data-modal-link="#forgot" class="form__forgot">Забыли пароль?</button>
+								<div class="btn-submit btn-submit--enter">
+									<input type="submit" value="Войти" class="btn-submit__input"/>
+								</div>
+							</form>
+							<form id="userReg" action="" name="userReg" class="form form--login">
+								<!-- ошибки на этом поле-->
+								<!-- input--no-login-->
+								<!-- input--reged-login-->
+								<!-- input--short-login-->
+								<div class="input">
+									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-login">Введите логин</p>
+										<p class="input__error input__error--reged-login">Логин занят</p>
+										<p class="input__error input__error--short-login">Логин должен быть длиннее 3 символов</p>
+									</div>
+								</div>
+								<div class="input">
+									<input type="email" placeholder="Введите e-mail" autocomplete="on" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<!-- ошибки на этом поле-->
+								<!-- input--no-pass-->
+								<!-- input--short-pass-->
+								<div class="input input--margined">
+									<input type="password" placeholder="Введите пароль" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--short-pass">Пароль не должен быть короче 6 символов</p>
+									</div>
+								</div>
+								<div class="recapcha"></div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Зарегистрироваться" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="forgot" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Забыли пароль?</p>
+					<div class="feedback__body">
+						<form action="" name="forgotPass" class="form">
+							<p class="form__text">Не может вспомнить пароль для входа в свой аккаунт?<br/>Введите Ваш e-mail в форму ниже, и мы отправим его Вам на почту.</p>
+							<!-- ошибки на этом поле-->
+							<!-- input--no-email-->
+							<!-- input--not-reged-email-->
+							<!-- input--wrong-mail-->
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--not-reged-mail">Данный e-mail не зарегистрирован</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--ask-pass">
+								<input type="submit" value="Отправьте мне пароль!" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="feedback" class="modal">
+				<div class="modal__bg"></div>
+				<div class="feedback">
+					<button type="button" class="close"></button>
+					<p class="feedback__title">Обратная связь</p>
+					<div class="feedback__body">
+						<form action="" name="userFeedback" class="form">
+							<div class="input">
+								<input type="email" placeholder="Введите e-mail" autocomplete="off" name="email" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--no-mail">Введите e-mail</p>
+									<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--feedback">
+								<input type="submit" value="Отправить сообщение" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="voteCounted" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Спасибо, Ваш голос учтен!</p>
+						<form action="" name="voting" class="form">
+							<div class="rate">
+								<div class="rate__content">
+									<p class="rate__title">Оцените закон:</p>
+									<div class="rate__stars">
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="-1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input checked="" type="radio" name="userRate" value="0" class="rate__input"/><span class="rate__value">0</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="1" class="rate__input"/><span class="rate__value">1</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="2" class="rate__input"/><span class="rate__value">2</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="3" class="rate__input"/><span class="rate__value">3</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="4" class="rate__input"/><span class="rate__value">4</span>
+										</label>
+										<label class="rate__label">
+											<input type="radio" name="userRate" value="5" class="rate__input"/><span class="rate__value">5</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="textarea textarea--modal">
+								<label class="textarea__label">Оставьте комментарий:</label>
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestPlus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить плюс:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="suggestMinus" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Предложить минус:</p>
+						<form action="" name="comment" class="form">
+							<div class="textarea textarea--modal">
+								<textarea name="comment" placeholder="Введите текст комментария" class="textarea__input"></textarea>
+							</div>
+							<div class="btn-submit btn-submit--modal">
+								<input type="submit" value="Оставить комментарий" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="confirmEmail" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal white-modal--left-title">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Подтверждение e-mail адреса</p>
+						<p class="white-modal__text">Чтобы подтвердить регистрацию, пожалуйста, введите проверочный код, который пришел Вам на e-mail</p>
+						<form action="" name="confirmEmail" class="form form--confirm">
+							<!-- ошибки на этом поле-->
+							<!-- input--wrong-code-->
+							<div class="input">
+								<input type="text" autocomplete="off" name="mail" class="input__input"/>
+								<div class="input__errors">
+									<p class="input__error input__error--wrong-code">Код введен неверно</p>
+								</div>
+							</div>
+							<div class="btn-submit btn-submit--confirm">
+								<input type="submit" value="Подтвердить e-mail" class="btn-submit__input"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="uploadPhoto" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Загрузка новой фотографии</p>
+						<p class="white-modal__text">Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию. Вы можете загрузить изображение в формате JPG, JPEG или PNG.</p>
+						<div class="loader"></div>
+					</div>
+				</div>
+			</div>
+			<div id="crop" class="modal modal--crop">
+				<div class="modal__bg"></div>
+				<div class="white-modal white-modal--crop white-modal--left-title">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Обрезка фотографии</p>
+						<p class="white-modal__text">Выбранная область будет показываться на Вашей странице. Если изображение ориентировано неправильно, фотографию можно повернуть.</p>
+						<div class="crop">
+							<div class="crop__area"></div>
+							<div class="crop__btns">
+								<button type="button" id="rotateWise" data-rotate="90deg" class="crop__rotate crop__rotate--wise"></button>
+								<button type="button" id="rotateCounterWise" data-rotate="-90deg" class="crop__rotate crop__rotate--counter-wise"></button>
+							</div>
+						</div>
+						<form action="" name="crop" class="form">
+							<div class="input input--no-margin">
+								<input type="hidden" autocomplete="off" class="input__input"/>
+							</div>
+							<div class="button button--center">
+								<button type="button" id="uploadCrop" class="button__btn">Загрузить изображение</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="wrongFile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Неверный формат фото</p>
+						<p class="white-modal__text">Вы пытаетесь загрузить фото неверного расширения (или вообще не фото). Допустимые форматы - JPG, JPEG, PNG</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="emailChanged" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">E-mail подтвержден</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tooBigFile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="white-modal">
+					<div class="white-modal__content">
+						<button type="button" class="close"></button>
+						<p class="white-modal__title">Слишком большое фото</p>
+						<p class="white-modal__text">Вы пытаетесь загрузить слишком большую фотографию. Размер фото не должен превышать 5МБ.</p>
+						<div class="button button--center">
+							<button type="button" data-act="closeModal" class="button__btn">Ок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="editAccount" class="modal">
+				<div class="modal__bg"></div>
+				<div class="settings">
+					<div class="settings__tabs">
+						<div class="settings__tab settings__tab--active settings__tab--account"><span class="settings__tab-name">Настройки аккаунта</span></div>
+						<div class="settings__tab settings__tab--security"><span class="settings__tab-name">Настройки безопасности</span></div>
+						<div class="settings__tab settings__tab--keyholder"><span class="settings__tab-name">Управление ключами</span></div>
+						<div class="settings__tab settings__tab--agreement"><span class="settings__tab-name">Лицензионное соглашение</span></div>
+						<div class="settings__tab settings__tab--delete"><span class="settings__tab-name">Удаление аккаунта</span></div>
+					</div>
+					<div class="settings__contents">
+						<button type="button" class="close close--settings"></button>
+						<div class="settings__content settings__content--show">
+							<h3 class="page__title page__title--h3 page__title--settings">Настройки аккаунта</h3>
+							<form action="" name="accountSettings" class="form">
+								<p class="settings__text settings__text--fat">E-mail</p>
+								<p class="settings__text settings__text--margined">Если необходимо, укажите новую электронную почту</p>
+								<div class="input input--settings input--s-margined">
+									<input type="email" autocomplete="on" name="email" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-mail">Введите e-mail</p>
+										<p class="input__error input__error--reged-mail">Данный e-mail уже зарегистрирован</p>
+										<p class="input__error input__error--wrong-mail">Введенный e-mail имеет неверный формат</p>
+									</div>
+								</div>
+								<div class="checkbox checkbox--s-margined">
+									<label for="noEmailNotification" class="checkbox__label">
+										<input type="checkbox" name="noEmailNotification" id="noEmailNotification" class="checkbox__input"/><span class="checkbox__text">Отключить уведомления по e-mail</span>
+									</label>
+								</div>
+								<p class="settings__text settings__text--fat">Текущий пароль</p>
+								<p class="settings__text settings__text--margined">Чтобы изменения вступили в силу, введите текущий пароль</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg btn-submit--lefted">
+									<input type="submit" value="Применить изменения" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Настройки безопасности</h3>
+							<form action="" name="securitySettings" class="form">
+								<h3 class="page__title page__title--h3">Изменение пароля</h3>
+								<p class="settings__text settings__text--fat">Текущий пароль</p>
+								<p class="settings__text settings__text--margined">Чтобы изменения вступили в силу, введите текущий пароль</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<p class="settings__text settings__text--fat">Новый пароль</p>
+								<p class="settings__text settings__text--margined">Пароль не должен быть короче 8 символов</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<p class="settings__text settings__text--fat settings__text--margined">Новый пароль еще раз</p>
+								<div class="input input--settings input--s-margined">
+									<input type="password" autocomplete="on" name="password" class="input__input"/>
+									<div class="input__errors">
+										<p class="input__error input__error--no-pass">Введите пароль</p>
+										<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg btn-submit--lefted">
+									<input type="submit" value="Применить изменения" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Ключница</h3>
+							<div class="keyholder">
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вконтакте</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face"><img src="/img/keyholder__img--img.png" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+								<div class="keyholder__item">
+									<h3 class="page__title page__title--h3 page__title--keyholder">Вфейсбуке</h3>
+									<div class="keyholder__content">
+										<div class="keyholder__face keyholder__face--no-photo"><img src="" alt="" class="keyholder__img"/></div>
+										<p class="keyholder__name">Оболбос Оболбосов</p>
+										<div class="button button--keyholder">
+											<button type="button" data-act="unlink" class="button__btn">Отключить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<h3 class="page__title page__title--h3">Привязать аккаунт</h3>
+							<p class="settings__text settings__text--margined">Привязка учетных записей социальных сетей (можно сразу нескольких) к аккаунту позволит Вам входить в проект в один клик.</p>
+							<div class="social"><a target="_blank" href="#" class="social__link social__link--vk social__link--linked">Vkontakte</a><a target="_blank" href="#" class="social__link social__link--fb social__link--linked">Facebook</a><a target="_blank" href="#" class="social__link social__link--tw">Twitter</a><a target="_blank" href="#" class="social__link social__link--gp">Google Plus</a><a target="_blank" href="#" class="social__link social__link--gh">GitHub</a><a target="_blank" href="#" class="social__link social__link--ms">Microsoft</a>
+							</div>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Лицензионное соглашение</h3>
+							<div class="scrl-area">
+								<div class="scrl-area__canvas text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>Какой-то заголовок</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>1. Можно с цифрой</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<h3>1. Можно с цифрой</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem deleniti ipsa quia quod neque porro, eaque quisquam culpa commodi dolores.</p>
+								</div>
+							</div>
+						</div>
+						<div class="settings__content">
+							<h3 class="page__title page__title--h3 page__title--settings">Удаление аккаунта</h3>
+							<h3 class="page__title page__title--h3">Вы действительно хотите удалить аккаунт?</h3>
+							<div class="button button--keyholder button--margined">
+								<button type="button" data-open-hidden="confirmDelete" class="button__btn">Удалить аккаунт</button>
+							</div>
+							<div id="confirmDelete" class="hidden-area">
+								<div class="hidden-area__content">
+									<form action="" name="confirmDelete" class="form">
+										<p class="settings__text settings__text--margined">Чтобы подтвердить удаление аккаунта введите текущий пароль</p>
+										<div class="input input--settings input--s-margined">
+											<input type="password" autocomplete="off" name="password" class="input__input"/>
+											<div class="input__errors">
+												<p class="input__error input__error--no-pass">Введите пароль</p>
+												<p class="input__error input__error--wrong-pass">Неверный пароль</p>
+											</div>
+										</div>
+										<div class="btn-submit btn-submit--reg btn-submit--lefted">
+											<input type="submit" value="Подтвердить удаление" class="btn-submit__input"/>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="editProfile" class="modal">
+				<div class="modal__bg"></div>
+				<div class="profile-sets">
+					<button type="button" class="close"></button>
+					<div class="profile-sets__content">
+						<div class="profile-sets__head">
+							<!-- если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo-->
+							<!-- либо просто в срц фото втыкать заглушку-->
+							<div class="profile-sets__face"><img src="/img/profile-sets__img--avatar.jpg" alt="" class="profile-sets__img"/><img src="/img/profile-sets__img.png" alt="" class="profile-sets__no-img"/>
+								<div class="upload-btn upload-btn--profile-sets">
+									<label ng-show="" class="upload-btn__label">
+										<input type="file" accept="image/jpg, image/jpeg, image/png" id="upload" ng-click="" class="upload-btn__input"/><span class="upload-btn__text">Загрузить новую фотографию</span>
+									</label>
+								</div>
+							</div>
+							<p class="profile-sets__name">Obolduy</p>
+						</div>
+						<div class="profile-sets__body">
+							<form action="" name="profileSets" class="form">
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--city">Город:</p>
+									<div class="profile-sets__variants">
+										<div class="select select--city">
+											<select id="profileCity" name="city" style="width:50%" class="select__select">
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--gender">Пол:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="male" class="radio__label">
+												<input type="radio" name="gender" id="male" class="radio__input"/><span class="radio__text">Мужской</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="female" class="radio__label">
+												<input type="radio" name="gender" id="female" class="radio__input"/><span class="radio__text">Женский</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--age">Возраст:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="17-" class="radio__label">
+												<input type="radio" name="age" id="17-" class="radio__input"/><span class="radio__text">< 17</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="18-30" class="radio__label">
+												<input type="radio" name="age" id="18-30" class="radio__input"/><span class="radio__text">18 - 30</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="30-50" class="radio__label">
+												<input type="radio" name="age" id="30-50" class="radio__input"/><span class="radio__text">30 - 50</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="50+" class="radio__label">
+												<input type="radio" name="age" id="50+" class="radio__input"/><span class="radio__text">> 50</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--edu">Образование:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="secindary" class="radio__label">
+												<input type="radio" name="education" id="secindary" class="radio__input"/><span class="radio__text">Среднее</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="technical" class="radio__label">
+												<input type="radio" name="education" id="technical" class="radio__input"/><span class="radio__text">Техническое</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="higher" class="radio__label">
+												<input type="radio" name="education" id="higher" class="radio__input"/><span class="radio__text">Высшее</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="degree" class="radio__label">
+												<input type="radio" name="education" id="degree" class="radio__input"/><span class="radio__text">Ученая степень</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--status">Статус:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="no" class="radio__label">
+												<input type="radio" name="married" id="no" class="radio__input"/><span class="radio__text">Холост / не замужем</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="yeas" class="radio__label">
+												<input type="radio" name="married" id="yeas" class="radio__input"/><span class="radio__text">Женат / замужем</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--career">Карьера:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="staff" class="radio__label">
+												<input type="radio" name="career" id="staff" class="radio__input"/><span class="radio__text">Штатный сотрудник</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="chief" class="radio__label">
+												<input type="radio" name="career" id="chief" class="radio__input"/><span class="radio__text">Руководитель среднего звена</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="masterChief" class="radio__label">
+												<input type="radio" name="career" id="masterChief" class="radio__input"/><span class="radio__text">Топ-менеджер</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="businessman" class="radio__label">
+												<input type="radio" name="career" id="businessman" class="radio__input"/><span class="radio__text">Предприниматель</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="freelancer" class="radio__label">
+												<input type="radio" name="career" id="freelancer" class="radio__input"/><span class="radio__text">Фрилансер</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="idler" class="radio__label">
+												<input type="radio" name="career" id="idler" class="radio__input"/><span class="radio__text">Безработный</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--religion">Религия:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--lower-case">
+											<label for="christianity" class="radio__label">
+												<input type="radio" name="religion" id="christianity" class="radio__input"/><span class="radio__text">Христианство</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="islam" class="radio__label">
+												<input type="radio" name="religion" id="islam" class="radio__input"/><span class="radio__text">Ислам</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="judaism" class="radio__label">
+												<input type="radio" name="religion" id="judaism" class="radio__input"/><span class="radio__text">Иудаизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="buddhism" class="radio__label">
+												<input type="radio" name="religion" id="buddhism" class="radio__input"/><span class="radio__text">Буддизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="hinduism" class="radio__label">
+												<input type="radio" name="religion" id="hinduism" class="radio__input"/><span class="radio__text">Индуизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="otherRel" class="radio__label">
+												<input type="radio" name="religion" id="otherRel" class="radio__input"/><span class="radio__text">Другое</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="profile-sets__line">
+									<p class="profile-sets__title profile-sets__title--politics">Политика:</p>
+									<div class="profile-sets__variants">
+										<div class="radio radio--party">
+											<label for="apple" class="radio__label">
+												<input type="radio" name="politics" id="apple" class="radio__input"/><img src="/img/gang__img--apple.png" alt="Яблоко" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="er" class="radio__label">
+												<input type="radio" name="politics" id="er" class="radio__input"/><img src="/img/gang__img--er.png" alt="Единая Россия" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="kprf" class="radio__label">
+												<input type="radio" name="politics" id="kprf" class="radio__input"/><img src="/img/gang__img--kprf.png" alt="КПРФ" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="ldpr" class="radio__label">
+												<input type="radio" name="politics" id="ldpr" class="radio__input"/><img src="/img/gang__img--ldpr.png" alt="ЛДПР" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="pd" class="radio__label">
+												<input type="radio" name="politics" id="pd" class="radio__input"/><img src="/img/gang__img--pd.png" alt="Правое дело" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="pr" class="radio__label">
+												<input type="radio" name="politics" id="pr" class="radio__input"/><img src="/img/gang__img--pr.png" alt="Патриоты России" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--party">
+											<label for="sr" class="radio__label">
+												<input type="radio" name="politics" id="sr" class="radio__input"/><img src="/img/gang__img--sr.png" alt="Справедливая Россия" class="radio__img"/>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="otherPol" class="radio__label">
+												<input type="radio" name="politics" id="otherPol" class="radio__input"/><span class="radio__text">Другое</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="btn-submit btn-submit--reg">
+									<input type="submit" value="Подтвердить" class="btn-submit__input"/>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="commenterInfo" class="modal">
+				<div class="modal__bg"></div>
+				<div class="commenter">
+					<button type="button" class="close"></button>
+					<div class="commenter__content">
+						<div class="commenter__head">
+							<!-- если фото юзер еще не загрузил, то можно к profile-sets__face добавить profile-sets__face--no-photo-->
+							<!-- либо просто в срц фото втыкать заглушку-->
+							<div class="commenter__face"><img src="/img/commenter__img--avatar.jpg" alt="" class="commenter__img"/><img src="/img/commenter__img.png" alt="" class="commenter__no-img"/></div>
+							<p class="commenter__name">Obolduy</p>
+						</div>
+						<div class="commenter__body">
+							<div class="commenter__half">
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--city">Город:</p>
+									<p class="commenter__text">Санкт-Петербург</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--gender">Пол:</p>
+									<p class="commenter__text commenter__text--lower">-</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--age">Возраст:</p>
+									<p class="commenter__text commenter__text--lower">< 17</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--edu">Образование:</p>
+									<p class="commenter__text commenter__text--lower">-</p>
+								</div>
+							</div>
+							<div class="commenter__half">
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--status">Статус:</p>
+									<p class="commenter__text commenter__text--lower">Холост / не замужем</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--career">Карьера:</p>
+									<p class="commenter__text commenter__text--lower">Безработный</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--religion">Религия:</p>
+									<p class="commenter__text commenter__text--lower">Другое</p>
+								</div>
+								<div class="commenter__line">
+									<p class="commenter__title commenter__title--politics">Политика:</p><img src="/img/gang__img--ldpr.png" class="commenter__party"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="error">
+			<p class="error__text">Медведеву не нравится, когда в него тыкают!</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

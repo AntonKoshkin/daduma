@@ -1,0 +1,18 @@
+extends ../blocks/template/template
+
+block page_id
+	-var page_id		= '404'
+	-var withKlichko	= false
+	-var qoute			= false
+
+block title
+	title Профиль
+
+block content
+	+main(class='main--404')
+		.page__content
+			+notPage
+				+npImg('/img/404.png')
+				+npTitle('Поздравляем!')
+				+npText('Вы нашли нашу секретную страницу. Никому об этом не говорите.<br>Как налюбуетесь - вернитесь на ')
+					+npLink('/index.html', 'главную')

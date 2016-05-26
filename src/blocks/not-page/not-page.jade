@@ -1,0 +1,28 @@
+mixin notPage
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'not-page--' + mod
+
+	.not-page
+		if block
+			block
+
+mixin npTitle(text)
+	h1.not-page__title=text
+
+mixin npText(text)
+	p.not-page__text!=text
+		if block
+			block
+		| .
+
+mixin npLink(link, text)
+	a.not-page__link(
+		href=link)=text
+
+mixin npImg(source)
+	.not-page__face
+		img.not-page__img(
+			src=source
+			alt='404')
