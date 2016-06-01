@@ -2,8 +2,7 @@ mixin comment(img, name, date, datetime, likes, text)
 	.comment
 		// если фото нет, то добавить модификатор .comment__face--no-photo
 		if attributes['no-photo'] === ''
-			.comment__face.comment__face--no-photo(
-				data-modal-link='#commenterInfo')
+			.comment__face.comment__face--no-photo
 				img.comment__img(
 					src!=img
 					alt='')
@@ -13,8 +12,7 @@ mixin comment(img, name, date, datetime, likes, text)
 				else
 					span.comment__like=likes
 		else
-			.comment__face(
-				data-modal-link='#commenterInfo')
+			.comment__face
 				img.comment__img(
 					src!=img
 					alt='')

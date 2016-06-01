@@ -15704,12 +15704,6 @@ jQuery(document).ready(function($) {
 	var windWidth = $(window).outerWidth(),
 		resizedWidth = $(window).outerWidth(),
 		breakpoint = 962;
-
-	// $(window).resize(function(event) {
-	// 	$('.comment__letter').removeClass('comment__letter--expand');
-	// 	$('.comment__text-wrapper').trigger('update');
-	// 	commentCollapse();
-	// });
 });
 
 
@@ -15737,8 +15731,6 @@ function commentCollapse() {
 				.next('.comment__more')
 				.hide();
 		}
-
-		// console.log($(el).triggerHandler('isTruncated'))
 	});
 }
 $(document).ready(function() {
