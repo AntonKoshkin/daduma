@@ -4,6 +4,7 @@ mixin comment(img, name, date, datetime, likes, text)
 		if attributes['no-photo'] === ''
 			.comment__face.comment__face--no-photo
 				img.comment__img(
+					data-modal-link='#commenterInfo'
 					src!=img
 					alt='')
 				// если коммент лайкнут, то у него есть класс comment__like--liked
@@ -14,6 +15,7 @@ mixin comment(img, name, date, datetime, likes, text)
 		else
 			.comment__face
 				img.comment__img(
+					data-modal-link='#commenterInfo'
 					src!=img
 					alt='')
 				// если коммент лайкнут, то у него есть класс comment__like--liked

@@ -1948,7 +1948,8 @@ textarea::-ms-clear {
   z-index: 0;
 }
 .color__numbers,
-.color__gray {
+.color__gray,
+.one-law__link {
   z-index: 1;
 }
 .navigation,
@@ -1965,8 +1966,7 @@ textarea::-ms-clear {
 .modal {
   z-index: 5;
 }
-.error,
-. {
+.error {
   z-index: 6;
 }
 @-webkit-keyframes fadeIn {
@@ -2374,6 +2374,10 @@ textarea::-ms-clear {
 }
 .owl-dot.active {
   background-color: #5ea4c5;
+}
+.owl-stage {
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 980px) {
   .owl-nav {
@@ -7530,21 +7534,25 @@ a.about-act__tab {
             flex-shrink: 1;
   }
   .profile__btn {
+    padding-left: 25px;
+    font-size: 0.875rem;
+
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
   }
-  .profile__btn--profile {
-    margin-right: 10px;
-    padding-left: 25px;
-    font-size: 0.875rem;
-  }
-  .profile__btn--profile:before {
+  .profile__btn:before {
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+  }
+  .profile__btn--profile {
+    margin-right: 10px;
   }
   .profile__btn--settings:hover:before {
     -webkit-animation: rotation 0.3s linear infinite;

@@ -97,17 +97,20 @@
 		
 		&__btn
 			flex-shrink 0
+			font-size .875rem
+			padding-left 25px
+
+			&:before
+				position absolute
+				left 0
+				top 0
+				bottom 0
+				margin-top auto
+				margin-bottom auto
+				transform translateY(-50%)
 			
 			&--profile
-				font-size .875rem
-				padding-left 25px
 				margin-right 10px
-
-				&:before
-					position absolute
-					left 0
-					top 50%
-					transform translateY(-50%)
 			
 			&--settings
 				&:hover
