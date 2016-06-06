@@ -52,8 +52,9 @@ module.exports = function() {
 				config.isDev,
 				maps.write('.'),
 				postCss([
-					cssNano(),
-					doiuse({browsers: 'last 2 versions'})
+					cssNano()
+					// ,
+					// doiuse({browsers: 'last 2 versions'})
 				])
 			))
 			.pipe(gulp.dest(config.pathTo.build.stylus))
