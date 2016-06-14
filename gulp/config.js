@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	isDev		: false,
+	isDev		: true,
 	pathTo	: {
 		src	: {
 			assets		: [
