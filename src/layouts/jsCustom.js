@@ -1,3 +1,8 @@
+if ((/iPhone/i.test(navigator.userAgent)) || (/iPad/i.test(navigator.userAgent)) || (/iPod/i.test(navigator.userAgent))) {
+	$('html').addClass('no-height');
+	$('.page').addClass('page--no-height');
+}
+
 //= ../blocks/template/scroll.js
 //= ../blocks/header/header.js
 //= ../blocks/burger/burger.js

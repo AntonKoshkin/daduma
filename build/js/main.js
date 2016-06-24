@@ -15268,6 +15268,11 @@ S2.define('jquery.select2',[
         module.exports = Croppie;    
     }
 }));
+if ((/iPhone/i.test(navigator.userAgent)) || (/iPad/i.test(navigator.userAgent)) || (/iPod/i.test(navigator.userAgent))) {
+	$('html').addClass('no-height');
+	$('.page').addClass('page--no-height');
+}
+
 $("a[href^='#']").on('click', function(e){
 	var
 		point			= $(this).attr('href'),
