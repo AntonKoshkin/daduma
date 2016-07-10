@@ -3,6 +3,52 @@
 	
 	&__btns
 		@extend $row, $just-between
-
+		
+		display none
+		
+		[data-voit-result='none'] &
+			display flex
+			
 	&__bar
 		width 100%
+	
+	&__text
+		width 100%
+		text-align center
+		
+		[data-voit-result='none'] &
+			display none
+		
+		p
+			text-align center
+			font-size .8125rem
+			margin-bottom 10px
+			display inline-block
+			padding 13px 20px
+			padding-left 49px
+			border-radius 3px
+			position relative
+	
+			&:before
+				@extend $pseudo-left
+				
+				left 9px
+			
+			[data-voit-result='for'] &
+				color green
+				border 2px solid green
+	
+				&:before
+					bicon(thumb.up.greenK, 22)
+			
+			[data-voit-result='against'] &
+				color pink
+				border 2px solid pink
+	
+				&:before
+					bicon(thumb.down.pinkK, 22)
+			
+			[data-voit-result='neutral'] &
+				color gray
+				border 2px solid gray
+				padding-left 20px

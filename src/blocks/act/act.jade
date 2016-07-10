@@ -38,30 +38,22 @@ mixin actDesc(title)
 					datetime='2016-03-18') 18.03.2016
 		if block
 			block
-
-		if !attributes.discuss
-			.act__download
-				// классы значков форматов:
-				// pdf - act__link--pdf
-				// doc - act__link--doc
-				// docx - act__link--docx
-				a.act__link.act__link--docx(
-					href='#'
-					download) Скачать полный текст закона
-				span.act__download-statistic (скачали 18 953 раз)
+			
+mixin actDownload
+	.act__download
+		// классы значков форматов:
+		// pdf - act__link--pdf
+		// doc - act__link--doc
+		// docx - act__link--docx
+		a.act__link.act__link--docx(
+			href='#'
+			download) Полный текст
+		//- span.act__download-statistic (скачали 18 953 раз)
 
 mixin actAutor(autors)
+	-var i = 0
 	p.act__autors
-		-var i = 0
 		each link, autor in autors
-			if i === 0
-				a.act__autor(
-					href=link
-					target='_blank')=autor
-				-i = i + 1
-			else
-				| , 
-				a.act__autor(
-					href=link
-					target='_blank')=autor
-				-i = i + 1
+			a.act__autor(
+				href=link
+				target='_blank')=autor

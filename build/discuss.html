@@ -76,11 +76,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="voiting">
+					<!-- data-voit-result='for' || 'against' || 'neutral' || 'none'-->
+					<div data-voit-result="for" class="voiting">
 						<div class="voiting__btns">
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-up"><span class="btn__text">Проголосовать &laquo;За&raquo;</span></button>
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-down"><span class="btn__text">Проголосовать &laquo;Против&raquo;</span></button>
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--neutral"><span class="btn__text">Воздержаться</span></button>
+						</div>
+						<div class="voiting__text">
+							<!-- после двоеточия может быть "за" || "против" || "воздержался"-->
+							<p>Ваш голос: За</p>
 						</div>
 						<div class="voiting__bar">
 							<div class="color-bar">
@@ -481,7 +486,7 @@
 							<div class="btn-submit btn-submit--confirm">
 								<input type="submit" value="Подтвердить e-mail" class="btn-submit__input"/>
 							</div>
-							<div class="btn-submit btn-submit--confirm">
+							<div class="btn-submit btn-submit--confirm btn-submit--one-more">
 								<input type="submit" value="Выслать повторно" class="btn-submit__input"/>
 							</div>
 						</form>
@@ -907,6 +912,11 @@
 										<div class="radio radio--lower-case">
 											<label for="hinduism" class="radio__label">
 												<input type="radio" name="religion" id="hinduism" class="radio__input"/><span class="radio__text">Индуизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
+											<label for="ateism" class="radio__label">
+												<input type="radio" name="religion" id="ateism" class="radio__input"/><span class="radio__text">Атеизм</span>
 											</label>
 										</div>
 										<div class="radio radio--lower-case">

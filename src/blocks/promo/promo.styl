@@ -1,7 +1,7 @@
 .promo
 	bgi url(../img/promo__bg.jpg)
 	
-	padding 24px 0 20px
+	padding 10px 0
 	background-position 30% 50%
 	
 	&__wrapper
@@ -25,26 +25,26 @@
 	
 	&__perk
 		text-align center
-		padding-top 61px
+		padding-top 40px
 		
 		&:before
 			@extend $pseudo-top
 		
 		&--toKnow
 			&:before
-				bicon(promo.toKnow, 51)
+				bicon(promo.toKnow, 30)
 
 		&--toSay
 			&:before
-				bicon(promo.toSay, 51)
+				bicon(promo.toSay, 30)
 
 		&--toCompare
 			&:before
-				bicon(promo.toCompare, 51)
+				bicon(promo.toCompare, 30)
 
 		&--toChoose
 			&:before
-				bicon(promo.toChoose, 51)
+				bicon(promo.toChoose, 30)
 
 	
 	&__perk-content
@@ -60,6 +60,7 @@
 		@extend $title-h3
 		
 		font-weight regular
+		display none
 	
 	&__text
 		@extend $very-small-text

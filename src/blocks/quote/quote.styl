@@ -16,15 +16,25 @@
 	
 	&__quote
 		background-color white
-		border 1px solid gray
-		border-radius 3px
-		padding 5px
+		border 1px solid black
+		border-radius 15px
+		padding 15px
 		opacity 0
 		position absolute
 		bottom 50%
 		transition .3s
+		cursor default
+		
+		&:after
+			@extend $pseudo
+			bicon(quoter.white, 30)
+			
+			position absolute
+			top 100%
+			left 55px
 	
 	&__face:hover + &__quote
+	&__quote:hover
 		opacity 1
 		bottom calc(100% + 10px)
 		
@@ -40,6 +50,7 @@
 		// transform rotate(0)
 		// transition .3s
 		transform-origin bottom center
+		width 100%
 	
 		&--tuda-suda
 			// transform rotate(5deg)

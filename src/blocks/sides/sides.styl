@@ -111,14 +111,23 @@
 			
 		&__title
 			cursor default
-			background-color #e
+			// background-color #e
 			margin-bottom 0
+			background-color gray-lighter
 			
 			&--invise
 				display inline
 			
 			&:last-child
-				background-color gray-lighter
+				// background-color gray-lighter
+				position relative
+				
+				&:before
+					@extend $pseudo-left
+					
+					width 1px
+					height 40px
+					background-color gray-suka-ebaniy-designer
 		
 		&__contents
 			padding 20px 0

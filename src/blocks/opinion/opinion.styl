@@ -39,7 +39,8 @@
 		transform translateY(-50%)
 
 	&__tab
-		size 30px
+		// size 30px
+		size 40px
 		
 		overflow hidden
 		display inline-block
@@ -118,6 +119,17 @@
 	&__name
 		font-style normal
 		font-weight medium
+	
+	&__main-title
+		@extend $title-very-big
+		
+		font-weight regular
+		margin-bottom 30px
+		text-align center
+		width 100%
+		
+		&.mb20
+			margin-bottom 20px
 
 	@media (min-width tablet)
 		&__item

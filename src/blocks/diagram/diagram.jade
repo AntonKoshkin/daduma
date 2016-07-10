@@ -15,6 +15,8 @@ mixin diagram(place, type, descr)
 				img.diagram__img(
 					class='diagram__img--'+type
 					src='img/diagram__pie.png')
+				if place === 'main' && (type === 'pie' || type === 'pie-deputy')
+					+dLega
 				if descr
 					p.diagram__description!=descr
 			.diagram__legends
@@ -27,6 +29,8 @@ mixin diagram(place, type, descr)
 				img.diagram__img(
 					class='diagram__img--'+type
 					src='img/diagram__bars.png')
+				if place === 'main' && (type === 'pie' || type === 'pie-deputy')
+					+dLega
 			if descr
 				p.diagram__description!=descr
 	else
@@ -36,6 +40,8 @@ mixin diagram(place, type, descr)
 				img.diagram__img(
 					class='diagram__img--'+type
 					src='img/diagram__pie.png')
+				if place === 'main' && (type === 'pie' || type === 'pie-deputy')
+					+dLega
 			if descr
 				p.diagram__description!=descr
 
@@ -44,3 +50,9 @@ mixin legItem(color, text, gray)
 		!=text
 		| , 
 		span.diagram__legend--gray!=gray
+
+mixin dLega
+	ul.diagram__lega
+		li.diagram__l-item.diagram__l-item--434348 За - 12
+		li.diagram__l-item.diagram__l-item--90ed7d Против - 24
+		li.diagram__l-item.diagram__l-item--f7a35c Воздержались - 1

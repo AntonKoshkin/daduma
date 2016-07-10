@@ -26,9 +26,10 @@ if ((/iPhone/i.test(navigator.userAgent)) || (/iPad/i.test(navigator.userAgent))
 //= ../blocks/select/select.js
 //= ../blocks/datepicker/datepicker.js
 //= ../blocks/range/range.js
-//= ../blocks/extended-search/extended-search.js
+// ../blocks/extended-search/extended-search.js
 //= ../blocks/crop/crop.js
 //= ../blocks/button/button.js
 //= ../blocks/settings/settings.js
 //= ../blocks/keyholder/keyholder.js
 //= ../blocks/variants/variants.js
+//= ../blocks/up-btn/up-btn.js

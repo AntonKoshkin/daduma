@@ -121,25 +121,25 @@
 								</div>
 							</div>
 						</div>
+						<div class="act__download">
+							<!-- классы значков форматов:-->
+							<!-- pdf - act__link--pdf-->
+							<!-- doc - act__link--doc-->
+							<!-- docx - act__link--docx--><a href="#" download="download" class="act__link act__link--docx">Полный текст</a>
+						</div>
 						<div class="act__params">
-							<div class="act__param">
-								<h4 class="small-title">Статус:
-								</h4>
-								<p class="main-text">первое чтение
-								</p>
-							</div>
 							<div class="act__param">
 								<h4 class="small-title">Авторы:
 								</h4>
 								<p class="main-text">
-									<p class="act__autors"><a href="doer.html" target="_blank" class="act__autor">В.И.Матвиенко</a>, <a href="/doer.html" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a>, <a href="/doer.html" target="_blank" class="act__autor">С.Е.Нарышкин</a>, <a href="/doer.html" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
+									<p class="act__autors"><a href="doer.html" target="_blank" class="act__autor">В.И.Матвиенко</a><a href="/doer.html" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a><a href="/doer.html" target="_blank" class="act__autor">С.Е.Нарышкин</a><a href="/doer.html" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
 									</p>
 								</p>
 							</div>
 							<div class="act__param">
-								<h4 class="small-title">Масштаб:
+								<h4 class="small-title">Статус:
 								</h4>
-								<p class="main-text">федеральный
+								<p class="main-text">первое чтение
 								</p>
 							</div>
 							<div class="act__param">
@@ -148,19 +148,24 @@
 								<p class="main-text">№ 999547-6
 								</p>
 							</div>
-						</div>
-						<div class="act__download">
-							<!-- классы значков форматов:-->
-							<!-- pdf - act__link--pdf-->
-							<!-- doc - act__link--doc-->
-							<!-- docx - act__link--docx--><a href="#" download="download" class="act__link act__link--docx">Скачать полный текст закона</a><span class="act__download-statistic">(скачали 18 953 раз)</span>
+							<div class="act__param">
+								<h4 class="small-title">Масштаб:
+								</h4>
+								<p class="main-text">федеральный
+								</p>
+							</div>
 						</div>
 					</div>
-					<div class="voiting">
+					<!-- data-voit-result='for' || 'against' || 'neutral' || 'none'-->
+					<div data-voit-result="for" class="voiting">
 						<div class="voiting__btns">
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-up"><span class="btn__text">Проголосовать &laquo;За&raquo;</span></button>
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--thumb-down"><span class="btn__text">Проголосовать &laquo;Против&raquo;</span></button>
 							<button type="button" data-modal-link="#voteCounted" class="btn btn--neutral"><span class="btn__text">Воздержаться</span></button>
+						</div>
+						<div class="voiting__text">
+							<!-- после двоеточия может быть "за" || "против" || "воздержался"-->
+							<p>Ваш голос: За</p>
 						</div>
 						<div class="voiting__bar">
 							<div class="color-bar">
@@ -194,7 +199,7 @@
 								<h4 class="small-title">Авторы:
 								</h4>
 								<p class="main-text">
-									<p class="act__autors"><a href="doer.html" target="_blank" class="act__autor">В.И.Матвиенко</a>, <a href="/doer.html" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a>, <a href="/doer.html" target="_blank" class="act__autor">С.Е.Нарышкин</a>, <a href="/doer.html" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
+									<p class="act__autors"><a href="doer.html" target="_blank" class="act__autor">В.И.Матвиенко</a><a href="/doer.html" target="_blank" class="act__autor">С.Н.Рябухин (члены СФ)</a><a href="/doer.html" target="_blank" class="act__autor">С.Е.Нарышкин</a><a href="/doer.html" target="_blank" class="act__autor">Н.Н.Гончар (депутаты ГД)</a>
 									</p>
 								</p>
 							</div>
@@ -230,28 +235,56 @@
 									<div class="about-act__diagram-pack">
 										<div class="about-act__diagrams">
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/>
+													<ul class="diagram__lega">
+														<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+														<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+														<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+													</ul>
+												</div>
 												<p class="diagram__description">Фракция Всероссийской политической партии "ЕДИНАЯ РОССИЯ"</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/>
+													<ul class="diagram__lega">
+														<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+														<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+														<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+													</ul>
+												</div>
 												<p class="diagram__description">Фракция Политической партии "Коммунистическая партия Российской Федерации"</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/>
+													<ul class="diagram__lega">
+														<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+														<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+														<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+													</ul>
+												</div>
 												<p class="diagram__description">Фракция Политической партии СПРАВЕДЛИВАЯ РОССИЯ</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/>
+													<ul class="diagram__lega">
+														<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+														<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+														<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+													</ul>
+												</div>
 												<p class="diagram__description">Фракция Политической партии "Либерально-демократическая партия России"</p>
 											</div>
 											<div class="diagram">
-												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/></div>
+												<div class="diagram__showing diagram__showing--pie-deputy"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie-deputy"/>
+													<ul class="diagram__lega">
+														<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+														<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+														<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+													</ul>
+												</div>
 												<p class="diagram__description">Общая статистика по всем партиям</p>
 											</div>
 										</div>
-									</div>
-									<div class="about-act__legends"><span class="about-act__legend about-act__legend--7cb5ec">Проголосовали За</span><span class="about-act__legend about-act__legend--434348">Проголосовали Против</span><span class="about-act__legend about-act__legend--90ed7d">Не голосовали</span><span class="about-act__legend about-act__legend--f7a35c">Воздержались</span>
 									</div>
 								</div>
 							</div>
@@ -288,11 +321,13 @@
 										<div class="about-act__diagrams">
 											<div class="about-act__type about-act__type--show">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/>
+													</div>
 													<p class="diagram__description">Мужчины</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/></div>
+													<div class="diagram__showing diagram__showing--bars"><img src="img/diagram__bars.png" class="diagram__img diagram__img--bars"/>
+													</div>
 													<p class="diagram__description">Женщины</p>
 												</div>
 												<div class="about-act__legends"><span class="about-act__legend about-act__legend--8085e9">Проголосовали За</span><span class="about-act__legend about-act__legend--f15c80">Проголосовали Против</span><span class="about-act__legend about-act__legend--e4d354">Воздержались</span>
@@ -300,11 +335,23 @@
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="about-act__legends"><span class="about-act__legend about-act__legend--2b908f">Проголосовали За</span><span class="about-act__legend about-act__legend--f45b5b">Проголосовали Против</span><span class="about-act__legend about-act__legend--91e8e1">Воздержались</span>
@@ -312,59 +359,33 @@
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
-												</div>
-											</div>
-											<div class="about-act__type">
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
-												</div>
-											</div>
-											<div class="about-act__type">
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
@@ -372,27 +393,43 @@
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
-													<p class="diagram__description">Описание категории</p>
-												</div>
-												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
@@ -400,31 +437,191 @@
 											</div>
 											<div class="about-act__type">
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+												</div>
+											</div>
+											<div class="about-act__type">
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="diagram">
-													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/></div>
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
+												</div>
+											</div>
+											<div class="about-act__type">
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
+													<p class="diagram__description">Описание категории</p>
+												</div>
+												<div class="diagram">
+													<div class="diagram__showing diagram__showing--pie"><img src="img/diagram__pie.png" class="diagram__img diagram__img--pie"/>
+														<ul class="diagram__lega">
+															<li class="diagram__l-item diagram__l-item--434348">За - 12</li>
+															<li class="diagram__l-item diagram__l-item--90ed7d">Против - 24</li>
+															<li class="diagram__l-item diagram__l-item--f7a35c">Воздержались - 1</li>
+														</ul>
+													</div>
 													<p class="diagram__description">Описание категории</p>
 												</div>
 												<div class="about-act__legends"><span class="about-act__legend about-act__legend--green">Проголосовали За</span><span class="about-act__legend about-act__legend--red">Проголосовали Против</span><span class="about-act__legend about-act__legend--gray">Воздержались</span>
@@ -498,8 +695,10 @@
 			<section class="sides">
 				<div class="sides__wrapper">
 					<div class="sides__titles">
-						<buttons type="button" class="sides__title sides__title--green sides__title--active">Плюсы<span class="sides__title--invise"> законопроекта</span></buttons>
-						<buttons type="button" class="sides__title sides__title--red">Минусы<span class="sides__title--invise"> законопроекта</span></buttons>
+						<buttons type="button" class="sides__title sides__title--green sides__title--active">Плюсы
+						</buttons>
+						<buttons type="button" class="sides__title sides__title--red">Минусы
+						</buttons>
 					</div>
 					<div class="sides__contents">
 						<div class="sides__content sides__content--show sides__content--green">
@@ -541,6 +740,7 @@
 					</div>
 				</div>
 			</section>
+			<h2 class="opinion__main-title">Мнения экспертов и известных людей по законопроекту</h2>
 			<!-- если отзыв негативный, то к .section добавляется класс .opinion__wrapper--red-->
 			<!-- если отзыв положительный, то к .section добавляется класс .opinion__wrapper--green-->
 			<!-- если отзыв нейтральный, то к .section добавляется класс .opinion__wrapper--gray-->
@@ -596,9 +796,9 @@
 					</div>
 				</div>
 			</section>
+			<h2 class="opinion__main-title mb20">Примеры применения закона и зарубежный опыт</h2>
 			<section class="section section--small-pad">
 				<div class="section__wrapper">
-					<h2 class="section__title">Примеры применения закона и зарубежный опыт:</h2>
 					<div class="usage">
 						<article class="usage__item">
 							<div class="usage__content">
@@ -630,6 +830,103 @@
 					</div>
 				</div>
 			</section>
+			<div class="page__laws--ex-laws">
+				<h2 class="opinion__main-title mb20">Вам могут быть интересны эти законы</h2>
+				<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+					<div class="one-law__header">
+						<div class="one-law__face"><img src="/img/one-law__banner--gibdd.png" alt="" class="one-law__img"/></div>
+						<div class="one-law__stats">
+							<div class="status-bar">
+								<!-- этому элементу ширина задается мануально-->
+								<div style="width: 13%" class="status-bar__bg"></div>
+								<div class="status-bar__text">Внесение в ГД
+								</div>
+							</div>
+							<div class="one-law__results">
+								<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+								<p class="one-law__result one-law__result--green">КПРФ - За</p>
+								<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+								<p class="one-law__result one-law__result--green">СР - За</p>
+							</div>
+						</div>
+					</div>
+					<div class="one-law__body">
+						<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+						<div class="one-law__text">
+							<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+						</div>
+					</div>
+					<div class="one-law__foot">
+						<div class="one-law__footer">
+							<div class="one-law__half">
+								<p class="one-law__text">Дата публикации:</p>
+								<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+							</div>
+							<div class="one-law__half one-law__half--grades">
+								<div class="one-law__grades one-law__grades--green"><span>53</span></div>
+								<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+							</div>
+						</div>
+						<div class="one-law__footer">
+							<div class="one-law__half one-law__half--comms">
+								<p class="one-law__text">Комментариев:</p>
+								<p class="one-law__text one-law__text--bold">216</p>
+							</div>
+							<div class="one-law__half">
+								<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--red">4.5</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="one-law"><a href="/law-single.html" title="Перейти к закону" class="one-law__link"></a>
+					<div class="one-law__header">
+						<div class="one-law__face"><img src="/img/one-law__banner--minfin.png" alt="" class="one-law__img"/></div>
+						<div class="one-law__stats">
+							<div class="status-bar">
+								<!-- этому элементу ширина задается мануально-->
+								<div style="width: 13%" class="status-bar__bg"></div>
+								<div class="status-bar__text">Внесение в ГД
+								</div>
+							</div>
+							<div class="one-law__results">
+								<p class="one-law__result one-law__result--gray">ЕР - Не голосовали</p>
+								<p class="one-law__result one-law__result--green">КПРФ - За</p>
+								<p class="one-law__result one-law__result--red">ЛДПР - Против</p>
+								<p class="one-law__result one-law__result--green">СР - За</p>
+							</div>
+						</div>
+					</div>
+					<div class="one-law__body">
+						<h3 class="one-law__title">Закон «О внесении изменений в постановление Правительства Российской Федерации...»</h3>
+						<div class="one-law__text">
+							<p>Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...</p>
+						</div>
+					</div>
+					<div class="one-law__foot">
+						<div class="one-law__footer">
+							<div class="one-law__half">
+								<p class="one-law__text">Дата публикации:</p>
+								<time datetime="2016-03-21" class="one-law__text one-law__text--bold">21 марта 2016</time>
+							</div>
+							<div class="one-law__half one-law__half--grades">
+								<div class="one-law__grades one-law__grades--green"><span>153</span></div>
+								<div class="one-law__grades one-law__grades--red"><span>6</span></div>
+							</div>
+						</div>
+						<div class="one-law__footer">
+							<div class="one-law__half one-law__half--comms">
+								<p class="one-law__text">Комментариев:</p>
+								<p class="one-law__text one-law__text--bold">216</p>
+							</div>
+							<div class="one-law__half">
+								<p class="one-law__text one-law__text--bold">Оценка<br/>пользователей:<span class="one-law__grade one-law__grade--red">2</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
 			<section id="comments" class="section">
 				<div class="section__wrapper">
 					<h2 class="section__title">Что Вы думаете по этому поводу?</h2>
@@ -1067,7 +1364,7 @@
 							<div class="btn-submit btn-submit--confirm">
 								<input type="submit" value="Подтвердить e-mail" class="btn-submit__input"/>
 							</div>
-							<div class="btn-submit btn-submit--confirm">
+							<div class="btn-submit btn-submit--confirm btn-submit--one-more">
 								<input type="submit" value="Выслать повторно" class="btn-submit__input"/>
 							</div>
 						</form>
@@ -1496,6 +1793,11 @@
 											</label>
 										</div>
 										<div class="radio radio--lower-case">
+											<label for="ateism" class="radio__label">
+												<input type="radio" name="religion" id="ateism" class="radio__input"/><span class="radio__text">Атеизм</span>
+											</label>
+										</div>
+										<div class="radio radio--lower-case">
 											<label for="otherRel" class="radio__label">
 												<input type="radio" name="religion" id="otherRel" class="radio__input"/><span class="radio__text">Другое</span>
 											</label>
@@ -1616,6 +1918,7 @@
 				<p class="quote__text">Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.</p>
 			</div>
 		</div>
+		<button type="button" class="up-btn"></button>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
 		<script src="js/main.js"></script>

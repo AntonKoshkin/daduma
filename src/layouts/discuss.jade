@@ -24,6 +24,9 @@ block content
 					+btn('Проголосовать &laquo;За&raquo;', 'thumb-up')(data-modal-link='#voteCounted')
 					+btn('Проголосовать &laquo;Против&raquo;', 'thumb-down')(data-modal-link='#voteCounted')
 					+btn('Воздержаться', 'neutral')(data-modal-link='#voteCounted')
+				.voiting__text
+					// после двоеточия может быть "за" || "против" || "воздержался"
+					p Ваш голос: За
 				.voiting__bar
 					+cBar(79, 104, 345)
 

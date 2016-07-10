@@ -177,7 +177,7 @@ html(lang='ru')
 								['wrong-code', 'Код введен неверно']
 							])
 						+btn-submit('Подтвердить e-mail')(mods=['confirm'])
-						+btn-submit('Выслать повторно')(mods=['confirm'])
+						+btn-submit('Выслать повторно')(mods=['confirm', 'one-more'])
 
 			+modal('uploadPhoto')(
 				id='uploadPhoto')
@@ -421,6 +421,8 @@ html(lang='ru')
 							mods=['lower-case'])
 						+radio('religion', 'hinduism', 'Индуизм')(
 							mods=['lower-case'])
+						+radio('religion', 'ateism', 'Атеизм')(
+							mods=['lower-case'])
 						+radio('religion', 'otherRel', 'Другое')(
 							mods=['lower-case'])
 
@@ -468,6 +470,9 @@ html(lang='ru')
 
 		if quote === true
 			+quote('Законопроект вводит жесткие нормы и требования к коллекторам, банкам, микрофинансовым организациям, а также к другим кредиторам при взаимодействии с должниками.', '/img/medved.png')
+
+		if page_id === 'index' || page_id === 'law'
+			+upBtn
 		
 		script(
 			src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
