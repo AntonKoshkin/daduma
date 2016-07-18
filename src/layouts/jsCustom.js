@@ -21,8 +21,9 @@ if ((/iPhone/i.test(navigator.userAgent)) || (/iPad/i.test(navigator.userAgent))
 //= ../blocks/close/close.js
 //= ../blocks/opinion/opinion.js
 //= ../blocks/number/number.js
-//= ../blocks/quote/quote.js
-//= ../blocks/error/error.js
+// клик по всплывахе
+// ../blocks/quote/quote.js
+// ../blocks/error/error.js
 //= ../blocks/select/select.js
 //= ../blocks/datepicker/datepicker.js
 //= ../blocks/range/range.js

@@ -77,19 +77,23 @@ block content
 							+diagram(
 								'main',
 								'pie-deputy',
-								'Фракция Всероссийской политической партии "ЕДИНАЯ РОССИЯ"')
+								'Единая Россия')(
+								mods=['big-name'])
 							+diagram(
 								'main',
 								'pie-deputy',
-								'Фракция Политической партии "Коммунистическая партия Российской Федерации"')
+								'КПРФ')(
+								mods=['big-name'])
 							+diagram(
 								'main',
 								'pie-deputy',
-								'Фракция Политической партии СПРАВЕДЛИВАЯ РОССИЯ')
+								'Справедливая Россия')(
+								mods=['big-name'])
 							+diagram(
 								'main',
 								'pie-deputy',
-								'Фракция Политической партии "Либерально-демократическая партия России"')
+								'ЛДПР')(
+								mods=['big-name'])
 							+diagram(
 								'main',
 								'pie-deputy',
@@ -223,7 +227,7 @@ block content
 		// если отзыв негативный, то к .section добавляется класс .opinion__wrapper--red
 		// если отзыв положительный, то к .section добавляется класс .opinion__wrapper--green
 		// если отзыв нейтральный, то к .section добавляется класс .opinion__wrapper--gray
-		+section('Мнения экспертов и известных людей по законопроекту:')(
+		+section(
 			class='opinion__wrapper--green')
 			+opinion
 				.opinion__tabs

@@ -2,6 +2,10 @@
 	margin-bottom 20px
 	position relative
 	
+	.about-act__diagrams &
+		&:not(:last-child)
+			margin-right 20px
+	
 	&--stat
 		display flex
 		flex-wrap nowrap
@@ -12,89 +16,14 @@
 		
 	&__showing
 		margin 0 auto 10px
-		text-align center
 		margin-bottom 0
-		position relative
-	
-	&--stat &__showing
-		flex-grow 0
-		width 135px
-		margin 0 75px 0 0
-	
-	&__img
-		width 100%
-		
-		&--pie
-		&--pie-deputy
-			size 135px
-			size 95px
-			
-			border-radius 50%
-	
-		&--bars
-			max-width 400px
-
-	&__description
-		@extend $very-small-text
-		
-		padding 10px
-		padding-bottom 0
-		padding-top 45px
-	
-	&--stat &__description
-		color gray
-	
-	&--stat &__legends
-		margin-bottom 36px
-
-	&__legend
-		@extend $not-so-small-text
-		
-		font-weight regular
-		margin-bottom 10px
-		// padding-left 46px
-		padding-left 20px
-		position relative
-		margin-left 5px
-		
-		&:before
-			@extend $pseudo-left
-			size 10px
-			
-			// width 30px
-			// height 3px
-			border-radius 50%
-		
-		&--red
-			&:before
-				background-color pink
-		
-		&--yellow
-			&:before
-				background-color yellow
-		
-		&--blue
-			&:before
-				background-color blue
-		
-		&--green
-			&:before
-				background-color green
-		
-		&--cyan
-			&:before
-				background-color #00bcd4
-		
-		&--gray
-			color gray-light
-			font-weight light
+		display flex
+		justify-content center
+		align-items center
 	
 	&__lega
-		position absolute
-		left 0
-		bottom -40px
 		list-style-type none
-		// background-color rgba(white, .5)
+		margin-left 10px
 	
 	&__l-item
 		@extend $small-text
@@ -170,3 +99,81 @@
 		&--blue
 			&:before
 				background-color blue
+	
+	&--stat &__showing
+		flex-grow 0
+		width 135px
+		margin 0 75px 0 0
+	
+	&__img
+		width 100%
+		
+		&--pie
+		&--pie-deputy
+			size 135px
+			size 95px
+			
+			border-radius 50%
+	
+		&--bars
+			max-width 400px
+
+	&__description
+		@extend $very-small-text
+		
+		padding 10px
+		padding-bottom 0
+		// padding-top 45px
+		padding-top 15px
+	
+	&--big-name &__description
+		font-size 20px
+		font-weight 500
+	
+	&--stat &__description
+		color gray
+	
+	&--stat &__legends
+		margin-bottom 36px
+
+	&__legend
+		@extend $not-so-small-text
+		
+		font-weight regular
+		margin-bottom 10px
+		// padding-left 46px
+		padding-left 20px
+		position relative
+		margin-left 5px
+		
+		&:before
+			@extend $pseudo-left
+			size 10px
+			
+			// width 30px
+			// height 3px
+			border-radius 50%
+		
+		&--red
+			&:before
+				background-color pink
+		
+		&--yellow
+			&:before
+				background-color yellow
+		
+		&--blue
+			&:before
+				background-color blue
+		
+		&--green
+			&:before
+				background-color green
+		
+		&--cyan
+			&:before
+				background-color #00bcd4
+		
+		&--gray
+			color gray-light
+			font-weight light

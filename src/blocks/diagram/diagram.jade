@@ -8,8 +8,15 @@
 //- 	main - index.jade
 
 mixin diagram(place, type, descr)
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'diagram--' + mod
+
 	if type === 'stat'
-		.diagram(class=attributes.class)
+		.diagram(
+			class=attributes.class
+			class=mods)
 			.diagram__showing(
 				class='diagram__showing--'+type)
 				img.diagram__img(
@@ -23,7 +30,9 @@ mixin diagram(place, type, descr)
 				if block
 					block
 	else if type === 'bars'
-		.diagram(class=attributes.class)
+		.diagram(
+			class=attributes.class
+			class=mods)
 			.diagram__showing(
 				class='diagram__showing--'+type)
 				img.diagram__img(
@@ -34,7 +43,9 @@ mixin diagram(place, type, descr)
 			if descr
 				p.diagram__description!=descr
 	else
-		.diagram(class=attributes.class)
+		.diagram(
+			class=attributes.class
+			class=mods)
 			.diagram__showing(
 				class='diagram__showing--'+type)
 				img.diagram__img(
