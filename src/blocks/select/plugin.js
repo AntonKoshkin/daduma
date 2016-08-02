@@ -4461,7 +4461,7 @@ S2.define('select2/i18n/en',[],function () {
       return message;
     },
     noResults: function () {
-      return 'Такой тематики нет';
+      return 'Результатов нет';
     },
     searching: function () {
       return 'Searching…';

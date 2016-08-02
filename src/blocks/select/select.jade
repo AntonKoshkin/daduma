@@ -4,7 +4,9 @@ mixin select(subj)
 		each mod, i in attributes.mods
 			-mods[i] = 'select--' + mod
 
-	.select(class=mods)
+	.select(
+		class=mods
+		style='width:'+attributes.width+'%')
 		select.select__select(
 			id=attributes.id
 			name=subj

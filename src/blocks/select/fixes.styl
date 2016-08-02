@@ -52,7 +52,23 @@
 	&--default
 		.select2-selection
 			&--multiple
+			&--single
 				border 1px solid gray-lighter
+			
+			&--single
+				display flex
+				flex-wrap wrap
+				align-items center
+				justify-content flex-start
+				padding 1px 10px 2px
+				height auto
+				
+				.select2-selection__arrow
+					top 7px
+					right 7px
+				
+				.select2-selection__rendered
+					font-size 14px
 
 	.select2-search--inline
 		.select2-search__field

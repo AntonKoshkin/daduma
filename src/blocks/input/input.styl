@@ -2,6 +2,9 @@
 	margin-bottom 15px
 	position relative
 	
+	&--search
+		margin-bottom 0
+
 	&__input
 		@extend $small-text
 		
@@ -9,6 +12,11 @@
 		padding 18px 23px
 		border 1px solid gray-lighter
 		width 100%
+	
+	&--search &__input
+		font-size 13px
+		padding 13px 18px 12px
+		border-radius 4px
 
 	&__error
 		@extend $extra-small-text

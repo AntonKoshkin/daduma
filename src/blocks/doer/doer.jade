@@ -1,13 +1,21 @@
-mixin doer(img)
+mixin doer
 	.doer
-		.doer__face
+		if block
+			block
+
+mixin dFace(img)
+	.doer__face
+		.doer__f-img
 			img.doer__img(
 				src=img
 				alt='Имя деятеля')
+		if block
+			block
 
-		.doer__info
-			if block
-				block
+mixin dInfo
+	.doer__info
+		if block
+			block
 
 mixin dDesc
 	.doer__desc
@@ -33,4 +41,11 @@ mixin dText(text)
 		each mod, i in attributes.mods
 			-mods[i] = 'doer__text--' + mod
 
-	p.doer__text!=text
+	p.doer__text(
+		class=mods
+		data-icon=attributes['data-icon'])!=text
+
+mixin dRow
+	.doer__row
+		if block
+		block

@@ -1,0 +1,30 @@
+.d-table
+	&__row
+		display flex
+		justify-content center
+		align-items stretch
+		border-bottom 2px solid #e8
+		
+		&:nth-child(odd)
+			background-color #f8
+		
+		&:nth-child(even)
+			background-color white
+	
+	&__cell
+		display flex
+		justify-content center
+		align-items center
+		text-align center
+		flex 1
+		min-height 70px
+		
+		&:not(:last-child)
+			border-right-width 1px
+			border-right-style solid
+	
+	&__row:nth-child(odd) &__cell:not(:last-child)
+		border-right-color white
+	
+	&__row:nth-child(even) &__cell:not(:last-child)
+		border-right-color #f8

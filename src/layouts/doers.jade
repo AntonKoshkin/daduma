@@ -1,0 +1,74 @@
+extends ../blocks/template/template
+
+block page_id
+	-var page_id		= 'doers'
+	-var withKlichko	= false
+	-var qoute			= false
+
+block title
+	title Пользователи
+
+block content
+	+main(class='main--bg')
+		.page__content
+			+breadcrumbs
+				+brItem('Состав и структура ГД')
+
+			+pageTitle(1, 'Состав Государственной Думы шестого созыва')(
+				mods=['h1'])
+			//- фильтры
+			+extendedSearch('other')(mods=['doers'])
+				+esItems
+					+esItem('ФИО')
+						//- заменить на инпут с вариантами
+						+input(
+							mods=['search']
+							placeholder='Введите ФИО депутата')
+					+esItem('Фракция')
+						+select('fraction')(
+							multiple='multiple'
+							id='fraction')
+							+sOption('er', 'Единая Россия')
+							+sOption('kprf', 'КПРФ')
+							+sOption('ldpr', 'ЛДПР')
+							+sOption('sr', 'Справедливая Россия')
+					+esItem('Населенный пункт')
+						//- заменить на инпут с вариантами
+						+select('doerCity')(
+							multiple='multiple'
+							id='doerCity'
+							width='100')
+					+esItem(mods=['checkbox'])
+						+checkbox('exIncluded', 'С учетом бывших')
+			+filter
+				+paragraph('Выбрано: 450 депутатов')(mods=['choosed'])
+				+alphabet
+			
+			+tableHead
+				+thCell('Фото')
+				+thCell('ФИО')(data-sort='down')
+				+thCell('Фракция')(data-sort='up')
+				+thCell('Деятельность')
+				+thCell('Связь с избирателями в регионах РФ')
+			.page__doers
+				+oneDoer(
+					src='http://placehold.it/500x500'
+					last-name='Агеев'
+					second-name='Александрович'
+					first-name='Александр'
+					fraction='Справедливая Россия'
+					job='Первый заместитель председателя комитета ГД по конституционному законодательству и государственному строительству'
+					cities='Город Москва - Восточная, Город Москва Донская, Город Москва - Люблинская')
+				+oneDoer(
+					src='http://placehold.it/500x500'
+					last-name='Абубакиров'
+					second-name='Фазлутдинович'
+					first-name='Ришат'
+					fraction='Единная Россия'
+					job='Член комитета ГД по гражданскому, уголовному, арбитражному и процессуальному законодательств Член комиссии ГД по строительству зданий и сооружений, предназначенных для размещения Парламентского центра'
+					cities='Город Москва - Восточная, Город Москва Донская, Город Москва - Люблинская')
+
+				+filter(mods=['bottom'])
+					+paragraph('Выбрано: 450 депутатов')(
+						mods=['choosed'])
+					+alphabet

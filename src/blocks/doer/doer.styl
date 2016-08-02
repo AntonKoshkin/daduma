@@ -2,9 +2,12 @@
 	width 100%
 	background-color white
 	padding 10px
-	margin-bottom 50px
+	margin-bottom 20px
 	
 	&__face
+		margin-bottom 10px
+	
+	&__f-img
 		overflow hidden
 		margin-bottom 23px
 		text-align center
@@ -20,9 +23,40 @@
 		@extend $small-text
 		
 		color gray
+		
+		&[data-icon='blue-arrow']
+			color blue-light
+			margin-bottom 5px
+			font-weight bold
+			
+			&:before
+				size 6px
+				
+				content ''
+				display inline-block
+				border-top 1px solid blue-light
+				border-right @border-top
+				transform translateY(-50%) rotate(46deg)
+				margin-right 5px
+		
+		&[data-icon='black-arrow']
+			margin-bottom 5px
+			
+			&:before
+				size 6px
+				
+				content ''
+				display inline-block
+				border-top 1px solid black
+				border-right @border-top
+				transform translateY(-50%) rotate(46deg)
+				margin-right 5px
+		
+		&&--mb20
+			margin-bottom 20px
 	
-	&__desc &__text
-		margin-bottom 23px
+	// &__desc &__text
+	// 	margin-bottom 23px
 	
 	&__title
 		@extend $small-text
@@ -30,6 +64,14 @@
 		font-family yefimov
 		font-weight regular
 		margin-bottom 5px
+	
+	&__row
+		height 45px
+		margin-bottom 5px
+		background-color #f3
+		display flex
+		align-items center
+		justify-content center
 	
 	@media (min-width tablet)
 		border 1px solid gray-lighter
@@ -45,3 +87,11 @@
 		&__info
 			flex-basis 100%
 			flex-shrink 1
+		
+		&__row
+			background-color transparent
+			height auto
+			margin-bottom 20px
+			
+			&:nth-child(n+3)
+				justify-content flex-start

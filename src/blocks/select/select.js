@@ -57,12 +57,41 @@ $(document).ready(function() {
 	];
 
 	$('#profileCity').select2({
-		placeholder					: 'Город',
+		allowClear					: true,
 		closeOnSelect				: true,
-		width							: '100%',
+		data							: cityData,
 		language						: 'ru',
 		minimumResultsForSearch	: 5,
-		data							: cityData,
-		allowClear					: true,
+		placeholder					: 'Город',
+		width							: '100%',
 	});
+
+	$('#fraction').select2({
+		allowClear					: true,
+		closeOnSelect				: true,
+		language						: 'ru',
+		minimumResultsForSearch	: Infinity,
+		placeholder					: 'Выберите фракцию',
+		width							: '100%',
+	});
+
+	$('#doerCity').select2({
+		allowClear					: true,
+		closeOnSelect				: true,
+		data							: cityData,
+		language						: 'ru',
+		minimumResultsForSearch	: 5,
+		placeholder					: 'Введите населенный пункт',
+		width							: '100%',
+	});
+
+	// $('#doerName').select2({
+	// 	allowClear					: true,
+	// 	// data							: cityData,
+	// 	closeOnSelect				: true,
+	// 	language						: 'ru',
+	// 	minimumResultsForSearch	: 5,
+	// 	placeholder					: 'Введите ФИО депутата',
+	// 	width							: '100%',
+	// });
 });

@@ -1,0 +1,25 @@
+.d-insets
+	margin-left 10px
+	margin-right 10px
+	margin-bottom 20px
+	
+	&__tab
+		height 60px
+		background-color #e8
+		display flex
+		justify-content center
+		align-items stretch
+		margin-bottom 10px
+		
+		&[data-selected='true']
+			background-color white
+		
+		button
+			@extend $btn-reset
+			
+			width 100%
+			font-size 13px
+	
+	&__content
+		&[data-show='false']
+			display none

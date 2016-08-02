@@ -20,39 +20,127 @@ block content
 			+pageTitle(1, 'Жириновский Владимир Вольфович')
 
 		.page__doer
-			+doer('/img/doer__img--zhir.jpg')
-				+dDesc
-					+dText('Депутат Государственной Думы избран в составе федерального списка кандидатов, выдвинутого Политической партией «Либерально - демократическая партия России»')
-					+dText('Руководитель фракции Политической партии «Либерально-демократическая партия России»')
-					+dText('Член комитета ГД по обороне')
-				
-				+dBlock
-					+dTitle('Дата начала полномочий')
-					+dText('4 декабря 2011 года (шестой созыв)')
-				
-				+dBlock
-					+dTitle('Дата рождения')
-					+dText('25 апреля 1946 года')
-				
-				+dBlock
-					+dTitle('Связь с избирателями в регионах РФ')
-					+dText('Все субъекты Российской Федерации')
-					+dText('Республика Крым')
-					+dText('Город Севастополь')
-				
-				+dBlock
-					+dTitle('Образование')
-					+dText('Московский государственный университет им. М.В. Ломоносова (институт восточных языков) (1970)')
-					+dText('Московский государственный университет им. М.В. Ломоносова (1977)')
-				
-				+dBlock
-					+dTitle('Ученые степени')
-					+dText('Доктор философских наук')
-				
-				+dBlock
-					+dTitle('Ученые звания')
-					+dText('Профессор')
-					+dText('Действительный член (академик) Академии социальных наук')
-					+dText('Действительный член (академик) Международной Академии экологии и природопользования (МАЭП)')
-					+dText('Почетный академик Академии естествознания')
-					+dText('Действительный член Международной Академии информатизации')
+			+doer
+				+dFace('/img/doer__img--zhir.jpg')
+					+dRow
+						+stars(37)
+						+paragraph('Голосовало 345 человек')(mods=['doer', 'ml10'])
+					+dRow
+						+paragraph('Выступления депутата (3 987)')(
+							data-icon='clouds'
+							mods=['doer'])
+					+dRow
+						+paragraph('Законопроекты депутата (210)')(
+							data-icon='papers'
+							mods=['doer'])
+					+dRow
+						+paragraph('Голосования депутата')(
+							data-icon='voting'
+							mods=['doer'])
+
+				+dInfo
+					+dDesc
+						+dText('Депутат Государственной Думы избран в составе федерального списка кандидатов, выдвинутого Политической партией «Либерально - демократическая партия России»')(
+							mods=['mb20'])
+						+dText('Руководитель фракции Политической партии «Либерально-демократическая партия России»')(
+							data-icon='blue-arrow')
+						+dText('Член комитета ГД по обороне')(
+							data-icon='blue-arrow'
+							mods=['mb20'])
+					
+					+dBlock
+						+dTitle('Дата начала полномочий')
+						+dText('4 декабря 2011 года (шестой созыв)')
+					
+					+dBlock
+						+dTitle('Дата рождения')
+						+dText('25 апреля 1946 года')
+					
+					+dBlock
+						+dTitle('Связь с избирателями в регионах РФ')
+						+dText('Все субъекты Российской Федерации')(
+							data-icon='black-arrow')
+						+dText('Республика Крым')(
+							data-icon='black-arrow')
+						+dText('Город Севастополь')(
+							data-icon='black-arrow')
+					
+					+dBlock
+						+dTitle('Образование')
+						+dText('Московский государственный университет им. М.В. Ломоносова (институт восточных языков) (1970)')(
+							data-icon='black-arrow')
+						+dText('Московский государственный университет им. М.В. Ломоносова (1977)')(
+							data-icon='black-arrow')
+					
+					+dBlock
+						+dTitle('Ученые степени')
+						+dText('Доктор философских наук')(
+							data-icon='black-arrow')
+					
+					+dBlock
+						+dTitle('Ученые звания')
+						+dText('Профессор')(
+							data-icon='black-arrow')
+						+dText('Действительный член (академик) Академии социальных наук')(
+							data-icon='black-arrow')
+						+dText('Действительный член (академик) Международной Академии экологии и природопользования (МАЭП)')(
+							data-icon='black-arrow')
+						+dText('Почетный академик Академии естествознания')(
+							data-icon='black-arrow')
+						+dText('Действительный член Международной Академии информатизации')(
+							data-icon='black-arrow')
+			
+			+paragraph('Сведения о доходах, имуществе и обязательствах имущественного характера депутата и членов его семьи за период с 01.01.2015 по 31.12.2015')(mods=['under-doer'])
+
+			+dInsets
+				+diTabs
+					+diTab('Общая сумма декларированного годового дохода')(
+						data-selected='true')
+					+diTab('Объекты недвижимого имущества')(
+						data-selected='false')
+					+diTab('Транспортные средства, принадлежащие на праве собственности (вид и марка)')(
+						data-selected='false')
+				+diContents
+					+diContent(data-show='true')
+						+dTable
+							+dtRow
+								+dtCell
+									+paragraph('Собственник')(
+										mods=['dt-title'])
+								+dtCell
+									+paragraph('Вид транпортного стредства')(
+										mods=['dt-title'])
+								+dtCell
+									+paragraph('Марка')(
+										mods=['dt-title'])
+							+dtRow
+								+dtCell
+									+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
+								+dtCell
+									+paragraph('мото-транспортные средства')(mods=['dt-text'])
+								+dtCell
+									+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
+							+dtRow
+								+dtCell
+									+paragraph('Супруга')(mods=['dt-text'])
+								+dtCell
+									+paragraph('автомобили легковые')(mods=['dt-text'])
+								+dtCell
+									+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
+							+dtRow
+								+dtCell
+									+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
+								+dtCell
+									+paragraph('мото-транспортные средства')(mods=['dt-text'])
+								+dtCell
+									+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
+							+dtRow
+								+dtCell
+									+paragraph('Супруга')(mods=['dt-text'])
+								+dtCell
+									+paragraph('автомобили легковые')(mods=['dt-text'])
+								+dtCell
+									+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
+
+					+diContent(data-show='false')
+					+diContent(data-show='false')

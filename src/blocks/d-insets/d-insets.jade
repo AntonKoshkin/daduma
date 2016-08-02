@@ -1,0 +1,23 @@
+mixin dInsets
+	.d-insets
+		if block
+			block
+
+mixin diTabs
+	.d-insets__tabs
+		if block
+			block
+
+mixin diContents
+	.d-contents
+		if block
+			block
+
+mixin diTab(text)
+	.d-insets__tab(data-selected=attributes['data-selected'])
+		button(type='button')=text
+
+mixin diContent
+	.d-content(data-show=attributes['data-show'])
+		if block
+			block

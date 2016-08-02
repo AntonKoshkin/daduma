@@ -1,0 +1,25 @@
+mixin oneDoer
+	.one-doer
+		.one-doer__face
+			a.one-doer__img(href='#')
+				img(
+					alt=attributes.alt || ''
+					src=attributes.src)
+		.one-doer__name-and-fraction
+			.one-doer__name
+				a.one-doer__text.one-doer__text--blue(href='#')
+					span.one-doer__text--fat=attributes['last-name']
+					| 
+					span=attributes['second-name']
+					| 
+					span=attributes['first-name']
+			.one-doer__fraction
+				p.one-doer__text.one-doer__text--blue
+					| Фракция<br>&laquo;
+					a.one-doer__text.one-doer__text--blue.one-doer__text--fat(
+						href='#')=attributes.fraction
+					| &raquo;
+		.one-doer__job
+			a.one-doer__text.one-doer__text--blue(href='#')=attributes.job
+		.one-doer__cities
+			p.one-doer__text=attributes.cities

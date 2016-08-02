@@ -1,0 +1,8 @@
+mixin tableHead
+	.table-head
+		if block
+			block
+
+mixin thCell(text)
+	.table-head__cell(data-sort=attributes['data-sort'])
+		button(type='button')=text

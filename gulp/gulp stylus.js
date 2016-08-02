@@ -44,7 +44,7 @@ module.exports = function() {
 					'ie > 9',
 					'last 2 versions']
 				}),
-				cssComb({'sort-order': 'zen'}),
+				// cssComb({'sort-order': 'zen'}),
 				// cssLint({'extends':'src/'}),
 			]))
 			.on('error', notify.onError())

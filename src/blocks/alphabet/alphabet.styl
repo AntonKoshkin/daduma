@@ -1,0 +1,53 @@
+.alphabet
+	background-color #f5
+	padding 0 10px
+	
+	&__content
+		display flex
+		height 50px
+		align-items center
+		justify-content space-between
+	
+	&__title
+		font-size 13px
+		font-weight regular
+		flex-shrink 0
+	
+	&__letters
+		display flex
+		flex-grow 1
+		justify-content space-between
+		align-items center
+		min-width 120px
+	
+	&__btn
+		@extend $btn-reset
+		
+		font-size 13px
+		
+		&--letter
+			size 30px
+			text-transform uppercase
+			
+			&[data-selected='true']
+				border 1px solid #85
+				background-color white
+				vertical-align middle
+				padding-bottom 2px
+		
+		&--prev
+		&--next
+			size 30px
+			padding-bottom 6px
+		
+		&--all
+			text-decoration underline
+	
+	// @media (min-width 1062px)
+	// 	&__btn
+	// 		&--prev
+	// 		&--next
+	// 			display none
+	
+	@media (min-width desktop)
+		width 920px

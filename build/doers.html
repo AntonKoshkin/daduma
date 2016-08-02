@@ -54,154 +54,178 @@
 				<div class="breadcrumbs">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a></li>
-						<li class="breadcrumbs__item"><a class="breadcrumbs__link">Статистика пользователей</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link">Состав и структура ГД</a></li>
 					</ul>
 				</div>
-				<h1 class="page__title page__title--h1">Статистика пользователей</h1>
-				<section class="page__stats">
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Пол / Возраст</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--bars.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend one-stat__legend--gender">
-							<p class="one-stat__gender one-stat__gender--male">Мужчины</p>
-							<p class="one-stat__gender one-stat__gender--female">Женщины</p>
-						</div>
-					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Статус</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--1.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">холост/не замужем</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">женат/замужем</span></p>
+				<h1 class="page__title page__title--h1 page__title--h1">Состав Государственной Думы шестого созыва</h1>
+				<div class="extended-search extended-search--doers">
+					<div class="extended-search__body">
+						<div class="extended-search__items">
+							<div class="extended-search__item">
+								<p class="extended-search__title">ФИО</p>
+								<div class="input input--search">
+									<input type="text" placeholder="Введите ФИО депутата" autocomplete="off" class="input__input"/>
+								</div>
 							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
+							<div class="extended-search__item">
+								<p class="extended-search__title">Фракция</p>
+								<div style="width:undefined%" class="select">
+									<select id="fraction" name="fraction" style="width:50%" multiple="multiple" class="select__select">
+										<option value="er" class="select__option">Единая Россия</option>
+										<option value="kprf" class="select__option">КПРФ</option>
+										<option value="ldpr" class="select__option">ЛДПР</option>
+										<option value="sr" class="select__option">Справедливая Россия</option>
+									</select>
+								</div>
 							</div>
-						</div>
-					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Карьера</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--2.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Штатный сотрудник</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Руководитель ср. звена</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Топ-менеджер</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Предприниматель</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Фрилансер</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Безработный</span></p>
+							<div class="extended-search__item">
+								<p class="extended-search__title">Населенный пункт</p>
+								<div style="width:100%" class="select">
+									<select id="doerCity" name="doerCity" style="width:50%" multiple="multiple" class="select__select">
+									</select>
+								</div>
 							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+							<div class="extended-search__item extended-search__item--checkbox">
+								<div class="checkbox">
+									<label for="exIncluded" class="checkbox__label">
+										<input type="checkbox" name="exIncluded" id="exIncluded" class="checkbox__input"/><span class="checkbox__text">С учетом бывших</span>
+									</label>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Религия</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--3.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Христианство</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Ислам</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Иудаизм</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Буддизм</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Индуизм</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Другое</span></p>
+				</div>
+				<div class="filter">
+					<div class="paragraph paragraph--choosed">
+						<p class="paragraph__text">Выбрано: 450 депутатов</p>
+					</div>
+					<div class="alphabet">
+						<div class="alphabet__content">
+							<p class="alphabet__title">По алфавиту:</p>
+							<button class="alphabet__btn alphabet__btn--prev">&laquo;</button>
+							<div class="alphabet__letters">
+								<button data-selected="true" type="button" class="alphabet__btn alphabet__btn--letter">а</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">б</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">в</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">г</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">д</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">е</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ж</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">з</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">и</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">к</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">л</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">м</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">н</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">о</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">п</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">р</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">с</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">т</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">у</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ф</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">х</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ц</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ч</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ш</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">щ</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">э</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ю</button>
+								<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">я</button>
 							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
+							<button class="alphabet__btn alphabet__btn--next">	&raquo;</button>
+							<button class="alphabet__btn alphabet__btn--all">Все</button>
+						</div>
+					</div>
+				</div>
+				<div class="table-head">
+					<div class="table-head__cell">
+						<button type="button">Фото</button>
+					</div>
+					<div data-sort="down" class="table-head__cell">
+						<button type="button">ФИО</button>
+					</div>
+					<div data-sort="up" class="table-head__cell">
+						<button type="button">Фракция</button>
+					</div>
+					<div class="table-head__cell">
+						<button type="button">Деятельность</button>
+					</div>
+					<div class="table-head__cell">
+						<button type="button">Связь с избирателями в регионах РФ</button>
+					</div>
+				</div>
+				<div class="page__doers">
+					<div class="one-doer">
+						<div class="one-doer__face"><a href="#" class="one-doer__img"><img alt="" src="http://placehold.it/500x500"/></a></div>
+						<div class="one-doer__name-and-fraction">
+							<div class="one-doer__name"><a href="#" class="one-doer__text one-doer__text--blue"><span class="one-doer__text--fat">Агеев</span> <span>Александрович</span> <span>Александр</span></a></div>
+							<div class="one-doer__fraction">
+								<p class="one-doer__text one-doer__text--blue">Фракция<br>&laquo;<a href="#" class="one-doer__text one-doer__text--blue one-doer__text--fat">Справедливая Россия</a>&raquo;</p>
+							</div>
+						</div>
+						<div class="one-doer__job"><a href="#" class="one-doer__text one-doer__text--blue">Первый заместитель председателя комитета ГД по конституционному законодательству и государственному строительству</a></div>
+						<div class="one-doer__cities">
+							<p class="one-doer__text">Город Москва - Восточная, Город Москва Донская, Город Москва - Люблинская</p>
+						</div>
+					</div>
+					<div class="one-doer">
+						<div class="one-doer__face"><a href="#" class="one-doer__img"><img alt="" src="http://placehold.it/500x500"/></a></div>
+						<div class="one-doer__name-and-fraction">
+							<div class="one-doer__name"><a href="#" class="one-doer__text one-doer__text--blue"><span class="one-doer__text--fat">Абубакиров</span> <span>Фазлутдинович</span> <span>Ришат</span></a></div>
+							<div class="one-doer__fraction">
+								<p class="one-doer__text one-doer__text--blue">Фракция<br>&laquo;<a href="#" class="one-doer__text one-doer__text--blue one-doer__text--fat">Единная Россия</a>&raquo;</p>
+							</div>
+						</div>
+						<div class="one-doer__job"><a href="#" class="one-doer__text one-doer__text--blue">Член комитета ГД по гражданскому, уголовному, арбитражному и процессуальному законодательств Член комиссии ГД по строительству зданий и сооружений, предназначенных для размещения Парламентского центра</a></div>
+						<div class="one-doer__cities">
+							<p class="one-doer__text">Город Москва - Восточная, Город Москва Донская, Город Москва - Люблинская</p>
+						</div>
+					</div>
+					<div class="filter filter--bottom">
+						<div class="paragraph paragraph--choosed">
+							<p class="paragraph__text">Выбрано: 450 депутатов</p>
+						</div>
+						<div class="alphabet">
+							<div class="alphabet__content">
+								<p class="alphabet__title">По алфавиту:</p>
+								<button class="alphabet__btn alphabet__btn--prev">&laquo;</button>
+								<div class="alphabet__letters">
+									<button data-selected="true" type="button" class="alphabet__btn alphabet__btn--letter">а</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">б</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">в</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">г</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">д</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">е</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ж</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">з</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">и</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">к</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">л</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">м</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">н</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">о</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">п</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">р</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">с</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">т</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">у</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ф</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">х</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ц</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ч</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ш</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">щ</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">э</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">ю</button>
+									<button data-selected="false" type="button" class="alphabet__btn alphabet__btn--letter">я</button>
+								</div>
+								<button class="alphabet__btn alphabet__btn--next">	&raquo;</button>
+								<button class="alphabet__btn alphabet__btn--all">Все</button>
 							</div>
 						</div>
 					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Образование</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--4.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Среднее</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Технической</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Высшее</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Ученая степень</span></p>
-							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">География</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--5.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Москва</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Санкт-Петербург</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Самара</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Анапа</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Краснодар</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Другие</span></p>
-							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
-							</div>
-						</div>
-					</div>
-					<div class="one-stat">
-						<h3 class="page__title page__title--h3 page__title--margined">Политические убеждения</h3>
-						<div class="one-stat__diagram"><img src="/img/one-stat__img--6.png" alt="" class="one-stat__img"/></div>
-						<div class="one-stat__legend">
-							<div class="one-stat__leg-col one-stat__leg-col--left">
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Статус</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Единая Россия</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Яблоко</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">ЛДПР</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">СПС</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">КПРФ</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">СР</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--left"><span class="one-stat__leg-text one-stat__leg-text--7cb5ec">Другое</span></p>
-							</div>
-							<div class="one-stat__leg-col one-stat__leg-col--right">
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">Кол-во, %</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">62</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">22</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">15</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">8</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">3</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">0,5</span></p>
-								<p class="one-stat__leg-item one-stat__leg-item--right"><span class="one-stat__leg-text">32,5</span></p>
-							</div>
-						</div>
-					</div>
-				</section>
+				</div>
 			</div>
 		</main>
 		<footer class="footer">

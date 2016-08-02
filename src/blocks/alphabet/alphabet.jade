@@ -1,0 +1,19 @@
+-var letters = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'э', 'ю', 'я']
+
+mixin alphabet
+	.alphabet
+		.alphabet__content
+			p.alphabet__title По алфавиту:
+			button.alphabet__btn.alphabet__btn--prev &laquo;
+			.alphabet__letters
+				each letter in letters
+					if letter === 'а'
+						button.alphabet__btn.alphabet__btn--letter(
+							data-selected='true'
+							type='button')=letter
+					else
+						button.alphabet__btn.alphabet__btn--letter(
+							data-selected='false'
+							type='button')=letter
+			button.alphabet__btn.alphabet__btn--next 	&raquo;
+			button.alphabet__btn.alphabet__btn--all Все

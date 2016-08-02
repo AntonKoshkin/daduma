@@ -14,6 +14,11 @@
 	&__body
 		// display none
 		margin-bottom 20px
+		display flex
+		flex-wrap wrap
+	
+	&--doers &__body
+		margin-bottom 0
 
 	&__items
 		display none
@@ -22,6 +27,10 @@
 		flex-wrap wrap
 		display flex
 		justify-content space-between
+		width 100%
+		
+		&--p0
+			padding 0
 	
 	&__item
 		flex-basis 100%
@@ -34,6 +43,9 @@
 		
 		&--half
 			flex-basis calc(50% - 5px)
+		
+		&--checkbox
+			padding-top 10px
 	
 	&__title
 		@extend $small-text
@@ -49,6 +61,12 @@
 			flex-wrap nowrap
 			justify-content space-between
 			padding 20px 10px
+			
+			&--p0
+				padding 0
+		
+		&--doers &__items
+			flex-wrap wrap
 		
 		&__item
 			flex-basis calc(25% - 8px)
@@ -57,7 +75,20 @@
 			&--half
 				flex-basis calc(12.5% - 8px)
 			
-
+			&--checkbox
+				padding-top 35px
+		
+		&--checkbox
+			display flex
+			align-items center
+			padding-top 30px
+	
+	@media (min-width desktop)
+		&--doers &__items
+			padding-bottom 20px
+			padding-left 30px
+			padding-right 30px
+			
 .page__laws
 	.extended-search
 		@media (min-width tablet)

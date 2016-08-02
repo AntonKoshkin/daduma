@@ -6,7 +6,7 @@ mixin input(type)
 
 	.input(class=mods)
 		input.input__input(
-			type=type
+			type=type || 'text'
 			id=attributes.id
 			placeholder!=attributes.placeholder
 			autocomplete=attributes.autocomplete || 'off'

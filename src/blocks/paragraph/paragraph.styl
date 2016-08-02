@@ -1,0 +1,49 @@
+.paragraph
+	&--choosed
+		font-size 13px
+		background-color #ec
+		
+	&--choosed &__text
+		color #6
+		height 50px
+		display flex
+		align-items center
+		padding-left 10px
+	
+	&--doer
+		font-size 13px
+		// margin-left 10px
+		font-weight regular
+	
+	&--ml10
+		margin-left 10px
+	
+	&[data-icon]
+		position relative
+		padding-left 35px
+		
+		&:before
+			@extend $pseudo-left
+			size 24px
+			background-color blue-light
+	
+	&--under-doer
+		font-size 15px
+		font-weight medium
+		text-align center
+		margin-bottom 5px
+		padding-left 10px
+		padding-right 10px
+	
+	&--dt-title
+		font-size 13px
+		font-weight bold
+	
+	&--dt-text
+		font-size 13px
+		font-weight medium
+	
+	@media (min-width desktop)
+		&--choosed
+			flex-basis 22%
+			padding-left 20px

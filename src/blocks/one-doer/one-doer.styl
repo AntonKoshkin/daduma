@@ -1,0 +1,101 @@
+.one-doer
+	padding 20px
+	border-bottom 3px solid #e8
+	display flex
+	flex-wrap wrap
+	align-content flex-start
+		
+	a:hover
+		text-decoration underline
+	
+	&__text
+		font-size 13px
+		font-weight regular
+		line-height 20px
+		
+		&--blue
+			color blue-light
+		
+		&--fat
+			font-weight bold
+	
+	&__face
+		@extend $font-reset
+		size 100px
+		
+		overflow hidden
+		margin-right 10px
+		margin-bottom 10px
+		
+		img
+			width 100%
+	
+	&__img
+		display inline-block
+	
+	&__name
+		margin-bottom 5px
+	
+	&__job
+		margin-bottom 5px
+	
+	@media (min-width desktop)
+		flex-wrap nowrap
+		padding 0
+		justify-content space-between
+		background-color #e8
+		
+		&:nth-of-type(2n) &__face
+		&:nth-of-type(2n) &__job
+		&:nth-of-type(2n) &__cities
+		&:nth-of-type(2n) &__name
+		&:nth-of-type(2n) &__fraction
+			background-color #f8
+		
+		&__face
+			width 182px
+			height auto
+			margin 0
+			padding 20px
+
+		&__name-and-fraction
+			width 395px
+			display flex
+			align-items stretch
+			background-color #e8
+
+		&__job
+			width 287px
+			margin-bottom 0
+
+		&__cities
+			width 287px
+		
+		&__name
+		&__fraction
+			width 50%
+		
+		&__name
+			margin-bottom 0
+			margin-right 3px
+		
+		&__face
+		&__job
+		&__cities
+		&__name
+		&__fraction
+			display flex
+			justify-content center
+			align-items center
+			text-align center
+			background-color white
+
+		&__job
+		&__cities
+		&__name
+		&__fraction
+			padding 10px 20px
+		
+		&__img
+			size 100px
+			

@@ -1,0 +1,50 @@
+.table-head
+	display none
+	height 60px
+	align-items stretch
+	background-color white
+	justify-content space-between
+	
+	&__cell
+		background-color #e8
+		display flex
+		align-items center
+		justify-content center
+		
+		&[data-sort]
+			&:after
+				content ''
+				display inline-block
+				margin-left 3px
+		
+		&[data-sort='up']
+			&:after
+				triangle up 4px 4px black
+		
+		&[data-sort='down']
+			&:after
+				triangle down 4px 4px black
+		
+		&:nth-child(1)
+			width 182px
+		
+		&:nth-child(2)
+			width 196px
+		
+		&:nth-child(3)
+			width 196px
+		
+		&:nth-child(4)
+			width 287px
+		
+		&:nth-child(5)
+			width 287px
+
+		button
+			@extend $btn-reset
+			
+			font-size 13px
+			font-weight medium
+	
+	@media (min-width desktop)
+		display flex
