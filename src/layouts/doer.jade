@@ -90,57 +90,145 @@ block content
 						+dText('Действительный член Международной Академии информатизации')(
 							data-icon='black-arrow')
 			
-			+paragraph('Сведения о доходах, имуществе и обязательствах имущественного характера депутата и членов его семьи за период с 01.01.2015 по 31.12.2015')(mods=['under-doer'])
+			.page__doer-has
+				+paragraph('Сведения о доходах, имуществе и обязательствах имущественного характера депутата и членов его семьи за период с 01.01.2015 по 31.12.2015')(mods=['under-doer'])
 
-			+dInsets
-				+diTabs
-					+diTab('Общая сумма декларированного годового дохода')(
-						data-selected='true')
-					+diTab('Объекты недвижимого имущества')(
-						data-selected='false')
-					+diTab('Транспортные средства, принадлежащие на праве собственности (вид и марка)')(
-						data-selected='false')
-				+diContents
-					+diContent(data-show='true')
-						+dTable
-							+dtRow
-								+dtCell
-									+paragraph('Собственник')(
-										mods=['dt-title'])
-								+dtCell
-									+paragraph('Вид транпортного стредства')(
-										mods=['dt-title'])
-								+dtCell
-									+paragraph('Марка')(
-										mods=['dt-title'])
-							+dtRow
-								+dtCell
-									+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
-								+dtCell
-									+paragraph('мото-транспортные средства')(mods=['dt-text'])
-								+dtCell
-									+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
-							+dtRow
-								+dtCell
-									+paragraph('Супруга')(mods=['dt-text'])
-								+dtCell
-									+paragraph('автомобили легковые')(mods=['dt-text'])
-								+dtCell
-									+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
-							+dtRow
-								+dtCell
-									+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
-								+dtCell
-									+paragraph('мото-транспортные средства')(mods=['dt-text'])
-								+dtCell
-									+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
-							+dtRow
-								+dtCell
-									+paragraph('Супруга')(mods=['dt-text'])
-								+dtCell
-									+paragraph('автомобили легковые')(mods=['dt-text'])
-								+dtCell
-									+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
+				+dInsets
+					+diTabs
+						+diTab('Общая сумма декларированного годового дохода')(
+							data-selected='true')
+						+diTab('Объекты недвижимого имущества')(
+							data-selected='false')
+						+diTab('Транспортные средства, принадлежащие на праве собственности (вид&nbsp;и&nbsp;марка)')(
+							data-selected='false')
+					+diContents
+						+diContent(data-show='true')
+							+dTable(mods=['min300'])
+								+dtRow
+									+dtCell
+										+paragraph('Заявитель')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Сумма годового дохода, руб/год')(mods=['dt-title'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('5 000 000 000')(
+											mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Супруга')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('500 000')(
+											mods=['dt-text'])
 
-					+diContent(data-show='false')
-					+diContent(data-show='false')
+						+diContent(data-show='false')
+							+dTable
+								+dtRow
+									+dtCell
+										+paragraph('Собственник')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Вид имущества')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Площадь, м<sup>2</sup>')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Страна расположения')(
+											mods=['dt-title'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Особняк')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('666')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Багамы')(
+											mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Особняк')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('666')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Багамы')(
+											mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Особняк')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('666')(
+											mods=['dt-text'])
+									+dtCell
+										+paragraph('Багамы')(
+											mods=['dt-text'])
+
+
+						+diContent(data-show='false')
+							+dTable
+								+dtRow
+									+dtCell
+										+paragraph('Собственник')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Вид транпортного стредства')(
+											mods=['dt-title'])
+									+dtCell
+										+paragraph('Марка')(
+											mods=['dt-title'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
+									+dtCell
+										+paragraph('мото-транспортные средства')(mods=['dt-text'])
+									+dtCell
+										+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Супруга')(mods=['dt-text'])
+									+dtCell
+										+paragraph('автомобили легковые')(mods=['dt-text'])
+									+dtCell
+										+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Жириновский Владимир Вольфович')(mods=['dt-text'])
+									+dtCell
+										+paragraph('мото-транспортные средства')(mods=['dt-text'])
+									+dtCell
+										+paragraph('мотоцикл HONDA CBR 1000RR')(mods=['dt-text'])
+								+dtRow
+									+dtCell
+										+paragraph('Супруга')(mods=['dt-text'])
+									+dtCell
+										+paragraph('автомобили легковые')(mods=['dt-text'])
+									+dtCell
+										+paragraph('Mercedes-Benz ML350')(mods=['dt-text'])
+
+			.page__laws--ex-laws
+				+paragraph('Законопроекты депутата')(mods=['under-doer'])
+
+				+oneLaw('/law-single.html', 'gibdd', [['ЕР', 'didnt'], ['КПРФ', 'for'], ['ЛДПР', 'against'], ['СР', 'for']], 1,
+					'Закон «О внесении изменений в постановление Правительства Российской Федерации...»',
+					'Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...', '21 марта 2016', '2016-03-21', 216, 53, 6, -4.5)
+					
+				+oneLaw('/law-single.html', 'minfin', [['ЕР', 'didnt'], ['КПРФ', 'for'], ['ЛДПР', 'against'], ['СР', 'for']], 1,
+					'Закон «О внесении изменений в постановление Правительства Российской Федерации...»',
+					'Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы ...Об утверждении правил предоставления из федерального бюджета субсидий стратегическим организациям оборонно-промышленного комплекса с целью предупреждения банкротства в рамках подпрограммы...', '21 марта 2016', '2016-03-21', 216, 153, 6, -2)

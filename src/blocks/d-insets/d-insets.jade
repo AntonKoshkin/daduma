@@ -9,15 +9,15 @@ mixin diTabs
 			block
 
 mixin diContents
-	.d-contents
+	.d-insets__contents
 		if block
 			block
 
 mixin diTab(text)
 	.d-insets__tab(data-selected=attributes['data-selected'])
-		button(type='button')=text
+		button(type='button')!=text
 
 mixin diContent
-	.d-content(data-show=attributes['data-show'])
+	.d-insets__content(data-show=attributes['data-show'])
 		if block
 			block

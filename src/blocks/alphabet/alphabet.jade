@@ -4,7 +4,7 @@ mixin alphabet
 	.alphabet
 		.alphabet__content
 			p.alphabet__title По алфавиту:
-			button.alphabet__btn.alphabet__btn--prev &laquo;
+			//- button.alphabet__btn.alphabet__btn--prev &laquo;
 			.alphabet__letters
 				each letter in letters
 					if letter === 'а'
@@ -15,5 +15,5 @@ mixin alphabet
 						button.alphabet__btn.alphabet__btn--letter(
 							data-selected='false'
 							type='button')=letter
-			button.alphabet__btn.alphabet__btn--next 	&raquo;
+			//- button.alphabet__btn.alphabet__btn--next 	&raquo;
 			button.alphabet__btn.alphabet__btn--all Все

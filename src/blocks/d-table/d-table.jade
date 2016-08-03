@@ -1,7 +1,13 @@
 mixin dTable
+	if attributes.mods
+		-var mods = []
+		each mod, i in attributes.mods
+			-mods[i] = 'd-table__content--' + mod
+
 	.d-table
-		if block
-			block
+		.d-table__content(class=mods)
+			if block
+				block
 
 mixin dtRow
 	.d-table__row

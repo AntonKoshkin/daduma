@@ -1395,7 +1395,8 @@ textarea::-ms-clear {
 .news-single__date,
 .status-bar__text,
 .profile__name,
-.info__right .info__item {
+.info__right .info__item,
+.paragraph--choosed .paragraph__text {
   white-space: nowrap;
 }
 .breadcrumbs__item:last-child .breadcrumbs__link,
@@ -2556,6 +2557,12 @@ html:not(.no-height) {
     margin: auto;
     padding: 0 20px;
   }
+  .page__doer-has {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .page__numbers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2640,6 +2647,12 @@ html:not(.no-height) {
         -ms-flex-align: stretch;
             align-items: stretch;
     margin-bottom: 10px;
+  }
+}
+@media (min-width: 1230px) {
+  .page__doer-has {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .recapcha {
@@ -7065,6 +7078,10 @@ a.about-act__tab {
           flex-grow: 1;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start;
 }
 .one-law__result {
   padding: 4px;
@@ -7320,6 +7337,7 @@ a.about-act__tab {
     display: flex;
     max-width: 1200px;
     margin: 0 auto 50px;
+    padding: 20px;
   }
   .doer__face {
     width: 270px;
@@ -7342,6 +7360,13 @@ a.about-act__tab {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+  }
+}
+@media (min-width: 1230px) {
+  .doer {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .confirmation {
@@ -8406,6 +8431,8 @@ a.about-act__tab {
   background-color: #ececec;
 }
 .paragraph--choosed .paragraph__text {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   color: #666;
   height: 50px;
   display: -webkit-box;
@@ -8415,6 +8442,8 @@ a.about-act__tab {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
 .paragraph--doer {
   font-size: 13px;
@@ -8439,6 +8468,7 @@ a.about-act__tab {
   margin-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  width: 100%;
 }
 .paragraph--dt-title {
   font-size: 13px;
@@ -8452,7 +8482,9 @@ a.about-act__tab {
   .paragraph--choosed {
     -ms-flex-preferred-size: 22%;
         flex-basis: 22%;
-    padding-left: 20px;
+  }
+  .paragraph--under-doer {
+    margin-bottom: 15px;
   }
 }
 .alphabet {
@@ -8491,6 +8523,9 @@ a.about-act__tab {
       -ms-flex-align: center;
           align-items: center;
   min-width: 120px;
+  overflow-x: auto;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .alphabet__btn {
   font-size: 13px;
@@ -8499,6 +8534,7 @@ a.about-act__tab {
   width: 30px;
   height: 30px;
   text-transform: uppercase;
+  min-width: 20px;
 }
 .alphabet__btn--letter[data-selected='true'] {
   border: 1px solid #858585;
@@ -8518,6 +8554,9 @@ a.about-act__tab {
 @media (min-width: 1230px) {
   .alphabet {
     width: 920px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 .one-doer {
@@ -8771,7 +8810,7 @@ a.about-act__tab {
   margin-bottom: 20px;
 }
 .d-insets__tab {
-  height: 60px;
+  min-height: 60px;
   background-color: #e8e8e8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8783,6 +8822,7 @@ a.about-act__tab {
       -ms-flex-align: stretch;
           align-items: stretch;
   margin-bottom: 10px;
+  padding: 5px;
 }
 .d-insets__tab[data-selected='true'] {
   background-color: #fff;
@@ -8793,6 +8833,22 @@ a.about-act__tab {
 }
 .d-insets__content[data-show='false'] {
   display: none;
+}
+@media (min-width: 1230px) {
+  .d-insets {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+.d-table {
+  overflow-x: auto;
+}
+.d-table__content {
+  min-width: 500px;
+}
+.d-table__content--miw300 {
+  min-width: 300px;
 }
 .d-table__row {
   display: -webkit-box;
@@ -8827,6 +8883,7 @@ a.about-act__tab {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   min-height: 70px;
+  padding: 5px;
 }
 .d-table__cell:not(:last-child) {
   border-right-width: 1px;
@@ -8837,6 +8894,11 @@ a.about-act__tab {
 }
 .d-table__row:nth-child(even) .d-table__cell:not(:last-child) {
   border-right-color: #f8f8f8;
+}
+@media (min-width: 1230px) {
+  .d-table__cell {
+    min-height: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,11 +4,16 @@
 		background-color #ec
 		
 	&--choosed &__text
+		@extend $one-row
+		
+		flex-shrink 1
 		color #6
 		height 50px
 		display flex
 		align-items center
 		padding-left 10px
+		padding-right 10px
+		text-align center
 	
 	&--doer
 		font-size 13px
@@ -34,6 +39,7 @@
 		margin-bottom 5px
 		padding-left 10px
 		padding-right 10px
+		width 100%
 	
 	&--dt-title
 		font-size 13px
@@ -46,4 +52,6 @@
 	@media (min-width desktop)
 		&--choosed
 			flex-basis 22%
-			padding-left 20px
+		
+		&--under-doer
+			margin-bottom 15px
