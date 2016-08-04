@@ -60,18 +60,18 @@ html(lang='ru')
 						id='userReg'
 						mods=['login'])
 
-						// ошибки на этом поле
-						// input--no-login
-						// input--reged-login
-						// input--short-login
-						+input('text')(
-							placeholder='Введите логин'
-							name='login'
-							errors=[
-								['no-login','Введите логин'],
-								['reged-login', 'Логин занят'],
-								['short-login', 'Логин должен быть длиннее 3 символов']
-							])
+						//- // ошибки на этом поле
+						//- // input--no-login
+						//- // input--reged-login
+						//- // input--short-login
+						//- +input('text')(
+						//- 	placeholder='Введите логин'
+						//- 	name='login'
+						//- 	errors=[
+						//- 		['no-login','Введите логин'],
+						//- 		['reged-login', 'Логин занят'],
+						//- 		['short-login', 'Логин должен быть длиннее 3 символов']
+						//- 	])
 						+input('email')(
 							placeholder='Введите e-mail'
 							autocomplete='on'

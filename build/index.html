@@ -1162,18 +1162,6 @@
 								</div>
 							</form>
 							<form id="userReg" action="" name="userReg" class="form form--login">
-								<!-- ошибки на этом поле-->
-								<!-- input--no-login-->
-								<!-- input--reged-login-->
-								<!-- input--short-login-->
-								<div class="input">
-									<input type="text" placeholder="Введите логин" autocomplete="off" name="login" class="input__input"/>
-									<div class="input__errors">
-										<p class="input__error input__error--no-login">Введите логин</p>
-										<p class="input__error input__error--reged-login">Логин занят</p>
-										<p class="input__error input__error--short-login">Логин должен быть длиннее 3 символов</p>
-									</div>
-								</div>
 								<div class="input">
 									<input type="email" placeholder="Введите e-mail" autocomplete="on" name="email" class="input__input"/>
 									<div class="input__errors">
@@ -1635,7 +1623,31 @@
 									</label>
 								</div>
 							</div>
-							<p class="profile-sets__name">Obolduy</p>
+							<!-- data-cond={'show' || 'edit'}-->
+							<!-- show показывает ник-->
+							<!-- edit показывает форму для редактирования-->
+							<div data-cond="show" class="profile-sets__nick-block">
+								<div class="profile-sets__nick">
+									<p class="profile-sets__name">Obolduy</p>
+									<button type="button" class="profile-sets__edit-nick">Изменить</button>
+								</div>
+								<form class="profile-sets__input">
+									<!-- ошибки включаются добавлением модификатора с названием элемента ошибки к .input-->
+									<!-- то есть если к .input добавить input--no-login, то появится ошибка "введите логин" и тд.-->
+									<!-- ошибки на этом поле-->
+									<!-- input--no-login-->
+									<div class="input input--nick">
+										<input type="text" placeholder="Введите никнейм" autocomplete="off" name="login" class="input__input"/>
+										<div class="input__errors">
+											<p class="input__error input__error--short-login">Логин слишком короткий</p>
+											<p class="input__error input__error--has-login">Этот логин уже занят</p>
+										</div>
+									</div>
+									<div class="btn-submit btn-submit--nick">
+										<input id="saveNick" type="submit" value="Сохранить" class="btn-submit__input"/>
+									</div>
+								</form>
+							</div>
 						</div>
 						<div class="profile-sets__body">
 							<form action="" name="profileSets" class="form">

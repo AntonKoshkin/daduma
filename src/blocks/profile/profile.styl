@@ -36,6 +36,7 @@
 		color blue-light
 		padding-right 10px
 		margin-bottom 15px
+		flex-grow 1
 	
 	&__btn
 		@extend $btn-reset, $small-text
@@ -49,6 +50,8 @@
 			content ''
 		
 		&--profile
+				margin-right 10px
+
 			&:before
 				bicon(pencil.blue, 16)
 		
@@ -107,9 +110,6 @@
 				bottom 0
 				margin-top auto
 				margin-bottom auto
-			
-			&--profile
-				margin-right 10px
 			
 			&--settings
 				&:hover

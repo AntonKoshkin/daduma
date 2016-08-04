@@ -35,3 +35,4 @@ if ((/iPhone/i.test(navigator.userAgent)) || (/iPad/i.test(navigator.userAgent))
 //= ../blocks/variants/variants.js
 //= ../blocks/up-btn/up-btn.js
 //= ../blocks/d-insets/d-insets.js
+//= ../blocks/profile-sets/profile-sets.js

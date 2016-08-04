@@ -29,7 +29,31 @@ mixin profileSets(img, name)
 							accept='image/jpg, image/jpeg, image/png'
 							mods=['profile-sets']
 							id='upload')
-				p.profile-sets__name!=name
+				// data-cond={'show' || 'edit'}
+				// show показывает ник
+				// edit показывает форму для редактирования
+				.profile-sets__nick-block(data-cond='show')
+					.profile-sets__nick
+						p.profile-sets__name!=name
+						button.profile-sets__edit-nick(
+							type='button') Изменить
+					form.profile-sets__input
+						// ошибки включаются добавлением модификатора с названием элемента ошибки к .input
+						// то есть если к .input добавить input--no-login, то появится ошибка "введите логин" и тд.
+						// ошибки на этом поле
+						// input--no-login
+						+input('text')(
+							placeholder='Введите никнейм'
+							mods=['nick']
+							name='login'
+							errors=[
+								['short-login', 'Логин слишком короткий'],
+								['has-login', 'Этот логин уже занят']
+							])
+						+btn-submit('Сохранить')(
+							id='saveNick'
+							mods=['nick'])
+
 			.profile-sets__body
 				+form('profileSets')
 					if block
